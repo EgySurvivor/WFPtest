@@ -1,0 +1,46 @@
+﻿@model IEnumerable<WFPtest.Models.SiteMenu>
+
+@{
+    ViewBag.Title = "asdfasd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>asdfasd</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NavURL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParentMenuID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MenuName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NavURL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParentMenuID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MenuID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MenuID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MenuID })
+        </td>
+    </tr>
+}
+
+</table>

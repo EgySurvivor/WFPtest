@@ -1,0 +1,458 @@
+﻿@using Microsoft.AspNet.Identity
+
+
+
+@model WFPtest.Models.MissionAuthorization1
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <style type="text/css">
+        .form-create {
+            background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+            background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+            margin: auto;
+            position: relative;
+            width: 1000px;
+            height: 1100px;
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 14px;
+            font-style: italic;
+            line-height: 24px;
+            font-weight: bold;
+            color: #09C;
+            text-decoration: none;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            border: 1px solid #999;
+            border: inset 1px solid #333;
+            -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .ui-datepicker {
+            background: #fff; /* Old browsers */
+            background: #fff -moz-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* FF3.6+ */
+            background: #fff -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc)), color-stop(100%,#fff)); /* Chrome,Safari4+ */
+            background: #fff -webkit-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* Chrome10+,Safari5.1+ */
+            background: #fff -o-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* Opera11.10+ */
+            background: #fff -ms-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* IE10+ */
+            background: #fff linear-gradient(top, #fcfcfc 0%, #fff 100%); /* W3C */
+            font-size: 11px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+            .ui-datepicker table {
+                width: 278px;
+            }
+
+                .ui-datepicker table td {
+                    text-align: center;
+                }
+
+            .ui-datepicker a {
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+        .ui-datepicker-prev {
+            float: left;
+        }
+
+        .ui-datepicker-next {
+            float: right;
+        }
+
+        .ui-datepicker-title {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        }
+        }
+    </style>
+
+    <div class=" form-create ">
+
+
+        <h4>Mission Authorization</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.MissionID)
+        @Html.HiddenFor(model => model.staffid)
+
+        <table class=" table">
+
+            <tr>
+                @Html.TextBoxFor(model => model.SignatureDate, new { @readonly = "readonly", @class = "hidden" })
+                <td style=" border-right :none  "><h4>Mission Dates </h4></td>
+
+            </tr>
+            <tr>
+
+                @*@Html.DisplayFor(model => model.staffid )
+                    @Html.ValidationMessageFor(model => model.staffid )*@
+
+
+                <th>
+                    @Html.Label("From Date")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.FromDate)
+                    @*@Html.EditorFor(model => model.FromDate)*@
+                    @Html.ValidationMessageFor(model => model.FromDate)
+                </td>
+
+                <th>
+                    @Html.Label("To Date")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.ToDate)
+                    @*@Html.EditorFor(model => model.ToDate)*@
+                    @Html.ValidationMessageFor(model => model.ToDate)
+                </td>
+
+
+            </tr>
+
+            <tr>
+                <td style=" border-right:none "></td>
+
+            </tr>
+
+            <tr>
+                <td style=" border-right :none  ">
+                    <h4>
+                        Mission Information
+                    </h4>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <th>
+                    @Html.Label("Mission Itinerary")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.MissionItinerary)
+                </td>
+
+                <th>
+                    @Html.Label("Funding")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.funding)
+                    @Html.ValidationMessageFor(model => model.funding)
+                </td>
+
+
+                <th>
+                    @Html.Label("Mission Objective")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.MissionObjective)
+                    @Html.ValidationMessageFor(model => model.MissionObjective)
+                </td>
+
+            </tr>
+            <tr>
+                <td style=" border-right:none "></td>
+
+            </tr>
+            <tr>
+                <th>
+                    @Html.Label("Expected Outputs")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.ExpectedOutputs)
+                    @Html.ValidationMessageFor(model => model.ExpectedOutputs)
+                </td>
+
+                <th>
+                    @Html.Label("Can This meeting Be Done Over Voice/Video?")
+                </th>
+                <td>
+                    @*@Html.CheckBoxFor(model => model.canbedone)*@
+                    @Html.ValidationMessageFor(model => model.canbedone)
+                    @Html.RadioButtonFor(model => model.canbedone, "True", new { disabled = "disabled" }) Yes
+                    @Html.RadioButtonFor(model => model.canbedone, "False", new { disabled = "disabled" }) No
+                </td>
+                <th>
+                    @Html.Label("I had a discussion with my supervisor")
+                </th>
+                <td>
+
+                    @Html.RadioButtonFor(model => model.ClearedBySupervisor, "True", new { disabled = "disabled" }) Yes
+                    @Html.RadioButtonFor(model => model.ClearedBySupervisor, "False", new { disabled = "disabled" }) No
+
+                    @Html.ValidationMessageFor(model => model.ClearedBySupervisor)
+                </td>
+
+            </tr>
+
+            <tr>
+                <td style=" border-right :none  ">
+                    <h4>
+                        ROming & Security Training
+                    </h4>
+                </td>
+
+            </tr>
+            <tr>
+
+
+                <th>
+                    @Html.Label("International ROAMING")
+                </th>
+                <td>
+                    @*@Html.CheckBoxFor(model => model.canbedone)*@
+                    @*@Html.CheckBoxFor(m => m.canbedone )*@
+                    @Html.RadioButtonFor(model => model.StaffSignature, "True", new { disabled = "disabled" }) Yes
+                    @Html.RadioButtonFor(model => model.StaffSignature, "False", new { disabled = "disabled" }) No
+
+                    @*@Html.ValidationMessageFor(model => model.StaffSignature)*@
+                </td>
+                <th>
+                    @Html.Label("BSITF")
+                </th>
+                <td>
+                    @*@Html.CheckBoxFor(model => model.canbedone)*@
+                    @*@Html.CheckBoxFor(m => m.canbedone )*@
+                    @Html.RadioButtonFor(model => model.BSITF, "True", new { disabled = "disabled" }) Yes
+                    @Html.RadioButtonFor(model => model.BSITF, "False", new { disabled = "disabled" }) No
+
+                    @*@Html.ValidationMessageFor(model => model.StaffSignature)*@
+                </td>
+
+
+                <th>
+                    @Html.Label("Expire Date")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Bexpiredate)
+                    @*@Html.EditorFor(model => model.Bexpiredate)*@
+                    @Html.ValidationMessageFor(model => model.Bexpiredate)
+                </td>
+
+            </tr>
+
+            <tr>
+                <td style=" border-right:none "></td>
+
+            </tr>
+
+
+            <tr>
+                <th>
+                    @Html.Label("ASITF")
+                </th>
+                <td>
+                    @*@Html.CheckBoxFor(model => model.canbedone)*@
+                    @*@Html.CheckBoxFor(m => m.canbedone )*@
+                    @Html.RadioButtonFor(model => model.ASITF, "True", new { disabled = "disabled" }) Yes
+                    @Html.RadioButtonFor(model => model.ASITF, "False", new { disabled = "disabled" }) No
+
+                    @*@Html.ValidationMessageFor(model => model.StaffSignature)*@
+                </td>
+
+                <th>
+                    @Html.Label("Expire Date")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Aexpiredate)
+                    @*@Html.EditorFor(model => model.Aexpiredate)*@
+                    @Html.ValidationMessageFor(model => model.Aexpiredate)
+                </td>
+
+
+            </tr>
+
+
+            <tr>
+                <td style=" border-right :none  ">
+                    <h4>
+                        Approvals
+                    </h4>
+                </td>
+
+            </tr>
+            <tr>
+                <th>
+                    @Html.Label("HOU Approval")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Signature1)
+                </td>
+                <th>
+                    @Html.Label("Date")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Signature1Date)
+                </td>
+                <th>
+                    @Html.Label("Comment")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Comment1 )
+                </td>
+
+            </tr>
+
+
+            <tr>
+                <td style=" border-right:none "></td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.Label("Security Approval")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Signature2 )
+                </td>
+                <th>
+                    @Html.Label("Date")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Signature2Date)
+                </td>
+                <th>
+                    @Html.Label("Comment")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Comment2)
+                </td>
+
+            </tr>
+
+
+            <tr>
+                <td style=" border-right:none "></td>
+            </tr>
+
+
+            <tr>
+                <th>
+                    @Html.Label("Finance  Clearance")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Signature3)
+                </td>
+                <th>
+                    @Html.Label("Date")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Signature3Date)
+                </td>
+                <th>
+                    @Html.Label("Comment")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Comment3)
+                </td>
+
+            </tr>
+
+
+            <tr>
+                <td style=" border-right:none "></td>
+            </tr>
+
+
+            <tr>
+                <th>
+                    @Html.Label("CD  Approval")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.non12 )
+                </td>
+                <th>
+                    @Html.Label("Date")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.non13)
+                </td>
+                <th>
+                    @Html.Label("Comment")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.non14)
+                </td>
+
+            </tr>
+
+
+            <tr>
+                <td style=" border-right :none  ">
+                    <h4>
+                        Dss Approval
+                    </h4>
+                </td>
+
+            </tr>
+            <tr>
+                <th>
+                    @Html.Label("LINK")
+                </th>
+                <td><a target='_blank'  href='http://10.11.135.254:8080/RBC-SMS/UploadedFiles/@Html.DisplayFor(model => model.non6) '> Click Here </a></td>
+
+
+            </tr>
+
+
+           
+
+            <tr>
+                <td style=" border-right :none  ">
+                    <h4>
+                        Comments
+                    </h4>
+                </td>
+
+            </tr>
+            <tr>
+                <th>
+                    @Html.Label("Comment")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.FollowUp)
+                    @Html.ValidationMessageFor(model => model.FollowUp)
+                </td>
+
+
+            </tr>
+
+        </table>
+
+        <table border="0" align="center">
+            <tr>
+                
+                <td>
+                    @Html.ActionLink("Back to List", "Index")
+                </td>
+            </tr>
+        </table>
+    </div>
+
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/scripts/customcompare.js")
+
+}

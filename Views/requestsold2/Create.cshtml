@@ -1,0 +1,408 @@
+﻿@model WFPtest.Models.request
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    <div class=" form-create ">
+        @Html.AntiForgeryToken()
+
+
+        <style type="text/css">
+            .ui-datepicker {
+                background: #fff; /* Old browsers */
+                background: #fff -moz-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* FF3.6+ */
+                background: #fff -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc)), color-stop(100%,#fff)); /* Chrome,Safari4+ */
+                background: #fff -webkit-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* Chrome10+,Safari5.1+ */
+                background: #fff -o-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* Opera11.10+ */
+                background: #fff -ms-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* IE10+ */
+                background: #fff linear-gradient(top, #fcfcfc 0%, #fff 100%); /* W3C */
+                font-size: 11px;
+                padding: 10px;
+                border: 1px solid #ccc;
+            }
+
+                .ui-datepicker table {
+                    width: 278px;
+                }
+
+                    .ui-datepicker table td {
+                        text-align: center;
+                    }
+
+                .ui-datepicker a {
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+
+            .ui-datepicker-prev {
+                float: left;
+            }
+
+            .ui-datepicker-next {
+                float: right;
+            }
+
+            .ui-datepicker-title {
+                text-align: center;
+                font-weight: bold;
+            }
+
+            }
+        </style>
+
+
+        <div class="form-horizontal">
+            <h4>request</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+            <table class=" table">
+                <tr>
+                    <th>
+                        @Html.Label("First Name")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.first_name)
+                        @Html.ValidationMessageFor(model => model.first_name)
+                    </td>
+
+
+                    <th>
+                        @Html.Label("Last Name")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.last_name)
+                        @Html.ValidationMessageFor(model => model.last_name)
+                    </td>
+
+
+                    <th>
+                        @Html.Label("Job Title")
+                    </th>
+                    <td>
+                        @Html.DropDownList("job_title", String.Empty)
+                        @Html.ValidationMessageFor(model => model.job_title)
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style=" border-right:none "></td>
+
+                </tr>
+                <tr>
+
+                    <th>
+                        @Html.Label("Unit")
+                    </th>
+                    <td>
+                        @Html.DropDownList("unit", String.Empty)
+                        @Html.ValidationMessageFor(model => model.unit)
+                    </td>
+
+
+                    <th>
+                        @Html.Label("Budget Code")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.budget_code)
+                        @Html.ValidationMessageFor(model => model.budget_code)
+                    </td>
+
+
+
+                    <th>
+                        @Html.Label("Index Number)")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.index_number)
+                        @Html.ValidationMessageFor(model => model.index_number)
+                    </td>
+                </tr>
+                <tr>
+                    <td style=" border-right:none "></td>
+
+                </tr>
+
+                <tr>
+
+
+                    <th>
+                        @Html.Label("Duty  Station")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.duty_station)
+                        @Html.ValidationMessageFor(model => model.duty_station)
+                    </td>
+
+                    <th>
+                        @Html.Label("Supervisor Email")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.supervisor_email)
+                        @Html.ValidationMessageFor(model => model.supervisor_email)
+                    </td>
+                    
+                    </tr>
+                <tr>
+                                   
+                    <td style=" border-right :none  "><h4>Appointment Type</h4></td>
+
+             
+                </tr>
+                    <tr>
+
+                    <th>
+                        @Html.Label("Appointment Type")
+                    </th>
+                    <td>
+                        @Html.DropDownList("appointment_type", new List<SelectListItem>
+
+                 {
+                    new SelectListItem{ Text="Continuing or Indefinite (no NTE)", Value = "Continuing or Indefinite (no NTE)" },
+                    new SelectListItem{ Text="Fixed-Term", Value = "Fixed-Term" },
+                    new SelectListItem{ Text="SSA", Value = "SSA" },
+                    new SelectListItem{ Text="SC", Value = "SC" },
+                    new SelectListItem{ Text="Other", Value = "Other" }
+                 })
+                        
+                        @*@Html.EditorFor(model => model.appointment_type)*@
+                        @Html.ValidationMessageFor(model => model.appointment_type)
+                    </td>
+                </tr>
+                <tr>
+                    <td style=" border-right:none "></td>
+
+                </tr>
+                <tr>
+
+                    <th>
+                        @Html.Label("Start Date")
+                    </th>
+                    <td>
+                        @Html.JQueryUI().DatepickerFor(model => model.start_date)
+                        @*@Html.EditorFor(model => model.start_date)*@
+                        @Html.ValidationMessageFor(model => model.start_date)
+                    </td>
+
+                    <th>
+                        @Html.Label("End Date")
+                    </th>
+                    <td>
+                        @Html.JQueryUI().DatepickerFor(model => model.end_date )
+                        @*@Html.EditorFor(model => model.end_date)*@
+                        @Html.ValidationMessageFor(model => model.end_date)
+                    </td>
+
+                    </tr>
+                <tr>
+
+                    <td style=" border-right :none  "><h4>Services and Equipment</h4></td>
+
+
+                </tr>
+                <tr>
+
+                    <td style=" border-right :none  ">Please select the required ICT services or equipments for the staff member.</td>
+
+
+                </tr>
+                    <tr>
+
+                    <th>
+                        @Html.Label("Computer")
+                    </th>
+                    <td>
+                        @*@Html.CheckBoxFor(model => model. )*@
+                        @*@Html.EditorFor(model => model.computer)*@
+                        @Html.ValidationMessageFor(model => model.computer)
+                    </td>
+                </tr>
+                <tr>
+                    <td style=" border-right:none "></td>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.Label("Email")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.email)
+                        @Html.ValidationMessageFor(model => model.email)
+                    </td>
+
+                    <th>
+                        @Html.Label("Access P")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.access_P)
+                        @Html.ValidationMessageFor(model => model.access_P)
+                    </td>
+
+                    <th>
+                        @Html.Label("Telephone")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.telephone)
+                        @Html.ValidationMessageFor(model => model.telephone)
+                    </td>
+                </tr>
+                <tr>
+                    <td style=" border-right:none "></td>
+
+                </tr>
+                <tr>
+
+                    <th>
+                        @Html.Label("Pincode EXT")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.pincode_ext)
+                        @Html.ValidationMessageFor(model => model.pincode_ext)
+                    </td>
+
+                    <th>
+                        @Html.Label("Local Sim")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.local_sim)
+                        @Html.ValidationMessageFor(model => model.local_sim)
+                    </td>
+
+                    <th>
+                        @Html.Label("International")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.international)
+                        @Html.ValidationMessageFor(model => model.international)
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style=" border-right:none "></td>
+
+                </tr>
+                <tr>
+
+                    <th>
+                        @Html.Label("Roaming")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.roaming)
+                        @Html.ValidationMessageFor(model => model.roaming)
+                    </td>
+
+                    <th>
+                        @Html.Label("MobileInternetService")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.MobileInternetService)
+                        @Html.ValidationMessageFor(model => model.MobileInternetService)
+                    </td>
+
+                    <th>
+                        @Html.Label("BlackberryService")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.BlackberryService)
+                        @Html.ValidationMessageFor(model => model.BlackberryService)
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style=" border-right:none "></td>
+
+                </tr>
+                <tr>
+
+                    <th>
+                        @Html.Label("IphoneService")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.IphoneService)
+                        @Html.ValidationMessageFor(model => model.IphoneService)
+                    </td>
+
+                    <th>
+                        @Html.Label("Mobile Phone")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.mobile_phone)
+                        @Html.ValidationMessageFor(model => model.mobile_phone)
+                    </td>
+
+                    <th>
+                        @Html.Label("USB Modem")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.usb_modem)
+                        @Html.ValidationMessageFor(model => model.usb_modem)
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style=" border-right:none "></td>
+
+                </tr>
+                <tr>
+
+                    <th>
+                        @Html.Label("Color Printer")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.color_printer)
+                        @Html.ValidationMessageFor(model => model.color_printer)
+                    </td>
+
+                    <th>
+                        @Html.Label("Other")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.other)
+                        @Html.ValidationMessageFor(model => model.other)
+                    </td>
+
+                    <th>
+                        @Html.Label("Location")
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.location)
+                        @Html.ValidationMessageFor(model => model.location)
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style=" border-right:none "></td>
+
+                </tr>
+                <tr>
+
+                    <th>
+                        @Html.Label("Requested By")
+                    </th>
+                    <td>
+                        @Html.DropDownList("requested_by", String.Empty)
+                        @Html.ValidationMessageFor(model => model.requested_by )
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </td>
+                <td>
+                    @Html.ActionLink("Back to List", "Index")
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+

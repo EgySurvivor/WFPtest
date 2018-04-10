@@ -1,0 +1,62 @@
+﻿@model WFPtest.Models.Fund
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Fund</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.fundid)
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.LabelFor(model => model.fund_code, new { @class = "control-label col-md-2" })
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.fund_code)
+                    @Html.ValidationMessageFor(model => model.fund_code)
+                </td>
+
+                <th>
+                    @Html.LabelFor(model => model.resource, new { @class = "control-label col-md-2" })
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.resource)
+                    @Html.ValidationMessageFor(model => model.resource)
+                </td>
+
+                <th>
+                    @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" })
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.Description)
+                    @Html.ValidationMessageFor(model => model.Description)
+                </td>
+            </tr>
+        </table>
+
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </td>
+                <td>
+                    @Html.ActionLink("Back to List", "Index")
+                </td>
+            </tr>
+        </table>
+
+      
+    </div>
+}
+
+

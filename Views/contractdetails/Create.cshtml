@@ -1,0 +1,173 @@
+﻿@using Microsoft.AspNet.Identity
+@if (!Request.IsAuthenticated)
+{
+    Response.Redirect("/RBC-SMS/account/login");
+}
+@model WFPtest.Models.contract_details
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+<p>
+    Create Contract Details 
+</p>
+    <div class="form-horizontal">
+       
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <table>
+            <tr>
+                <th>
+                    @Html.Label("Code")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.contract_details_id)
+                    @Html.ValidationMessageFor(model => model.contract_details_id)
+                </td>
+
+                <th>
+                    @Html.Label("English Description")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.contract_details_description_english)
+                    @Html.ValidationMessageFor(model => model.contract_details_description_english)
+                </td>
+
+                <th>
+                    @Html.Label("English Abreviation")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.contract_details_abreviation_english)
+                    @Html.ValidationMessageFor(model => model.contract_details_abreviation_english)
+                </td>
+
+                <th>
+                    @Html.Label("French Description")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.contract_details_description_french)
+                    @Html.ValidationMessageFor(model => model.contract_details_description_french)
+                </td>
+
+            </tr>
+            <tr>
+                <th>
+                    @Html.Label("French Abreviation")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.contract_details_abreviation_french)
+                    @Html.ValidationMessageFor(model => model.contract_details_abreviation_french)
+                </td>
+
+
+
+                <th>
+                    @Html.Label("Status")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.contract_details_status)
+                    @Html.ValidationMessageFor(model => model.contract_details_status)
+                </td>
+
+
+
+                @*<th>
+                    @Html.Label("Contract Type")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.contract_type_code)
+                    @Html.ValidationMessageFor(model => model.contract_type_code)
+                </td>*@
+
+                <th>
+                    @Html.Label("Fund")
+                </th>
+                <td>
+                    @Html.DropDownList("fundid", String.Empty)
+                    @Html.ValidationMessageFor(model => model.fundid )
+                </td>
+          
+                <th>
+                    @Html.Label("Staff")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.DropDownList("staffid", String.Empty)
+                    @*@Html.EditorFor(model => model.staffid)*@
+                    @Html.ValidationMessageFor(model => model.staffid)
+                </td>
+
+            </tr>
+        </table>
+        <br>
+        <table border=" " align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </td>
+                <td>
+                    <a href="/staff/Index">Back to Main List</a>
+                </td>
+            </tr>
+        </table>
+
+        @*hidden*@
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.contract_details_created_by, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.contract_details_created_by)
+                    @Html.ValidationMessageFor(model => model.contract_details_created_by)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.contract_details_created_datetime, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.contract_details_created_datetime)
+                    @Html.ValidationMessageFor(model => model.contract_details_created_datetime)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.contract_details_last_modified_by, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.contract_details_last_modified_by)
+                    @Html.ValidationMessageFor(model => model.contract_details_last_modified_by)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.contract_details_last_modified_datetime, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.contract_details_last_modified_datetime)
+                    @Html.ValidationMessageFor(model => model.contract_details_last_modified_datetime)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.contract_details_deleted_by, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.contract_details_deleted_by)
+                    @Html.ValidationMessageFor(model => model.contract_details_deleted_by)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.contract_details_deleted_datetime, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.contract_details_deleted_datetime)
+                    @Html.ValidationMessageFor(model => model.contract_details_deleted_datetime)
+                </div>
+            </div>*@
+       
+    </div>
+}
+
+   
+

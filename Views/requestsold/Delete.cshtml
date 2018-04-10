@@ -1,0 +1,257 @@
+﻿@model WFPtest.Models.request
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>request</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.first_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.first_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.last_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.last_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.job_title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.job_title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.budget_code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.budget_code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.index_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.index_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.duty_station)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duty_station)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.supervisor_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.supervisor_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.appointment_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appointment_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.start_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.start_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.end_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.end_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.computer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.computer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.access_P)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.access_P)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telephone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pincode_ext)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pincode_ext)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.local_sim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.local_sim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.international)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.international)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.roaming)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.roaming)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileInternetService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileInternetService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BlackberryService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BlackberryService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IphoneService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IphoneService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mobile_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mobile_phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usb_modem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usb_modem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.color_printer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.color_printer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.other)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.other)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff.staff_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff.staff_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff1.staff_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff1.staff_id)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

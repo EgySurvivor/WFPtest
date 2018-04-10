@@ -1,0 +1,119 @@
+﻿@model WFPtest.Models.unit
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>unit</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.unitid)
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.Label("code")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.unit_id)
+                    @Html.ValidationMessageFor(model => model.unit_id)
+                </td>
+
+                <th>
+                    @Html.Label("english description")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.unit_description_english)
+                    @Html.ValidationMessageFor(model => model.unit_description_english)
+                </td>
+
+                <th>
+                    @Html.Label("english abreviation")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.unit_abreviation_english)
+                    @Html.ValidationMessageFor(model => model.unit_abreviation_english)
+                </td>
+
+                <th>
+                    @Html.Label("french description")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.unit_description_french)
+                    @Html.ValidationMessageFor(model => model.unit_description_french)
+                </td>
+
+
+            </tr>
+            <tr>
+
+                <th>
+                    @Html.Label("french abreviation")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.unit_abreviation_french)
+                    @Html.ValidationMessageFor(model => model.unit_abreviation_french)
+                </td>
+
+                <th>
+                    @Html.Label("status")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.unit_status)
+                    @Html.ValidationMessageFor(model => model.unit_status)
+                </td>
+
+
+                <th>
+                    @Html.Label("short abreviation")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.unit_short_abreviation)
+                    @Html.ValidationMessageFor(model => model.unit_short_abreviation)
+                </td>
+
+                <th>
+                    @Html.Label("office")
+                </th>
+                <td>
+                    @*@Html.EditorFor(model => model.office_id)*@
+                    @Html.DropDownList("office_id", String.Empty)
+                    @Html.ValidationMessageFor(model => model.office_id)
+                </td>
+
+                </tr>
+                <tr>
+                    <th>
+                        @Html.Label("HOU")
+                    </th>
+                    <td>
+                        @*@Html.EditorFor(model => model.office_id)*@
+                        @Html.DropDownList("HOU_ID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.HOU_ID )
+                    </td>
+            </tr>
+        </table>
+
+
+        <table border=" " align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </td>
+                <td>
+                    @Html.ActionLink("Back to List", "Index")
+                </td>
+            </tr>
+        </table>
+
+       
+    </div>
+}
+

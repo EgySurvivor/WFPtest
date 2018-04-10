@@ -1,0 +1,82 @@
+﻿@*@model IEnumerable<WFPtest.Models.Fund>*@
+@using Microsoft.AspNet.Identity
+@*@if (!Request.IsAuthenticated)
+    {
+        Response.Redirect("/RBC-SMS/account/login");
+    }*@
+
+@model PagedList.IPagedList<WFPtest.Models.Fund>
+@using WFPtest.Models
+
+
+@using PagedList.Mvc;
+@using JQueryUIHelpers;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Funds List</h2>
+
+@using (Html.BeginForm("Index", "fund", FormMethod.Get))
+{
+
+
+    <br>
+    <p>
+        Find by resource Or Description: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />&nbsp;&nbsp;@Html.ActionLink("Reset Filter", "Index")
+    </p>
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Code")
+        </th>
+        <th>
+            @Html.ActionLink("resource (Sort)", "Index", new { sortOrder = ViewBag.DateSortParm })
+            @*@Html.DisplayName("resource")*@
+        </th>
+        <th>
+            @Html.ActionLink("Description (Sort)", "Index", new { sortOrder = ViewBag.DateSortParm })
+            @*@Html.DisplayName("Description")*@
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fund_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resource)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.fundid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.fundid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.fundid })
+        </td>
+    </tr>
+}
+
+</table>
+<table>
+    <tr>
+        <td>
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        </td>
+    </tr>
+</table>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

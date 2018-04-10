@@ -1,0 +1,72 @@
+﻿@model WFPtest.Models.TB_EVENT_LOG
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TB_EVENT_LOG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nEventLogIdn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nEventLogIdn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nIsLog)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nIsLog)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nTNAEvent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nTNAEvent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nIsUseTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nIsUseTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

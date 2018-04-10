@@ -1,0 +1,370 @@
+﻿@model WFPtest.Models.request
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    table, td {
+        border-right: 1px solid #C1DAD7;
+        border-bottom: 0px solid #C1DAD7;
+        border-top: 1px solid #C1DAD7;
+        background: #ffffff;
+        padding: 6px 6px 6px 12px;
+        color: black;
+        text-align: left;
+        width: 40px;
+    }
+
+    table, th {
+          font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica,
+	sans-serif;
+	color: #6D929B;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 0px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 12px;
+	background: #CAE8EA url(images/bg_header.jpg) no-repeat;
+           width: 40px; 
+        }
+
+</style>
+
+<h2>Details</h2>
+
+<div>
+    <h4>request</h4>
+    <hr />
+  
+    <table class="dl-horizontal" align="center">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.first_name)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.first_name)
+            </td>
+
+       
+
+            <th>
+                @Html.DisplayNameFor(model => model.last_name)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.last_name)
+            </td>
+
+      
+
+            <th>
+                @Html.DisplayNameFor(model => model.budget_code)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.budget_code)
+            </td>
+        </tr>
+        <tr>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.index_number)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.index_number)
+            </td>
+        
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.duty_station)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.duty_station)
+            </td>
+        
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.supervisor_email)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.supervisor_email)
+            </td>
+        </tr>
+        <tr>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.appointment_type)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.appointment_type)
+            </td>
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.start_date)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.start_date)
+            </td>
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.end_date)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.end_date)
+            </td>
+
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.computerLaptop)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.computerLaptop)
+            </td>
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.computerDeskyop)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.computerDeskyop)
+            </td>
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.email)
+            </td>
+
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.access_P)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.access_P)
+            </td>
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.telephone)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.telephone)
+            </td>
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.pincode_ext)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.pincode_ext)
+            </td>
+
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.local_sim)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.local_sim)
+            </td>
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.international)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.international)
+            </td>
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.roaming)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.roaming)
+            </td>
+
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.SmartPhone)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.SmartPhone)
+            </td>
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.BasicPhone)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.BasicPhone)
+            </td>
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.usb_modem)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.usb_modem)
+            </td>
+
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.color_printer)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.color_printer)
+            </td>
+
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.BlackberryService)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.BlackberryService)
+            </td>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.IphoneService)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.IphoneService)
+            </td>
+
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.mobile_phone)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.mobile_phone)
+            </td>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.other)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.other)
+            </td>
+
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.location)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.location)
+            </td>
+
+        </tr>
+        <tr>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.functional_title.functional_title_id)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.functional_title.functional_title_id)
+            </td>
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.staff.staff_id)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.staff.staff_id)
+            </td>
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.staff1.staff_id)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.staff1.staff_id)
+            </td>
+
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.unit1.unit_id)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.unit1.unit_id)
+            </td>
+        </tr>
+
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.request_no }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,142 @@
+﻿@model WFPtest.Models.dependent
+
+@{
+    ViewBag.Title = "Create";
+}
+<br>
+
+<p>
+  <h2>  Create Dependents</h2>
+</p>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+      
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.Label("Dependents Code")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.dependents_code)
+                    @Html.ValidationMessageFor(model => model.dependents_code)
+                </td>
+
+
+                <th>
+                    @Html.Label("Staff E-mail")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.DropDownList("staffid", String.Empty)
+                    @Html.ValidationMessageFor(model => model.staff .staff_id )
+                </td>
+
+                <th>
+                    @Html.Label("First Name")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.dependents_first_name)
+                    @Html.ValidationMessageFor(model => model.dependents_first_name)
+                </td>
+                <th>
+                    @Html.Label("Notes")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.dependents_notes)
+                    @Html.ValidationMessageFor(model => model.dependents_notes)
+                </td>
+               </tr>
+
+            <tr>
+                <th>
+                    @Html.Label("Gender")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.dependents_gender)
+                    @Html.ValidationMessageFor(model => model.dependents_gender)
+                </td>
+
+                <th>
+                    @Html.Label("Phone Number")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.dependents_phone_num)
+                    @Html.ValidationMessageFor(model => model.dependents_phone_num)
+                </td>
+
+                <th>
+                    @Html.Label("Blood Group")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.dependents_blood_group)
+                    @Html.ValidationMessageFor(model => model.dependents_blood_group)
+                </td>
+
+                <th>
+                    @Html.Label("Last Name")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.dependents_last_name)
+                    @Html.ValidationMessageFor(model => model.dependents_last_name)
+                </td>
+            </tr>
+            <tr>
+
+               
+
+                
+
+                <th>
+                    @Html.Label("Medical Condition")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.dependents_medical_condition)
+                    @Html.ValidationMessageFor(model => model.dependents_medical_condition)
+                </td>
+
+                <th>
+                    @Html.Label("Passport Expiry Date")
+                </th>
+                <td>
+                    @Html.JQueryUI().DatepickerFor(model => model.dependents_passport_expiry_date)
+                    @*@Html.EditorFor(model => model.dependents_passport_expiry_date)*@
+                    @Html.ValidationMessageFor(model => model.dependents_passport_expiry_date)
+                </td>
+
+                <th>
+                    @Html.Label("Passport Number")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.dependents_passport_num)
+                    @Html.ValidationMessageFor(model => model.dependents_passport_num)
+                </td>
+                </tr>
+            <tr>
+               
+            </tr>
+        </table>
+
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </td>
+                <td>
+                    @Html.ActionLink("Back to List", "Index")
+                </td>
+            </tr>
+        </table>
+
+      
+
+
+    </div>
+}
+
+

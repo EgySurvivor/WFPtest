@@ -1,0 +1,6 @@
+/* JS */ gapi.loaded_2(function(_){var window=this;
+_.Sm.wc("ytsubscribe",function(a,c){var f=_.Sm.zt;f&&_.Sm.Na({role:"ytsubscribe",iframe:f,data:c},{role:"ytrelay",iframe:a})},void 0,_.Vz);
+var HU={onytevent:!0},IU=["https://www.youtube.com"],JU=["http://www.youtube.com","https://www.youtube.com"];var KU=function(){this.po=this.zt=null};KU.prototype.Ei=function(){var a=window.location.href.split("#")[0],c=_.Sm.zt,c=c&&c.Pq();return{eurl:a,notificationsPipeSupported:-1!=_.xd.call(JU,c)}};KU.prototype.hg=function(a){var c=_.Sm.zt;if(c)try{c.send("ytsubscribe-msg",a,void 0,MU(this))}catch(f){}};var LU=function(a){a.zt||(a.zt=_.AD(IU));return a.zt},MU=function(a){a.po||(a.po=_.AD(JU));return a.po};
+(function(){var a=new KU;_.iC({0:"ytsubscribe",3:HU,5:function(c,f){if("e"==c){var g=f[5];g.register("_ready",a.Ei,LU(a));g.register("msg-youtube-pubsub",(0,_.H)(a.hg,a),LU(a))}}})})();
+});
+// Google Inc.

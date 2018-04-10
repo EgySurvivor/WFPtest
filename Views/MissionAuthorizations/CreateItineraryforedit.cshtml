@@ -1,0 +1,186 @@
+﻿@model WFPtest.Models.MissionItinerary
+
+@{
+    Layout = null;
+}
+
+
+@*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>*@
+@*@Html.AntiForgeryToken()
+    @if (ViewBag.Message != null)
+    {
+        <span class="text-success">@ViewBag.Message</span>
+    }
+    <span class="alert-danger">
+        @Html.ValidationSummary()
+    </span>*@
+
+<!-- Button trigger modal -->
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModaledit">
+    Add Itinerary
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModaledit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create Itinerary</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("CreateItineraryforedit", "MissionAuthorizations", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+
+                        <br>
+                        @Html.ValidationSummary(true)
+
+                        @Html.TextBoxFor(model => model.non3, new { @readonly = "readonly", @Value = ViewBag.non3, @class = "hidden" })
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MissionID, "Mission ID", htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.TextBoxFor(model => model.MissionID, new { @readonly = "readonly", @Value = ViewBag.MissionID, @class = "hidden" })
+                            <div class="col-lg-1">
+                                @*@Html.DropDownList("MissionID", String.Empty)
+                                    @Html.ValidationMessageFor(model => model.MissionID)*@
+
+                                @Html.Display("MissionID")
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Description, "Purpose", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-lg-1">
+                                @Html.TextArea("Description")
+                                @Html.ValidationMessageFor(model => model.Description)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.FromID, "Departure", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-lg-1">
+                                Country @Html.DropDownList("FromID", String.Empty)City/Town @Html.EditorFor(model => model.Twon1) Date @Html.Editor("FromDate") Time  @Html.Editor("Fromtime")
+                                @Html.ValidationMessageFor(model => model.FromID)
+                            </div>
+                        </div>
+
+                        @*<div class="form-group">
+                                @Html.LabelFor(model => model.FromID, "City/Town", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-lg-1">
+                                    @Html.EditorFor(model => model.Twon1)
+                                    @Html.ValidationMessageFor(model => model.Twon1)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FromID, "Date", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-lg-1">
+                                    @Html.Editor("FromDate")
+                                    @Html.ValidationMessageFor(model => model.FromDate)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FromID, "Time", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-lg-1">
+                                    @Html.Editor("Fromtime")
+                                    @Html.ValidationMessageFor(model => model.Fromtime)
+                                </div>
+                            </div>*@
+
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ToID, "Arrival", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-lg-1">
+                                Country @Html.DropDownList("ToID", String.Empty)City/Town @Html.EditorFor(model => model.Twon2) Date @Html.Editor("ToDate") Time  @Html.Editor("Totime")
+                                @Html.ValidationMessageFor(model => model.ToID)
+                            </div>
+                        </div>
+
+                        @*<div class="form-group">
+                                @Html.LabelFor(model => model.FromDate, "From Date", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.Editor("FromDate")  @Html.Editor("Fromtime")
+                                    @Html.ValidationMessageFor(model => model.FromDate)
+                                </div>
+                            </div>*@
+
+
+
+
+                        @*<div class="form-group">
+                                @Html.LabelFor(model => model.ToID, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.ToID)
+                                    @Html.ValidationMessageFor(model => model.ToID)
+                                </div>
+                            </div>*@
+
+                        @*<div class="form-group">
+                                @Html.LabelFor(model => model.ToDate, "To Date", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.Editor("ToDate")  @Html.Editor("Totime")
+                                    @Html.ValidationMessageFor(model => model.ToDate)
+                                </div>
+                            </div>*@
+
+                        @*<div class="form-group">
+                                @Html.LabelFor(model => model.non1, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.non1)
+                                    @Html.ValidationMessageFor(model => model.non1)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.non2, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.non2)
+                                    @Html.ValidationMessageFor(model => model.non2)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.non3, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.non3)
+                                    @Html.ValidationMessageFor(model => model.non3)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.non4, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.non4)
+                                    @Html.ValidationMessageFor(model => model.non4)
+                                </div>
+                            </div>*@
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Create" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+            <div class="modal-footer">
+                @*<a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                    <input type="reset" value="Submit" class="btn btn-success" id="btnSubmit" />*@
+            </div>
+        </div>
+    </div>
+</div>
+

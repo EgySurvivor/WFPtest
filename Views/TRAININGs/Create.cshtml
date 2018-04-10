@@ -1,0 +1,75 @@
+﻿@model WFPtest.Models.TRAINING
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>TRAINING</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.TRAINING_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TRAINING_ID)
+                @Html.ValidationMessageFor(model => model.TRAINING_ID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TRAINING_NAME, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TRAINING_NAME)
+                @Html.ValidationMessageFor(model => model.TRAINING_NAME)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TRAINING_DESC, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TRAINING_DESC)
+                @Html.ValidationMessageFor(model => model.TRAINING_DESC)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TRAINING_PLACE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TRAINING_PLACE)
+                @Html.ValidationMessageFor(model => model.TRAINING_PLACE)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TRAINING_PERIOD, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TRAINING_PERIOD)
+                @Html.ValidationMessageFor(model => model.TRAINING_PERIOD)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PARENT_TRAINING_ID, "PARENT_TRAINING_ID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("PARENT_TRAINING_ID", String.Empty)
+                @Html.ValidationMessageFor(model => model.PARENT_TRAINING_ID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

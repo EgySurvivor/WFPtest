@@ -1,0 +1,2500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WFPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BRANCHES">
+    <Key>
+      <PropertyRef Name="BRANCH_ID" />
+    </Key>
+    <Property Name="BRANCH_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BRANCH" Type="varchar" MaxLength="50" />
+    <Property Name="BRANCH_MANAGER" Type="varchar" MaxLength="50" />
+    <Property Name="BRANCH_DESC" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="categories">
+    <Key>
+      <PropertyRef Name="CatID" />
+    </Key>
+    <Property Name="CatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CatName" Type="nchar" MaxLength="30" />
+    <Property Name="CatDescription" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="contract_details">
+    <Key>
+      <PropertyRef Name="contractdetailsid" />
+    </Key>
+    <Property Name="contractdetailsid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="contract_details_id" Type="char" MaxLength="20" />
+    <Property Name="contract_details_description_english" Type="nvarchar" MaxLength="100" />
+    <Property Name="contract_details_abreviation_english" Type="nvarchar" MaxLength="50" />
+    <Property Name="contract_details_description_french" Type="nvarchar" MaxLength="100" />
+    <Property Name="contract_details_abreviation_french" Type="nvarchar" MaxLength="50" />
+    <Property Name="contract_details_status" Type="char" MaxLength="1" />
+    <Property Name="contract_details_created_by" Type="char" MaxLength="20" />
+    <Property Name="contract_details_created_datetime" Type="datetime" />
+    <Property Name="contract_details_last_modified_by" Type="char" MaxLength="20" />
+    <Property Name="contract_details_last_modified_datetime" Type="datetime" />
+    <Property Name="contract_details_deleted_by" Type="char" MaxLength="20" />
+    <Property Name="contract_details_deleted_datetime" Type="datetime" />
+    <Property Name="contract_type_code" Type="char" MaxLength="20" />
+    <Property Name="fundid" Type="int" />
+    <Property Name="staffid" Type="int" />
+  </EntityType>
+  <EntityType Name="contract_type">
+    <Key>
+      <PropertyRef Name="contractTypeid" />
+    </Key>
+    <Property Name="contractTypeid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="contract_Type_code" Type="char" MaxLength="20" />
+    <Property Name="contract_type_name" Type="nchar" MaxLength="100" />
+    <Property Name="contract_type_description" Type="nchar" MaxLength="20" />
+    <Property Name="stafid" Type="int" />
+  </EntityType>
+  <EntityType Name="countries">
+    <Key>
+      <PropertyRef Name="countryid" />
+    </Key>
+    <Property Name="countryid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="country_name" Type="nvarchar(max)" />
+    <Property Name="country_description" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Country_office">
+    <Key>
+      <PropertyRef Name="countryofficeid" />
+    </Key>
+    <Property Name="countryofficeid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="office_id" Type="char" MaxLength="20" />
+    <Property Name="office_description_english" Type="nvarchar" MaxLength="100" />
+    <Property Name="office_abreviation_english" Type="nvarchar" MaxLength="50" />
+    <Property Name="office_description_french" Type="nvarchar" MaxLength="100" />
+    <Property Name="office_abreviation_french" Type="nvarchar" MaxLength="50" />
+    <Property Name="office_status" Type="char" MaxLength="1" />
+    <Property Name="office_created_by" Type="char" MaxLength="20" />
+    <Property Name="office_created_datetime" Type="datetime" />
+    <Property Name="office_last_modified_by" Type="char" MaxLength="20" />
+    <Property Name="office_last_modified_datetime" Type="datetime" />
+    <Property Name="office_deleted_by" Type="char" MaxLength="20" />
+    <Property Name="office_deleted_datetime" Type="datetime" />
+    <Property Name="country_code" Type="int" />
+    <Property Name="Manager" Type="int" />
+    <Property Name="RB_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="CourseDetails">
+    <Key>
+      <PropertyRef Name="CourseDetailsID" />
+    </Key>
+    <Property Name="CourseDetailsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CoursID" Type="int" />
+    <Property Name="Des1" Type="nvarchar(max)" />
+    <Property Name="Des2" Type="nvarchar(max)" />
+    <Property Name="Des3" Type="nvarchar(max)" />
+    <Property Name="Des4" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CourseReg">
+    <Key>
+      <PropertyRef Name="RegID" />
+    </Key>
+    <Property Name="RegID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="staffid" Type="int" />
+    <Property Name="courseid" Type="int" />
+    <Property Name="sessionid" Type="int" />
+    <Property Name="LMSPre" Type="bit" />
+    <Property Name="SupervisorApprove" Type="bit" />
+  </EntityType>
+  <EntityType Name="Courses">
+    <Key>
+      <PropertyRef Name="CourseID" />
+    </Key>
+    <Property Name="CourseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UnitID" Type="int" />
+    <Property Name="CourseTypeID" Type="int" />
+    <Property Name="CourseName" Type="nchar" MaxLength="100" />
+    <Property Name="CourseType" Type="nvarchar(max)" />
+    <Property Name="CourseDescp1" Type="nvarchar(max)" />
+    <Property Name="CourseDescp2" Type="nvarchar(max)" />
+    <Property Name="CourseDescp3" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CourseSession">
+    <Key>
+      <PropertyRef Name="Sessionid" />
+    </Key>
+    <Property Name="Sessionid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SessionName" Type="nchar" MaxLength="100" />
+    <Property Name="CourseID" Type="int" />
+    <Property Name="CourseDuration" Type="nchar" MaxLength="100" />
+    <Property Name="CourseStartTime" Type="nchar" MaxLength="10" />
+    <Property Name="CourseEndTime" Type="nchar" MaxLength="10" />
+    <Property Name="CourseStartDate" Type="date" />
+    <Property Name="CourseEndDate" Type="date" />
+    <Property Name="CourseLocation" Type="nchar" MaxLength="100" />
+    <Property Name="CoursePrerequisite" Type="nchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="CourseTypt">
+    <Key>
+      <PropertyRef Name="CourseTypeID" />
+    </Key>
+    <Property Name="CourseTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CourseType" Type="nvarchar(max)" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="comment2" Type="nvarchar(max)" />
+    <Property Name="comment3" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DEPARTMENTS">
+    <Key>
+      <PropertyRef Name="DEP_ID" />
+    </Key>
+    <Property Name="DEP_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DEP_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="PARENT_ID" Type="varchar" MaxLength="50" />
+    <Property Name="BRANCH_ID" Type="varchar" MaxLength="50" />
+    <Property Name="DEP_MANAGER" Type="varchar" MaxLength="50" />
+    <Property Name="DEP_DESC" Type="varchar" MaxLength="255" />
+    <Property Name="MaxEmpNo" Type="int" />
+  </EntityType>
+  <EntityType Name="dependents">
+    <Key>
+      <PropertyRef Name="dependentsid" />
+    </Key>
+    <Property Name="dependentsid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dependents_code" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="staffid" Type="int" />
+    <Property Name="dependents_first_name" Type="nchar" MaxLength="20" />
+    <Property Name="dependents_last_name" Type="nchar" MaxLength="20" />
+    <Property Name="dependents_gender" Type="nchar" MaxLength="10" />
+    <Property Name="dependents_phone_num" Type="nchar" MaxLength="20" />
+    <Property Name="dependents_blood_group" Type="nchar" MaxLength="20" />
+    <Property Name="dependents_passport_num" Type="nchar" MaxLength="20" />
+    <Property Name="dependents_passport_expiry_date" Type="date" />
+    <Property Name="dependents_notes" Type="nvarchar(max)" />
+    <Property Name="dependents_medical_condition" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="district">
+    <Key>
+      <PropertyRef Name="areacode" />
+    </Key>
+    <Property Name="areacode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="area_name" Type="nchar" MaxLength="50" />
+    <Property Name="countryid" Type="int" />
+    <Property Name="governorates_code" Type="int" />
+  </EntityType>
+  <EntityType Name="EMPLOYEES">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+    </Key>
+    <Property Name="EMP_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EMP_FIRST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="EMP_MIDDLE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="EMP_LAST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="PREFIX" Type="varchar" MaxLength="50" />
+    <Property Name="NATIONALITY_ID" Type="varchar" MaxLength="50" />
+    <Property Name="BIRTH_DATE" Type="datetime" />
+    <Property Name="BIRTH_PLACE" Type="varchar" MaxLength="50" />
+    <Property Name="GENDER" Type="varchar" MaxLength="50" />
+    <Property Name="PHONE" Type="varchar" MaxLength="50" />
+    <Property Name="ADDRESSID" Type="varchar" MaxLength="255" />
+    <Property Name="CELL" Type="varchar" MaxLength="50" />
+    <Property Name="MARTIAL_STATUS_ID" Type="varchar" MaxLength="50" />
+    <Property Name="VACATION_GROUP_ID" Type="varchar" MaxLength="50" />
+    <Property Name="PERMISSION_GROUP_ID" Type="varchar" MaxLength="50" />
+    <Property Name="HOLIDAY_GROUP_ID" Type="varchar" MaxLength="50" />
+    <Property Name="DEPID" Type="varchar" MaxLength="50" />
+    <Property Name="JOB_ID" Type="varchar" MaxLength="50" />
+    <Property Name="QUAKIFICATION" Type="varchar" MaxLength="50" />
+    <Property Name="GRADU_DEPT" Type="varchar" MaxLength="50" />
+    <Property Name="GRADU_GRADE" Type="varchar" MaxLength="50" />
+    <Property Name="SSN" Type="varchar" MaxLength="50" />
+    <Property Name="HIRE_DATE" Type="datetime" />
+    <Property Name="BRANCH_ID" Type="varchar" MaxLength="50" />
+    <Property Name="NATIONAL_NO" Type="varchar" MaxLength="50" />
+    <Property Name="NATIONAL_NO_IP" Type="varchar" MaxLength="50" />
+    <Property Name="NATIONAL_NO_ID" Type="datetime" />
+    <Property Name="MILIT_SERV" Type="varchar" MaxLength="50" />
+    <Property Name="OTHER1" Type="varchar" MaxLength="50" />
+    <Property Name="OTHER2" Type="varchar" MaxLength="50" />
+    <Property Name="OTHERDATE" Type="text" />
+    <Property Name="PIC" Type="image" />
+    <Property Name="RESIGN_DATE" Type="datetime" />
+    <Property Name="RESIGNED" Type="bit" />
+    <Property Name="RESIGN_REASON" Type="varchar" MaxLength="500" />
+    <Property Name="ACCESS_CARD" Type="varchar" MaxLength="50" />
+    <Property Name="SAL_GRP_ID" Type="varchar" MaxLength="50" />
+    <Property Name="CUR_ID" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYEE" Type="bit" />
+    <Property Name="USER_CARD" Type="int" />
+    <Property Name="EMAIL_ADDRESS" Type="varchar" MaxLength="50" />
+    <Property Name="MANAGER" Type="varchar" MaxLength="50" />
+    <Property Name="ZONE_ID" Type="varchar" MaxLength="50" />
+    <Property Name="STEP_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Emp_Agent_Id" Type="int" />
+    <Property Name="Emp_Insur" Type="int" />
+    <Property Name="Contract_Code" Type="varchar" MaxLength="50" />
+    <Property Name="FLEXY_GRPS" Type="int" />
+    <Property Name="CST_CD" Type="varchar" MaxLength="50" />
+    <Property Name="SSN_DT" Type="datetime" />
+    <Property Name="RESIGN_REASON_ID" Type="varchar" MaxLength="50" />
+    <Property Name="MILIT_SERV_NO" Type="varchar" MaxLength="50" />
+    <Property Name="MILIT_SERV_ISUDT" Type="datetime" />
+    <Property Name="MILIT_SERV_EXPDT" Type="datetime" />
+    <Property Name="NATIONAL_NO_ED" Type="datetime" />
+    <Property Name="Portal_UsrNam" Type="varchar" MaxLength="50" />
+    <Property Name="Send_Mail" Type="int" />
+    <Property Name="Cont_Type_Id" Type="varchar" MaxLength="50" />
+    <Property Name="Contract_End" Type="datetime" />
+    <Property Name="empid" Type="int" />
+  </EntityType>
+  <EntityType Name="error_login">
+    <Key>
+      <PropertyRef Name="error_login_id" />
+    </Key>
+    <Property Name="error_login_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="error_login_desc" Type="varchar" MaxLength="1000" />
+    <Property Name="error_login_datetime" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Evaluation">
+    <Key>
+      <PropertyRef Name="evaid" />
+    </Key>
+    <Property Name="evaid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nchar" MaxLength="20" />
+    <Property Name="LastName" Type="nchar" MaxLength="20" />
+    <Property Name="ContractNo" Type="nchar" MaxLength="20" />
+    <Property Name="Title" Type="nchar" MaxLength="20" />
+    <Property Name="Duty_station" Type="nchar" MaxLength="20" />
+    <Property Name="OrgUnit" Type="nchar" MaxLength="20" />
+    <Property Name="from" Type="date" />
+    <Property Name="to" Type="date" />
+    <Property Name="Part2" Type="nvarchar(max)" />
+    <Property Name="Part3" Type="nvarchar(max)" />
+    <Property Name="ActionMangement" Type="nchar" MaxLength="20" />
+    <Property Name="Communications" Type="nchar" MaxLength="20" />
+    <Property Name="ethicsAndValues" Type="nchar" MaxLength="20" />
+    <Property Name="Teamwork" Type="nchar" MaxLength="20" />
+    <Property Name="Interpersonal Relations" Type="nchar" MaxLength="20" />
+    <Property Name="clientOrientation" Type="nchar" MaxLength="20" />
+    <Property Name="TechnicalSkills" Type="nchar" MaxLength="20" />
+    <Property Name="BehaviouralFlexibilty" Type="nchar" MaxLength="20" />
+    <Property Name="Negotiation" Type="nchar" MaxLength="20" />
+    <Property Name="OvarallPerformanceRating" Type="nchar" MaxLength="20" />
+    <Property Name="part5" Type="nchar" MaxLength="10" />
+    <Property Name="path" Type="nvarchar(max)" />
+    <Property Name="staffid" Type="int" />
+  </EntityType>
+  <EntityType Name="evalution">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffID" Type="int" />
+    <Property Name="EventID" Type="nchar" MaxLength="10" />
+    <Property Name="q1" Type="nchar" MaxLength="10" />
+    <Property Name="q2" Type="nchar" MaxLength="10" />
+    <Property Name="q3" Type="nchar" MaxLength="10" />
+    <Property Name="q4" Type="nchar" MaxLength="10" />
+    <Property Name="q5" Type="nchar" MaxLength="10" />
+    <Property Name="q6" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Event_requests">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestingDate" Type="datetime" />
+    <Property Name="RequestingUnit" Type="nvarchar" MaxLength="50" />
+    <Property Name="FocalPoint" Type="int" />
+    <Property Name="Purpose" Type="nvarchar(max)" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="NumOFP_CO" Type="nchar" MaxLength="10" />
+    <Property Name="NumOFP_RB" Type="nchar" MaxLength="10" />
+    <Property Name="NumOFP_HQ" Type="nchar" MaxLength="10" />
+    <Property Name="NumOFP_Other" Type="nchar" MaxLength="10" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="GOV" Type="nvarchar" MaxLength="50" />
+    <Property Name="District" Type="nvarchar" MaxLength="50" />
+    <Property Name="OtherPlace" Type="nvarchar(max)" />
+    <Property Name="Budget_TR" Type="nvarchar" MaxLength="50" />
+    <Property Name="Number_Roms" Type="nchar" MaxLength="10" />
+    <Property Name="Check_inDate" Type="datetime" />
+    <Property Name="Check_OutDate" Type="datetime" />
+    <Property Name="Rom_Type" Type="nchar" MaxLength="10" />
+    <Property Name="Microphone" Type="bit" />
+    <Property Name="HiSpeedInternet" Type="bit" />
+    <Property Name="Conf_Call_Device" Type="bit" />
+    <Property Name="MMR_Days" Type="nchar" MaxLength="10" />
+    <Property Name="BOR_Days" Type="nchar" MaxLength="10" />
+    <Property Name="COffeBreak" Type="bit" />
+    <Property Name="COffeBreak_UNM" Type="nchar" MaxLength="10" />
+    <Property Name="Lunch" Type="bit" />
+    <Property Name="Dinner" Type="bit" />
+    <Property Name="Coctail_Reception" Type="bit" />
+    <Property Name="Dedicated_IT_SUPP" Type="bit" />
+    <Property Name="Transportstion_ForLocal_Staff" Type="bit" />
+    <Property Name="Airport_Picup_Services" Type="bit" />
+    <Property Name="Other_Services" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="functional_title">
+    <Key>
+      <PropertyRef Name="functionaltitleid" />
+    </Key>
+    <Property Name="functionaltitleid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="functional_title_id" Type="char" MaxLength="20" />
+    <Property Name="functional_title_description_english" Type="nvarchar" MaxLength="100" />
+    <Property Name="functional_title_abreviation_english" Type="nvarchar" MaxLength="50" />
+    <Property Name="functional_title_description_french" Type="nvarchar" MaxLength="100" />
+    <Property Name="functional_title_abreviation_french" Type="nvarchar" MaxLength="50" />
+    <Property Name="functional_title_status" Type="char" MaxLength="1" />
+    <Property Name="functional_title_created_by" Type="char" MaxLength="20" />
+    <Property Name="functional_title_created_datetime" Type="datetime" />
+    <Property Name="functional_title_last_modified_by" Type="char" MaxLength="20" />
+    <Property Name="functional_title_last_modified_datetime" Type="datetime" />
+    <Property Name="functional_title_deleted_by" Type="char" MaxLength="20" />
+    <Property Name="functional_title_deleted_datetime" Type="datetime" />
+    <Property Name="stafid" Type="int" />
+  </EntityType>
+  <EntityType Name="Funds">
+    <Key>
+      <PropertyRef Name="fundid" />
+    </Key>
+    <Property Name="fundid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fund_code" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="resource" Type="nchar" MaxLength="20" />
+    <Property Name="Description" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="governorates">
+    <Key>
+      <PropertyRef Name="governorates_code" />
+    </Key>
+    <Property Name="governorates_code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="governorates_name" Type="nchar" MaxLength="20" />
+    <Property Name="governorates_description" Type="nvarchar(max)" />
+    <Property Name="country_code" Type="int" />
+    <Property Name="staff_id" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Job_DESCRIPTION">
+    <Key>
+      <PropertyRef Name="JOB_ID" />
+    </Key>
+    <Property Name="JOB_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="JOB_TITLE" Type="varchar" MaxLength="50" />
+    <Property Name="SUPERVISOR_TITLE" Type="varchar" MaxLength="50" />
+    <Property Name="SALARY_RANGE_F" Type="float" />
+    <Property Name="SALARY_RANGE_T" Type="float" />
+    <Property Name="POSITION_PURPOSE" Type="text" />
+    <Property Name="ESSENTIAL_DUTIES" Type="text" />
+    <Property Name="OTHER_DUTIES" Type="text" />
+    <Property Name="SUPERVISORY_RESP" Type="text" />
+  </EntityType>
+  <EntityType Name="MissionAuthorization">
+    <Key>
+      <PropertyRef Name="MissionID" />
+    </Key>
+    <Property Name="MissionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="staffid" Type="int" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="MissionItinerary" Type="nvarchar(max)" />
+    <Property Name="funding" Type="nvarchar(max)" />
+    <Property Name="ClearedBySupervisor" Type="bit" />
+    <Property Name="MissionObjective" Type="varchar(max)" />
+    <Property Name="ExpectedOutputs" Type="varchar(max)" />
+    <Property Name="Achievements" Type="nvarchar(max)" />
+    <Property Name="FollowUp" Type="nvarchar(max)" />
+    <Property Name="StaffSignature" Type="nvarchar(max)" />
+    <Property Name="SignatureDate" Type="datetime" />
+    <Property Name="RDORDRDSignature" Type="nvarchar(max)" />
+    <Property Name="RDORDRDDate" Type="datetime" />
+    <Property Name="canbedone" Type="bit" />
+    <Property Name="staffonbehalf" Type="int" />
+    <Property Name="nnon1" Type="int" />
+    <Property Name="non2" Type="date" />
+    <Property Name="non3" Type="int" />
+    <Property Name="non4" Type="nchar" MaxLength="30" />
+    <Property Name="non5" Type="int" />
+    <Property Name="FromTime" Type="datetime" />
+    <Property Name="ToTime" Type="datetime" />
+    <Property Name="Mission_Type" Type="int" />
+    <Property Name="UberCareem" Type="bit" />
+    <Property Name="other" Type="nvarchar(max)" />
+    <Property Name="files" Type="nvarchar(max)" />
+    <Property Name="destinationCountry" Type="int" />
+    <Property Name="destinationTwon" Type="nvarchar(max)" />
+    <Property Name="non16" Type="int" />
+    <Property Name="non17" Type="nvarchar(max)" />
+    <Property Name="non18" Type="bit" />
+    <Property Name="non19" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'WFPUpdate.dbo.MissionAuthorizationH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MissionAuthorizationH">
+    <Key>
+      <PropertyRef Name="MissionID" />
+    </Key>
+    <Property Name="MissionID" Type="int" Nullable="false" />
+    <Property Name="staffid" Type="int" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="MissionItinerary" Type="nvarchar(max)" />
+    <Property Name="funding" Type="nvarchar(max)" />
+    <Property Name="ClearedBySupervisor" Type="bit" />
+    <Property Name="MissionObjective" Type="varchar(max)" />
+    <Property Name="ExpectedOutputs" Type="varchar(max)" />
+    <Property Name="Achievements" Type="nvarchar(max)" />
+    <Property Name="FollowUp" Type="nvarchar(max)" />
+    <Property Name="StaffSignature" Type="nvarchar(max)" />
+    <Property Name="SignatureDate" Type="datetime" />
+    <Property Name="RDORDRDSignature" Type="nvarchar(max)" />
+    <Property Name="RDORDRDDate" Type="datetime" />
+    <Property Name="canbedone" Type="bit" />
+    <Property Name="delted" Type="bit" />
+    <Property Name="updated" Type="bit" />
+    <Property Name="update_date" Type="datetime" />
+    <Property Name="delete_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MissionItinerary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MissionID" Type="int" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="FromID" Type="int" />
+    <Property Name="Twon1" Type="nvarchar(max)" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToID" Type="int" />
+    <Property Name="Twon2" Type="nvarchar(max)" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="non1" Type="nchar" MaxLength="50" />
+    <Property Name="non2" Type="datetime" />
+    <Property Name="non3" Type="int" />
+    <Property Name="non4" Type="bit" />
+    <Property Name="Fromtime" Type="datetime" />
+    <Property Name="Totime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MissionType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Non1" Type="nchar" MaxLength="10" />
+    <Property Name="Non2" Type="int" />
+    <Property Name="Non3" Type="datetime" />
+  </EntityType>
+  <EntityType Name="requests">
+    <Key>
+      <PropertyRef Name="request_no" />
+    </Key>
+    <Property Name="request_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="first_name" Type="varchar" MaxLength="30" />
+    <Property Name="last_name" Type="varchar" MaxLength="30" />
+    <Property Name="job_title" Type="int" />
+    <Property Name="unit" Type="int" />
+    <Property Name="budget_code" Type="varchar" MaxLength="30" />
+    <Property Name="index_number" Type="varchar" MaxLength="30" />
+    <Property Name="duty_station" Type="varchar" MaxLength="30" />
+    <Property Name="supervisor_email" Type="int" />
+    <Property Name="appointment_type" Type="varchar" MaxLength="30" />
+    <Property Name="start_date" Type="datetime" />
+    <Property Name="end_date" Type="datetime" />
+    <Property Name="computerLaptop" Type="bit" />
+    <Property Name="computerDeskyop" Type="bit" />
+    <Property Name="email" Type="bit" />
+    <Property Name="access_P" Type="bit" />
+    <Property Name="telephone" Type="bit" />
+    <Property Name="pincode_ext" Type="bit" />
+    <Property Name="local_sim" Type="bit" />
+    <Property Name="international" Type="bit" />
+    <Property Name="roaming" Type="bit" />
+    <Property Name="SmartPhone" Type="bit" />
+    <Property Name="BasicPhone" Type="bit" />
+    <Property Name="usb_modem" Type="bit" />
+    <Property Name="color_printer" Type="bit" />
+    <Property Name="BlackberryService" Type="varchar" MaxLength="30" />
+    <Property Name="IphoneService" Type="varchar" MaxLength="10" />
+    <Property Name="mobile_phone" Type="varchar" MaxLength="30" />
+    <Property Name="other" Type="nvarchar(max)" />
+    <Property Name="location" Type="nvarchar(max)" />
+    <Property Name="requested_by" Type="int" />
+  </EntityType>
+  <EntityType Name="securitytracking">
+    <Key>
+      <PropertyRef Name="secid" />
+    </Key>
+    <Property Name="secid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="staffid" Type="int" />
+    <Property Name="incountry" Type="bit" />
+    <Property Name="outofcountry" Type="bit" />
+    <Property Name="randrleave" Type="bit" />
+    <Property Name="leave" Type="bit" />
+    <Property Name="onmission" Type="bit" />
+    <Property Name="remark" Type="nvarchar(max)" />
+    <Property Name="active" Type="bit" />
+    <Property Name="Date" Type="date" />
+  </EntityType>
+  <EntityType Name="sir_access">
+    <Key>
+      <PropertyRef Name="sir_access_id" />
+    </Key>
+    <Property Name="sir_access_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="staff_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="sir_access_manage_user" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="sir_access_is_admin" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="sir_access_status" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="created_by" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="created_datetime" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="updated_by" Type="char" MaxLength="20" />
+    <Property Name="updated_datetime" Type="char" MaxLength="20" />
+    <Property Name="deleted_by" Type="char" MaxLength="20" />
+    <Property Name="deleted_datetime" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="sir_category">
+    <Key>
+      <PropertyRef Name="sir_category_id" />
+    </Key>
+    <Property Name="sir_category_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="sir_category_desc" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="sir_category_abrev" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="sir_category_status" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="created_by" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="created_datetime" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="updated_by" Type="char" MaxLength="20" />
+    <Property Name="updated_datetime" Type="char" MaxLength="20" />
+    <Property Name="deleted_by" Type="char" MaxLength="20" />
+    <Property Name="deleted_datetime" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="sir_category_access">
+    <Key>
+      <PropertyRef Name="sir_category_access_id" />
+    </Key>
+    <Property Name="sir_category_access_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="sir_access_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="sir_category_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="sir_category_access_status" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="created_by" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="created_datetime" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="updated_by" Type="char" MaxLength="20" />
+    <Property Name="updated_datetime" Type="char" MaxLength="20" />
+    <Property Name="deleted_by" Type="char" MaxLength="20" />
+    <Property Name="deleted_datetime" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="sir_item">
+    <Key>
+      <PropertyRef Name="sir_item_id" />
+    </Key>
+    <Property Name="sir_item_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="sir_item_desc" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="sir_item_allow_attachment" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="sir_item_status" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="created_by" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="created_datetime" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="updated_by" Type="char" MaxLength="20" />
+    <Property Name="updated_datetime" Type="char" MaxLength="20" />
+    <Property Name="deleted_by" Type="char" MaxLength="20" />
+    <Property Name="deleted_datetime" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="sir_item_category_access">
+    <Key>
+      <PropertyRef Name="sir_item_category_access_id" />
+    </Key>
+    <Property Name="sir_item_category_access_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="sir_item_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="sir_category_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="sir_item_category_access_type" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="sir_item_category_access_status" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="created_by" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="created_datetime" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="updated_by" Type="char" MaxLength="20" />
+    <Property Name="updated_datetime" Type="char" MaxLength="20" />
+    <Property Name="deleted_by" Type="char" MaxLength="20" />
+    <Property Name="deleted_datetime" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="sir_staff_item">
+    <Key>
+      <PropertyRef Name="sir_staff_item_id" />
+    </Key>
+    <Property Name="sir_staff_item_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="staff_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="sir_item_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="sir_staff_item_description" Type="nvarchar" MaxLength="200" />
+    <Property Name="sir_staff_item_file_attached" Type="char" MaxLength="1" />
+    <Property Name="sir_staff_item_file_old_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="sir_staff_item_file_new_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="sir_staff_item_complete" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="sir_staff_item_status" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="created_by" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="created_datetime" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="updated_by" Type="char" MaxLength="20" />
+    <Property Name="updated_datetime" Type="char" MaxLength="20" />
+    <Property Name="deleted_by" Type="char" MaxLength="20" />
+    <Property Name="deleted_datetime" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="SiteMenu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NavURL" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="ParentMenuID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="staff">
+    <Key>
+      <PropertyRef Name="staffid" />
+    </Key>
+    <Property Name="staffid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="staff_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="country_office_id" Type="int" />
+    <Property Name="sub_office_id" Type="int" />
+    <Property Name="unit_id" Type="int" />
+    <Property Name="contract_type_id" Type="int" />
+    <Property Name="functional_title_id" Type="int" />
+    <Property Name="staff_login" Type="nvarchar" MaxLength="50" />
+    <Property Name="staff_first_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_last_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_created_by" Type="char" MaxLength="20" />
+    <Property Name="staff_created_datetime" Type="char" MaxLength="20" />
+    <Property Name="staff_status" Type="char" MaxLength="1" />
+    <Property Name="staff_index_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="staff_vendor_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="staff_nationality" Type="nvarchar" MaxLength="50" />
+    <Property Name="staff_address" Type="nvarchar" MaxLength="50" />
+    <Property Name="staff_dob" Type="datetime" />
+    <Property Name="staff_eod" Type="datetime" />
+    <Property Name="staff_nte" Type="datetime" />
+    <Property Name="staff_extension_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="staff_email" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_main" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_dts" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_tb" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_ct" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_li" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_lc" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_sr" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_admin" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_last_updated_by" Type="char" MaxLength="20" />
+    <Property Name="staff_last_updated_datetime" Type="char" MaxLength="20" />
+    <Property Name="staff_deleted_by" Type="char" MaxLength="20" />
+    <Property Name="staff_deleted_datetime" Type="char" MaxLength="20" />
+    <Property Name="staff_supervisorid" Type="int" />
+    <Property Name="stuff_contract_details" Type="int" />
+    <Property Name="staff_warden" Type="int" />
+    <Property Name="alternate_warden_1" Type="int" />
+    <Property Name="alternate_warden_2" Type="int" />
+    <Property Name="Call_Sign" Type="nchar" MaxLength="10" />
+    <Property Name="Landline" Type="nchar" MaxLength="50" />
+    <Property Name="Mobile" Type="nchar" MaxLength="50" />
+    <Property Name="countryid" Type="int" />
+    <Property Name="governorates_code" Type="int" />
+    <Property Name="areacode" Type="int" />
+    <Property Name="cate" Type="bit" />
+    <Property Name="international" Type="nchar" MaxLength="20" />
+    <Property Name="CatID" Type="int" />
+    <Property Name="WardenZone" Type="int" />
+    <Property Name="WardenGroupId" Type="int" />
+  </EntityType>
+  <EntityType Name="staff_login_history">
+    <Key>
+      <PropertyRef Name="staff_login_history_id" />
+    </Key>
+    <Property Name="staff_login_history_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="staff_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="staff_login_history_datetime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="staff_pwd">
+    <Key>
+      <PropertyRef Name="staff_pwd_id" />
+    </Key>
+    <Property Name="staff_pwd_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="staff_id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="staff_pwd_pwd" Type="varbinary" MaxLength="44" Nullable="false" />
+    <Property Name="staff_pwd_created_by" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="staff_pwd_created_datetime" Type="datetime" Nullable="false" />
+    <Property Name="staff_pwd_status" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="staff_pwd_is_expired" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="staff_pwd_need_change" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="stafftest">
+    <Key>
+      <PropertyRef Name="staffid" />
+    </Key>
+    <Property Name="staffid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="staff_id" Type="varchar" MaxLength="50" />
+    <Property Name="country_office_id" Type="int" />
+    <Property Name="sub_office_id" Type="int" />
+    <Property Name="unit_id" Type="int" />
+    <Property Name="contract_type_id" Type="int" />
+    <Property Name="functional_title_id" Type="int" />
+    <Property Name="staff_login" Type="nvarchar" MaxLength="50" />
+    <Property Name="staff_first_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_last_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_created_by" Type="char" MaxLength="20" />
+    <Property Name="staff_created_datetime" Type="char" MaxLength="20" />
+    <Property Name="staff_status" Type="char" MaxLength="1" />
+    <Property Name="staff_index_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="staff_vendor_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="staff_nationality" Type="char" MaxLength="20" />
+    <Property Name="staff_address" Type="nvarchar" MaxLength="50" />
+    <Property Name="staff_dob" Type="date" />
+    <Property Name="staff_eod" Type="date" />
+    <Property Name="staff_nte" Type="date" />
+    <Property Name="staff_extension_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="staff_email" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_main" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_dts" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_tb" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_ct" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_li" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_lc" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_sr" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_access_admin" Type="nvarchar" MaxLength="100" />
+    <Property Name="staff_last_updated_by" Type="char" MaxLength="20" />
+    <Property Name="staff_last_updated_datetime" Type="char" MaxLength="20" />
+    <Property Name="staff_deleted_by" Type="char" MaxLength="20" />
+    <Property Name="staff_deleted_datetime" Type="char" MaxLength="20" />
+    <Property Name="staff_supervisorid" Type="int" />
+    <Property Name="stuff_contract_details" Type="int" />
+    <Property Name="staff_warden" Type="int" />
+    <Property Name="alternate_warden_1" Type="int" />
+    <Property Name="alternate_warden_2" Type="int" />
+    <Property Name="Call_Sign" Type="nchar" MaxLength="10" />
+    <Property Name="Landline" Type="nchar" MaxLength="50" />
+    <Property Name="Mobile" Type="nchar" MaxLength="50" />
+    <Property Name="countryid" Type="int" />
+    <Property Name="governorates_code" Type="int" />
+    <Property Name="areacode" Type="int" />
+    <Property Name="cate" Type="bit" />
+    <Property Name="international" Type="nchar" MaxLength="20" />
+    <Property Name="CatID" Type="int" />
+    <Property Name="WardenZone" Type="int" />
+    <Property Name="WardenGroupId" Type="int" />
+  </EntityType>
+  <EntityType Name="stafftesttest">
+    <Key>
+      <PropertyRef Name="stafftestid" />
+    </Key>
+    <Property Name="stafftestid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stafftest_id" Type="varchar" MaxLength="50" />
+    <Property Name="country_office_id" Type="int" />
+    <Property Name="sub_office_id" Type="int" />
+    <Property Name="unit_id" Type="int" />
+    <Property Name="contract_type_id" Type="int" />
+    <Property Name="functional_title_id" Type="int" />
+    <Property Name="stafftest_login" Type="nvarchar" MaxLength="50" />
+    <Property Name="stafftest_first_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="stafftest_last_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="stafftest_created_by" Type="char" MaxLength="20" />
+    <Property Name="stafftest_created_datetime" Type="char" MaxLength="20" />
+    <Property Name="stafftest_status" Type="char" MaxLength="1" />
+    <Property Name="stafftest_index_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="stafftest_vendor_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="stafftest_nationality" Type="char" MaxLength="20" />
+    <Property Name="stafftest_address" Type="nvarchar" MaxLength="50" />
+    <Property Name="stafftest_dob" Type="date" />
+    <Property Name="stafftest_eod" Type="date" />
+    <Property Name="stafftest_nte" Type="date" />
+    <Property Name="stafftest_extension_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="stafftest_email" Type="nvarchar" MaxLength="100" />
+    <Property Name="stafftest_access_main" Type="nvarchar" MaxLength="100" />
+    <Property Name="stafftest_access_dts" Type="nvarchar" MaxLength="100" />
+    <Property Name="stafftest_access_tb" Type="nvarchar" MaxLength="100" />
+    <Property Name="stafftest_access_ct" Type="nvarchar" MaxLength="100" />
+    <Property Name="stafftest_access_li" Type="nvarchar" MaxLength="100" />
+    <Property Name="stafftest_access_lc" Type="nvarchar" MaxLength="100" />
+    <Property Name="stafftest_access_sr" Type="nvarchar" MaxLength="100" />
+    <Property Name="stafftest_access_admin" Type="nvarchar" MaxLength="100" />
+    <Property Name="stafftest_last_updated_by" Type="char" MaxLength="20" />
+    <Property Name="stafftest_last_updated_datetime" Type="char" MaxLength="20" />
+    <Property Name="stafftest_deleted_by" Type="char" MaxLength="20" />
+    <Property Name="stafftest_deleted_datetime" Type="char" MaxLength="20" />
+    <Property Name="stafftest_supervisorid" Type="int" />
+    <Property Name="stuff_contract_details" Type="int" />
+    <Property Name="stafftest_warden" Type="int" />
+    <Property Name="alternate_warden_1" Type="int" />
+    <Property Name="alternate_warden_2" Type="int" />
+    <Property Name="Call_Sign" Type="nchar" MaxLength="10" />
+    <Property Name="Landline" Type="nchar" MaxLength="15" />
+    <Property Name="Mobile" Type="nchar" MaxLength="15" />
+    <Property Name="countryid" Type="int" />
+    <Property Name="governorates_code" Type="int" />
+    <Property Name="areacode" Type="int" />
+    <Property Name="cate" Type="bit" />
+    <Property Name="international" Type="nchar" MaxLength="20" />
+    <Property Name="CatID" Type="int" />
+    <Property Name="WardenZone" Type="int" />
+    <Property Name="WardenGroupId" Type="int" />
+  </EntityType>
+  <EntityType Name="sub_office">
+    <Key>
+      <PropertyRef Name="subofficeid" />
+    </Key>
+    <Property Name="subofficeid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sub_office_id" Type="char" MaxLength="20" />
+    <Property Name="office_description_english" Type="nvarchar" MaxLength="100" />
+    <Property Name="office_abreviation_english" Type="nvarchar" MaxLength="50" />
+    <Property Name="office_description_french" Type="nvarchar" MaxLength="100" />
+    <Property Name="office_abreviation_french" Type="nvarchar" MaxLength="50" />
+    <Property Name="office_status" Type="char" MaxLength="1" />
+    <Property Name="office_created_by" Type="char" MaxLength="20" />
+    <Property Name="office_created_datetime" Type="datetime" />
+    <Property Name="office_last_modified_by" Type="char" MaxLength="20" />
+    <Property Name="office_last_modified_datetime" Type="datetime" />
+    <Property Name="office_deleted_by" Type="char" MaxLength="20" />
+    <Property Name="office_deleted_datetime" Type="datetime" />
+    <Property Name="countryofficeid" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TRAINEES">
+    <Key>
+      <PropertyRef Name="TRAINING_ID" />
+      <PropertyRef Name="PLAN_ID" />
+      <PropertyRef Name="EMP_ID" />
+    </Key>
+    <Property Name="TRAINING_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PLAN_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EMP_ID" Type="int" Nullable="false" />
+    <Property Name="ATTENDED" Type="bit" />
+    <Property Name="PASSED" Type="bit" />
+    <Property Name="TRAINING_EVALUATION" Type="text" />
+    <Property Name="TRAINER_EVALUATION" Type="text" />
+    <Property Name="CLASS_ID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TRAINING_CERTIFICATION">
+    <Key>
+      <PropertyRef Name="certID" />
+    </Key>
+    <Property Name="certID" Type="int" Nullable="false" />
+    <Property Name="certName" Type="nvarchar" MaxLength="50" />
+    <Property Name="cert_course_id" Type="varchar" MaxLength="50" />
+    <Property Name="emp_id" Type="int" />
+    <Property Name="TRAINING_ID" Type="varchar" MaxLength="50" />
+    <Property Name="CERT1" Type="int" />
+    <Property Name="CERT2" Type="nvarchar" MaxLength="50" />
+    <Property Name="COMMENT" Type="nvarchar(max)" />
+    <Property Name="CERT3" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TRAINING_COMPANIES">
+    <Key>
+      <PropertyRef Name="TRAINING_COMPANY_ID" />
+    </Key>
+    <Property Name="TRAINING_COMPANY_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TRAINING_COMPANY_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="ADRESS" Type="text" />
+    <Property Name="PHONE" Type="varchar" MaxLength="50" />
+    <Property Name="FAX" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TRAINING_PLAN">
+    <Key>
+      <PropertyRef Name="PLAN_ID" />
+    </Key>
+    <Property Name="PLAN_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TRAINING_PLACE" Type="varchar" MaxLength="50" />
+    <Property Name="PERIOD_FROM" Type="datetime" />
+    <Property Name="PERIOD_TO" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TRAINING_PLAN_TRAINERS">
+    <Key>
+      <PropertyRef Name="EMPLOYEE_ID" />
+      <PropertyRef Name="PLAN_ID" />
+      <PropertyRef Name="TRAINING_ID" />
+      <PropertyRef Name="CLASS_ID" />
+    </Key>
+    <Property Name="EMPLOYEE_ID" Type="int" Nullable="false" />
+    <Property Name="PLAN_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TRAINING_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CLASS_ID" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TRAINING_PLAN_TRAINING_CLASSES">
+    <Key>
+      <PropertyRef Name="PLAN_ID" />
+      <PropertyRef Name="TRAINING_ID" />
+      <PropertyRef Name="CLASS_ID" />
+    </Key>
+    <Property Name="PLAN_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TRAINING_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CLASS_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CLASS_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="FROM_TIME" Type="datetime" />
+    <Property Name="TO_TIME" Type="datetime" />
+    <Property Name="FROM_DATE" Type="datetime" />
+    <Property Name="TO_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TRAINING_PLAN_TRAINING_COMPANIES">
+    <Key>
+      <PropertyRef Name="PLAN_ID" />
+      <PropertyRef Name="TRAINING_COMPANY_ID" />
+      <PropertyRef Name="TRAINING_ID" />
+    </Key>
+    <Property Name="PLAN_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TRAINING_COMPANY_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TRAINING_ID" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TRAINING_PLAN_TRAININGS">
+    <Key>
+      <PropertyRef Name="PLAN_ID" />
+      <PropertyRef Name="TRAINING_ID" />
+    </Key>
+    <Property Name="PLAN_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TRAINING_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="REQUIRE_CERTIFICATE" Type="bit" />
+    <Property Name="CERTIFICATE_ID" Type="varchar" MaxLength="50" />
+    <Property Name="COASTPEREMP" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLPERCENTAGE" Type="varchar" MaxLength="50" />
+    <Property Name="FAILPASSDEPENDANCY" Type="varchar" MaxLength="50" />
+    <Property Name="IFFAILPERCENTAGE" Type="varchar" MaxLength="50" />
+    <Property Name="IFPASSPERCENTAGE" Type="varchar" MaxLength="50" />
+    <Property Name="TRAINING_TYPE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TRAINING_SC">
+    <Key>
+      <PropertyRef Name="sc_id" />
+    </Key>
+    <Property Name="sc_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="from_time" Type="datetime" />
+    <Property Name="to_time" Type="datetime" />
+    <Property Name="EMP_ID" Type="int" />
+    <Property Name="attend" Type="char" MaxLength="10" />
+    <Property Name="PLAN_ID" Type="varchar" MaxLength="50" />
+    <Property Name="time_open" Type="datetime" />
+    <Property Name="extra1" Type="nchar" MaxLength="50" />
+    <Property Name="extra2" Type="int" />
+    <Property Name="extra3" Type="nchar" MaxLength="50" />
+    <Property Name="time_closed" Type="datetime" />
+    <Property Name="comment" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TRAINING_TRAINING_COMPANIES">
+    <Key>
+      <PropertyRef Name="TRAINING_ID" />
+      <PropertyRef Name="TRAINING_COMPANY_ID" />
+    </Key>
+    <Property Name="TRAINING_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TRAINING_COMPANY_ID" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TRAINING_TYPE">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="type_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="comment" Type="nvarchar(max)" />
+    <Property Name="typ01" Type="nvarchar" MaxLength="50" />
+    <Property Name="type02" Type="int" />
+    <Property Name="type22" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TRAININGS">
+    <Key>
+      <PropertyRef Name="TRAINING_ID" />
+    </Key>
+    <Property Name="TRAINING_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TRAINING_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="TRAINING_DESC" Type="text" />
+    <Property Name="TRAINING_PLACE" Type="varchar" MaxLength="50" />
+    <Property Name="TRAINING_PERIOD" Type="float" />
+    <Property Name="PARENT_TRAINING_ID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="unit">
+    <Key>
+      <PropertyRef Name="unitid" />
+    </Key>
+    <Property Name="unitid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="unit_id" Type="char" MaxLength="20" />
+    <Property Name="unit_description_english" Type="nvarchar" MaxLength="100" />
+    <Property Name="unit_abreviation_english" Type="nvarchar" MaxLength="50" />
+    <Property Name="unit_description_french" Type="nvarchar" MaxLength="100" />
+    <Property Name="unit_abreviation_french" Type="nvarchar" MaxLength="50" />
+    <Property Name="unit_status" Type="char" MaxLength="1" />
+    <Property Name="unit_created_by" Type="char" MaxLength="20" />
+    <Property Name="unit_created_datetime" Type="datetime" />
+    <Property Name="unit_last_modified_by" Type="char" MaxLength="20" />
+    <Property Name="unit_last_modified_datetime" Type="datetime" />
+    <Property Name="unit_deleted_by" Type="char" MaxLength="20" />
+    <Property Name="unit_deleted_datetime" Type="datetime" />
+    <Property Name="unit_short_abreviation" Type="char" MaxLength="2" />
+    <Property Name="office_id" Type="int" />
+    <Property Name="HOU_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="VAC_TRANS">
+    <Key>
+      <PropertyRef Name="TRANS_ID" />
+    </Key>
+    <Property Name="TRANS_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EMP_ID" Type="varchar" MaxLength="50" />
+    <Property Name="VACATION_TYPE_ID" Type="varchar" MaxLength="50" />
+    <Property Name="FROM_DATE" Type="datetime" />
+    <Property Name="TO_DATE" Type="datetime" />
+    <Property Name="DAY_COUNT" Type="float" />
+    <Property Name="REASON" Type="text" />
+    <Property Name="COMMENTS" Type="text" />
+    <Property Name="ISSUE_DATE" Type="datetime" />
+    <Property Name="FROMTIME" Type="datetime" />
+    <Property Name="TOTIME" Type="datetime" />
+    <Property Name="VACPHONE" Type="varchar" MaxLength="50" />
+    <Property Name="VACADDRESS" Type="varchar" MaxLength="50" />
+    <Property Name="DAYTYPENO" Type="int" />
+    <Property Name="SECOND_DAY" Type="int" />
+    <Property Name="ASSFDATE" Type="datetime" />
+    <Property Name="ASSTDATE" Type="datetime" />
+    <Property Name="IN_WEEKEND" Type="bit" />
+    <Property Name="IN_HOLIDAY" Type="bit" />
+    <Property Name="empid" Type="int" />
+  </EntityType>
+  <EntityType Name="VACATION_GROUP_DETAILS">
+    <Key>
+      <PropertyRef Name="VACATION_PERIOD_ID" />
+      <PropertyRef Name="VACATION_TYPE_ID" />
+    </Key>
+    <Property Name="VACATION_PERIOD_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VACATION_TYPE_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VACATION_DET_ID" Type="varchar" MaxLength="50" />
+    <Property Name="ALLOWED_COUNT" Type="float" />
+    <Property Name="ALLOW_ACCUMULATION" Type="bit" Nullable="false" />
+    <Property Name="CONSIDER_WEEKEND_AS_VAC" Type="bit" Nullable="false" />
+    <Property Name="CONSIDER_HOLIDAY_AS_VAC" Type="bit" Nullable="false" />
+    <Property Name="EDGED_WEEKEND_AS_VAC" Type="bit" Nullable="false" />
+    <Property Name="EDGED_HOLIDAY_AS_VAC" Type="bit" Nullable="false" />
+    <Property Name="EDGED_WEEKEND_AS_VAC_END" Type="bit" Nullable="false" />
+    <Property Name="EDGED_HOLIDAY_AS_VAC_END" Type="bit" Nullable="false" />
+    <Property Name="ISALLOWED" Type="bit" />
+    <Property Name="VAC_TYPE_ACC" Type="varchar" MaxLength="50" />
+    <Property Name="MAX_ACC" Type="float" />
+  </EntityType>
+  <EntityType Name="VACATION_GROUPS">
+    <Key>
+      <PropertyRef Name="VACATION_GROUP_ID" />
+    </Key>
+    <Property Name="VACATION_GROUP_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VACATION_GROUP_NAME" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="VACATION_PERIODS">
+    <Key>
+      <PropertyRef Name="VACATION_PERIOD_ID" />
+    </Key>
+    <Property Name="VACATION_PERIOD_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VACATION_GROUP_ID" Type="varchar" MaxLength="50" />
+    <Property Name="V_START" Type="datetime" />
+    <Property Name="V_END" Type="datetime" />
+  </EntityType>
+  <EntityType Name="VACATION_TYPE_LIST">
+    <Key>
+      <PropertyRef Name="VACATION_TYPE_ID" />
+    </Key>
+    <Property Name="VACATION_TYPE_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VACATION_TYPE_NAME" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="WardenGroups">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupName" Type="nchar" MaxLength="50" />
+    <Property Name="GroupZone" Type="int" />
+    <Property Name="GroupDescription" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MissionAuthorization1">
+    <Key>
+      <PropertyRef Name="MissionID" />
+    </Key>
+    <Property Name="MissionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="staffid" Type="int" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="MissionItinerary" Type="nvarchar(max)" />
+    <Property Name="funding" Type="nvarchar(max)" />
+    <Property Name="ClearedBySupervisor" Type="bit" />
+    <Property Name="MissionObjective" Type="varchar(max)" />
+    <Property Name="ExpectedOutputs" Type="varchar(max)" />
+    <Property Name="Achievements" Type="nvarchar(max)" />
+    <Property Name="FollowUp" Type="nvarchar(max)" />
+    <Property Name="StaffSignature" Type="nvarchar(max)" />
+    <Property Name="SignatureDate" Type="datetime" />
+    <Property Name="RDORDRDSignature" Type="nvarchar(max)" />
+    <Property Name="RDORDRDDate" Type="datetime" />
+    <Property Name="canbedone" Type="bit" />
+    <Property Name="staffonbehalf" Type="int" />
+    <Property Name="nnon1" Type="int" />
+    <Property Name="non2" Type="date" />
+    <Property Name="non3" Type="int" />
+    <Property Name="non4" Type="nchar" MaxLength="30" />
+    <Property Name="non5" Type="int" />
+    <Property Name="Signature1" Type="bit" />
+    <Property Name="Signature1Date" Type="date" />
+    <Property Name="Comment1" Type="nvarchar(max)" />
+    <Property Name="Signature2" Type="bit" />
+    <Property Name="Signature2Date" Type="date" />
+    <Property Name="Comment2" Type="nvarchar(max)" />
+    <Property Name="Signature3" Type="bit" />
+    <Property Name="Signature3Date" Type="date" />
+    <Property Name="Comment3" Type="nvarchar(max)" />
+    <Property Name="clearances" Type="nvarchar(max)" />
+    <Property Name="BSITF" Type="bit" />
+    <Property Name="Bexpiredate" Type="datetime" />
+    <Property Name="ASITF" Type="bit" />
+    <Property Name="Aexpiredate" Type="datetime" />
+    <Property Name="SSAFE" Type="bit" />
+    <Property Name="Sexpiredate" Type="datetime" />
+    <Property Name="non6" Type="nvarchar(max)" />
+    <Property Name="non7" Type="bit" />
+    <Property Name="nonn8" Type="datetime" />
+    <Property Name="nono9" Type="int" />
+    <Property Name="non10" Type="nvarchar(max)" />
+    <Property Name="non11" Type="nvarchar(max)" />
+    <Property Name="non12" Type="bit" />
+    <Property Name="non13" Type="date" />
+    <Property Name="non14" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Attends">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="staffid" Type="int" />
+    <Property Name="eventid" Type="int" />
+    <Property Name="DayNUM" Type="nchar" MaxLength="10" />
+    <Property Name="DayAttend" Type="bit" />
+    <Property Name="Present" Type="bit" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="From_Time" Type="time" Precision="7" />
+    <Property Name="To_Time" Type="time" Precision="7" />
+    <Property Name="agenda" Type="nvarchar(max)" />
+    <Property Name="non1" Type="nvarchar" MaxLength="50" />
+    <Property Name="non2" Type="int" />
+    <Property Name="non3" Type="datetime" />
+  </EntityType>
+  <EntityType Name="requests1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequstingBy" Type="int" />
+    <Property Name="RequestingDate" Type="datetime" />
+    <Property Name="RequestingUnit" Type="int" />
+    <Property Name="FocalPoint" Type="int" />
+    <Property Name="Purpose" Type="nvarchar(max)" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="NumOFP_CO" Type="nchar" MaxLength="10" />
+    <Property Name="NumOFP_RB" Type="nchar" MaxLength="10" />
+    <Property Name="NumOFP_HQ" Type="nchar" MaxLength="10" />
+    <Property Name="NumOFP_Other" Type="nchar" MaxLength="10" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="GOV" Type="nvarchar" MaxLength="50" />
+    <Property Name="District" Type="nvarchar" MaxLength="50" />
+    <Property Name="OtherPlace" Type="nvarchar(max)" />
+    <Property Name="Budget_TR" Type="nvarchar" MaxLength="50" />
+    <Property Name="Number_Roms" Type="nvarchar(max)" />
+    <Property Name="Check_inDate" Type="datetime" />
+    <Property Name="Check_OutDate" Type="datetime" />
+    <Property Name="Rom_Type" Type="nvarchar(max)" />
+    <Property Name="Microphone" Type="bit" />
+    <Property Name="HiSpeedInternet" Type="bit" />
+    <Property Name="Conf_Call_Device" Type="bit" />
+    <Property Name="MMR_Days" Type="nvarchar(max)" />
+    <Property Name="BOR_Days" Type="nvarchar(max)" />
+    <Property Name="COffeBreak" Type="bit" />
+    <Property Name="COffeBreak_UNM" Type="nchar" MaxLength="10" />
+    <Property Name="Lunch" Type="bit" />
+    <Property Name="Dinner" Type="bit" />
+    <Property Name="Coctail_Reception" Type="bit" />
+    <Property Name="Dedicated_IT_SUPP" Type="bit" />
+    <Property Name="DescripDaysORHours" Type="nvarchar(max)" />
+    <Property Name="Transportstion_ForLocal_Staff" Type="bit" />
+    <Property Name="Airport_Picup_Services" Type="bit" />
+    <Property Name="Other_Services" Type="nvarchar(max)" />
+    <Property Name="non1" Type="nvarchar" MaxLength="50" />
+    <Property Name="non2" Type="int" />
+    <Property Name="non3" Type="datetime" />
+    <Property Name="Stationary" Type="nvarchar(max)" />
+    <Property Name="NameTags" Type="bit" />
+    <Property Name="Writingpads" Type="bit" />
+    <Property Name="ServicesReqOthers" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Staff_Event">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Event_ID" Type="int" />
+    <Property Name="staffid" Type="int" />
+    <Property Name="days" Type="nchar" MaxLength="10" />
+    <Property Name="non1" Type="nvarchar" MaxLength="50" />
+    <Property Name="non2" Type="int" />
+    <Property Name="non3" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AggregatedCounter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Key" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Value" Type="bigint" Nullable="false" />
+    <Property Name="ExpireAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Counter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Key" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Value" Type="smallint" Nullable="false" />
+    <Property Name="ExpireAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Hash">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Key" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Field" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" />
+    <Property Name="ExpireAt" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StateId" Type="int" />
+    <Property Name="StateName" Type="nvarchar" MaxLength="20" />
+    <Property Name="InvocationData" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Arguments" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+    <Property Name="ExpireAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="JobParameter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="JobQueue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="int" Nullable="false" />
+    <Property Name="Queue" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FetchedAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="List">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Key" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" />
+    <Property Name="ExpireAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Schema">
+    <Key>
+      <PropertyRef Name="Version" />
+    </Key>
+    <Property Name="Version" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Server">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Data" Type="nvarchar(max)" />
+    <Property Name="LastHeartbeat" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Key" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Score" Type="float" Nullable="false" />
+    <Property Name="Value" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="ExpireAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+    <Property Name="Data" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK__sir_categ__sir_a__4BAC3F29">
+    <End Role="sir_access" Type="Self.sir_access" Multiplicity="1" />
+    <End Role="sir_category_access" Type="Self.sir_category_access" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sir_access">
+        <PropertyRef Name="sir_access_id" />
+      </Principal>
+      <Dependent Role="sir_category_access">
+        <PropertyRef Name="sir_access_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__sir_categ__sir_c__4CA06362">
+    <End Role="sir_category" Type="Self.sir_category" Multiplicity="1" />
+    <End Role="sir_category_access" Type="Self.sir_category_access" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sir_category">
+        <PropertyRef Name="sir_category_id" />
+      </Principal>
+      <Dependent Role="sir_category_access">
+        <PropertyRef Name="sir_category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__sir_item___sir_c__5BE2A6F2">
+    <End Role="sir_category" Type="Self.sir_category" Multiplicity="1" />
+    <End Role="sir_item_category_access" Type="Self.sir_item_category_access" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sir_category">
+        <PropertyRef Name="sir_category_id" />
+      </Principal>
+      <Dependent Role="sir_item_category_access">
+        <PropertyRef Name="sir_category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__sir_item___sir_i__5AEE82B9">
+    <End Role="sir_item" Type="Self.sir_item" Multiplicity="1" />
+    <End Role="sir_item_category_access" Type="Self.sir_item_category_access" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sir_item">
+        <PropertyRef Name="sir_item_id" />
+      </Principal>
+      <Dependent Role="sir_item_category_access">
+        <PropertyRef Name="sir_item_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__sir_staff__sir_i__6477ECF3">
+    <End Role="sir_item" Type="Self.sir_item" Multiplicity="1" />
+    <End Role="sir_staff_item" Type="Self.sir_staff_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sir_item">
+        <PropertyRef Name="sir_item_id" />
+      </Principal>
+      <Dependent Role="sir_staff_item">
+        <PropertyRef Name="sir_item_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Attends_requests">
+    <End Role="requests1" Type="Self.requests1" Multiplicity="0..1" />
+    <End Role="Attends" Type="Self.Attends" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="requests1">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Attends">
+        <PropertyRef Name="staffid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Attends_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="Attends" Type="Self.Attends" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="Attends">
+        <PropertyRef Name="staffid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_contract_details_Funds">
+    <End Role="Funds" Type="Self.Funds" Multiplicity="0..1" />
+    <End Role="contract_details" Type="Self.contract_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funds">
+        <PropertyRef Name="fundid" />
+      </Principal>
+      <Dependent Role="contract_details">
+        <PropertyRef Name="fundid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_contract_details_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="contract_details" Type="Self.contract_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="contract_details">
+        <PropertyRef Name="staffid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_contract_type_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="contract_type" Type="Self.contract_type" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="contract_type">
+        <PropertyRef Name="stafid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Country_office_countries">
+    <End Role="countries" Type="Self.countries" Multiplicity="0..1" />
+    <End Role="Country_office" Type="Self.Country_office" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="countries">
+        <PropertyRef Name="countryid" />
+      </Principal>
+      <Dependent Role="Country_office">
+        <PropertyRef Name="country_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseDetails_Courses">
+    <End Role="Courses" Type="Self.Courses" Multiplicity="0..1" />
+    <End Role="CourseDetails" Type="Self.CourseDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="CourseDetails">
+        <PropertyRef Name="CoursID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseReg_Courses">
+    <End Role="Courses" Type="Self.Courses" Multiplicity="0..1" />
+    <End Role="CourseReg" Type="Self.CourseReg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="CourseReg">
+        <PropertyRef Name="courseid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseReg_CourseSession">
+    <End Role="CourseSession" Type="Self.CourseSession" Multiplicity="0..1" />
+    <End Role="CourseReg" Type="Self.CourseReg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CourseSession">
+        <PropertyRef Name="Sessionid" />
+      </Principal>
+      <Dependent Role="CourseReg">
+        <PropertyRef Name="sessionid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseReg_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="CourseReg" Type="Self.CourseReg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="CourseReg">
+        <PropertyRef Name="staffid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Courses_CourseTypt">
+    <End Role="CourseTypt" Type="Self.CourseTypt" Multiplicity="0..1" />
+    <End Role="Courses" Type="Self.Courses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CourseTypt">
+        <PropertyRef Name="CourseTypeID" />
+      </Principal>
+      <Dependent Role="Courses">
+        <PropertyRef Name="CourseTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Courses_unit">
+    <End Role="unit" Type="Self.unit" Multiplicity="0..1" />
+    <End Role="Courses" Type="Self.Courses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="unit">
+        <PropertyRef Name="unitid" />
+      </Principal>
+      <Dependent Role="Courses">
+        <PropertyRef Name="UnitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseSession_Courses">
+    <End Role="Courses" Type="Self.Courses" Multiplicity="0..1" />
+    <End Role="CourseSession" Type="Self.CourseSession" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="CourseSession">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dependents_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="dependents" Type="Self.dependents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="dependents">
+        <PropertyRef Name="staffid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_district_countries">
+    <End Role="countries" Type="Self.countries" Multiplicity="0..1" />
+    <End Role="district" Type="Self.district" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="countries">
+        <PropertyRef Name="countryid" />
+      </Principal>
+      <Dependent Role="district">
+        <PropertyRef Name="countryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_district_governorates">
+    <End Role="governorates" Type="Self.governorates" Multiplicity="0..1" />
+    <End Role="district" Type="Self.district" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="governorates">
+        <PropertyRef Name="governorates_code" />
+      </Principal>
+      <Dependent Role="district">
+        <PropertyRef Name="governorates_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPLOYEES_BRANCHES">
+    <End Role="BRANCHES" Type="Self.BRANCHES" Multiplicity="0..1" />
+    <End Role="EMPLOYEES" Type="Self.EMPLOYEES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BRANCHES">
+        <PropertyRef Name="BRANCH_ID" />
+      </Principal>
+      <Dependent Role="EMPLOYEES">
+        <PropertyRef Name="BRANCH_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Evaluation_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="Evaluation" Type="Self.Evaluation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="Evaluation">
+        <PropertyRef Name="staffid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_functional_title_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="functional_title" Type="Self.functional_title" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="functional_title">
+        <PropertyRef Name="stafid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_governorates_countries">
+    <End Role="countries" Type="Self.countries" Multiplicity="0..1" />
+    <End Role="governorates" Type="Self.governorates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="countries">
+        <PropertyRef Name="countryid" />
+      </Principal>
+      <Dependent Role="governorates">
+        <PropertyRef Name="country_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HangFire_JobParameter_Job">
+    <End Role="Job" Type="Self.Job" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="JobParameter" Type="Self.JobParameter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobParameter">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HangFire_State_Job">
+    <End Role="Job" Type="Self.Job" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="State" Type="Self.State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MissionAuthorization_countries">
+    <End Role="countries" Type="Self.countries" Multiplicity="0..1" />
+    <End Role="MissionAuthorization" Type="Self.MissionAuthorization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="countries">
+        <PropertyRef Name="countryid" />
+      </Principal>
+      <Dependent Role="MissionAuthorization">
+        <PropertyRef Name="destinationCountry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MissionAuthorization_MissionType">
+    <End Role="MissionType" Type="Self.MissionType" Multiplicity="0..1" />
+    <End Role="MissionAuthorization" Type="Self.MissionAuthorization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MissionType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MissionAuthorization">
+        <PropertyRef Name="Mission_Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MissionAuthorization_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="MissionAuthorization" Type="Self.MissionAuthorization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="MissionAuthorization">
+        <PropertyRef Name="staffid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MissionAuthorization_staff1">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="MissionAuthorization1" Type="Self.MissionAuthorization1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="MissionAuthorization1">
+        <PropertyRef Name="staffid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MissionAuthorization_staff11">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="MissionAuthorization" Type="Self.MissionAuthorization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="MissionAuthorization">
+        <PropertyRef Name="staffonbehalf" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MissionItinerary_countries">
+    <End Role="countries" Type="Self.countries" Multiplicity="0..1" />
+    <End Role="MissionItinerary" Type="Self.MissionItinerary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="countries">
+        <PropertyRef Name="countryid" />
+      </Principal>
+      <Dependent Role="MissionItinerary">
+        <PropertyRef Name="FromID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MissionItinerary_countries1">
+    <End Role="countries" Type="Self.countries" Multiplicity="0..1" />
+    <End Role="MissionItinerary" Type="Self.MissionItinerary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="countries">
+        <PropertyRef Name="countryid" />
+      </Principal>
+      <Dependent Role="MissionItinerary">
+        <PropertyRef Name="FromID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MissionItinerary_MissionAuthorization">
+    <End Role="MissionAuthorization" Type="Self.MissionAuthorization" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MissionItinerary" Type="Self.MissionItinerary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MissionAuthorization">
+        <PropertyRef Name="MissionID" />
+      </Principal>
+      <Dependent Role="MissionItinerary">
+        <PropertyRef Name="MissionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_requests_functional_title">
+    <End Role="functional_title" Type="Self.functional_title" Multiplicity="0..1" />
+    <End Role="requests" Type="Self.requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="functional_title">
+        <PropertyRef Name="functionaltitleid" />
+      </Principal>
+      <Dependent Role="requests">
+        <PropertyRef Name="job_title" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_requests_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="requests" Type="Self.requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="requests">
+        <PropertyRef Name="requested_by" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_requests_staff1">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="requests" Type="Self.requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="requests">
+        <PropertyRef Name="requested_by" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_requests_unit">
+    <End Role="unit" Type="Self.unit" Multiplicity="0..1" />
+    <End Role="requests" Type="Self.requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="unit">
+        <PropertyRef Name="unitid" />
+      </Principal>
+      <Dependent Role="requests">
+        <PropertyRef Name="unit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_categories">
+    <End Role="categories" Type="Self.categories" Multiplicity="0..1" />
+    <End Role="staff" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categories">
+        <PropertyRef Name="CatID" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="CatID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_countries">
+    <End Role="countries" Type="Self.countries" Multiplicity="0..1" />
+    <End Role="staff" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="countries">
+        <PropertyRef Name="countryid" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="countryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_district">
+    <End Role="district" Type="Self.district" Multiplicity="0..1" />
+    <End Role="staff" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="district">
+        <PropertyRef Name="areacode" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="areacode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_district1">
+    <End Role="district" Type="Self.district" Multiplicity="0..1" />
+    <End Role="staff" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="district">
+        <PropertyRef Name="areacode" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="WardenZone" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Staff_Event_requests">
+    <End Role="requests1" Type="Self.requests1" Multiplicity="0..1" />
+    <End Role="Staff_Event" Type="Self.Staff_Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="requests1">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Staff_Event">
+        <PropertyRef Name="Event_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Staff_Event_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="Staff_Event" Type="Self.Staff_Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="Staff_Event">
+        <PropertyRef Name="staffid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_governorates">
+    <End Role="governorates" Type="Self.governorates" Multiplicity="0..1" />
+    <End Role="staff" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="governorates">
+        <PropertyRef Name="governorates_code" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="governorates_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="staff1" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="staff1">
+        <PropertyRef Name="staff_supervisorid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_staff1">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="staff1" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="staff1">
+        <PropertyRef Name="staff_warden" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_staff2">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="staff1" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="staff1">
+        <PropertyRef Name="alternate_warden_1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_staff3">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="staff1" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="staff1">
+        <PropertyRef Name="alternate_warden_2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_WardenGroups">
+    <End Role="WardenGroups" Type="Self.WardenGroups" Multiplicity="0..1" />
+    <End Role="staff" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WardenGroups">
+        <PropertyRef Name="GroupId" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="WardenGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sub_office_Country_office">
+    <End Role="Country_office" Type="Self.Country_office" Multiplicity="0..1" />
+    <End Role="sub_office" Type="Self.sub_office" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_office">
+        <PropertyRef Name="countryofficeid" />
+      </Principal>
+      <Dependent Role="sub_office">
+        <PropertyRef Name="countryofficeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRAINEES_TRAINING_PLAN_TRAINING_CLASSES">
+    <End Role="TRAINING_PLAN_TRAINING_CLASSES" Type="Self.TRAINING_PLAN_TRAINING_CLASSES" Multiplicity="0..1" />
+    <End Role="TRAINEES" Type="Self.TRAINEES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRAINING_PLAN_TRAINING_CLASSES">
+        <PropertyRef Name="PLAN_ID" />
+        <PropertyRef Name="TRAINING_ID" />
+        <PropertyRef Name="CLASS_ID" />
+      </Principal>
+      <Dependent Role="TRAINEES">
+        <PropertyRef Name="PLAN_ID" />
+        <PropertyRef Name="TRAINING_ID" />
+        <PropertyRef Name="CLASS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRAINEES_TRAININGS">
+    <End Role="TRAININGS" Type="Self.TRAININGS" Multiplicity="1" />
+    <End Role="TRAINEES" Type="Self.TRAINEES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRAININGS">
+        <PropertyRef Name="TRAINING_ID" />
+      </Principal>
+      <Dependent Role="TRAINEES">
+        <PropertyRef Name="TRAINING_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRAINING_CERTIFICATION_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="TRAINING_CERTIFICATION" Type="Self.TRAINING_CERTIFICATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="TRAINING_CERTIFICATION">
+        <PropertyRef Name="emp_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRAINING_CERTIFICATION_TRAININGS">
+    <End Role="TRAININGS" Type="Self.TRAININGS" Multiplicity="0..1" />
+    <End Role="TRAINING_CERTIFICATION" Type="Self.TRAINING_CERTIFICATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRAININGS">
+        <PropertyRef Name="TRAINING_ID" />
+      </Principal>
+      <Dependent Role="TRAINING_CERTIFICATION">
+        <PropertyRef Name="TRAINING_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRAINING_PLAN_TRAINING_CLASSES_TRAINING_PLAN">
+    <End Role="TRAINING_PLAN" Type="Self.TRAINING_PLAN" Multiplicity="1" />
+    <End Role="TRAINING_PLAN_TRAINING_CLASSES" Type="Self.TRAINING_PLAN_TRAINING_CLASSES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRAINING_PLAN">
+        <PropertyRef Name="PLAN_ID" />
+      </Principal>
+      <Dependent Role="TRAINING_PLAN_TRAINING_CLASSES">
+        <PropertyRef Name="PLAN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRAINING_PLAN_TRAINING_COMPANIES_TRAINING_COMPANIES">
+    <End Role="TRAINING_COMPANIES" Type="Self.TRAINING_COMPANIES" Multiplicity="1" />
+    <End Role="TRAINING_PLAN_TRAINING_COMPANIES" Type="Self.TRAINING_PLAN_TRAINING_COMPANIES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRAINING_COMPANIES">
+        <PropertyRef Name="TRAINING_COMPANY_ID" />
+      </Principal>
+      <Dependent Role="TRAINING_PLAN_TRAINING_COMPANIES">
+        <PropertyRef Name="TRAINING_COMPANY_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRAINING_PLAN_TRAININGS_TRAINING_PLAN">
+    <End Role="TRAINING_PLAN" Type="Self.TRAINING_PLAN" Multiplicity="1" />
+    <End Role="TRAINING_PLAN_TRAININGS" Type="Self.TRAINING_PLAN_TRAININGS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRAINING_PLAN">
+        <PropertyRef Name="PLAN_ID" />
+      </Principal>
+      <Dependent Role="TRAINING_PLAN_TRAININGS">
+        <PropertyRef Name="PLAN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRAINING_PLAN_TRAININGS_TRAINING_TYPE">
+    <End Role="TRAINING_TYPE" Type="Self.TRAINING_TYPE" Multiplicity="0..1" />
+    <End Role="TRAINING_PLAN_TRAININGS" Type="Self.TRAINING_PLAN_TRAININGS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRAINING_TYPE">
+        <PropertyRef Name="type_id" />
+      </Principal>
+      <Dependent Role="TRAINING_PLAN_TRAININGS">
+        <PropertyRef Name="TRAINING_TYPE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRAINING_SC_TRAINING_PLAN">
+    <End Role="TRAINING_PLAN" Type="Self.TRAINING_PLAN" Multiplicity="0..1" />
+    <End Role="TRAINING_SC" Type="Self.TRAINING_SC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRAINING_PLAN">
+        <PropertyRef Name="PLAN_ID" />
+      </Principal>
+      <Dependent Role="TRAINING_SC">
+        <PropertyRef Name="PLAN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRAINING_TRAINING_COMPANIES_TRAINING_COMPANIES">
+    <End Role="TRAINING_COMPANIES" Type="Self.TRAINING_COMPANIES" Multiplicity="1" />
+    <End Role="TRAINING_TRAINING_COMPANIES" Type="Self.TRAINING_TRAINING_COMPANIES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRAINING_COMPANIES">
+        <PropertyRef Name="TRAINING_COMPANY_ID" />
+      </Principal>
+      <Dependent Role="TRAINING_TRAINING_COMPANIES">
+        <PropertyRef Name="TRAINING_COMPANY_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRAININGS_TRAININGS">
+    <End Role="TRAININGS" Type="Self.TRAININGS" Multiplicity="0..1" />
+    <End Role="TRAININGS1" Type="Self.TRAININGS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRAININGS">
+        <PropertyRef Name="TRAINING_ID" />
+      </Principal>
+      <Dependent Role="TRAININGS1">
+        <PropertyRef Name="PARENT_TRAINING_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_unit_Country_office">
+    <End Role="Country_office" Type="Self.Country_office" Multiplicity="0..1" />
+    <End Role="unit" Type="Self.unit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_office">
+        <PropertyRef Name="countryofficeid" />
+      </Principal>
+      <Dependent Role="unit">
+        <PropertyRef Name="office_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VAC_TRANS_EMPLOYEES">
+    <End Role="EMPLOYEES" Type="Self.EMPLOYEES" Multiplicity="0..1" />
+    <End Role="VAC_TRANS" Type="Self.VAC_TRANS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLOYEES">
+        <PropertyRef Name="EMP_ID" />
+      </Principal>
+      <Dependent Role="VAC_TRANS">
+        <PropertyRef Name="EMP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WardenGroups_district">
+    <End Role="district" Type="Self.district" Multiplicity="0..1" />
+    <End Role="WardenGroups" Type="Self.WardenGroups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="district">
+        <PropertyRef Name="areacode" />
+      </Principal>
+      <Dependent Role="WardenGroups">
+        <PropertyRef Name="GroupZone" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WFPModelStoreContainer">
+    <EntitySet Name="BRANCHES" EntityType="Self.BRANCHES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="categories" EntityType="Self.categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="contract_details" EntityType="Self.contract_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="contract_type" EntityType="Self.contract_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="countries" EntityType="Self.countries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country_office" EntityType="Self.Country_office" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CourseDetails" EntityType="Self.CourseDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CourseReg" EntityType="Self.CourseReg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Courses" EntityType="Self.Courses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CourseSession" EntityType="Self.CourseSession" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CourseTypt" EntityType="Self.CourseTypt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DEPARTMENTS" EntityType="Self.DEPARTMENTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dependents" EntityType="Self.dependents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="district" EntityType="Self.district" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMPLOYEES" EntityType="Self.EMPLOYEES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="error_login" EntityType="Self.error_login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Evaluation" EntityType="Self.Evaluation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="evalution" EntityType="Self.evalution" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Event_requests" EntityType="Self.Event_requests" Schema="dbo" Table="Event.requests" store:Type="Tables" />
+    <EntitySet Name="functional_title" EntityType="Self.functional_title" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Funds" EntityType="Self.Funds" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="governorates" EntityType="Self.governorates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Job_DESCRIPTION" EntityType="Self.Job_DESCRIPTION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MissionAuthorization" EntityType="Self.MissionAuthorization" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MissionItinerary" EntityType="Self.MissionItinerary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MissionType" EntityType="Self.MissionType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="requests" EntityType="Self.requests" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="securitytracking" EntityType="Self.securitytracking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sir_access" EntityType="Self.sir_access" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sir_category" EntityType="Self.sir_category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sir_category_access" EntityType="Self.sir_category_access" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sir_item" EntityType="Self.sir_item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sir_item_category_access" EntityType="Self.sir_item_category_access" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sir_staff_item" EntityType="Self.sir_staff_item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SiteMenu" EntityType="Self.SiteMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="staff" EntityType="Self.staff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="staff_login_history" EntityType="Self.staff_login_history" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="staff_pwd" EntityType="Self.staff_pwd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="stafftest" EntityType="Self.stafftest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="stafftesttest" EntityType="Self.stafftesttest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sub_office" EntityType="Self.sub_office" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRAINEES" EntityType="Self.TRAINEES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRAINING_CERTIFICATION" EntityType="Self.TRAINING_CERTIFICATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRAINING_COMPANIES" EntityType="Self.TRAINING_COMPANIES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRAINING_PLAN" EntityType="Self.TRAINING_PLAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRAINING_PLAN_TRAINERS" EntityType="Self.TRAINING_PLAN_TRAINERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRAINING_PLAN_TRAINING_CLASSES" EntityType="Self.TRAINING_PLAN_TRAINING_CLASSES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRAINING_PLAN_TRAINING_COMPANIES" EntityType="Self.TRAINING_PLAN_TRAINING_COMPANIES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRAINING_PLAN_TRAININGS" EntityType="Self.TRAINING_PLAN_TRAININGS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRAINING_SC" EntityType="Self.TRAINING_SC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRAINING_TRAINING_COMPANIES" EntityType="Self.TRAINING_TRAINING_COMPANIES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRAINING_TYPE" EntityType="Self.TRAINING_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRAININGS" EntityType="Self.TRAININGS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="unit" EntityType="Self.unit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VAC_TRANS" EntityType="Self.VAC_TRANS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VACATION_GROUP_DETAILS" EntityType="Self.VACATION_GROUP_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VACATION_GROUPS" EntityType="Self.VACATION_GROUPS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VACATION_PERIODS" EntityType="Self.VACATION_PERIODS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VACATION_TYPE_LIST" EntityType="Self.VACATION_TYPE_LIST" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WardenGroups" EntityType="Self.WardenGroups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MissionAuthorization1" EntityType="Self.MissionAuthorization1" Schema="EGYCO" Table="MissionAuthorization" store:Type="Tables" />
+    <EntitySet Name="Attends" EntityType="Self.Attends" Schema="Event" store:Type="Tables" />
+    <EntitySet Name="requests1" EntityType="Self.requests1" Schema="Event" Table="requests" store:Type="Tables" />
+    <EntitySet Name="Staff_Event" EntityType="Self.Staff_Event" Schema="Event" store:Type="Tables" />
+    <EntitySet Name="AggregatedCounter" EntityType="Self.AggregatedCounter" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="Counter" EntityType="Self.Counter" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="Hash" EntityType="Self.Hash" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="Job" EntityType="Self.Job" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="JobParameter" EntityType="Self.JobParameter" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="JobQueue" EntityType="Self.JobQueue" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="List" EntityType="Self.List" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="Schema" EntityType="Self.Schema" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="Server" EntityType="Self.Server" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="Set" EntityType="Self.Set" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="State" EntityType="Self.State" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="MissionAuthorizationH" EntityType="Self.MissionAuthorizationH" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MissionAuthorizationH].[MissionID] AS [MissionID], 
+    [MissionAuthorizationH].[staffid] AS [staffid], 
+    [MissionAuthorizationH].[FromDate] AS [FromDate], 
+    [MissionAuthorizationH].[ToDate] AS [ToDate], 
+    [MissionAuthorizationH].[MissionItinerary] AS [MissionItinerary], 
+    [MissionAuthorizationH].[funding] AS [funding], 
+    [MissionAuthorizationH].[ClearedBySupervisor] AS [ClearedBySupervisor], 
+    [MissionAuthorizationH].[MissionObjective] AS [MissionObjective], 
+    [MissionAuthorizationH].[ExpectedOutputs] AS [ExpectedOutputs], 
+    [MissionAuthorizationH].[Achievements] AS [Achievements], 
+    [MissionAuthorizationH].[FollowUp] AS [FollowUp], 
+    [MissionAuthorizationH].[StaffSignature] AS [StaffSignature], 
+    [MissionAuthorizationH].[SignatureDate] AS [SignatureDate], 
+    [MissionAuthorizationH].[RDORDRDSignature] AS [RDORDRDSignature], 
+    [MissionAuthorizationH].[RDORDRDDate] AS [RDORDRDDate], 
+    [MissionAuthorizationH].[canbedone] AS [canbedone], 
+    [MissionAuthorizationH].[delted] AS [delted], 
+    [MissionAuthorizationH].[updated] AS [updated], 
+    [MissionAuthorizationH].[update_date] AS [update_date], 
+    [MissionAuthorizationH].[delete_date] AS [delete_date]
+    FROM [dbo].[MissionAuthorizationH] AS [MissionAuthorizationH]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__sir_categ__sir_a__4BAC3F29" Association="Self.FK__sir_categ__sir_a__4BAC3F29">
+      <End Role="sir_access" EntitySet="sir_access" />
+      <End Role="sir_category_access" EntitySet="sir_category_access" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sir_categ__sir_c__4CA06362" Association="Self.FK__sir_categ__sir_c__4CA06362">
+      <End Role="sir_category" EntitySet="sir_category" />
+      <End Role="sir_category_access" EntitySet="sir_category_access" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sir_item___sir_c__5BE2A6F2" Association="Self.FK__sir_item___sir_c__5BE2A6F2">
+      <End Role="sir_category" EntitySet="sir_category" />
+      <End Role="sir_item_category_access" EntitySet="sir_item_category_access" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sir_item___sir_i__5AEE82B9" Association="Self.FK__sir_item___sir_i__5AEE82B9">
+      <End Role="sir_item" EntitySet="sir_item" />
+      <End Role="sir_item_category_access" EntitySet="sir_item_category_access" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sir_staff__sir_i__6477ECF3" Association="Self.FK__sir_staff__sir_i__6477ECF3">
+      <End Role="sir_item" EntitySet="sir_item" />
+      <End Role="sir_staff_item" EntitySet="sir_staff_item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Attends_requests" Association="Self.FK_Attends_requests">
+      <End Role="requests1" EntitySet="requests1" />
+      <End Role="Attends" EntitySet="Attends" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Attends_staff" Association="Self.FK_Attends_staff">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="Attends" EntitySet="Attends" />
+    </AssociationSet>
+    <AssociationSet Name="FK_contract_details_Funds" Association="Self.FK_contract_details_Funds">
+      <End Role="Funds" EntitySet="Funds" />
+      <End Role="contract_details" EntitySet="contract_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_contract_details_staff" Association="Self.FK_contract_details_staff">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="contract_details" EntitySet="contract_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_contract_type_staff" Association="Self.FK_contract_type_staff">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="contract_type" EntitySet="contract_type" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Country_office_countries" Association="Self.FK_Country_office_countries">
+      <End Role="countries" EntitySet="countries" />
+      <End Role="Country_office" EntitySet="Country_office" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseDetails_Courses" Association="Self.FK_CourseDetails_Courses">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="CourseDetails" EntitySet="CourseDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseReg_Courses" Association="Self.FK_CourseReg_Courses">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="CourseReg" EntitySet="CourseReg" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseReg_CourseSession" Association="Self.FK_CourseReg_CourseSession">
+      <End Role="CourseSession" EntitySet="CourseSession" />
+      <End Role="CourseReg" EntitySet="CourseReg" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseReg_staff" Association="Self.FK_CourseReg_staff">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="CourseReg" EntitySet="CourseReg" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Courses_CourseTypt" Association="Self.FK_Courses_CourseTypt">
+      <End Role="CourseTypt" EntitySet="CourseTypt" />
+      <End Role="Courses" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Courses_unit" Association="Self.FK_Courses_unit">
+      <End Role="unit" EntitySet="unit" />
+      <End Role="Courses" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseSession_Courses" Association="Self.FK_CourseSession_Courses">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="CourseSession" EntitySet="CourseSession" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dependents_staff" Association="Self.FK_dependents_staff">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="dependents" EntitySet="dependents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_district_countries" Association="Self.FK_district_countries">
+      <End Role="countries" EntitySet="countries" />
+      <End Role="district" EntitySet="district" />
+    </AssociationSet>
+    <AssociationSet Name="FK_district_governorates" Association="Self.FK_district_governorates">
+      <End Role="governorates" EntitySet="governorates" />
+      <End Role="district" EntitySet="district" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPLOYEES_BRANCHES" Association="Self.FK_EMPLOYEES_BRANCHES">
+      <End Role="BRANCHES" EntitySet="BRANCHES" />
+      <End Role="EMPLOYEES" EntitySet="EMPLOYEES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Evaluation_staff" Association="Self.FK_Evaluation_staff">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="Evaluation" EntitySet="Evaluation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_functional_title_staff" Association="Self.FK_functional_title_staff">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="functional_title" EntitySet="functional_title" />
+    </AssociationSet>
+    <AssociationSet Name="FK_governorates_countries" Association="Self.FK_governorates_countries">
+      <End Role="countries" EntitySet="countries" />
+      <End Role="governorates" EntitySet="governorates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HangFire_JobParameter_Job" Association="Self.FK_HangFire_JobParameter_Job">
+      <End Role="Job" EntitySet="Job" />
+      <End Role="JobParameter" EntitySet="JobParameter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HangFire_State_Job" Association="Self.FK_HangFire_State_Job">
+      <End Role="Job" EntitySet="Job" />
+      <End Role="State" EntitySet="State" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MissionAuthorization_countries" Association="Self.FK_MissionAuthorization_countries">
+      <End Role="countries" EntitySet="countries" />
+      <End Role="MissionAuthorization" EntitySet="MissionAuthorization" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MissionAuthorization_MissionType" Association="Self.FK_MissionAuthorization_MissionType">
+      <End Role="MissionType" EntitySet="MissionType" />
+      <End Role="MissionAuthorization" EntitySet="MissionAuthorization" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MissionAuthorization_staff" Association="Self.FK_MissionAuthorization_staff">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="MissionAuthorization" EntitySet="MissionAuthorization" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MissionAuthorization_staff1" Association="Self.FK_MissionAuthorization_staff1">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="MissionAuthorization1" EntitySet="MissionAuthorization1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MissionAuthorization_staff11" Association="Self.FK_MissionAuthorization_staff11">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="MissionAuthorization" EntitySet="MissionAuthorization" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MissionItinerary_countries" Association="Self.FK_MissionItinerary_countries">
+      <End Role="countries" EntitySet="countries" />
+      <End Role="MissionItinerary" EntitySet="MissionItinerary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MissionItinerary_countries1" Association="Self.FK_MissionItinerary_countries1">
+      <End Role="countries" EntitySet="countries" />
+      <End Role="MissionItinerary" EntitySet="MissionItinerary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MissionItinerary_MissionAuthorization" Association="Self.FK_MissionItinerary_MissionAuthorization">
+      <End Role="MissionAuthorization" EntitySet="MissionAuthorization" />
+      <End Role="MissionItinerary" EntitySet="MissionItinerary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_requests_functional_title" Association="Self.FK_requests_functional_title">
+      <End Role="functional_title" EntitySet="functional_title" />
+      <End Role="requests" EntitySet="requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_requests_staff" Association="Self.FK_requests_staff">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="requests" EntitySet="requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_requests_staff1" Association="Self.FK_requests_staff1">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="requests" EntitySet="requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_requests_unit" Association="Self.FK_requests_unit">
+      <End Role="unit" EntitySet="unit" />
+      <End Role="requests" EntitySet="requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_categories" Association="Self.FK_staff_categories">
+      <End Role="categories" EntitySet="categories" />
+      <End Role="staff" EntitySet="staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_countries" Association="Self.FK_staff_countries">
+      <End Role="countries" EntitySet="countries" />
+      <End Role="staff" EntitySet="staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_district" Association="Self.FK_staff_district">
+      <End Role="district" EntitySet="district" />
+      <End Role="staff" EntitySet="staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_district1" Association="Self.FK_staff_district1">
+      <End Role="district" EntitySet="district" />
+      <End Role="staff" EntitySet="staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Staff_Event_requests" Association="Self.FK_Staff_Event_requests">
+      <End Role="requests1" EntitySet="requests1" />
+      <End Role="Staff_Event" EntitySet="Staff_Event" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Staff_Event_staff" Association="Self.FK_Staff_Event_staff">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="Staff_Event" EntitySet="Staff_Event" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_governorates" Association="Self.FK_staff_governorates">
+      <End Role="governorates" EntitySet="governorates" />
+      <End Role="staff" EntitySet="staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_staff" Association="Self.FK_staff_staff">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="staff1" EntitySet="staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_staff1" Association="Self.FK_staff_staff1">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="staff1" EntitySet="staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_staff2" Association="Self.FK_staff_staff2">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="staff1" EntitySet="staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_staff3" Association="Self.FK_staff_staff3">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="staff1" EntitySet="staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_WardenGroups" Association="Self.FK_staff_WardenGroups">
+      <End Role="WardenGroups" EntitySet="WardenGroups" />
+      <End Role="staff" EntitySet="staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sub_office_Country_office" Association="Self.FK_sub_office_Country_office">
+      <End Role="Country_office" EntitySet="Country_office" />
+      <End Role="sub_office" EntitySet="sub_office" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRAINEES_TRAINING_PLAN_TRAINING_CLASSES" Association="Self.FK_TRAINEES_TRAINING_PLAN_TRAINING_CLASSES">
+      <End Role="TRAINING_PLAN_TRAINING_CLASSES" EntitySet="TRAINING_PLAN_TRAINING_CLASSES" />
+      <End Role="TRAINEES" EntitySet="TRAINEES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRAINEES_TRAININGS" Association="Self.FK_TRAINEES_TRAININGS">
+      <End Role="TRAININGS" EntitySet="TRAININGS" />
+      <End Role="TRAINEES" EntitySet="TRAINEES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRAINING_CERTIFICATION_staff" Association="Self.FK_TRAINING_CERTIFICATION_staff">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="TRAINING_CERTIFICATION" EntitySet="TRAINING_CERTIFICATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRAINING_CERTIFICATION_TRAININGS" Association="Self.FK_TRAINING_CERTIFICATION_TRAININGS">
+      <End Role="TRAININGS" EntitySet="TRAININGS" />
+      <End Role="TRAINING_CERTIFICATION" EntitySet="TRAINING_CERTIFICATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRAINING_PLAN_TRAINING_CLASSES_TRAINING_PLAN" Association="Self.FK_TRAINING_PLAN_TRAINING_CLASSES_TRAINING_PLAN">
+      <End Role="TRAINING_PLAN" EntitySet="TRAINING_PLAN" />
+      <End Role="TRAINING_PLAN_TRAINING_CLASSES" EntitySet="TRAINING_PLAN_TRAINING_CLASSES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRAINING_PLAN_TRAINING_COMPANIES_TRAINING_COMPANIES" Association="Self.FK_TRAINING_PLAN_TRAINING_COMPANIES_TRAINING_COMPANIES">
+      <End Role="TRAINING_COMPANIES" EntitySet="TRAINING_COMPANIES" />
+      <End Role="TRAINING_PLAN_TRAINING_COMPANIES" EntitySet="TRAINING_PLAN_TRAINING_COMPANIES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRAINING_PLAN_TRAININGS_TRAINING_PLAN" Association="Self.FK_TRAINING_PLAN_TRAININGS_TRAINING_PLAN">
+      <End Role="TRAINING_PLAN" EntitySet="TRAINING_PLAN" />
+      <End Role="TRAINING_PLAN_TRAININGS" EntitySet="TRAINING_PLAN_TRAININGS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRAINING_PLAN_TRAININGS_TRAINING_TYPE" Association="Self.FK_TRAINING_PLAN_TRAININGS_TRAINING_TYPE">
+      <End Role="TRAINING_TYPE" EntitySet="TRAINING_TYPE" />
+      <End Role="TRAINING_PLAN_TRAININGS" EntitySet="TRAINING_PLAN_TRAININGS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRAINING_SC_TRAINING_PLAN" Association="Self.FK_TRAINING_SC_TRAINING_PLAN">
+      <End Role="TRAINING_PLAN" EntitySet="TRAINING_PLAN" />
+      <End Role="TRAINING_SC" EntitySet="TRAINING_SC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRAINING_TRAINING_COMPANIES_TRAINING_COMPANIES" Association="Self.FK_TRAINING_TRAINING_COMPANIES_TRAINING_COMPANIES">
+      <End Role="TRAINING_COMPANIES" EntitySet="TRAINING_COMPANIES" />
+      <End Role="TRAINING_TRAINING_COMPANIES" EntitySet="TRAINING_TRAINING_COMPANIES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRAININGS_TRAININGS" Association="Self.FK_TRAININGS_TRAININGS">
+      <End Role="TRAININGS" EntitySet="TRAININGS" />
+      <End Role="TRAININGS1" EntitySet="TRAININGS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_unit_Country_office" Association="Self.FK_unit_Country_office">
+      <End Role="Country_office" EntitySet="Country_office" />
+      <End Role="unit" EntitySet="unit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VAC_TRANS_EMPLOYEES" Association="Self.FK_VAC_TRANS_EMPLOYEES">
+      <End Role="EMPLOYEES" EntitySet="EMPLOYEES" />
+      <End Role="VAC_TRANS" EntitySet="VAC_TRANS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WardenGroups_district" Association="Self.FK_WardenGroups_district">
+      <End Role="district" EntitySet="district" />
+      <End Role="WardenGroups" EntitySet="WardenGroups" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

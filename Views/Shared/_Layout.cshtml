@@ -1,0 +1,226 @@
+﻿
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+
+            #parent {
+  display: flex;
+}
+#narrow {
+  width: 100px;
+ 
+  /* Just so it's visible */
+}
+#wide {
+  flex: 1;
+  /* Grow to rest of container */
+ 
+  /* Just so it's visible */
+}
+            li.c2 a {
+                color: #FFFFFF;
+                text-align: left;
+            }
+        </style>
+
+       
+
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - RBC  SMS</title>
+        @Styles.Render("~/Content/")
+        @Scripts.Render("~/bundles/modernizr")
+        @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/themes/base/css")
+        @Styles.Render("~/Content/jqtree.css")
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/jqueryui")
+        @Scripts.Render("~/Scripts/tree.jquery.js")
+
+
+    </head>
+    <body>
+
+       
+
+        <div style=" background-color :#0094ff" @*class="navbar navbar-inverse navbar-fixed-top"*@>
+            <div class="container">
+                <br>
+                <div class="navbar-header">
+                    <img src="~/Content/images/logo new withe.png" width="300" />
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+
+                    </button>
+
+                    @*@Html.ActionLink("WFP MS", "Index", "staff", null, new { @class = "navbar-brand" })*@
+                </div>
+
+                @Html.Partial("_LoginPartial")
+
+
+                <pr>
+
+                    <div>
+                        <ul class="nav navbar-nav">
+
+                            <li class=" c2">@Html.ActionLink("Home", "Index", "Home")</li>
+                            @*<li class=" c2">@Html.ActionLink("Staff", "Index", "staff")</li>
+                                <li class=" c2">@Html.ActionLink("Dependents", "Index", "dependent")</li>
+                                <li class=" c2">@Html.ActionLink("Contract Type", "index", "contracttype")</li>
+                                <li class=" c2">@Html.ActionLink("Contract Details", "Create", "contractdetails")</li>
+                                <li class=" c2">@Html.ActionLink("Titles", "Index", "title")</li>
+                                <li class=" c2">@Html.ActionLink("Office", "Index", "office")</li>
+                                <li class=" c2">@Html.ActionLink("Sub Office", "Index", "suboffice")</li>
+                                <li class=" c2">@Html.ActionLink("Funds", "Index", "fund")</li>
+                                <li class=" c2">@Html.ActionLink("Country", "Index", "country")</li>
+                                <li class=" c2">@Html.ActionLink("Governorates", "Index", "governorate")</li>
+                                <li class=" c2">@Html.ActionLink("Districts", "Index", "district")</li>
+                                <li class=" c2">@Html.ActionLink("Units", "Index", "unit")</li>*@
+                        </ul>
+
+
+                        @*<ul class="nav navbar-nav">
+                                <li class="c2">
+                                    <a data-toggle="dropdown" class="c2" href="#"><span class="glyphicon glyphicon-certificate"></span>Security<b class="caret"></b></a>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li><a href="http://10.11.135.29/security/WardenGroups">Create Group</a></li>
+                                        <li><a href="http://10.11.135.29/security/AddWardenToGroup">Add Warden To Group</a></li>
+                                        <li><a href="#">Warden</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="http://10.11.135.29/security/contact">Warden List</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                    </ul>
+                                </li>
+                            </ul>*@
+
+
+                        <ul class="nav navbar-nav">
+                            <li class="c2">
+                                <a data-toggle="dropdown" class="c2" href="#">RBC Mission Authorization<b class="caret"></b></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li class=" c2">@Html.ActionLink("Missions List", "Index", "MissionAuthorizations")</li>
+                                    <li class=" c2">@Html.ActionLink("Create Mission", "create", "MissionAuthorizations")</li>
+                                    <li class=" c2">@Html.ActionLink("Create Mission On Behalf", "createonbehalf", "MissionAuthorizations")</li>
+                                </ul>
+                            </li>
+
+                            <li class="c2">
+                                <a data-toggle="dropdown" class="c2" href="#">Event Request<b class="caret"></b></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li class=" c2">@Html.ActionLink("Events List", "Index", "EventRequest")</li>
+                                    <li class=" c2">@Html.ActionLink("Create Event", "create", "EventRequest")</li>
+                                    
+                                </ul>
+                            </li>
+
+                            <li class="c2">
+                                <a data-toggle="dropdown" class="c2" href="#">EGYCO Mission Authorization<b class="caret"></b></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li class=" c2">@Html.ActionLink("Missions List", "Index", "MissionAuthorization1")</li>
+                                    <li class=" c2">@Html.ActionLink("Create Mission", "create", "MissionAuthorization1")</li>
+                                    
+                                </ul>
+                            </li>
+
+                       
+                            <li class="c2">
+                                <a data-toggle="dropdown" class="c2" href="#">New Staff Requests<b class="caret"></b></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li class=" c2">@Html.ActionLink("New Staff Request List", "Index", "requests")</li>
+                                    <li class=" c2">@Html.ActionLink("Create New", "create", "requests")</li>
+                                </ul>
+                            </li>
+                           
+
+
+                       
+                            <li class="c2">
+                                <a data-toggle="dropdown" class="c2" href="#">Related Links<b class="caret"></b></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li class=" c2"><a href="https://dss.un.org" target="_blank">UNDSS security clearance</a></li>
+                                    <li class=" c2"><a href="http://go.wfp.org/" target="_blank">Protocol WFPgo</a></li>
+                                    <li class=" c2"><a href="https://welearn.wfp.org" target="_blank">WeLearn</a></li>
+                                    <li class=" c2"><a href="https://teamwork.wfp.org/" target="_blank">WFP Teamwork Spaces </a></li>
+                                    <li class=" c2"><a href="http://mail.wfp.org/" target="_blank">Webmail</a></li>
+                                    <li class=" c2"><a href="http://go.wfp.org/web/hr/my-career" target="_blank">Careers (HR)</a></li>
+                                    <li class=" c2"><a href="http://go.wfp.org/web/medicalservices/home" target="_blank">Medical Services</a></li>
+                                    <li class=" c2"><a href="http://go.wfp.org/web/scope/" target="_blank">Scope</a></li>
+                                    <li class=" c2"><a href="http://opweb.wfp.org/" target="_blank">OPweb</a></li>
+                                    <li class=" c2"><a href="https://communities.wfp.org" target="_blank">WFP Communities</a></li>
+                                    <li class=" c2"><a href="http://10.11.135.7/portals" target="_blank">Attends System</a></li>
+                                                                        
+                                </ul>
+                            </li>
+                       
+</ul>
+                    </div>
+
+
+
+
+
+                    @Html.Partial("menu")
+                  
+                   
+            </div>
+        </div>
+          
+
+        <dive id="parent">
+            <div id="narrow" class="well sidebar-nav" style="width :200px">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Related Links</li>
+                    <li><a href="https://dss.un.org" target="_blank">security clearance</a></li>
+                    <li><a href="http://go.wfp.org/" target="_blank">Protocol WFPgo</a></li>
+                    <li><a href="https://welearn.wfp.org" target="_blank">WeLearn</a></li>
+                    <li><a href="https://teamwork.wfp.org/" target="_blank">Teamwork Spaces</a></li>
+                    <li><a href="http://dev.itcommunities.wfp.org" target="_blank">IT Communities</a></li> 
+                    <li><a href="http://mail.wfp.org/" target="_blank">Webmail</a></li>
+                    <li><a href="http://go.wfp.org/web/hr/my-career" target="_blank">Careers (HR)</a></li>
+                    <li><a href="http://go.wfp.org/web/medicalservices/home" target="_blank">Medical Services</a></li>
+                    <li><a href="http://go.wfp.org/web/scope/" target="_blank">Scope</a></li>
+                    <li><a href="http://opweb.wfp.org/" target="_blank">OPweb</a></li>
+                    <li><a href="https://communities.wfp.org" target="_blank">WFP Communities</a></li>
+                    <li><a href="http://10.11.135.7/portals" target="_blank">Attends System</a></li>
+                    @*<li class="nav-header"> Navigation Header</li>
+                    <li>@Html.ActionLink("Link AA", "../")</li>
+                    <li>@Html.ActionLink("Link BB", "../")</li>
+                    <li>@Html.ActionLink("Link CC", "../")</li>*@
+                </ul>
+            </div>
+
+          
+
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrapjs")
+
+            @*@Html.Action("Simple", "MissionAuthorizations")*@
+
+
+            <div id="wide" class="container body-content">
+                
+                @RenderBody()
+               
+            </div>
+          
+            </dive>
+        <div>
+            <hr />
+            <footer>
+
+                <p>&copy; 2015-WFP Application</p>
+            </footer>
+        </div>
+
+                @Scripts.Render("~/bundles/jquery")
+                @Scripts.Render("~/bundles/bootstrap")
+                @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿@model IEnumerable<WFPtest.Models.TRAINING_SC>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.from_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.to_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMP_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attend)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.time_open)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.extra1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.extra2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.extra3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.time_closed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRAINING_PLAN.TRAINING_PLACE)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.from_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.to_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMP_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attend)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.time_open)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.extra1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.extra2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.extra3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.time_closed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRAINING_PLAN.TRAINING_PLACE)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.sc_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.sc_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.sc_id })
+        </td>
+    </tr>
+}
+
+</table>

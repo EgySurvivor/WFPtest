@@ -1,0 +1,44 @@
+﻿@model WFPtest.Models.governorate 
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Governorates</h4>
+    <hr />
+    <table class=" table">
+        <tr>
+            <th>
+                @Html.DisplayName("Name")
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.governorates_name)
+            </td>
+            <th>
+                @Html.DisplayName("description")
+            </th>
+           
+
+            <td>
+                @Html.DisplayFor(model => model.governorates_description)
+            </td>
+
+            <th>
+
+                @Html.DisplayName("Country")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.country.country_name)
+                </td>
+</tr>
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.countryid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

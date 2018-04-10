@@ -1,0 +1,49 @@
+﻿@model WFPtest.Models.contract_type
+
+@{
+    ViewBag.Title = "Details";
+}
+<br>
+
+<p>
+   <h2> Contract Type Details</h2>
+</p>
+
+
+
+<div>
+   
+	<hr />
+    <table class=" table" >
+        <tr>
+            <th>
+            @Html.DisplayName("Contract Type Code")
+           </th>
+
+        <td>
+            @Html.DisplayFor(model => model.contract_Type_code)
+        </td>
+
+        <th>
+            @Html.DisplayName("Contract Type Name")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.contract_type_name)
+        </td>
+
+        <th>
+            @Html.DisplayName("Contract Type Description")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.contract_type_description)
+        </td>
+</tr>
+        </table>
+   
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.contractTypeid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

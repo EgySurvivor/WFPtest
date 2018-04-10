@@ -1,0 +1,197 @@
+﻿@using Microsoft.AspNet.Identity
+@if (!Request.IsAuthenticated)
+{
+    Response.Redirect("~/RBC-SMS/account/login");
+}
+
+@model PagedList.IPagedList<WFPtest.Models.MissionAuthorization>
+@*@model Tuple<PagedList.IPagedList<MissionAuthorization>, MissionItinerary>*@
+
+
+@*@model IEnumerable<WFPtest.Models.staff>*@
+@*@using IEnumerable<wfptest.models.staff>;*@
+@using WFPtest.Models
+
+
+@using PagedList.Mvc;
+@using JQueryUIHelpers;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<br>
+
+<p>
+    <h2>Mission Authorization List</h2>
+</p>
+
+
+
+    @using (Html.BeginForm("Index", "MissionAuthorizations", FormMethod.Get))
+    {
+
+        <br>
+        <p>
+            Find by From Date Or E-mail : @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+            <input type="submit" value="Search" />&nbsp;&nbsp;@Html.ActionLink("Reset Filter", "Index")
+        </p>
+    }
+
+
+
+
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayName("Mission ID")
+            </th>
+            <th>
+                @Html.DisplayName("Staff Name")
+            </th>
+            <th>
+                @Html.DisplayName("On Behalf")
+            </th>
+
+            <th>
+                @Html.DisplayName("Mission Creation Date")
+            </th>
+          
+
+            <th>
+                @Html.DisplayName("Funding")
+            </th>
+            @*<th>
+                    @Html.DisplayName("Cleared By Supervisor")
+                </th>*@
+            <th>
+                @Html.DisplayName("Mission Objective")
+            </th>
+            <th>
+                @Html.DisplayName("Expected Outputs")
+            </th>
+            @*<th>
+                    @Html.DisplayName("Achievements")
+                </th>*@
+            <th>
+                @Html.DisplayName("Comment")
+            </th>
+            @*<th>
+                    @Html.DisplayName("Mission Creation")
+                </th>*@
+
+            <th>
+                @Html.DisplayName("Submitted")
+            </th>
+            <th>
+                @Html.DisplayName("Approved")
+            </th>
+            <th>
+                @Html.DisplayName("Date")
+            </th>
+
+
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MissionID)
+                </td>
+                <td>
+
+                    @*@Html.Display("staffNName")*@
+                    @*@Html.DisplayNameFor(model => model.staff.staffid)*@
+                    @Html.DisplayFor(modelItem => item.staff.staff_first_name)
+                    @Html.DisplayFor(modelItem => item.staff.staff_last_name)
+                    @Html.Display("onbehalfFullName")
+                    @*@Html.Display("onbehalfFullName2")*@
+
+                </td>
+                <td>
+                 @*ddddddd @Html.DisplayFor(modelItem => item.staffonbehalf)*@
+                    @Html.DisplayFor(modelItem => item.staff1.staff_first_name )
+                    @Html.DisplayFor(modelItem => item.staff1.staff_last_name)
+                    @*@Html.ActionLink("staffonbehalfperson", "staffonbehalfperson", new { id = item.staffonbehalf}) |*@
+                    @*@{ Html.RenderAction("staffonbehalfperson",new { id = item.staffonbehalf }); }*@
+                   
+                    @*@Html.ActionLink("staffonbehalfperson", "staffonbehalfperson", new { id = item.staffonbehalf }, new { data_toggle = "modal", data_target = "#myModal22"})
+                    @Html.ActionLink("Open Modal", "staffonbehalfperson", "MissionAuthorizations", new { id = item.staffonbehalf }, new{data_target = "#myModal22",data_toggle = "modal"})*@
+                    @*@RenderPage("~/Views/MissionAuthorizations/staffonbehalfpersonP.cshtml")*@
+                    @*@{ Html.RenderAction("staffonbehalfperson", "MissionAuthorizations"); }*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SignatureDate, "ShortDateTime")
+
+                </td>
+
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.funding)
+                </td>
+
+
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.MissionObjective)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpectedOutputs)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Achievements)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.FollowUp)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.StaffSignature)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.non4)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.RDORDRDSignature)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RDORDRDDate)
+                </td>
+
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MissionID, id2 = item.staff.staffid, drd = ViewBag.rdDrd, loginid = ViewBag.loginid, staffmail = item.staff.staff_email, behalfOf = item.staffonbehalf }) |
+
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MissionID, id2 = item.staff.staffid, submitted = item.non4 }) |
+                   
+                    @Html.ActionLink("Submit", "Approval", new { Mid = item.MissionID, id2 = item.staff.staffid, onbehalfID = item.staffonbehalf, onbehalfSuperID = item.non3, onbehalfHouID = item.nnon1 }, new { onclick = "return confirm('Are you sure you wish to submit this mission?');" })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <table border="0">
+        <tr>
+            <td>
+                <p>
+                    @Html.ActionLink("Create New", "Create")
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    
+
+
+    <br />
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

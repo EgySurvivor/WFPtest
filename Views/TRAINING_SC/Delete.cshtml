@@ -1,0 +1,112 @@
+﻿@model WFPtest.Models.TRAINING_SC
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TRAINING_SC</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.from_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.from_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.to_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.to_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMP_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMP_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.attend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.attend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.time_open)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.time_open)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.extra1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.extra1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.extra2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.extra2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.extra3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.extra3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.time_closed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.time_closed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TRAINING_PLAN.TRAINING_PLACE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRAINING_PLAN.TRAINING_PLACE)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

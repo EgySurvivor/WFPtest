@@ -1,0 +1,67 @@
+﻿@model WFPtest.Models.CourseReg
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>CourseReg</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.RegID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.staffid, "staffid", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("staffid", String.Empty)
+                @Html.ValidationMessageFor(model => model.staffid)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.courseid, "courseid", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("courseid", String.Empty)
+                @Html.ValidationMessageFor(model => model.courseid)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.sessionid, "sessionid", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("sessionid", String.Empty)
+                @Html.ValidationMessageFor(model => model.sessionid)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LMSPre, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LMSPre)
+                @Html.ValidationMessageFor(model => model.LMSPre)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.SupervisorApprove, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SupervisorApprove)
+                @Html.ValidationMessageFor(model => model.SupervisorApprove)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

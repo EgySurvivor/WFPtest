@@ -1,0 +1,94 @@
+﻿@model WFPtest.Models.functional_title
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<br>
+
+
+<p>
+   <h2> Edit Title</h2>
+</p>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+     
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.functionaltitleid)
+
+        <table class=" table">
+            <tr>
+                <th>
+                    @Html.Label("Title Code")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.functional_title_id)
+                    @Html.ValidationMessageFor(model => model.functional_title_id)
+                </td>
+
+
+                <th>
+                    @Html.Label("English Description")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.functional_title_description_english)
+                    @Html.ValidationMessageFor(model => model.functional_title_description_english)
+                </td>
+
+                <th>
+                    @Html.Label("English Abreviation")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.functional_title_abreviation_english)
+                    @Html.ValidationMessageFor(model => model.functional_title_abreviation_english)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.Label("French Description")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.functional_title_description_french)
+                    @Html.ValidationMessageFor(model => model.functional_title_description_french)
+                </td>
+
+                <th>
+                    @Html.Label("French Abreviation")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.functional_title_abreviation_french)
+                    @Html.ValidationMessageFor(model => model.functional_title_abreviation_french)
+                </td>
+
+                <th>
+                    @Html.Label("Status")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.functional_title_status)
+                    @Html.ValidationMessageFor(model => model.functional_title_status)
+                </td>
+
+            </tr>
+        </table>
+
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </td>
+                <td>
+                    @Html.ActionLink("Back to List", "Index")
+                </td>
+            </tr>
+        </table>
+       
+    </div>
+}
+
+

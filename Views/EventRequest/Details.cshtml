@@ -1,0 +1,668 @@
+﻿@model WFPtest.Models.requests1
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+
+  
+    <br>
+    <style type="text/css">
+        .form-create {
+            background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+            background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+            margin: auto;
+            position: relative;
+            width: 1190px;
+            height: 1450px;
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 14px;
+            font-style: italic;
+            line-height: 24px;
+            font-weight: bold;
+            color: #09C;
+            text-decoration: none;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            border: 1px solid #999;
+            border: inset 1px solid #333;
+            -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .ui-datepicker {
+            background: #fff; /* Old browsers */
+            background: #fff -moz-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* FF3.6+ */
+            background: #fff -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc)), color-stop(100%,#fff)); /* Chrome,Safari4+ */
+            background: #fff -webkit-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* Chrome10+,Safari5.1+ */
+            background: #fff -o-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* Opera11.10+ */
+            background: #fff -ms-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* IE10+ */
+            background: #fff linear-gradient(top, #fcfcfc 0%, #fff 100%); /* W3C */
+            font-size: 11px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+            .ui-datepicker table {
+                width: 278px;
+            }
+
+                .ui-datepicker table td {
+                    text-align: center;
+                }
+
+            .ui-datepicker a {
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+        .ui-datepicker-prev {
+            float: left;
+        }
+
+        .ui-datepicker-next {
+            float: right;
+        }
+
+        .ui-datepicker-title {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .parent {
+            display: table;
+            /* optional, just for the demo */
+            height: 300px;
+            background: yellow;
+        }
+
+        .child {
+            display: table-cell;
+            vertical-align: middle;
+            /* optional, just for the demo */
+            background: #6D929B;
+        }
+
+        .content {
+            /* optional, just for the demo */
+            background: white;
+            width: 1px;
+            word-wrap: break-word;
+            font-family: monospace; /* this is just for good looks */
+            font-size: large;
+            text-decoration-color: #CAE8EA;
+        }
+
+        .vertical-text {
+            transform: rotate(90deg);
+            transform-origin: left top 0;
+            word-wrap: normal;
+            font-family: monospace; /* this is just for good looks */
+        }
+
+        }
+    </style>
+
+
+
+    
+            
+            <style>
+                table, td {
+                    border-right: 1px solid #C1DAD7;
+                    border-bottom: 0px solid #C1DAD7;
+                    border-top: 1px solid #C1DAD7;
+                    background: #ffffff;
+                    padding: 6px 6px 6px 12px;
+                    color: black;
+                    text-align: left;
+                    width: 1px;
+                }
+
+                table, th {
+                    font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+                    color: #6D929B;
+                    border-right: 1px solid #C1DAD7;
+                    border-bottom: 0px solid #C1DAD7;
+                    border-top: 1px solid #C1DAD7;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    text-align: left;
+                    padding: 6px 6px 6px 12px;
+                    background: #CAE8EA url(images/bg_header.jpg) no-repeat;
+                    width: 1px;
+                }
+            </style>
+
+            
+              
+
+                    <table class=" table">
+
+                        <tr>
+                            <td rowspan="33"></td>
+
+                        </tr>
+                        <tr>
+
+                            <td style=" border-right :none  " colspan="6"><h4>Personal Information</h4></td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td style=" border-right :none" colspan="6"></td>
+
+
+
+                        </tr>
+                        <tr>
+
+
+                            <th>
+                                @Html.Label("Requsting By")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.Display("staffid2")
+                                @Html.Display("LastName")
+                                @Html.TextBoxFor(model => model.RequstingBy, new { @readonly = "readonly", @Value = ViewBag.staffid, @class = "hidden" })
+                                @*@Html.EditorFor(model => model.RequstingBy)
+                                    @Html.ValidationMessageFor(model => model.RequstingBy)*@
+                            </td>
+
+                            <th>
+                                @Html.Label("RequestingDate")<b style="color:Red;">*</b>
+
+                            </th>
+                            <td>
+
+                                @Html.Display("currentDate")
+                                @Html.ValidationMessageFor(model => model.RequestingDate)
+                                @Html.TextBoxFor(model => model.RequestingDate, new { @readonly = "readonly", @Value = ViewBag.currentDate, @class = "hidden" })
+                            </td>
+
+                            <th>
+                                @Html.Label("Requesting Unit")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.Display("Unit")
+                                @Html.ValidationMessageFor(model => model.RequestingUnit)
+                                @Html.TextBoxFor(model => model.RequestingUnit, new { @readonly = "readonly", @Value = ViewBag.unitid, @class = "hidden" })
+
+                            </td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td style=" border-right :none  " colspan="6">
+                                <h4>
+                                    Event Information
+                                </h4>
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr>
+                            <th>
+                                @Html.Label("Purpose")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+
+                               @Html.DisplayFor(model => model.Purpose)
+                                @Html.ValidationMessageFor(model => model.Purpose)
+
+                            </td>
+                            <th>
+                                @Html.Label("Focal Point")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.Display("staffid2")
+                                @Html.Display("LastName")
+                                @Html.TextBoxFor(model => model.FocalPoint, new { @readonly = "readonly", @Value = ViewBag.staffid, @class = "hidden" })
+                                @Html.ValidationMessageFor(model => model.FocalPoint)
+                            </td>
+
+                            <th>
+                                @Html.Label("From Date")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.FromDate)
+                                @Html.ValidationMessageFor(model => model.FromDate)
+
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td style=" border-right :none" colspan="6"></td>
+
+
+
+                        </tr>
+                        <tr>
+
+                            <th>
+                                @Html.Label("To Date")<b style="color:Red;">*</b>
+                            </th>
+                            <td colspan="6">
+                                @Html.DisplayFor(model => model.ToDate)
+                                @Html.ValidationMessageFor(model => model.ToDate)
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td style=" border-right :none  " colspan="6">
+                                <h4>
+                                    Participates Information
+                                </h4>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <th>
+                                @Html.Label("NumberOF Persons COs")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.NumOFP_CO)
+                                @Html.ValidationMessageFor(model => model.NumOFP_CO)
+
+                            </td>
+
+                            <th>
+                                @Html.Label("NumberOF Persons RB")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.NumOFP_RB)
+                                @Html.ValidationMessageFor(model => model.NumOFP_RB)
+
+                            </td>
+                            <th>
+                                @Html.Label("NumberOF Persons HQ")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.NumOFP_HQ)
+                                @Html.ValidationMessageFor(model => model.NumOFP_HQ)
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td style=" border-right :none" colspan="6"></td>
+
+
+                        </tr>
+
+                        <tr>
+
+
+                            <th>
+                                @Html.Label("Others")<b style="color:Red;">*</b>
+                            </th>
+                            <td colspan="6">
+                                @Html.DisplayFor(model => model.NumOFP_Other)
+                                @Html.ValidationMessageFor(model => model.NumOFP_Other)
+
+                            </td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td style=" border-right :none  " colspan="6">
+                                <h4>
+                                    Location
+                                </h4>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <th>
+                                @Html.Label("Country")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.Country)
+                                @Html.ValidationMessageFor(model => model.Country)
+
+                            </td>
+                            <th>
+                                @Html.Label("District")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.District)
+                                @Html.ValidationMessageFor(model => model.District)
+                            </td>
+
+                            <th>
+                                @Html.Label("OtherPlace")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.OtherPlace)
+                                @Html.ValidationMessageFor(model => model.OtherPlace)
+
+                            </td>
+
+
+                        </tr>
+
+                        <tr>
+
+                            <td style=" border-right :none" colspan="6"></td>
+
+
+                        </tr>
+
+                        <tr>
+
+
+                            <th>
+                                @Html.Label("Budget/TR")<b style="color:Red;">*</b>
+                            </th>
+                            <td colspan="6">
+                                @Html.DisplayFor(model => model.Budget_TR)
+                                @Html.ValidationMessageFor(model => model.Budget_TR)
+
+                            </td>
+
+
+                        </tr>
+
+
+
+                        <tr>
+                            <td style=" border-right :none  " colspan="6">
+                                <h4>
+                                    Hotel Rooms
+                                </h4>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <th>
+                                @Html.Label("Number of Roms")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                               @Html.DisplayFor(model => model.Number_Roms)
+                                @Html.ValidationMessageFor(model => model.Number_Roms)
+                            </td>
+
+                            <th>
+                                @Html.Label("Check in Date")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.Check_inDate)
+                                @Html.ValidationMessageFor(model => model.Check_inDate)
+
+                            </td>
+
+                            <th>
+                                @Html.Label("Check Out Date")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.Check_OutDate)
+                                @Html.ValidationMessageFor(model => model.Check_OutDate)
+
+                            </td>
+                        </tr>
+                        <tr>
+
+
+
+
+                            <td style=" border-right :none" colspan="6"></td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+
+                            <th style=" border-right :none  ">
+                                @Html.Label(" Main Meeting Roome")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.MMR_Days)
+                                @Html.ValidationMessageFor(model => model.MMR_Days)
+
+                            </td>
+
+
+
+                            <th>
+                                @Html.Label("Breakout Area")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.BOR_Days)
+                                @Html.ValidationMessageFor(model => model.BOR_Days)
+
+                            </td>
+                            <th>
+                                @Html.Label("Rom Type")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.Rom_Type)
+                                @Html.ValidationMessageFor(model => model.Rom_Type)
+                            </td>
+                        </tr>
+
+                        <tr>
+
+
+
+
+                        <tr>
+                            <td style=" border-right :none  " colspan="6">
+                                <h4>
+                                    Services Required
+                                </h4>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <th>
+                                @Html.Label("Microphone")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.Microphone)
+                                @Html.ValidationMessageFor(model => model.Microphone)
+
+                            </td>
+                            <th>
+                                @Html.Label("Hi Speed Internet")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.HiSpeedInternet)
+                                @Html.ValidationMessageFor(model => model.HiSpeedInternet)
+
+                            </td>
+                            <th>
+                                @Html.Label("Confrance Call Device")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.Conf_Call_Device)
+                                @Html.ValidationMessageFor(model => model.Conf_Call_Device)
+                            </td>
+
+
+
+
+                        </tr>
+
+                        <tr>
+                            <td style=" border-right :none" colspan="6"></td>
+                        </tr>
+
+
+
+                        <tr>
+                            <th>
+                                @Html.Label("Stationary")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.Stationary)
+                                @Html.ValidationMessageFor(model => model.Microphone)
+
+                            </td>
+                            <th>
+                                @Html.Label("Name Tags")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.NameTags)
+                                @Html.ValidationMessageFor(model => model.HiSpeedInternet)
+
+                            </td>
+                            <th>
+                                @Html.Label("Writing Pads")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.Conf_Call_Device)
+                                @Html.ValidationMessageFor(model => model.Conf_Call_Device)
+                            </td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td style=" border-right :none" colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <th>
+                                @Html.Label("Others")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.ServicesReqOthers)
+                                @Html.ValidationMessageFor(model => model.Microphone)
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+                        <td style=" border-right :none  " colspan="6">
+                            <h4>
+                                Catering
+                            </h4>
+                        </td>
+
+                        </tr>
+
+                        <tr>
+                            <th>
+                                @Html.Label("COffe Break")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.COffeBreak)
+                                @Html.ValidationMessageFor(model => model.COffeBreak)
+                            </td>
+
+
+
+                            <th>
+                                @Html.Label("COffe Break Number")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.COffeBreak_UNM)
+                                @Html.ValidationMessageFor(model => model.COffeBreak_UNM)
+
+                            </td>
+                            <th>
+                                @Html.Label("Lunch")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.Lunch)
+                                @Html.ValidationMessageFor(model => model.Lunch)
+
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td style=" border-right :none" colspan="6"></td>
+
+
+                        </tr>
+
+
+                        <tr>
+                            <th>
+                                @Html.Label("Dinner")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.Dinner)
+                                @Html.ValidationMessageFor(model => model.Dinner)
+                            </td>
+
+
+                            <th>
+                                @Html.Label("Coctail Reception")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.Coctail_Reception)
+                                @Html.ValidationMessageFor(model => model.Coctail_Reception)
+
+                            </td>
+
+                            <th>
+                                @Html.Label("Coctail Reception")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.Coctail_Reception)
+                                @Html.ValidationMessageFor(model => model.Coctail_Reception)
+
+                            </td>
+
+                        </tr>
+
+                        <td style=" border-right :none  " colspan="6">
+                            <h4>
+                                Transportation
+                            </h4>
+                        </td>
+
+                        <tr>
+                            <th>
+                                @Html.Label("Transportation For Local Staff")<b style="color:Red;">*</b>
+                            </th>
+                            <td>
+                                @Html.DisplayFor(model => model.Transportstion_ForLocal_Staff)
+                                @Html.ValidationMessageFor(model => model.Transportstion_ForLocal_Staff)
+
+                            </td>
+                            <th>
+                                @Html.Label("Airport Picup Services")<b style="color:Red;">*</b>
+                            </th>
+                            <td colspan="4">
+                                @Html.DisplayFor(model => model.Airport_Picup_Services)
+                                @Html.ValidationMessageFor(model => model.Airport_Picup_Services)
+
+                            </td>
+
+
+
+                        </tr>
+
+
+                    </table>
+                  
+                    <br>
+
+              
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+                    @Html.ActionLink("Back to List", "Index")
+                </p>

@@ -1,0 +1,100 @@
+﻿@model WFPtest.Models.sub_office
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Sub Office</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.subofficeid)
+
+        <table class=" table">
+            <tr>
+                <th>
+                    @Html.Label("Code")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.sub_office_id)
+                    @Html.ValidationMessageFor(model => model.sub_office_id)
+                </td>
+
+
+
+                <th>
+                    @Html.Label("english description")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.office_description_english)
+                    @Html.ValidationMessageFor(model => model.office_description_english)
+                </td>
+
+                <th>
+                    @Html.Label("english abreviation")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.office_abreviation_english)
+                    @Html.ValidationMessageFor(model => model.office_abreviation_english)
+                </td>
+
+                <th>
+                    @Html.Label("french description")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.office_description_french)
+                    @Html.ValidationMessageFor(model => model.office_description_french)
+                </td>
+            </tr>
+            <tr>
+
+
+
+                <th>
+                    @Html.Label("french abreviation")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.office_abreviation_french)
+                    @Html.ValidationMessageFor(model => model.office_abreviation_french)
+                </td>
+
+                <th>
+                    @Html.Label("status")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.office_status)
+                    @Html.ValidationMessageFor(model => model.office_status)
+                </td>
+
+
+
+                <th>
+                    @Html.Label("Office")
+                </th>
+                <td>
+                    @Html.DropDownList("countryofficeid", String.Empty)
+                    @Html.ValidationMessageFor(model => model.countryofficeid)
+                </td>
+            </tr>
+        </table>
+
+        
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </td>
+                <td>
+                    @Html.ActionLink("Back to List", "Index")
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+

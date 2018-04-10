@@ -1,0 +1,65 @@
+﻿@model WFPtest.Models.governorate 
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>governorates</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <table class=" table">
+            <tr>
+                <th>
+                    @Html.Label("Name")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.governorates_name)
+                    @Html.ValidationMessageFor(model => model.governorates_name)
+                </td>
+                <th>
+                    @Html.Label("description")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.governorates_description)
+                    @Html.ValidationMessageFor(model => model.governorates_description)
+                </td>
+                <th>
+                    @Html.Label("Country")
+                </th>
+                <td>
+                    @Html.DropDownList("country_code", String.Empty)
+                    @Html.ValidationMessageFor(model => model.country_code)
+                </td>
+
+    </tr>
+        </table>
+    
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.staff_id, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.staff_id)
+                @Html.ValidationMessageFor(model => model.staff_id)
+            </div>
+        </div>*@
+<table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </td>
+                <td>
+                    @Html.ActionLink("Back to List", "Index")
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+
+

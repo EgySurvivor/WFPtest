@@ -1,0 +1,88 @@
+﻿@model WFPtest.Models.TB_EVENT_LOG
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>TB_EVENT_LOG</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.nEventLogIdn, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nEventLogIdn)
+                @Html.ValidationMessageFor(model => model.nEventLogIdn)
+            </div>
+        </div>
+
+        @Html.HiddenFor(model => model.nDateTime)
+
+        @Html.HiddenFor(model => model.nReaderIdn)
+
+        @Html.HiddenFor(model => model.nEventIdn)
+
+        @Html.HiddenFor(model => model.nUserID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nIsLog, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nIsLog)
+                @Html.ValidationMessageFor(model => model.nIsLog)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nTNAEvent, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nTNAEvent)
+                @Html.ValidationMessageFor(model => model.nTNAEvent)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nIsUseTA, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nIsUseTA)
+                @Html.ValidationMessageFor(model => model.nIsUseTA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nType, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nType)
+                @Html.ValidationMessageFor(model => model.nType)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.date, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.date)
+                @Html.ValidationMessageFor(model => model.date)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

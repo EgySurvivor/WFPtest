@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WFPtest.Models.TRAINING>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TRAINING_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRAINING_DESC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRAINING_PLACE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRAINING_PERIOD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRAINING1.TRAINING_NAME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRAINING_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRAINING_DESC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRAINING_PLACE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRAINING_PERIOD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRAINING1.TRAINING_NAME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TRAINING_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TRAINING_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TRAINING_ID })
+        </td>
+    </tr>
+}
+
+</table>

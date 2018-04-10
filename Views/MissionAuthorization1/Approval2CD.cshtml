@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Approval2CD";
+}
+
+<h2>CD Approval</h2>
+
+@model WFPtest.Models.MissionAuthorization1
+@using WFPtest.Models
+@using Microsoft.AspNet.Identity;
+
+@using (Html.BeginForm(new { @class = "form-create", role = "form-create" }))
+{
+
+    <div class=" form-create">
+        <table class=" table" width="50">
+            @Html.TextBoxFor(model => model.MissionID, new { @readonly = "readonly", @Value = ViewBag.MissionID, @class = "hidden" })
+            @Html.TextBoxFor(model => model.RDORDRDSignature, new { @readonly = "readonly", @Value = ViewBag.RDORDRDSignature, @class = "hidden" })
+            @Html.TextBoxFor(model => model.FromDate, new { @readonly = "readonly", @Value = ViewBag.FromDate, @class = "hidden" })
+            @Html.TextBoxFor(model => model.ToDate, new { @readonly = "readonly", @Value = ViewBag.ToDate, @class = "hidden" })
+            @Html.TextBoxFor(model => model.non10, new { @readonly = "readonly", @Value = ViewBag.to, @class = "hidden" })
+            @Html.TextBoxFor(model => model.staff, new { @readonly = "readonly", @Value = ViewBag.staffmail, @class = "hidden" })
+            @Html.TextBoxFor(model => model.SSAFE, new { @readonly = "readonly", @Value = ViewBag.supervisorname, @class = "hidden" })
+            @Html.TextBoxFor(model => model.canbedone, new { @readonly = "readonly", @Value = ViewBag.onbehalfID, @class = "hidden" })
+            @Html.TextBoxFor(model => model.non6, new { @readonly = "readonly", @Value = ViewBag.onbehalfHouID, @class = "hidden" })
+            @Html.TextBoxFor(model => model.nono9, new { @readonly = "readonly", @Value = ViewBag.onbehalfSuperID, @class = "hidden" })
+
+            
+            <tr>
+
+                <th width="50">
+                    @Html.Label("Comment")
+                </th>
+                <td width="50">
+                    @Html.TextAreaFor(model => model.non14 )
+                    @Html.ValidationMessageFor(model => model.non14)
+                </td>
+               
+            </tr>
+        </table>
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="submit" class="btn btn-default" />
+                </td>
+
+            </tr>
+        </table>
+
+    </div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/scripts/customcompare.js")
+    @Scripts.Render("~/jquery.unobtrusive-ajax.js")
+    @Scripts.Render("~/Scripts/jquery.unobtrusive*")
+    @Scripts.Render("~/Scripts/jquery.validate*")
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.min.js")
+
+
+}
+
+
+
+
+<h2>Approval2FinAdmin</h2>
+
+

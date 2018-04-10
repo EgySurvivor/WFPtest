@@ -1,0 +1,7 @@
+From: ahmed.badr@wfp.org
+To: a7med_hafez@hotmail.com
+Subject: Email test
+ 
+This is the test body of the email
+ 
+.

@@ -1,0 +1,218 @@
+﻿@model WFPtest.Models.MissionItinerary
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Show Validations in Bootstrap Model Popup </title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    @Html.AntiForgeryToken()
+    @if (ViewBag.Message != null)
+    {
+        <span class="text-success">@ViewBag.Message</span>
+    }
+    <span class="alert-danger">
+        @Html.ValidationSummary()
+    </span>
+
+    <script>
+        $(function () {
+            var parsley_valiation_options = {
+                //errorsWrapper: '',
+                errorTemplate: '<span class="error-msg"></span>',
+                errorClass: 'error',
+            }
+            //check if modal_div element exists on the page
+            if ($('#modal_div').length > 0) {
+
+                //Attach Parsley validation to the modal input elements
+                $('#modal_div input').parsley(parsley_valiation_options);
+
+                //On modal submit button click, validate all the input fields
+                $('#modal_div_submit_button').click(function (event) {
+                    event.preventDefault();
+
+                    var isValid = true;
+
+                    $('#modal_div input').each(function () {
+                        if ($(this).parsley().validate() !== true)
+                            isValid = false;
+                    })
+
+                    if (isValid) {
+                        alert("All fields are validated !");
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Button trigger modal -->
+    <span class="form-control-static pull-left">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Add Itinerary
+        </button>
+        </span>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Create Itinerary</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                       
+                        @using (Html.BeginForm("CreateItinerary", "MissionAuthorizations", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-horizontal">
+                                <h4>Mission Itinerary</h4>
+                                <hr />
+                                @Html.ValidationSummary(true)
+
+                                @Html.TextBoxFor(model => model.non3, new { @readonly = "readonly", @Value = ViewBag.non3, @class = "hidden" })
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.MissionID, "Mission", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.DropDownList("MissionID", String.Empty)
+                                        @Html.ValidationMessageFor(model => model.MissionID)
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Description, "Description", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.Editor("Description")
+                                        @Html.ValidationMessageFor(model => model.Description)
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.FromID, "From", htmlAttributes: new { @class = "control-label col-md-2", id = "FromID", name = "FromID" })
+                                    <div class="col-md-10">
+                                        @Html.DropDownList("FromID", String.Empty)
+                                        @if (!ViewData.ModelState.IsValid)
+                                        {
+                                            <span class="field-validation-error">
+                                                @ViewData.ModelState["FromID"].Errors[0].ErrorMessage
+                                            </span>
+                                        }
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.ToID, "To", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.DropDownList("ToID", String.Empty)
+                                        @Html.ValidationMessageFor(model => model.ToID)
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.FromDate, "From", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.Editor("FromDate") @Html.Editor("Fromtime")
+                                        @if (!ViewData.ModelState.IsValid)
+                                        {
+                                            <span class="field-validation-error">
+                                                @ViewData.ModelState["FromDate"].Errors[0].ErrorMessage
+                                            </span>
+                                        }
+                                    </div>
+                                </div>
+
+
+
+
+                                @*<div class="form-group">
+                                        @Html.LabelFor(model => model.ToID, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.ToID)
+                                            @Html.ValidationMessageFor(model => model.ToID)
+                                        </div>
+                                    </div>*@
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.ToDate, "To", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.Editor("ToDate")   @Html.Editor("Totime")
+                                        @Html.ValidationMessageFor(model => model.ToDate)
+                                    </div>
+                                </div>
+
+                                @*<div class="form-group">
+                                        @Html.LabelFor(model => model.non1, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.non1)
+                                            @Html.ValidationMessageFor(model => model.non1)
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.non2, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.non2)
+                                            @Html.ValidationMessageFor(model => model.non2)
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.non3, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.non3)
+                                            @Html.ValidationMessageFor(model => model.non3)
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.non4, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.non4)
+                                            @Html.ValidationMessageFor(model => model.non4)
+                                        </div>
+                                    </div>*@
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Create" class="btn btn-primary" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <script type="text/javascript">
+                            $.validator.unobtrusive.parse("#frmAddItem");
+                        </script>
+                        <div>
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+
+                    </div>
+                    @Scripts.Render("~/bundles/jqueryval")
+                    <div class="modal-footer">
+                        @*<a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                            <input type="reset" value="Submit" class="btn btn-success" id="btnSubmit" />*@
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>

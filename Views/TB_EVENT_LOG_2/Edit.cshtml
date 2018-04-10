@@ -1,0 +1,58 @@
+﻿@model WFPtest.Models.TB_EVENT_LOG_2
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>TB_EVENT_LOG_2</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.nEventLogIdn)
+
+        @Html.HiddenFor(model => model.nDateTime)
+
+        @Html.HiddenFor(model => model.nReaderIdn)
+
+        @Html.HiddenFor(model => model.nEventIdn)
+
+        @Html.HiddenFor(model => model.nUserID)
+
+        @Html.HiddenFor(model => model.nIsLog)
+
+        @Html.HiddenFor(model => model.nTNAEvent)
+
+        @Html.HiddenFor(model => model.nIsUseTA)
+
+        @Html.HiddenFor(model => model.nType)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.date, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.date)
+                @Html.ValidationMessageFor(model => model.date)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

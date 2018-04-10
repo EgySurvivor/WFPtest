@@ -1,0 +1,128 @@
+﻿@model WFPtest.Models.Country_office
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>office</h4>
+	<hr />
+    <table class=" table">
+        <tr>
+            
+        <th>
+            @Html.DisplayName("Code")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.office_id)
+        </td>
+
+        <th>
+            @Html.DisplayName("english description")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.office_description_english)
+        </td>
+
+        <th>
+            @Html.DisplayName("english abreviation")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.office_abreviation_english)
+        </td>
+
+        <th>
+            @Html.DisplayName("french description")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.office_description_french)
+        </td>
+
+       </tr>
+        <tr>
+
+        <th>
+            @Html.DisplayName("french abreviation")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.office_abreviation_french)
+        </td>
+
+        <th>
+            @Html.DisplayName("status")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.office_status)
+        </td>
+            <th>
+                @Html.DisplayName("country")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.country.country_name)
+            </td>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.office_created_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.office_created_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.office_created_datetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.office_created_datetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.office_last_modified_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.office_last_modified_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.office_last_modified_datetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.office_last_modified_datetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.office_deleted_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.office_deleted_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.office_deleted_datetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.office_deleted_datetime)
+        </dd>*@
+
+        
+            </tr>
+   </table>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.countryofficeid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

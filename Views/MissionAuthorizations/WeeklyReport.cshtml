@@ -1,0 +1,205 @@
+﻿@using Microsoft.AspNet.Identity
+@*@if (!Request.IsAuthenticated)
+    {
+        Response.Redirect("/RBC-SMS/account/login");
+    }*@
+
+@model PagedList.IPagedList<WFPtest.Models.MissionAuthorization>
+
+
+
+@*@model IEnumerable<WFPtest.Models.staff>*@
+@*@using IEnumerable<wfptest.models.staff>;*@
+@using WFPtest.Models
+
+
+@using PagedList.Mvc;
+@using JQueryUIHelpers;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+
+@*@section scripts {
+        <script language="javascript" type="text/javascript">
+
+            $(function () {
+                $('#tree1').tree({
+                    closedIcon: $('<i class="fa fa-plus"></i>'),
+                    openedIcon: $('<i class="fa fa-minus"></i>'),
+                    dragAndDrop: false,
+                    selectable: false
+                });
+
+                // bind 'tree.click' event
+                $('#tree1').bind(
+                    'tree.click',
+                    function (event) {
+                        // The clicked node is 'event.node'
+                        var node = event.node;
+                        console.log('clicked ' + node.name);
+                    }
+                );
+            });
+
+        </script>
+    }*@
+<br>
+
+<p>
+    <h2>Mission Authorization List</h2>
+</p>
+
+@*@using (Html.BeginForm())
+    {
+        <p>
+            Find by name: @Html.TextBox("SearchString")
+            <input type="submit" value="Search" />
+        </p>
+    }*@
+
+@using (Html.BeginForm("Index", "MissionAuthorizations", FormMethod.Get))
+{
+
+    <br>
+    <p>
+        Find by name Or E-mail Or Unit: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />&nbsp;&nbsp;@Html.ActionLink("Reset Filter", "Index")
+    </p>
+}
+
+
+@*<div id="tree1" data-url="/nodes/">
+        @Html.Display("nnode")
+    </div>*@
+
+@*@Html.Partial("Simple")*@
+@*@{Html.RenderPartial("Simple");}*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Staff Name")
+        </th>
+        <th>
+            @Html.DisplayName("Mission Creation Date")
+        </th>
+        <th>
+            @Html.DisplayName("From Date")
+        </th>
+        <th>
+            @Html.DisplayName("To Date")
+        </th>
+        <th>
+            @Html.DisplayName("Mission Itinerary")
+        </th>
+        <th>
+            @Html.DisplayName("Funding")
+        </th>
+        @*<th>
+                @Html.DisplayName("Cleared By Supervisor")
+            </th>*@
+        <th>
+            @Html.DisplayName("Mission Objective")
+        </th>
+        <th>
+            @Html.DisplayName("Expected Outputs")
+        </th>
+        @*<th>
+                @Html.DisplayName("Achievements")
+            </th>*@
+        <th>
+            @Html.DisplayName("Comment")
+        </th>
+        @*<th>
+                @Html.DisplayName("Mission Creation")
+            </th>*@
+
+        <th>
+            @Html.DisplayName("Head Of Unit Approve")
+        </th>
+        <th>
+            @Html.DisplayName("Date")
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+
+                @*@Html.Display("staffNName")*@
+                @*@Html.DisplayNameFor(model => model.staff.staffid)*@
+                @Html.DisplayFor(modelItem => item.staff.staff_first_name)
+                @Html.DisplayFor(modelItem => item.staff.staff_last_name)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SignatureDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FromDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MissionItinerary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.funding)
+            </td>
+
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.MissionObjective)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpectedOutputs)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Achievements)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.FollowUp)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.StaffSignature)
+                </td>*@
+
+            <td>
+                @Html.DisplayFor(modelItem => item.RDORDRDSignature)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RDORDRDDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MissionID, id2 = item.staff.staffid, drd = ViewBag.rdDrd, loginid = ViewBag.loginid, staffmail = item.staff.staff_email }) |
+
+                @Html.ActionLink("Delete", "Delete", new { id = item.MissionID, id2 = item.staff.staffid })
+            </td>
+        </tr>
+    }
+
+</table>
+<table border="0">
+    <tr>
+        <td>
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        </td>
+    </tr>
+</table>
+<br />
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

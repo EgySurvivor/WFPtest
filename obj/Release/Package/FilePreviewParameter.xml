@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Default Web Site/SMS" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Ahmed\.Badr\\Desktop\\WFPtest\\WFPtest\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Ahmed\.Badr\\Desktop\\WFPtest\\WFPtest\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Add write permission to App_Data Folder" description="Add write permission to App_Data folder" value="Default Web Site/SMS/App_Data" tags="Hidden">
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Ahmed\.Badr\\Desktop\\WFPtest\\WFPtest\\obj\\Release\\Package\\PackageTmp\\App_Data$" />
+  </parameter>
+  <parameter name="ADConnectionString-Web.config Connection String" description="" value="LDAP://WFPEGADCP03.GLOBAL.wfp.org:389" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ahmed\.Badr\\Desktop\\WFPtest\\WFPtest\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ADConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="BioStarConnectionString-Web.config Connection String" description="" value="Data Source=WFPEGHRP01-VM\BSSERVER;Initial Catalog=BioStar;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ahmed\.Badr\\Desktop\\WFPtest\\WFPtest\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BioStarConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="BioStarEntities-Web.config Connection String" description="" value="metadata=res://*/Attends.csdl|res://*/Attends.ssdl|res://*/Attends.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=WFPEGHRP01-VM\BSSERVER;initial catalog=BioStar;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ahmed\.Badr\\Desktop\\WFPtest\\WFPtest\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BioStarEntities']/@connectionString" />
+  </parameter>
+  <parameter name="BioStarEntitiesWFP-Web.config Connection String" description="" value="metadata=res://*/Models.BSserver.csdl|res://*/Models.BSserver.ssdl|res://*/Models.BSserver.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=EGYWINV00P-VM;Initial Catalog=WFPUpdate;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ahmed\.Badr\\Desktop\\WFPtest\\WFPtest\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BioStarEntitiesWFP']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=EGYWINV00P-VM;Initial Catalog=WFPUpdate;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ahmed\.Badr\\Desktop\\WFPtest\\WFPtest\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="WFPConnectionString-Web.config Connection String" description="" value="Data Source=EGYWINV00P-VM;Initial Catalog=WFPUpdate;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ahmed\.Badr\\Desktop\\WFPtest\\WFPtest\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WFPConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="WFPEntities-Web.config Connection String" description="" value="metadata=res://*/Models.WFPModel.csdl|res://*/Models.WFPModel.ssdl|res://*/Models.WFPModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=EGYWINV00P-VM;initial catalog=WFPUpdate;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ahmed\.Badr\\Desktop\\WFPtest\\WFPtest\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WFPEntities']/@connectionString" />
+  </parameter>
+  <parameter name="WFPEntities1-Web.config Connection String" description="" value="metadata=res://*/Models.wfpmodel.csdl|res://*/Models.wfpmodel.ssdl|res://*/Models.wfpmodel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=EGYWINV00P-VM;initial catalog=WFPUpdate;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ahmed\.Badr\\Desktop\\WFPtest\\WFPtest\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WFPEntities1']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,91 @@
+﻿@model WFPtest.Models.CourseSession
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CourseSession</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseStartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseStartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseEndTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseEndTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseEndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseEndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SessionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SessionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoursePrerequisite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoursePrerequisite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cours.CourseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cours.CourseName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Sessionid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

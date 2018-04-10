@@ -1,0 +1,494 @@
+﻿SchoolID	SchoolName	non1	non2	non3	GovID	TownID	VillageID
+815	أباظه القبلية                                                                                       	NULL	NULL	NULL	29	3761	71
+816	أبوزيد خليفة                                                                                        	NULL	NULL	NULL	29	3761	72
+817	أبوعرب                                                                                              	NULL	NULL	NULL	29	3761	73
+818	التحويلة                                                                                            	NULL	NULL	NULL	29	3760	74
+819	الجزيرة                                                                                             	NULL	NULL	NULL	29	3761	75
+820	الجلاد                                                                                              	NULL	NULL	NULL	29	3761	76
+821	الحمرا الهلباوى                                                                                     	NULL	NULL	NULL	29	3761	77
+822	الحمراء الكبرى                                                                                      	NULL	NULL	NULL	29	3761	78
+823	الستين                                                                                              	NULL	NULL	NULL	29	3761	79
+824	العكريشه                                                                                            	NULL	NULL	NULL	29	3761	80
+825	العمده الجديدة                                                                                      	NULL	NULL	NULL	29	3761	81
+826	الغندور                                                                                             	NULL	NULL	NULL	29	3761	82
+827	القادوسى                                                                                            	NULL	NULL	NULL	29	3761	83
+828	اللوقين                                                                                             	NULL	NULL	NULL	29	3761	84
+829	المعديه                                                                                             	NULL	NULL	NULL	29	3760	85
+830	الهامي زكريا                                                                                        	NULL	NULL	NULL	29	3761	86
+831	باباه الصغرى                                                                                        	NULL	NULL	NULL	29	3761	87
+832	جمعه حميده                                                                                          	NULL	NULL	NULL	29	3761	88
+833	حمد                                                                                                 	NULL	NULL	NULL	29	3761	89
+834	حميده حسن                                                                                           	NULL	NULL	NULL	29	3761	90
+835	سامون                                                                                               	NULL	NULL	NULL	29	3761	91
+836	شرق البوغاز                                                                                         	NULL	NULL	NULL	29	3760	92
+837	صيدناوى 8                                                                                           	NULL	NULL	NULL	29	3761	93
+838	طعمه                                                                                                	NULL	NULL	NULL	29	3761	94
+839	عاداه الشرقيه                                                                                       	NULL	NULL	NULL	29	3761	95
+840	عزبة خليفه                                                                                          	NULL	NULL	NULL	29	3761	96
+841	عزبة عامر                                                                                           	NULL	NULL	NULL	29	3761	97
+842	عمرو بن العاص                                                                                       	NULL	NULL	NULL	29	3760	98
+843	فريده                                                                                               	NULL	NULL	NULL	29	3761	99
+844	قبوة الشامى                                                                                         	NULL	NULL	NULL	29	3761	100
+845	قرية  6                                                                                             	NULL	NULL	NULL	29	3760	101
+846	قرية 1                                                                                              	NULL	NULL	NULL	29	3760	102
+847	قرية 7                                                                                              	NULL	NULL	NULL	29	3760	103
+848	قرية 8                                                                                              	NULL	NULL	NULL	29	3760	104
+849	قرية السلام                                                                                         	NULL	NULL	NULL	29	3760	105
+850	كدوة الرويعه                                                                                        	NULL	NULL	NULL	29	3761	106
+851	كوم طالوس 1                                                                                         	NULL	NULL	NULL	29	3760	107
+852	كوم طالوس 2                                                                                         	NULL	NULL	NULL	29	3760	108
+853	منشأة يونس                                                                                          	NULL	NULL	NULL	29	3761	109
+854	منشية الأمل                                                                                         	NULL	NULL	NULL	29	3760	110
+855	مياح                                                                                                	NULL	NULL	NULL	29	3760	111
+856	 البرج فصل واحد                                                                                     	NULL	NULL	NULL	30	3763	436
+857	ابو رصاص فصل واحد                                                                                   	NULL	NULL	NULL	30	3762	437
+858	ابو سيف راضى / فصل واحد                                                                             	NULL	NULL	NULL	30	3763	438
+859	ابو صالح صديقة الفتيات                                                                              	NULL	NULL	NULL	30	3763	439
+860	ابو صالح فصل واحد                                                                                   	NULL	NULL	NULL	30	3763	440
+861	ابو صير المشتركة 1                                                                                  	NULL	NULL	NULL	30	3762	441
+862	ابو صير المشتركة 2 ف 1                                                                              	NULL	NULL	NULL	30	3762	442
+863	ابو صير الملق المستقلة                                                                              	NULL	NULL	NULL	30	3762	443
+864	احمد لطفى الصديقة للفتيات                                                                           	NULL	NULL	NULL	30	3763	444
+865	ادريجة ف 1                                                                                          	NULL	NULL	NULL	30	3762	445
+866	اطفال في ظروف صعبة                                                                                  	NULL	NULL	NULL	30	3763	446
+867	اطواب 2 اساسي                                                                                       	NULL	NULL	NULL	30	3762	447
+868	اطواب الاعدادية المشتركة                                                                            	NULL	NULL	NULL	30	3762	448
+869	أطواب المجمعة 2                                                                                     	NULL	NULL	NULL	30	3762	449
+870	اطواب المجمعه 1                                                                                     	NULL	NULL	NULL	30	3762	450
+871	اطواب المشتركة                                                                                      	NULL	NULL	NULL	30	3762	451
+872	اطواب تعليم اساسى 1                                                                                 	NULL	NULL	NULL	30	3762	452
+873	اطواب سكة حديد فتيات                                                                                	NULL	NULL	NULL	30	3762	453
+874	اطواب فصل واحد                                                                                      	NULL	NULL	NULL	30	3762	454
+875	افوه (ص)                                                                                            	NULL	NULL	NULL	30	3762	455
+876	افوه الجديده                                                                                        	NULL	NULL	NULL	30	3762	456
+877	افوه ع.م (فصل واحد )                                                                                	NULL	NULL	NULL	30	3762	457
+878	الاصلاح بقمن العروس                                                                                 	NULL	NULL	NULL	30	3762	458
+879	البطل يوسف صديق الاعدادية المشتركة بنات                                                             	NULL	NULL	NULL	30	3762	459
+880	الثورة ف1                                                                                           	NULL	NULL	NULL	30	3762	460
+881	الجرو صديقة الفتيات                                                                                 	NULL	NULL	NULL	30	3763	461
+882	الجرو فصل واحد                                                                                      	NULL	NULL	NULL	30	3763	462
+883	الجلاء الابتدائيه المشتركه                                                                          	NULL	NULL	NULL	30	3762	463
+884	الجمعيه الخيريه                                                                                     	NULL	NULL	NULL	30	3762	464
+885	الجمعيه الشرعيه                                                                                     	NULL	NULL	NULL	30	3762	465
+886	الحبايشة فصل واحد                                                                                   	NULL	NULL	NULL	30	3762	466
+887	الحمام ف1                                                                                           	NULL	NULL	NULL	30	3763	467
+888	الحومه الاعداديه                                                                                    	NULL	NULL	NULL	30	3762	468
+889	الديابيه فصل واحد                                                                                   	NULL	NULL	NULL	30	3762	469
+890	الزاوية بنين                                                                                        	NULL	NULL	NULL	30	3762	470
+891	الزيتون المشتركة                                                                                    	NULL	NULL	NULL	30	3763	471
+892	السنترال القديم                                                                                     	NULL	NULL	NULL	30	3762	472
+893	السنط                                                                                               	NULL	NULL	NULL	30	3763	473
+894	السوسي ف 1                                                                                          	NULL	NULL	NULL	30	3762	474
+895	الشلاده (2)                                                                                         	NULL	NULL	NULL	30	3762	475
+896	الشلاده1 ميدوم                                                                                      	NULL	NULL	NULL	30	3762	476
+897	الشناوية المشتركة 2                                                                                 	NULL	NULL	NULL	30	3763	477
+898	الشهيد عبد الرحمن البنا(ف1)                                                                         	NULL	NULL	NULL	30	3762	478
+899	الشهيد على عبد الحليم بنى زايد 1                                                                    	NULL	NULL	NULL	30	3763	479
+900	الشهيد هشام الجمل                                                                                   	NULL	NULL	NULL	30	3762	480
+901	الصديقه للفتيات بكوم ابو راضي                                                                       	NULL	NULL	NULL	30	3762	481
+902	العبور 1                                                                                            	NULL	NULL	NULL	30	3762	482
+903	العكريش ف1                                                                                          	NULL	NULL	NULL	30	3763	483
+904	الفاروق عمر                                                                                         	NULL	NULL	NULL	30	3762	484
+905	الفرقد الصديقة للفتيات                                                                              	NULL	NULL	NULL	30	3763	485
+906	الفصل الواحد 2 بني محمد                                                                             	NULL	NULL	NULL	30	3762	486
+907	الفصل الواحد بعزبه حميده ابو الحسن                                                                  	NULL	NULL	NULL	30	3762	487
+908	الفصل الواحد كوم ادريجة فصل واحد                                                                    	NULL	NULL	NULL	30	3762	488
+909	الكفر الغربى (فصل واحد)                                                                             	NULL	NULL	NULL	30	3763	489
+910	اللافى صديقة الفتيات                                                                                	NULL	NULL	NULL	30	3763	490
+911	المجمع الطبى صديقة الفتيات                                                                          	NULL	NULL	NULL	30	3763	491
+912	المنصورة الفصل الواحد                                                                               	NULL	NULL	NULL	30	3763	492
+913	المنصورة صديقة الفتيات                                                                              	NULL	NULL	NULL	30	3763	493
+914	الميمون                                                                                             	NULL	NULL	NULL	30	3762	494
+915	الميمون الاعدادية المشتركة                                                                          	NULL	NULL	NULL	30	3762	495
+916	الميمون الغربية                                                                                     	NULL	NULL	NULL	30	3762	496
+917	الميمون بنين فصل واحد                                                                               	NULL	NULL	NULL	30	3762	497
+918	الميمون ف 1                                                                                         	NULL	NULL	NULL	30	3762	498
+919	النويشي الإعدادية ف 1                                                                               	NULL	NULL	NULL	30	3762	499
+920	الهرم1                                                                                              	NULL	NULL	NULL	30	3762	500
+921	الوحدة الصحية بصفط الشرقية                                                                          	NULL	NULL	NULL	30	3762	501
+922	الوحدة الصحية بقمن                                                                                  	NULL	NULL	NULL	30	3762	502
+923	الوحدة الصحية بكوم ادريجة ص                                                                         	NULL	NULL	NULL	30	3762	503
+924	الوحده المجمعه باطواب                                                                               	NULL	NULL	NULL	30	3762	504
+925	الوحده المحليه بابو صير                                                                             	NULL	NULL	NULL	30	3762	505
+926	اليعقوبي                                                                                            	NULL	NULL	NULL	30	3762	506
+927	انفسط 1                                                                                             	NULL	NULL	NULL	30	3762	507
+928	انفسط 2(التحرير)                                                                                    	NULL	NULL	NULL	30	3762	508
+929	انفسط صديقه الفتيات                                                                                 	NULL	NULL	NULL	30	3762	509
+930	بريك                                                                                                	NULL	NULL	NULL	30	3762	510
+931	بريك ص                                                                                              	NULL	NULL	NULL	30	3762	511
+932	بنى حدير 1 فصل واحد                                                                                 	NULL	NULL	NULL	30	3762	512
+933	بنى حدير 2 فصل واحد                                                                                 	NULL	NULL	NULL	30	3762	513
+934	بنى حدير الصديقة                                                                                    	NULL	NULL	NULL	30	3762	514
+935	بنى خليفة                                                                                           	NULL	NULL	NULL	30	3763	515
+936	بنى زايد 2                                                                                          	NULL	NULL	NULL	30	3763	516
+937	بنى عدى المشتركة ف1                                                                                 	NULL	NULL	NULL	30	3763	517
+938	بنى محمد رقم 1                                                                                      	NULL	NULL	NULL	30	3762	518
+939	بني حدير 2 فصل واحد                                                                                 	NULL	NULL	NULL	30	3762	519
+940	بني سليمان البحرية 1 ف 1                                                                            	NULL	NULL	NULL	30	3762	520
+941	بني سليمان البحرية 2 ف 1                                                                            	NULL	NULL	NULL	30	3762	521
+942	بني غنيم الاعدادية المشتركة                                                                         	NULL	NULL	NULL	30	3762	522
+943	بني غنيم الجديده الابتدائيه المشتركه                                                                	NULL	NULL	NULL	30	3762	523
+944	بني غنيم القديمه                                                                                    	NULL	NULL	NULL	30	3762	524
+945	بهبشين 1 فصل واحد                                                                                   	NULL	NULL	NULL	30	3763	525
+946	بهبشين 2 فصل واحد                                                                                   	NULL	NULL	NULL	30	3763	526
+947	جامع مبارك                                                                                          	NULL	NULL	NULL	30	3762	527
+948	جزيرة ابو حبشى                                                                                      	NULL	NULL	NULL	30	3763	528
+949	جزيرة المساعدة ف 1                                                                                  	NULL	NULL	NULL	30	3762	529
+950	جمعية تحفيظ القرأن ص                                                                                	NULL	NULL	NULL	30	3762	530
+951	جمعية تنمية المجتمع المحلى بجزيرة المساعدة                                                          	NULL	NULL	NULL	30	3762	531
+952	جمعية تنمية المجتمع بقمن                                                                            	NULL	NULL	NULL	30	3762	532
+953	حامد عبد الباقى                                                                                     	NULL	NULL	NULL	30	3763	533
+954	حسين نامق فصل واحد                                                                                  	NULL	NULL	NULL	30	3763	534
+955	دار شروق بدنديل                                                                                     	NULL	NULL	NULL	30	3763	535
+956	دنديل 1 الفصل الواحد                                                                                	NULL	NULL	NULL	30	3763	536
+957	دويدار ف 1                                                                                          	NULL	NULL	NULL	30	3762	537
+958	ذات النطاقين                                                                                        	NULL	NULL	NULL	30	3762	538
+959	زاويه المصلوب                                                                                       	NULL	NULL	NULL	30	3762	539
+960	سليمان بياض الفصل الواحد                                                                            	NULL	NULL	NULL	30	3763	540
+961	سليمان وهبي الابتدائية                                                                              	NULL	NULL	NULL	30	3762	541
+962	سيد عبد القادر ف1                                                                                   	NULL	NULL	NULL	30	3763	542
+963	شهداء الثورة ف1                                                                                     	NULL	NULL	NULL	30	3763	543
+964	شهداء مطيريد 1 ص                                                                                    	NULL	NULL	NULL	30	3763	544
+965	شهداء مطيريد 2                                                                                      	NULL	NULL	NULL	30	3763	545
+966	صديقة الفتيات ببنى خليفة                                                                            	NULL	NULL	NULL	30	3763	546
+967	صديقة الفتيات عزبة حميدة ابو الحسن                                                                  	NULL	NULL	NULL	30	3762	547
+968	صديقة فتيات بمركز شباب كوم ابو خلاد                                                                 	NULL	NULL	NULL	30	3763	548
+969	صفط الشرقية                                                                                         	NULL	NULL	NULL	30	3762	549
+970	صفط الغربية                                                                                         	NULL	NULL	NULL	30	3762	550
+971	طحا بوش (الفصل الواحد)                                                                              	NULL	NULL	NULL	30	3763	551
+972	طنسا الملق                                                                                          	NULL	NULL	NULL	30	3763	552
+973	عبد الباقى حسين                                                                                     	NULL	NULL	NULL	30	3763	553
+974	عبد الحليم راضي (ص)                                                                                 	NULL	NULL	NULL	30	3762	554
+975	عبد الحليم منتصر الابتداية                                                                          	NULL	NULL	NULL	30	3763	555
+976	عبد اللة طة                                                                                         	NULL	NULL	NULL	30	3763	556
+977	عبد الله زين العابدين                                                                               	NULL	NULL	NULL	30	3763	557
+978	عزبة أبو النور                                                                                      	NULL	NULL	NULL	30	3762	558
+979	عزبة ابو جبر                                                                                        	NULL	NULL	NULL	30	3762	559
+980	عزبة الاسكندرانى                                                                                    	NULL	NULL	NULL	30	3762	560
+981	عزبة الشركة فصل واحد                                                                                	NULL	NULL	NULL	30	3763	561
+982	عزبة سكران                                                                                          	NULL	NULL	NULL	30	3762	562
+983	عزبه ابو شرف                                                                                        	NULL	NULL	NULL	30	3762	563
+984	عزبه ابو طالب                                                                                       	NULL	NULL	NULL	30	3762	564
+985	عزبه الاصلاح                                                                                        	NULL	NULL	NULL	30	3762	565
+986	عزبه بهنس فصل واحد                                                                                  	NULL	NULL	NULL	30	3762	566
+987	عزبه خطاب                                                                                           	NULL	NULL	NULL	30	3762	567
+988	عزبه سليم                                                                                           	NULL	NULL	NULL	30	3762	568
+989	عزبه مطيريد                                                                                         	NULL	NULL	NULL	30	3763	569
+990	عزت لملوم صديقة الفتيات                                                                             	NULL	NULL	NULL	30	3763	570
+991	عطف افوة                                                                                            	NULL	NULL	NULL	30	3762	571
+992	عطف افوه (ص)                                                                                        	NULL	NULL	NULL	30	3762	572
+993	على حسيب                                                                                            	NULL	NULL	NULL	30	3763	573
+994	على حمودة صديقة الفتيات                                                                             	NULL	NULL	NULL	30	3763	574
+995	على حمودة فصل واحد                                                                                  	NULL	NULL	NULL	30	3763	575
+996	على سعيد 2 فصل واحد                                                                                 	NULL	NULL	NULL	30	3763	576
+997	على عامر                                                                                            	NULL	NULL	NULL	30	3763	577
+998	علي رمضان صديقة                                                                                     	NULL	NULL	NULL	30	3762	578
+999	علي سعيد 1 ف1                                                                                       	NULL	NULL	NULL	30	3763	579
+1000	فاطمة الزهراء زاوية المصلوب                                                                         	NULL	NULL	NULL	30	3762	580
+1001	قمن العروس الاعداديه بنات                                                                           	NULL	NULL	NULL	30	3762	581
+1002	قمن العروس الجديدة                                                                                  	NULL	NULL	NULL	30	3762	582
+1003	كامل الديب                                                                                          	NULL	NULL	NULL	30	3762	583
+1004	كامل محجوب                                                                                          	NULL	NULL	NULL	30	3762	584
+1005	كفر 2ابجيج                                                                                          	NULL	NULL	NULL	30	3762	585
+1006	كفر ابجيج 1 بالجمعيه الزراعيه                                                                       	NULL	NULL	NULL	30	3762	586
+1007	كفر ابجيج الاعداديه                                                                                 	NULL	NULL	NULL	30	3762	587
+1008	كفر بنى عتمان                                                                                       	NULL	NULL	NULL	30	3762	588
+1009	كفر بني عثمان (ص)                                                                                   	NULL	NULL	NULL	30	3762	589
+1010	كوم ابو خلاد ف1                                                                                     	NULL	NULL	NULL	30	3763	590
+1011	مجمع طبي علي رمضان                                                                                  	NULL	NULL	NULL	30	3762	591
+1012	محمد ابراهيم ف1 الابتدائية 2                                                                        	NULL	NULL	NULL	30	3763	592
+1013	محمد جعفر الفصل الواحد                                                                              	NULL	NULL	NULL	30	3763	593
+1014	محمد دويدار                                                                                         	NULL	NULL	NULL	30	3762	594
+1015	محمد عبد الرحمن                                                                                     	NULL	NULL	NULL	30	3763	595
+1016	محمد عثمان 1 جلال                                                                                   	NULL	NULL	NULL	30	3762	596
+1017	محمد موسى                                                                                           	NULL	NULL	NULL	30	3763	597
+1018	محمود حمد ف1                                                                                        	NULL	NULL	NULL	30	3763	598
+1019	مدرسة الادهم فصل واحد                                                                               	NULL	NULL	NULL	30	3762	599
+1020	مدرسة الحرجة تعليم مجتمعى فصل واحد                                                                  	NULL	NULL	NULL	30	3763	600
+1021	مدرسة الفصل الواحد بخالد بن الوليد بئر جمعة                                                         	NULL	NULL	NULL	30	3762	601
+1022	مدرسة الهرم 2                                                                                       	NULL	NULL	NULL	30	3762	602
+1023	مركز شاباب افوه                                                                                     	NULL	NULL	NULL	30	3762	603
+1024	مركز شباب اطواب                                                                                     	NULL	NULL	NULL	30	3762	604
+1025	مركز شباب الميمون                                                                                   	NULL	NULL	NULL	30	3762	605
+1026	مركز شباب الواسطي                                                                                   	NULL	NULL	NULL	30	3762	606
+1027	مركز شباب جزيرة المساعده الصديقه للفتيات                                                            	NULL	NULL	NULL	30	3762	607
+1028	مركز شباب عطف افوة الصديقة                                                                          	NULL	NULL	NULL	30	3762	608
+1029	مركز شباب ونا القس (ص)                                                                              	NULL	NULL	NULL	30	3762	609
+1030	مركز طبي الميمون                                                                                    	NULL	NULL	NULL	30	3762	610
+1031	مسجد ابو رمان ص                                                                                     	NULL	NULL	NULL	30	3762	611
+1032	مسجد التوحيد بالحومة                                                                                	NULL	NULL	NULL	30	3762	612
+1033	مسجد الرحمن بالحومة                                                                                 	NULL	NULL	NULL	30	3762	613
+1034	مسجد الفتح باطواب                                                                                   	NULL	NULL	NULL	30	3762	614
+1035	مسجد الهدي بني حدير ص                                                                               	NULL	NULL	NULL	30	3762	615
+1036	مصطفى فراج (صديقة الفتيات)                                                                          	NULL	NULL	NULL	30	3763	616
+1037	معصرة أبو صير ف 1                                                                                   	NULL	NULL	NULL	30	3762	617
+1038	منشأة هديب صديقة الفتيات                                                                            	NULL	NULL	NULL	30	3763	618
+1039	منشاة هديب فصل واحد                                                                                 	NULL	NULL	NULL	30	3763	619
+1040	ميهوب الديب ع فصل واحد                                                                              	NULL	NULL	NULL	30	3762	620
+1041	ناصر                                                                                                	NULL	NULL	NULL	30	3763	621
+1042	نجع الديب فصل واحد                                                                                  	NULL	NULL	NULL	30	3763	622
+1043	نزلة الجنيدى فصل واحد                                                                               	NULL	NULL	NULL	30	3762	623
+1044	هشام الحميلى                                                                                        	NULL	NULL	NULL	30	3763	624
+1045	ونا القس تعليم مجتمعي (مبادرة)                                                                      	NULL	NULL	NULL	30	3762	625
+1046	ونا القس صديقة الفتيات                                                                              	NULL	NULL	NULL	30	3762	626
+1047	اباظه قبلي مصر الخير                                                                                	NULL	NULL	NULL	31	3764	628
+1048	ابو الريش/ص                                                                                         	NULL	NULL	NULL	32	3765	629
+1049	ابو جريد 1/ص                                                                                        	NULL	NULL	NULL	32	3765	630
+1050	ابو جريد 2/ص                                                                                        	NULL	NULL	NULL	32	3765	631
+1051	ابو جريد 3 / مصر الخير                                                                              	NULL	NULL	NULL	32	3765	632
+1052	ابو سيدهم/ص                                                                                         	NULL	NULL	NULL	32	3766	633
+1053	ابو شبوه/ص                                                                                          	NULL	NULL	NULL	32	3766	634
+1054	ابو عايد/ف                                                                                          	NULL	NULL	NULL	32	3766	635
+1055	ابو يادم/ص                                                                                          	NULL	NULL	NULL	32	3766	636
+1056	ابوان/ف                                                                                             	NULL	NULL	NULL	32	3767	637
+1057	ابوسويلم/ص                                                                                          	NULL	NULL	NULL	32	3765	638
+1058	ابوفليو/ص                                                                                           	NULL	NULL	NULL	32	3765	639
+1059	احمد حسن مطلق / مصر الخير                                                                           	NULL	NULL	NULL	32	3765	640
+1060	احمد علي السيد/ص                                                                                    	NULL	NULL	NULL	32	3766	641
+1061	ادمو/ص                                                                                              	NULL	NULL	NULL	32	3765	642
+1062	اسطال /ص م خ                                                                                        	NULL	NULL	NULL	32	3766	643
+1063	اسطال/ص                                                                                             	NULL	NULL	NULL	32	3766	644
+1064	اطسا المحطة /ص                                                                                      	NULL	NULL	NULL	32	3766	645
+1065	اطسا/ص                                                                                              	NULL	NULL	NULL	32	3766	646
+1066	الابعديه/ف                                                                                          	NULL	NULL	NULL	32	3765	647
+1067	الاعتزاز3 خريجين/ف                                                                                  	NULL	NULL	NULL	32	3766	648
+1068	الاعتزاز3/ف                                                                                         	NULL	NULL	NULL	32	3766	649
+1069	البرنسات/ف                                                                                          	NULL	NULL	NULL	32	3767	650
+1070	التوفيقية/ص                                                                                         	NULL	NULL	NULL	32	3766	651
+1071	الجزائر/ص                                                                                           	NULL	NULL	NULL	32	3766	652
+1072	الحاج سيد/ف                                                                                         	NULL	NULL	NULL	32	3767	653
+1073	الحكيم 1/ص                                                                                          	NULL	NULL	NULL	32	3765	654
+1074	الحكيم 2/ص                                                                                          	NULL	NULL	NULL	32	3765	655
+1075	الحكيم 3/ص                                                                                          	NULL	NULL	NULL	32	3765	656
+1076	الحكيم 4 /ص                                                                                         	NULL	NULL	NULL	32	3765	657
+1077	الرخاء5/ف                                                                                           	NULL	NULL	NULL	32	3766	658
+1078	الروضة/ص/ مطاي                                                                                      	NULL	NULL	NULL	32	3767	659
+1079	الروضة/ف/ مطاي                                                                                      	NULL	NULL	NULL	32	3767	660
+1080	الزكابية/ف                                                                                          	NULL	NULL	NULL	32	3766	661
+1081	السريرية/ص                                                                                          	NULL	NULL	NULL	32	3766	662
+1082	السوايطة/ف                                                                                          	NULL	NULL	NULL	32	3767	663
+1083	السوبي/ص                                                                                            	NULL	NULL	NULL	32	3766	664
+1084	السوداني/ف                                                                                          	NULL	NULL	NULL	32	3767	665
+1085	الشرفا/ص                                                                                            	NULL	NULL	NULL	32	3765	666
+1086	الشيخ حسن/ص/مطاي                                                                                    	NULL	NULL	NULL	32	3767	667
+1087	الشيخ عبد اللاه/ص                                                                                   	NULL	NULL	NULL	32	3766	668
+1088	الصليبة/ص                                                                                           	NULL	NULL	NULL	32	3766	669
+1089	العزيمة 4 /ف/سمالوط                                                                                 	NULL	NULL	NULL	32	3766	670
+1090	العزيمة 4خريجين/ف/سمالوط                                                                            	NULL	NULL	NULL	32	3766	671
+1091	العكروت/ص                                                                                           	NULL	NULL	NULL	32	3766	672
+1092	العور/ص                                                                                             	NULL	NULL	NULL	32	3766	673
+1093	الفدا 1/ف                                                                                           	NULL	NULL	NULL	32	3767	674
+1094	الفدا خريجين/ف                                                                                      	NULL	NULL	NULL	32	3767	675
+1095	الفرجاني 2/مصر الخير                                                                                	NULL	NULL	NULL	32	3766	676
+1096	الفرجاني/مصر الخير                                                                                  	NULL	NULL	NULL	32	3766	677
+1097	الفرنساوي/ف                                                                                         	NULL	NULL	NULL	32	3766	678
+1098	القبة/ف                                                                                             	NULL	NULL	NULL	32	3767	679
+1099	القرايشة /ص  مصر الخير                                                                              	NULL	NULL	NULL	32	3765	680
+1100	القشاش/ص مصر الخير                                                                                  	NULL	NULL	NULL	32	3765	681
+1101	القمادير/ص                                                                                          	NULL	NULL	NULL	32	3766	682
+1102	المختار/ص                                                                                           	NULL	NULL	NULL	32	3766	683
+1103	المطاهرة البحرية / ص مصر الخير                                                                      	NULL	NULL	NULL	32	3765	684
+1104	المطاهره البحريه/ف                                                                                  	NULL	NULL	NULL	32	3765	685
+1105	المناجم/ف                                                                                           	NULL	NULL	NULL	32	3766	686
+1106	النيل/ف                                                                                             	NULL	NULL	NULL	32	3767	687
+1107	الهماملة/ص                                                                                          	NULL	NULL	NULL	32	3767	688
+1108	الوفاء 2 خريجين/ف                                                                                   	NULL	NULL	NULL	32	3766	689
+1109	الوفاء 2/ف                                                                                          	NULL	NULL	NULL	32	3766	690
+1110	اولاد الشيخ علي/ص                                                                                   	NULL	NULL	NULL	32	3767	691
+1111	بردنوها/ف                                                                                           	NULL	NULL	NULL	32	3767	692
+1112	بنى احمد الغربيه/ص                                                                                  	NULL	NULL	NULL	32	3765	693
+1113	بني خالد/ص                                                                                          	NULL	NULL	NULL	32	3766	694
+1114	بني خالد1/ف                                                                                         	NULL	NULL	NULL	32	3766	695
+1115	بني خالد2/ف                                                                                         	NULL	NULL	NULL	32	3766	696
+1116	بني غني/ص                                                                                           	NULL	NULL	NULL	32	3766	697
+1117	بني غني/ف                                                                                           	NULL	NULL	NULL	32	3766	698
+1118	تله/ص                                                                                               	NULL	NULL	NULL	32	3765	699
+1119	جبل الطير البحرية/ص                                                                                 	NULL	NULL	NULL	32	3766	700
+1120	جبل الطير قبلي/ص                                                                                    	NULL	NULL	NULL	32	3766	701
+1121	جزيره بنى احمد /ف                                                                                   	NULL	NULL	NULL	32	3765	702
+1122	حامد جودة/ف                                                                                         	NULL	NULL	NULL	32	3766	703
+1123	حامد محمد طنطاوى(ادم الحسينى)/ف                                                                     	NULL	NULL	NULL	32	3765	704
+1124	حلوة/ص                                                                                              	NULL	NULL	NULL	32	3767	705
+1125	حمد ابو زيد/ص                                                                                       	NULL	NULL	NULL	32	3766	706
+1126	خالد ادم/ف                                                                                          	NULL	NULL	NULL	32	3767	707
+1127	داقوف1/ص                                                                                            	NULL	NULL	NULL	32	3766	708
+1128	داقوف2/ص                                                                                            	NULL	NULL	NULL	32	3766	709
+1129	دفش/ مصر الخير                                                                                      	NULL	NULL	NULL	32	3766	710
+1130	دير جبل الطير/ص                                                                                     	NULL	NULL	NULL	32	3766	711
+1131	دير جبل الطير/ف                                                                                     	NULL	NULL	NULL	32	3766	712
+1132	ريده1/ص                                                                                             	NULL	NULL	NULL	32	3765	713
+1133	ريده2/ص                                                                                             	NULL	NULL	NULL	32	3765	714
+1134	ريده3/ص                                                                                             	NULL	NULL	NULL	32	3765	715
+1135	زاوية سلطان / ص مصر الخير                                                                           	NULL	NULL	NULL	32	3765	716
+1136	زاويه سلطان/ف                                                                                       	NULL	NULL	NULL	32	3765	717
+1137	ساقية داقوف/ص                                                                                       	NULL	NULL	NULL	32	3766	718
+1138	سيدي بشر/ص                                                                                          	NULL	NULL	NULL	32	3765	719
+1139	سيلة الغربية/ص                                                                                      	NULL	NULL	NULL	32	3767	720
+1140	صالح سليم/ف                                                                                         	NULL	NULL	NULL	32	3767	721
+1141	صفط الشرقيه/ف                                                                                       	NULL	NULL	NULL	32	3765	722
+1142	طهنا الجبل/ف                                                                                        	NULL	NULL	NULL	32	3765	723
+1143	طهنشا/ص                                                                                             	NULL	NULL	NULL	32	3765	724
+1144	طوخ الخيل /ص  مصر الخير                                                                             	NULL	NULL	NULL	32	3765	725
+1145	ظهر التمساح/ف                                                                                       	NULL	NULL	NULL	32	3765	726
+1146	عبد الرازق غيطان/ص                                                                                  	NULL	NULL	NULL	32	3766	727
+1147	عبد الصالحين علاف/ف                                                                                 	NULL	NULL	NULL	32	3766	728
+1148	عبد الهادي الابعج/ف                                                                                 	NULL	NULL	NULL	32	3766	729
+1149	عبد الونيس 2/ م خ                                                                                   	NULL	NULL	NULL	32	3766	730
+1150	عبد الونيس/ص                                                                                        	NULL	NULL	NULL	32	3766	731
+1151	عثمان راغب /ف                                                                                       	NULL	NULL	NULL	32	3767	732
+1152	عرب الشيخ محمد/ف                                                                                    	NULL	NULL	NULL	32	3765	733
+1153	عزاقة / ص مصر الخير                                                                                 	NULL	NULL	NULL	32	3765	734
+1154	عزاقة حسن مطلق/مصر الخير                                                                            	NULL	NULL	NULL	32	3765	735
+1155	عزاقه/ف                                                                                             	NULL	NULL	NULL	32	3765	736
+1156	عزبة الاصلاح/ص                                                                                      	NULL	NULL	NULL	32	3766	737
+1157	عزبة بشري/ص                                                                                         	NULL	NULL	NULL	32	3766	738
+1158	عزبة سلطان /ص مصر الخير                                                                             	NULL	NULL	NULL	32	3765	739
+1159	عزبة مهني 2 /مصر الخير                                                                              	NULL	NULL	NULL	32	3765	740
+1160	عزبة مهني/ص  مصر الخير                                                                              	NULL	NULL	NULL	32	3765	741
+1161	عطية كيلاني/ف                                                                                       	NULL	NULL	NULL	32	3766	742
+1162	علي شعبان/ص                                                                                         	NULL	NULL	NULL	32	3766	743
+1163	علي موسي/ص                                                                                          	NULL	NULL	NULL	32	3766	744
+1164	عيون النبيش/ص مصر الخير                                                                             	NULL	NULL	NULL	32	3765	745
+1165	قرية 7/مصر الخير                                                                                    	NULL	NULL	NULL	32	3765	746
+1166	قرية 8/ص مصر الخير                                                                                  	NULL	NULL	NULL	32	3765	747
+1167	قلوصنا/ص                                                                                            	NULL	NULL	NULL	32	3766	748
+1168	كمبود/ف                                                                                             	NULL	NULL	NULL	32	3765	749
+1169	ماقوسة/ف                                                                                            	NULL	NULL	NULL	32	3765	750
+1170	مجلى خليل/ف                                                                                         	NULL	NULL	NULL	32	3765	751
+1171	محفوظ 1/ص                                                                                           	NULL	NULL	NULL	32	3765	752
+1172	محفوظ 2/ص                                                                                           	NULL	NULL	NULL	32	3765	753
+1173	محفوظ 3/ص                                                                                           	NULL	NULL	NULL	32	3765	754
+1174	محمد حمد ابو شناف/ص                                                                                 	NULL	NULL	NULL	32	3765	755
+1175	محمد سلطان/ص                                                                                        	NULL	NULL	NULL	32	3766	756
+1176	مطاي البلد/ص                                                                                        	NULL	NULL	NULL	32	3767	757
+1177	معتمد مريض/ص                                                                                        	NULL	NULL	NULL	32	3766	758
+1178	منبال/ص                                                                                             	NULL	NULL	NULL	32	3767	759
+1179	منبال/ف                                                                                             	NULL	NULL	NULL	32	3767	760
+1180	منشأة بدينى/ف                                                                                       	NULL	NULL	NULL	32	3766	761
+1181	منشية الدهب القبلية /ص                                                                              	NULL	NULL	NULL	32	3765	762
+1182	منشيه سواده/ص                                                                                       	NULL	NULL	NULL	32	3765	763
+1183	منقطين/ص                                                                                            	NULL	NULL	NULL	32	3766	764
+1184	منقطين/ف                                                                                            	NULL	NULL	NULL	32	3766	765
+1185	مؤسسة تربيه البنين/ص                                                                                	NULL	NULL	NULL	32	3765	766
+1186	موسى ادم/ص                                                                                          	NULL	NULL	NULL	32	3767	767
+1187	نجم/ص                                                                                               	NULL	NULL	NULL	32	3767	768
+1188	نجم/ف                                                                                               	NULL	NULL	NULL	32	3767	769
+1189	نزلة اسطال/ص                                                                                        	NULL	NULL	NULL	32	3766	770
+1190	نزلة ثابت/ص                                                                                         	NULL	NULL	NULL	32	3767	771
+1191	نزله حسين/ف                                                                                         	NULL	NULL	NULL	32	3765	772
+1192	يوسف العادلي/ص                                                                                      	NULL	NULL	NULL	32	3766	773
+1193	يونس صميده /ص                                                                                       	NULL	NULL	NULL	32	3765	774
+1194	ابو جودة 4                                                                                          	NULL	NULL	NULL	33	3769	775
+1195	ابو جوده 1                                                                                          	NULL	NULL	NULL	33	3769	776
+1196	ابو جوده 2                                                                                          	NULL	NULL	NULL	33	3769	777
+1197	ابو جوده 3                                                                                          	NULL	NULL	NULL	33	3769	778
+1198	ابو جوده 5                                                                                          	NULL	NULL	NULL	33	3769	779
+1199	ابو جوده 6                                                                                          	NULL	NULL	NULL	33	3769	780
+1200	ابو زيد عمرو                                                                                        	NULL	NULL	NULL	33	3768	781
+1201	البراهمة                                                                                            	NULL	NULL	NULL	33	3768	782
+1202	البرنسيسة                                                                                           	NULL	NULL	NULL	33	3769	783
+1203	البلابيش المستجدة                                                                                   	NULL	NULL	NULL	33	3769	784
+1204	الحاجر 1                                                                                            	NULL	NULL	NULL	33	3769	824
+1205	الحاجر 2                                                                                            	NULL	NULL	NULL	33	3769	824
+1206	الحاجر 3                                                                                            	NULL	NULL	NULL	33	3769	824
+1207	الحاجر 5                                                                                            	NULL	NULL	NULL	33	3769	824
+1208	الحاجر 6                                                                                            	NULL	NULL	NULL	33	3769	824
+1209	الحاجر 7                                                                                            	NULL	NULL	NULL	33	3769	824
+1210	الحارس السلامونى                                                                                    	NULL	NULL	NULL	33	3768	786
+1211	الحسين 2                                                                                            	NULL	NULL	NULL	33	3769	787
+1212	الحسين 3                                                                                            	NULL	NULL	NULL	33	3769	788
+1213	الحسين 4                                                                                            	NULL	NULL	NULL	33	3769	789
+1214	الحواويش الجديدة                                                                                    	NULL	NULL	NULL	33	3768	790
+1215	الخيام أ                                                                                            	NULL	NULL	NULL	33	3769	791
+1216	الخيام ب                                                                                            	NULL	NULL	NULL	33	3769	792
+1217	الذكر الحكيم                                                                                        	NULL	NULL	NULL	33	3768	793
+1218	السلامون الجديدة                                                                                    	NULL	NULL	NULL	33	3768	794
+1219	الشيخ امبادر 1                                                                                      	NULL	NULL	NULL	33	3769	795
+1220	الشيخ امبادر 2                                                                                      	NULL	NULL	NULL	33	3769	796
+1221	الشيخ حامد3                                                                                         	NULL	NULL	NULL	33	3768	797
+1222	الشيخ شاهين 1                                                                                       	NULL	NULL	NULL	33	3769	798
+1223	الشيخ شاهين 2                                                                                       	NULL	NULL	NULL	33	3769	799
+1224	الصغيرة 1                                                                                           	NULL	NULL	NULL	33	3769	811
+1225	الصغيرة 2                                                                                           	NULL	NULL	NULL	33	3769	811
+1226	الصغيرة 3                                                                                           	NULL	NULL	NULL	33	3769	811
+1227	الصغيرة بالنغاميش                                                                                   	NULL	NULL	NULL	33	3769	800
+1228	الصغيرة بدير النغاميش                                                                               	NULL	NULL	NULL	33	3769	801
+1229	الضبيعة                                                                                             	NULL	NULL	NULL	33	3769	802
+1230	العزبة 1                                                                                            	NULL	NULL	NULL	33	3769	803
+1231	العزبة 2                                                                                            	NULL	NULL	NULL	33	3769	804
+1232	الغنايمة                                                                                            	NULL	NULL	NULL	33	3769	805
+1233	القاوية                                                                                             	NULL	NULL	NULL	33	3769	806
+1234	الكرنك 1                                                                                            	NULL	NULL	NULL	33	3769	807
+1235	الكرنك 2                                                                                            	NULL	NULL	NULL	33	3769	808
+1236	الكرنك 3                                                                                            	NULL	NULL	NULL	33	3769	809
+1237	الكرنك 4                                                                                            	NULL	NULL	NULL	33	3769	810
+1238	المستقبل                                                                                            	NULL	NULL	NULL	33	3769	812
+1239	المناصير                                                                                            	NULL	NULL	NULL	33	3769	866
+1240	النغاميش 1                                                                                          	NULL	NULL	NULL	33	3769	813
+1241	النغاميش 2                                                                                          	NULL	NULL	NULL	33	3769	814
+1242	ام المؤمنين بالنغاميش                                                                               	NULL	NULL	NULL	33	3769	815
+1243	امبادر 1                                                                                            	NULL	NULL	NULL	33	3769	816
+1244	اولاد الشيخ                                                                                         	NULL	NULL	NULL	33	3769	817
+1245	اولاد سالم 2                                                                                        	NULL	NULL	NULL	33	3769	818
+1246	اولاد سالم بحري                                                                                     	NULL	NULL	NULL	33	3769	819
+1247	اولاد سالم بحري 1                                                                                   	NULL	NULL	NULL	33	3769	820
+1248	اولاد سالم بحري 2                                                                                   	NULL	NULL	NULL	33	3769	821
+1249	أولاد يحي بحري                                                                                      	NULL	NULL	NULL	33	3769	823
+1250	اولاد يحيي المجتمعية 4                                                                              	NULL	NULL	NULL	33	3769	785
+1251	حامد 1                                                                                              	NULL	NULL	NULL	33	3768	825
+1252	حامد 2                                                                                              	NULL	NULL	NULL	33	3768	826
+1253	حلوان 1                                                                                             	NULL	NULL	NULL	33	3769	827
+1254	حلوان 2                                                                                             	NULL	NULL	NULL	33	3769	828
+1255	حلوان 3                                                                                             	NULL	NULL	NULL	33	3769	829
+1256	حلوان 4                                                                                             	NULL	NULL	NULL	33	3769	830
+1257	حلوان 5                                                                                             	NULL	NULL	NULL	33	3769	831
+1258	حلوان 6                                                                                             	NULL	NULL	NULL	33	3769	832
+1259	حلوان 7                                                                                             	NULL	NULL	NULL	33	3769	833
+1260	حلوان 8                                                                                             	NULL	NULL	NULL	33	3769	834
+1261	حلوان 9                                                                                             	NULL	NULL	NULL	33	3769	835
+1262	صديق المنشاوي 1                                                                                     	NULL	NULL	NULL	33	3769	836
+1263	صديق المنشاوي 2                                                                                     	NULL	NULL	NULL	33	3769	837
+1264	عرب التمبكية                                                                                        	NULL	NULL	NULL	33	3768	838
+1265	عرب الخور                                                                                           	NULL	NULL	NULL	33	3768	839
+1266	عرب الصابحة 1                                                                                       	NULL	NULL	NULL	33	3769	840
+1267	عزبة حلوان                                                                                          	NULL	NULL	NULL	33	3769	841
+1268	عزبة رضوان                                                                                          	NULL	NULL	NULL	33	3769	842
+1269	عزبة سعد 1                                                                                          	NULL	NULL	NULL	33	3769	811
+1270	عزبة سعد 2                                                                                          	NULL	NULL	NULL	33	3769	811
+1271	عزبة سعد 3                                                                                          	NULL	NULL	NULL	33	3769	811
+1272	عزبة سعد 4                                                                                          	NULL	NULL	NULL	33	3769	811
+1273	عزبة سعد 5                                                                                          	NULL	NULL	NULL	33	3769	811
+1274	عزبة سعد 6                                                                                          	NULL	NULL	NULL	33	3769	811
+1275	عزبة سعد 7                                                                                          	NULL	NULL	NULL	33	3769	811
+1276	عصر 1                                                                                               	NULL	NULL	NULL	33	3769	843
+1277	عصر 2                                                                                               	NULL	NULL	NULL	33	3769	844
+1278	عصر 3                                                                                               	NULL	NULL	NULL	33	3769	845
+1279	علي السوالمي                                                                                        	NULL	NULL	NULL	33	3769	846
+1280	فارس                                                                                                	NULL	NULL	NULL	33	3769	847
+1281	فارس الخير                                                                                          	NULL	NULL	NULL	33	3769	848
+1282	محمود كساب                                                                                          	NULL	NULL	NULL	33	3769	849
+1283	مزاته شرق صديقة                                                                                     	NULL	NULL	NULL	33	3769	850
+1284	مزاته شرق مجتمع                                                                                     	NULL	NULL	NULL	33	3769	850
+1285	نجع ابو سرور                                                                                        	NULL	NULL	NULL	33	3769	851
+1286	نجع البرج اولاد خلف                                                                                 	NULL	NULL	NULL	33	3769	852
+1287	نجع الخور                                                                                           	NULL	NULL	NULL	33	3768	853
+1288	نجع الدير شرق                                                                                       	NULL	NULL	NULL	33	3769	854
+1289	نجع الساقية                                                                                         	NULL	NULL	NULL	33	3768	855
+1290	نجع السكن اولاد خلف                                                                                 	NULL	NULL	NULL	33	3769	856
+1291	نجع القط 1                                                                                          	NULL	NULL	NULL	33	3769	857
+1292	نجع القط 2                                                                                          	NULL	NULL	NULL	33	3769	858
+1293	نجع المراعي                                                                                         	NULL	NULL	NULL	33	3769	859
+1294	نجع المصلحة                                                                                         	NULL	NULL	NULL	33	3769	860
+1295	نجع الملاقط                                                                                         	NULL	NULL	NULL	33	3768	861
+1296	نجع جبره                                                                                            	NULL	NULL	NULL	33	3769	862
+1297	نجع عمران                                                                                           	NULL	NULL	NULL	33	3768	863
+1298	نجع عمران 1                                                                                         	NULL	NULL	NULL	33	3769	822
+1299	نجع عمران 2                                                                                         	NULL	NULL	NULL	33	3769	822
+1300	نجع عمران 3                                                                                         	NULL	NULL	NULL	33	3769	822
+1301	نجع عمران 4                                                                                         	NULL	NULL	NULL	33	3769	822
+1302	نجع عمران 5                                                                                         	NULL	NULL	NULL	33	3769	822
+1303	نجع عميرة                                                                                           	NULL	NULL	NULL	33	3768	864
+1304	نجع كمال كامل                                                                                       	NULL	NULL	NULL	33	3769	865
+1305	نجع محمد عبد المنعم                                                                                 	NULL	NULL	NULL	33	3769	867
+1306	نجع محمد عليو                                                                                       	NULL	NULL	NULL	33	3769	868
+1307	نيدة                                                                                                	NULL	NULL	NULL	33	3768	869

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        li.c2 a {
+            color: white;
+        }
+    </style>
+
+
+
+       
+    
+     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - RBC Staff MS</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryui")
+</head>
+<body>
+   
+   
+    <div style=" background-color :#0094ff" @*class="navbar navbar-inverse navbar-fixed-top"*@>
+        <div class="container">
+            <div class="navbar-header">
+                <img src="~/Content/images/wfplogo.jpg" />
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+
+                </button>
+
+                @*@Html.ActionLink("WFP MS", "Index", "staff", null, new { @class = "navbar-brand" })*@
+            </div>
+
+
+
+
+
+            <div >
+                <ul class="nav navbar-nav">
+                
+                    <li class=" c2">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class=" c2">@Html.ActionLink("Staff", "Index", "staff")</li>
+                    <li class=" c2">@Html.ActionLink("Dependents", "Index", "dependent")</li>
+                    <li class=" c2">@Html.ActionLink("Contract Type", "index", "contracttype")</li>
+                    <li class=" c2">@Html.ActionLink("Contract Details", "Create", "contractdetails")</li>
+                    <li class=" c2">@Html.ActionLink("Titles", "Index", "title")</li>
+                    <li class=" c2">@Html.ActionLink("Office", "Index", "office")</li>
+                    <li class=" c2">@Html.ActionLink("Sub Office", "Index", "suboffice")</li>
+                    <li class=" c2">@Html.ActionLink("Funds", "Index", "fund")</li>
+                    <li class=" c2">@Html.ActionLink("Country", "Index", "country")</li>
+                    <li class=" c2">@Html.ActionLink("Units", "Index", "unit")</li>
+</ul>
+                @Html.Partial("_LoginPartial")
+                
+                
+            </div>
+           
+
+
+
+@Html.Partial("menu")
+
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+
+            <p>&copy; @DateTime.Now.Year -WFP Application</p>
+        </footer>
+    </div>
+  
+
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

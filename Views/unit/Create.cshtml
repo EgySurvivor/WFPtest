@@ -1,0 +1,172 @@
+﻿@model WFPtest.Models.unit
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>unit</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.Label("code")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.unit_id)
+                    @Html.ValidationMessageFor(model => model.unit_id)
+                </td>
+
+                <th>
+                    @Html.Label("english description")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.unit_description_english)
+                    @Html.ValidationMessageFor(model => model.unit_description_english)
+                </td>
+
+                <th>
+                    @Html.Label("english abreviation")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.unit_abreviation_english)
+                    @Html.ValidationMessageFor(model => model.unit_abreviation_english)
+                </td>
+
+            </tr>
+            <tr>
+
+                <th>
+                    @Html.Label("french description")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.unit_description_french)
+                    @Html.ValidationMessageFor(model => model.unit_description_french)
+                </td>
+
+
+
+
+                <th>
+                    @Html.Label("french abreviation")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.unit_abreviation_french)
+                    @Html.ValidationMessageFor(model => model.unit_abreviation_french)
+                </td>
+
+                <th>
+                    @Html.Label("status")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.unit_status)
+                    @Html.ValidationMessageFor(model => model.unit_status)
+                </td>
+
+            </tr>
+            <tr>
+
+                <th>
+                    @Html.Label("short abreviation")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.unit_short_abreviation)
+                    @Html.ValidationMessageFor(model => model.unit_short_abreviation)
+                </td>
+
+                <th>
+                    @Html.Label("office")
+                </th>
+                <td>
+                    @*@Html.EditorFor(model => model.office_id)*@
+                    @Html.DropDownList("office_id", String.Empty)
+                    @Html.ValidationMessageFor(model => model.office_id)
+                </td>
+
+                <th>
+                    @Html.Label("HOU")
+                </th>
+                <td>
+                    @*@Html.EditorFor(model => model.office_id)*@
+                    @Html.DropDownList("HOU_ID", String.Empty)
+                    @Html.ValidationMessageFor(model => model.HOU_ID)
+                </td>
+            </tr>
+        </table>
+
+
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.unit_created_by, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.unit_created_by)
+                    @Html.ValidationMessageFor(model => model.unit_created_by)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.unit_created_datetime, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.unit_created_datetime)
+                    @Html.ValidationMessageFor(model => model.unit_created_datetime)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.unit_last_modified_by, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.unit_last_modified_by)
+                    @Html.ValidationMessageFor(model => model.unit_last_modified_by)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.unit_last_modified_datetime, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.unit_last_modified_datetime)
+                    @Html.ValidationMessageFor(model => model.unit_last_modified_datetime)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.unit_deleted_by, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.unit_deleted_by)
+                    @Html.ValidationMessageFor(model => model.unit_deleted_by)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.unit_deleted_datetime, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.unit_deleted_datetime)
+                    @Html.ValidationMessageFor(model => model.unit_deleted_datetime)
+                </div>
+            </div>*@
+
+
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </td>
+                <td>
+                    @Html.ActionLink("Back to List", "Index")
+                </td>
+            </tr>
+        </table>
+
+
+        
+    </div>
+}
+
+

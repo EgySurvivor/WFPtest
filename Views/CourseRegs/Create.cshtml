@@ -1,0 +1,188 @@
+﻿@model WFPtest.Models.CourseReg
+
+@{
+    ViewBag.Title = "Course Registration";
+}
+
+
+<h2>Registration Form For RBC Training Courses</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Registration</h4>
+        @*<table border="0" align="center">
+            <tr>
+                <td>
+                    @Html.ActionLink("Prerequisites & Courses Schedule", "index", "CourseSessions")
+                </td>
+            </tr>
+        </table>*@
+        <hr />
+        @Html.ValidationSummary(true)
+        
+        <table class=" table">
+            <tr>
+                <th>
+                    @Html.Label("Staff e-mail")
+                </th>
+                <td>
+                    @*@Html.DropDownList("staffid", String.Empty)
+                    @Html.ValidationMessageFor(model => model.staffid)
+                    @Html.ActionLink("Add Staff", "UserCreateStaff", "staff")*@
+                    @Html.Display("staffemail")
+                    @Html.TextBoxFor(model => model.staffid, new { @readonly = "readonly", @Value = ViewBag.staffid, @class = "hidden" })
+                 </td>
+
+                <th>
+                    @Html.Label("Course Name")
+                   </th>
+                <td>
+                        @Html.DropDownList("courseid", String.Empty)
+                        @Html.ValidationMessageFor(model => model.courseid)
+                   </td>
+
+               <th>
+                    @Html.Label("Session Name")
+                    </th>
+                <td>
+                        @Html.DropDownList("sessionid", String.Empty)
+                        @Html.ValidationMessageFor(model => model.sessionid)
+                   </td>
+
+               <th>
+                    @Html.Label("did you take lms Prerequisite training if yes please send the certification to HR")
+                  </th>
+                <td>
+                        @*@Html.EditorFor(model => model.LMSPre)
+                        @Html.ValidationMessageFor(model => model.LMSPre)*@
+
+                    @Html.RadioButtonFor(model => model.LMSPre, "True")
+                    Yes
+                    <p>
+                        @Html.RadioButtonFor(model => model.LMSPre , "False")
+                        No
+</td>
+                <th>
+                    @Html.Label("did you seek your supervisor approval")
+                </th>
+                <td>
+                   
+                    @*@Html.EditorFor(model => model.SupervisorApprove )
+                    @Html.ValidationMessageFor(model => model.SupervisorApprove )*@
+
+                    @Html.RadioButtonFor(model => model.SupervisorApprove,"True")
+                        Yes
+                   <p>
+                    @Html.RadioButtonFor(model => model.SupervisorApprove, "False")
+                        No
+                </td>
+                </tr>
+            </table>
+
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </td>
+                @*<td>
+                    @Html.ActionLink("Back to List", "Index")
+                </td>*@
+            </tr>
+        </table>
+
+        <p>
+        <table border="0" align="center">
+            <tr>
+                <td>
+                   Prerequisites & Courses Schedule
+                </td>
+            </tr>
+        </table>
+        <p>
+            <table border="0" align="center">
+                <tr>
+                    <td>
+                        @Html.Action("IndexPartial", "CourseSessions")
+                    </td>
+                </tr>
+            </table>
+
+
+
+</div>
+}
+
+
+
+
+@*@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4></h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <table class=" table">
+            <tr>
+                <th>
+                    @Html.Label("Staff e-mail")
+                </th>
+                <td>
+                    @Html.DropDownList("staffid", String.Empty)
+                    @Html.ValidationMessageFor(model => model.staffid)
+                   @Html.ActionLink("Add Staff", "UserCreateStaff", "staff")
+              
+                </td>
+
+                <th>
+                    @Html.Label("Course Name")
+                </th>
+                <td>
+                    @Html.DropDownList("courseid", String.Empty)
+                    @Html.ValidationMessageFor(model => model.courseid)
+                    
+                </td>
+
+                <th>
+                    @Html.Label("Session Name")
+                </th>
+                <td>
+                    @Html.DropDownList("sessionid", String.Empty)
+                    @Html.ValidationMessageFor(model => model.sessionid)
+                </td>
+
+                <th>
+                    @Html.Label("did you take lms Prerequisite training if yes please send the certification to HR")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.LMSPre)
+                    @Html.ValidationMessageFor(model => model.LMSPre)
+                </td>
+            </tr>
+        </table>
+
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </td>
+                <td>
+                    @Html.ActionLink("Back to List", "Index")
+                </td>
+            </tr>
+        </table>
+
+
+
+
+    </div>
+}*@
+
+
+
+
+ 

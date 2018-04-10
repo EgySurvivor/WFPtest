@@ -1,0 +1,1397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WFPModelStoreContainer" CdmEntityContainer="WFPEntities1">
+    <EntitySetMapping Name="contract_details">
+      <EntityTypeMapping TypeName="WFPModel.contract_details">
+        <MappingFragment StoreEntitySet="contract_details">
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+          <ScalarProperty Name="contractdetailsid" ColumnName="contractdetailsid" />
+          <ScalarProperty Name="contract_details_id" ColumnName="contract_details_id" />
+          <ScalarProperty Name="contract_details_description_english" ColumnName="contract_details_description_english" />
+          <ScalarProperty Name="contract_details_abreviation_english" ColumnName="contract_details_abreviation_english" />
+          <ScalarProperty Name="contract_details_description_french" ColumnName="contract_details_description_french" />
+          <ScalarProperty Name="contract_details_abreviation_french" ColumnName="contract_details_abreviation_french" />
+          <ScalarProperty Name="contract_details_status" ColumnName="contract_details_status" />
+          <ScalarProperty Name="contract_details_created_by" ColumnName="contract_details_created_by" />
+          <ScalarProperty Name="contract_details_created_datetime" ColumnName="contract_details_created_datetime" />
+          <ScalarProperty Name="contract_details_last_modified_by" ColumnName="contract_details_last_modified_by" />
+          <ScalarProperty Name="contract_details_last_modified_datetime" ColumnName="contract_details_last_modified_datetime" />
+          <ScalarProperty Name="contract_details_deleted_by" ColumnName="contract_details_deleted_by" />
+          <ScalarProperty Name="contract_details_deleted_datetime" ColumnName="contract_details_deleted_datetime" />
+          <ScalarProperty Name="contract_type_code" ColumnName="contract_type_code" />
+          <ScalarProperty Name="fundid" ColumnName="fundid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contract_type">
+      <EntityTypeMapping TypeName="WFPModel.contract_type">
+        <MappingFragment StoreEntitySet="contract_type">
+          <ScalarProperty Name="stafid" ColumnName="stafid" />
+          <ScalarProperty Name="contractTypeid" ColumnName="contractTypeid" />
+          <ScalarProperty Name="contract_Type_code" ColumnName="contract_Type_code" />
+          <ScalarProperty Name="contract_type_name" ColumnName="contract_type_name" />
+          <ScalarProperty Name="contract_type_description" ColumnName="contract_type_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="countries">
+      <EntityTypeMapping TypeName="WFPModel.country">
+        <MappingFragment StoreEntitySet="countries">
+          <ScalarProperty Name="countryid" ColumnName="countryid" />
+          <ScalarProperty Name="country_name" ColumnName="country_name" />
+          <ScalarProperty Name="country_description" ColumnName="country_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country_office">
+      <EntityTypeMapping TypeName="WFPModel.Country_office">
+        <MappingFragment StoreEntitySet="Country_office">
+          <ScalarProperty Name="RB_ID" ColumnName="RB_ID" />
+          <ScalarProperty Name="Manager" ColumnName="Manager" />
+          <ScalarProperty Name="countryofficeid" ColumnName="countryofficeid" />
+          <ScalarProperty Name="office_id" ColumnName="office_id" />
+          <ScalarProperty Name="office_description_english" ColumnName="office_description_english" />
+          <ScalarProperty Name="office_abreviation_english" ColumnName="office_abreviation_english" />
+          <ScalarProperty Name="office_description_french" ColumnName="office_description_french" />
+          <ScalarProperty Name="office_abreviation_french" ColumnName="office_abreviation_french" />
+          <ScalarProperty Name="office_status" ColumnName="office_status" />
+          <ScalarProperty Name="office_created_by" ColumnName="office_created_by" />
+          <ScalarProperty Name="office_created_datetime" ColumnName="office_created_datetime" />
+          <ScalarProperty Name="office_last_modified_by" ColumnName="office_last_modified_by" />
+          <ScalarProperty Name="office_last_modified_datetime" ColumnName="office_last_modified_datetime" />
+          <ScalarProperty Name="office_deleted_by" ColumnName="office_deleted_by" />
+          <ScalarProperty Name="office_deleted_datetime" ColumnName="office_deleted_datetime" />
+          <ScalarProperty Name="country_code" ColumnName="country_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dependents">
+      <EntityTypeMapping TypeName="WFPModel.dependent">
+        <MappingFragment StoreEntitySet="dependents">
+          <ScalarProperty Name="dependentsid" ColumnName="dependentsid" />
+          <ScalarProperty Name="dependents_code" ColumnName="dependents_code" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+          <ScalarProperty Name="dependents_first_name" ColumnName="dependents_first_name" />
+          <ScalarProperty Name="dependents_last_name" ColumnName="dependents_last_name" />
+          <ScalarProperty Name="dependents_gender" ColumnName="dependents_gender" />
+          <ScalarProperty Name="dependents_phone_num" ColumnName="dependents_phone_num" />
+          <ScalarProperty Name="dependents_blood_group" ColumnName="dependents_blood_group" />
+          <ScalarProperty Name="dependents_passport_num" ColumnName="dependents_passport_num" />
+          <ScalarProperty Name="dependents_passport_expiry_date" ColumnName="dependents_passport_expiry_date" />
+          <ScalarProperty Name="dependents_notes" ColumnName="dependents_notes" />
+          <ScalarProperty Name="dependents_medical_condition" ColumnName="dependents_medical_condition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Evaluations">
+      <EntityTypeMapping TypeName="WFPModel.Evaluation">
+        <MappingFragment StoreEntitySet="Evaluation">
+          <ScalarProperty Name="evaid" ColumnName="evaid" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Duty_station" ColumnName="Duty_station" />
+          <ScalarProperty Name="OrgUnit" ColumnName="OrgUnit" />
+          <ScalarProperty Name="from" ColumnName="from" />
+          <ScalarProperty Name="to" ColumnName="to" />
+          <ScalarProperty Name="Part2" ColumnName="Part2" />
+          <ScalarProperty Name="Part3" ColumnName="Part3" />
+          <ScalarProperty Name="ActionMangement" ColumnName="ActionMangement" />
+          <ScalarProperty Name="Communications" ColumnName="Communications" />
+          <ScalarProperty Name="ethicsAndValues" ColumnName="ethicsAndValues" />
+          <ScalarProperty Name="Teamwork" ColumnName="Teamwork" />
+          <ScalarProperty Name="Interpersonal_Relations" ColumnName="Interpersonal Relations" />
+          <ScalarProperty Name="clientOrientation" ColumnName="clientOrientation" />
+          <ScalarProperty Name="TechnicalSkills" ColumnName="TechnicalSkills" />
+          <ScalarProperty Name="BehaviouralFlexibilty" ColumnName="BehaviouralFlexibilty" />
+          <ScalarProperty Name="Negotiation" ColumnName="Negotiation" />
+          <ScalarProperty Name="OvarallPerformanceRating" ColumnName="OvarallPerformanceRating" />
+          <ScalarProperty Name="part5" ColumnName="part5" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="functional_title">
+      <EntityTypeMapping TypeName="WFPModel.functional_title">
+        <MappingFragment StoreEntitySet="functional_title">
+          <ScalarProperty Name="stafid" ColumnName="stafid" />
+          <ScalarProperty Name="functionaltitleid" ColumnName="functionaltitleid" />
+          <ScalarProperty Name="functional_title_id" ColumnName="functional_title_id" />
+          <ScalarProperty Name="functional_title_description_english" ColumnName="functional_title_description_english" />
+          <ScalarProperty Name="functional_title_abreviation_english" ColumnName="functional_title_abreviation_english" />
+          <ScalarProperty Name="functional_title_description_french" ColumnName="functional_title_description_french" />
+          <ScalarProperty Name="functional_title_abreviation_french" ColumnName="functional_title_abreviation_french" />
+          <ScalarProperty Name="functional_title_status" ColumnName="functional_title_status" />
+          <ScalarProperty Name="functional_title_created_by" ColumnName="functional_title_created_by" />
+          <ScalarProperty Name="functional_title_created_datetime" ColumnName="functional_title_created_datetime" />
+          <ScalarProperty Name="functional_title_last_modified_by" ColumnName="functional_title_last_modified_by" />
+          <ScalarProperty Name="functional_title_last_modified_datetime" ColumnName="functional_title_last_modified_datetime" />
+          <ScalarProperty Name="functional_title_deleted_by" ColumnName="functional_title_deleted_by" />
+          <ScalarProperty Name="functional_title_deleted_datetime" ColumnName="functional_title_deleted_datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Funds">
+      <EntityTypeMapping TypeName="WFPModel.Fund">
+        <MappingFragment StoreEntitySet="Funds">
+          <ScalarProperty Name="fundid" ColumnName="fundid" />
+          <ScalarProperty Name="fund_code" ColumnName="fund_code" />
+          <ScalarProperty Name="resource" ColumnName="resource" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="staffs">
+      <EntityTypeMapping TypeName="WFPModel.staff">
+        <MappingFragment StoreEntitySet="staff">
+          <ScalarProperty Name="WardenGroupId" ColumnName="WardenGroupId" />
+          <ScalarProperty Name="WardenZone" ColumnName="WardenZone" />
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+          <ScalarProperty Name="cate" ColumnName="cate" />
+          <ScalarProperty Name="international" ColumnName="international" />
+          <ScalarProperty Name="areacode" ColumnName="areacode" />
+          <ScalarProperty Name="governorates_code" ColumnName="governorates_code" />
+          <ScalarProperty Name="countryid" ColumnName="countryid" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Landline" ColumnName="Landline" />
+          <ScalarProperty Name="Call_Sign" ColumnName="Call_Sign" />
+          <ScalarProperty Name="alternate_warden_2" ColumnName="alternate_warden_2" />
+          <ScalarProperty Name="alternate_warden_1" ColumnName="alternate_warden_1" />
+          <ScalarProperty Name="staff_warden" ColumnName="staff_warden" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+          <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+          <ScalarProperty Name="country_office_id" ColumnName="country_office_id" />
+          <ScalarProperty Name="sub_office_id" ColumnName="sub_office_id" />
+          <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+          <ScalarProperty Name="contract_type_id" ColumnName="contract_type_id" />
+          <ScalarProperty Name="functional_title_id" ColumnName="functional_title_id" />
+          <ScalarProperty Name="staff_login" ColumnName="staff_login" />
+          <ScalarProperty Name="staff_first_name" ColumnName="staff_first_name" />
+          <ScalarProperty Name="staff_last_name" ColumnName="staff_last_name" />
+          <ScalarProperty Name="staff_created_by" ColumnName="staff_created_by" />
+          <ScalarProperty Name="staff_created_datetime" ColumnName="staff_created_datetime" />
+          <ScalarProperty Name="staff_status" ColumnName="staff_status" />
+          <ScalarProperty Name="staff_index_number" ColumnName="staff_index_number" />
+          <ScalarProperty Name="staff_vendor_number" ColumnName="staff_vendor_number" />
+          <ScalarProperty Name="staff_nationality" ColumnName="staff_nationality" />
+          <ScalarProperty Name="staff_address" ColumnName="staff_address" />
+          <ScalarProperty Name="staff_dob" ColumnName="staff_dob" />
+          <ScalarProperty Name="staff_eod" ColumnName="staff_eod" />
+          <ScalarProperty Name="staff_nte" ColumnName="staff_nte" />
+          <ScalarProperty Name="staff_extension_number" ColumnName="staff_extension_number" />
+          <ScalarProperty Name="staff_email" ColumnName="staff_email" />
+          <ScalarProperty Name="staff_access_main" ColumnName="staff_access_main" />
+          <ScalarProperty Name="staff_access_dts" ColumnName="staff_access_dts" />
+          <ScalarProperty Name="staff_access_tb" ColumnName="staff_access_tb" />
+          <ScalarProperty Name="staff_access_ct" ColumnName="staff_access_ct" />
+          <ScalarProperty Name="staff_access_li" ColumnName="staff_access_li" />
+          <ScalarProperty Name="staff_access_lc" ColumnName="staff_access_lc" />
+          <ScalarProperty Name="staff_access_sr" ColumnName="staff_access_sr" />
+          <ScalarProperty Name="staff_access_admin" ColumnName="staff_access_admin" />
+          <ScalarProperty Name="staff_last_updated_by" ColumnName="staff_last_updated_by" />
+          <ScalarProperty Name="staff_last_updated_datetime" ColumnName="staff_last_updated_datetime" />
+          <ScalarProperty Name="staff_deleted_by" ColumnName="staff_deleted_by" />
+          <ScalarProperty Name="staff_deleted_datetime" ColumnName="staff_deleted_datetime" />
+          <ScalarProperty Name="staff_supervisorid" ColumnName="staff_supervisorid" />
+          <ScalarProperty Name="stuff_contract_details" ColumnName="stuff_contract_details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sub_office">
+      <EntityTypeMapping TypeName="WFPModel.sub_office">
+        <MappingFragment StoreEntitySet="sub_office">
+          <ScalarProperty Name="subofficeid" ColumnName="subofficeid" />
+          <ScalarProperty Name="sub_office_id" ColumnName="sub_office_id" />
+          <ScalarProperty Name="office_description_english" ColumnName="office_description_english" />
+          <ScalarProperty Name="office_abreviation_english" ColumnName="office_abreviation_english" />
+          <ScalarProperty Name="office_description_french" ColumnName="office_description_french" />
+          <ScalarProperty Name="office_abreviation_french" ColumnName="office_abreviation_french" />
+          <ScalarProperty Name="office_status" ColumnName="office_status" />
+          <ScalarProperty Name="office_created_by" ColumnName="office_created_by" />
+          <ScalarProperty Name="office_created_datetime" ColumnName="office_created_datetime" />
+          <ScalarProperty Name="office_last_modified_by" ColumnName="office_last_modified_by" />
+          <ScalarProperty Name="office_last_modified_datetime" ColumnName="office_last_modified_datetime" />
+          <ScalarProperty Name="office_deleted_by" ColumnName="office_deleted_by" />
+          <ScalarProperty Name="office_deleted_datetime" ColumnName="office_deleted_datetime" />
+          <ScalarProperty Name="countryofficeid" ColumnName="countryofficeid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="units">
+      <EntityTypeMapping TypeName="WFPModel.unit">
+        <MappingFragment StoreEntitySet="unit">
+          <ScalarProperty Name="HOU_ID" ColumnName="HOU_ID" />
+          <ScalarProperty Name="unitid" ColumnName="unitid" />
+          <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+          <ScalarProperty Name="unit_description_english" ColumnName="unit_description_english" />
+          <ScalarProperty Name="unit_abreviation_english" ColumnName="unit_abreviation_english" />
+          <ScalarProperty Name="unit_description_french" ColumnName="unit_description_french" />
+          <ScalarProperty Name="unit_abreviation_french" ColumnName="unit_abreviation_french" />
+          <ScalarProperty Name="unit_status" ColumnName="unit_status" />
+          <ScalarProperty Name="unit_created_by" ColumnName="unit_created_by" />
+          <ScalarProperty Name="unit_created_datetime" ColumnName="unit_created_datetime" />
+          <ScalarProperty Name="unit_last_modified_by" ColumnName="unit_last_modified_by" />
+          <ScalarProperty Name="unit_last_modified_datetime" ColumnName="unit_last_modified_datetime" />
+          <ScalarProperty Name="unit_deleted_by" ColumnName="unit_deleted_by" />
+          <ScalarProperty Name="unit_deleted_datetime" ColumnName="unit_deleted_datetime" />
+          <ScalarProperty Name="unit_short_abreviation" ColumnName="unit_short_abreviation" />
+          <ScalarProperty Name="office_id" ColumnName="office_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="governorates">
+      <EntityTypeMapping TypeName="WFPModel.governorate">
+        <MappingFragment StoreEntitySet="governorates">
+          <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+          <ScalarProperty Name="country_code" ColumnName="country_code" />
+          <ScalarProperty Name="governorates_description" ColumnName="governorates_description" />
+          <ScalarProperty Name="governorates_name" ColumnName="governorates_name" />
+          <ScalarProperty Name="governorates_code" ColumnName="governorates_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="districts">
+      <EntityTypeMapping TypeName="WFPModel.district">
+        <MappingFragment StoreEntitySet="district">
+          <ScalarProperty Name="governorates_code" ColumnName="governorates_code" />
+          <ScalarProperty Name="countryid" ColumnName="countryid" />
+          <ScalarProperty Name="area_name" ColumnName="area_name" />
+          <ScalarProperty Name="areacode" ColumnName="areacode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="WFPModel.category">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="CatDescription" ColumnName="CatDescription" />
+          <ScalarProperty Name="CatName" ColumnName="CatName" />
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WardenGroups">
+      <EntityTypeMapping TypeName="WFPModel.WardenGroup">
+        <MappingFragment StoreEntitySet="WardenGroups">
+          <ScalarProperty Name="GroupDescription" ColumnName="GroupDescription" />
+          <ScalarProperty Name="GroupZone" ColumnName="GroupZone" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CourseRegs">
+      <EntityTypeMapping TypeName="WFPModel.CourseReg">
+        <MappingFragment StoreEntitySet="CourseReg">
+          <ScalarProperty Name="SupervisorApprove" ColumnName="SupervisorApprove" />
+          <ScalarProperty Name="LMSPre" ColumnName="LMSPre" />
+          <ScalarProperty Name="sessionid" ColumnName="sessionid" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+          <ScalarProperty Name="RegID" ColumnName="RegID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="WFPModel.Cours">
+        <MappingFragment StoreEntitySet="Courses">
+          <ScalarProperty Name="CourseDescp3" ColumnName="CourseDescp3" />
+          <ScalarProperty Name="CourseDescp2" ColumnName="CourseDescp2" />
+          <ScalarProperty Name="CourseDescp1" ColumnName="CourseDescp1" />
+          <ScalarProperty Name="CourseTypeID" ColumnName="CourseTypeID" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="CourseType" ColumnName="CourseType" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CourseSessions">
+      <EntityTypeMapping TypeName="WFPModel.CourseSession">
+        <MappingFragment StoreEntitySet="CourseSession">
+          <ScalarProperty Name="CoursePrerequisite" ColumnName="CoursePrerequisite" />
+          <ScalarProperty Name="SessionName" ColumnName="SessionName" />
+          <ScalarProperty Name="CourseLocation" ColumnName="CourseLocation" />
+          <ScalarProperty Name="CourseEndDate" ColumnName="CourseEndDate" />
+          <ScalarProperty Name="CourseStartDate" ColumnName="CourseStartDate" />
+          <ScalarProperty Name="CourseEndTime" ColumnName="CourseEndTime" />
+          <ScalarProperty Name="CourseStartTime" ColumnName="CourseStartTime" />
+          <ScalarProperty Name="CourseDuration" ColumnName="CourseDuration" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="Sessionid" ColumnName="Sessionid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MissionAuthorizations">
+      <EntityTypeMapping TypeName="WFPModel.MissionAuthorization">
+        <MappingFragment StoreEntitySet="MissionAuthorization">
+          <ScalarProperty Name="non19" ColumnName="non19" />
+          <ScalarProperty Name="non18" ColumnName="non18" />
+          <ScalarProperty Name="non17" ColumnName="non17" />
+          <ScalarProperty Name="non16" ColumnName="non16" />
+          <ScalarProperty Name="destinationTwon" ColumnName="destinationTwon" />
+          <ScalarProperty Name="destinationCountry" ColumnName="destinationCountry" />
+          <ScalarProperty Name="files" ColumnName="files" />
+          <ScalarProperty Name="other" ColumnName="other" />
+          <ScalarProperty Name="UberCareem" ColumnName="UberCareem" />
+          <ScalarProperty Name="Mission_Type" ColumnName="Mission_Type" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="non5" ColumnName="non5" />
+          <ScalarProperty Name="non4" ColumnName="non4" />
+          <ScalarProperty Name="non3" ColumnName="non3" />
+          <ScalarProperty Name="non2" ColumnName="non2" />
+          <ScalarProperty Name="nnon1" ColumnName="nnon1" />
+          <ScalarProperty Name="staffonbehalf" ColumnName="staffonbehalf" />
+          <ScalarProperty Name="canbedone" ColumnName="canbedone" />
+          <ScalarProperty Name="RDORDRDDate" ColumnName="RDORDRDDate" />
+          <ScalarProperty Name="RDORDRDSignature" ColumnName="RDORDRDSignature" />
+          <ScalarProperty Name="SignatureDate" ColumnName="SignatureDate" />
+          <ScalarProperty Name="StaffSignature" ColumnName="StaffSignature" />
+          <ScalarProperty Name="FollowUp" ColumnName="FollowUp" />
+          <ScalarProperty Name="Achievements" ColumnName="Achievements" />
+          <ScalarProperty Name="ExpectedOutputs" ColumnName="ExpectedOutputs" />
+          <ScalarProperty Name="MissionObjective" ColumnName="MissionObjective" />
+          <ScalarProperty Name="ClearedBySupervisor" ColumnName="ClearedBySupervisor" />
+          <ScalarProperty Name="funding" ColumnName="funding" />
+          <ScalarProperty Name="MissionItinerary" ColumnName="MissionItinerary" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+          <ScalarProperty Name="MissionID" ColumnName="MissionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="requests">
+      <EntityTypeMapping TypeName="WFPModel.request">
+        <MappingFragment StoreEntitySet="requests">
+          <ScalarProperty Name="requested_by" ColumnName="requested_by" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="other" ColumnName="other" />
+          <ScalarProperty Name="mobile_phone" ColumnName="mobile_phone" />
+          <ScalarProperty Name="IphoneService" ColumnName="IphoneService" />
+          <ScalarProperty Name="BlackberryService" ColumnName="BlackberryService" />
+          <ScalarProperty Name="color_printer" ColumnName="color_printer" />
+          <ScalarProperty Name="usb_modem" ColumnName="usb_modem" />
+          <ScalarProperty Name="BasicPhone" ColumnName="BasicPhone" />
+          <ScalarProperty Name="SmartPhone" ColumnName="SmartPhone" />
+          <ScalarProperty Name="roaming" ColumnName="roaming" />
+          <ScalarProperty Name="international" ColumnName="international" />
+          <ScalarProperty Name="local_sim" ColumnName="local_sim" />
+          <ScalarProperty Name="pincode_ext" ColumnName="pincode_ext" />
+          <ScalarProperty Name="telephone" ColumnName="telephone" />
+          <ScalarProperty Name="access_P" ColumnName="access_P" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="computerDeskyop" ColumnName="computerDeskyop" />
+          <ScalarProperty Name="computerLaptop" ColumnName="computerLaptop" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="appointment_type" ColumnName="appointment_type" />
+          <ScalarProperty Name="supervisor_email" ColumnName="supervisor_email" />
+          <ScalarProperty Name="duty_station" ColumnName="duty_station" />
+          <ScalarProperty Name="index_number" ColumnName="index_number" />
+          <ScalarProperty Name="budget_code" ColumnName="budget_code" />
+          <ScalarProperty Name="unit" ColumnName="unit" />
+          <ScalarProperty Name="job_title" ColumnName="job_title" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="request_no" ColumnName="request_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiteMenus">
+      <EntityTypeMapping TypeName="WFPModel.SiteMenu">
+        <MappingFragment StoreEntitySet="SiteMenu">
+          <ScalarProperty Name="ParentMenuID" ColumnName="ParentMenuID" />
+          <ScalarProperty Name="NavURL" ColumnName="NavURL" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CourseDetails">
+      <EntityTypeMapping TypeName="WFPModel.CourseDetail">
+        <MappingFragment StoreEntitySet="CourseDetails">
+          <ScalarProperty Name="Des4" ColumnName="Des4" />
+          <ScalarProperty Name="Des3" ColumnName="Des3" />
+          <ScalarProperty Name="Des2" ColumnName="Des2" />
+          <ScalarProperty Name="Des1" ColumnName="Des1" />
+          <ScalarProperty Name="CoursID" ColumnName="CoursID" />
+          <ScalarProperty Name="CourseDetailsID" ColumnName="CourseDetailsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CourseTypts">
+      <EntityTypeMapping TypeName="WFPModel.CourseTypt">
+        <MappingFragment StoreEntitySet="CourseTypt">
+          <ScalarProperty Name="comment3" ColumnName="comment3" />
+          <ScalarProperty Name="comment2" ColumnName="comment2" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CourseType" ColumnName="CourseType" />
+          <ScalarProperty Name="CourseTypeID" ColumnName="CourseTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VACATION_TYPE_LIST">
+      <EntityTypeMapping TypeName="WFPModel.VACATION_TYPE_LIST">
+        <MappingFragment StoreEntitySet="VACATION_TYPE_LIST">
+          <ScalarProperty Name="VACATION_TYPE_NAME" ColumnName="VACATION_TYPE_NAME" />
+          <ScalarProperty Name="VACATION_TYPE_ID" ColumnName="VACATION_TYPE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEPARTMENTS">
+      <EntityTypeMapping TypeName="WFPModel.DEPARTMENT">
+        <MappingFragment StoreEntitySet="DEPARTMENTS">
+          <ScalarProperty Name="MaxEmpNo" ColumnName="MaxEmpNo" />
+          <ScalarProperty Name="DEP_DESC" ColumnName="DEP_DESC" />
+          <ScalarProperty Name="DEP_MANAGER" ColumnName="DEP_MANAGER" />
+          <ScalarProperty Name="BRANCH_ID" ColumnName="BRANCH_ID" />
+          <ScalarProperty Name="PARENT_ID" ColumnName="PARENT_ID" />
+          <ScalarProperty Name="DEP_NAME" ColumnName="DEP_NAME" />
+          <ScalarProperty Name="DEP_ID" ColumnName="DEP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="error_login">
+      <EntityTypeMapping TypeName="WFPModel.error_login">
+        <MappingFragment StoreEntitySet="error_login">
+          <ScalarProperty Name="error_login_datetime" ColumnName="error_login_datetime" />
+          <ScalarProperty Name="error_login_desc" ColumnName="error_login_desc" />
+          <ScalarProperty Name="error_login_id" ColumnName="error_login_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="securitytrackings">
+      <EntityTypeMapping TypeName="WFPModel.securitytracking">
+        <MappingFragment StoreEntitySet="securitytracking">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="onmission" ColumnName="onmission" />
+          <ScalarProperty Name="leave" ColumnName="leave" />
+          <ScalarProperty Name="randrleave" ColumnName="randrleave" />
+          <ScalarProperty Name="outofcountry" ColumnName="outofcountry" />
+          <ScalarProperty Name="incountry" ColumnName="incountry" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+          <ScalarProperty Name="secid" ColumnName="secid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sir_access">
+      <EntityTypeMapping TypeName="WFPModel.sir_access">
+        <MappingFragment StoreEntitySet="sir_access">
+          <ScalarProperty Name="deleted_datetime" ColumnName="deleted_datetime" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="updated_datetime" ColumnName="updated_datetime" />
+          <ScalarProperty Name="updated_by" ColumnName="updated_by" />
+          <ScalarProperty Name="created_datetime" ColumnName="created_datetime" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="sir_access_status" ColumnName="sir_access_status" />
+          <ScalarProperty Name="sir_access_is_admin" ColumnName="sir_access_is_admin" />
+          <ScalarProperty Name="sir_access_manage_user" ColumnName="sir_access_manage_user" />
+          <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+          <ScalarProperty Name="sir_access_id" ColumnName="sir_access_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sir_category">
+      <EntityTypeMapping TypeName="WFPModel.sir_category">
+        <MappingFragment StoreEntitySet="sir_category">
+          <ScalarProperty Name="deleted_datetime" ColumnName="deleted_datetime" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="updated_datetime" ColumnName="updated_datetime" />
+          <ScalarProperty Name="updated_by" ColumnName="updated_by" />
+          <ScalarProperty Name="created_datetime" ColumnName="created_datetime" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="sir_category_status" ColumnName="sir_category_status" />
+          <ScalarProperty Name="sir_category_abrev" ColumnName="sir_category_abrev" />
+          <ScalarProperty Name="sir_category_desc" ColumnName="sir_category_desc" />
+          <ScalarProperty Name="sir_category_id" ColumnName="sir_category_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sir_category_access">
+      <EntityTypeMapping TypeName="WFPModel.sir_category_access">
+        <MappingFragment StoreEntitySet="sir_category_access">
+          <ScalarProperty Name="deleted_datetime" ColumnName="deleted_datetime" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="updated_datetime" ColumnName="updated_datetime" />
+          <ScalarProperty Name="updated_by" ColumnName="updated_by" />
+          <ScalarProperty Name="created_datetime" ColumnName="created_datetime" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="sir_category_access_status" ColumnName="sir_category_access_status" />
+          <ScalarProperty Name="sir_category_id" ColumnName="sir_category_id" />
+          <ScalarProperty Name="sir_access_id" ColumnName="sir_access_id" />
+          <ScalarProperty Name="sir_category_access_id" ColumnName="sir_category_access_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sir_item">
+      <EntityTypeMapping TypeName="WFPModel.sir_item">
+        <MappingFragment StoreEntitySet="sir_item">
+          <ScalarProperty Name="deleted_datetime" ColumnName="deleted_datetime" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="updated_datetime" ColumnName="updated_datetime" />
+          <ScalarProperty Name="updated_by" ColumnName="updated_by" />
+          <ScalarProperty Name="created_datetime" ColumnName="created_datetime" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="sir_item_status" ColumnName="sir_item_status" />
+          <ScalarProperty Name="sir_item_allow_attachment" ColumnName="sir_item_allow_attachment" />
+          <ScalarProperty Name="sir_item_desc" ColumnName="sir_item_desc" />
+          <ScalarProperty Name="sir_item_id" ColumnName="sir_item_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sir_item_category_access">
+      <EntityTypeMapping TypeName="WFPModel.sir_item_category_access">
+        <MappingFragment StoreEntitySet="sir_item_category_access">
+          <ScalarProperty Name="deleted_datetime" ColumnName="deleted_datetime" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="updated_datetime" ColumnName="updated_datetime" />
+          <ScalarProperty Name="updated_by" ColumnName="updated_by" />
+          <ScalarProperty Name="created_datetime" ColumnName="created_datetime" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="sir_item_category_access_status" ColumnName="sir_item_category_access_status" />
+          <ScalarProperty Name="sir_item_category_access_type" ColumnName="sir_item_category_access_type" />
+          <ScalarProperty Name="sir_category_id" ColumnName="sir_category_id" />
+          <ScalarProperty Name="sir_item_id" ColumnName="sir_item_id" />
+          <ScalarProperty Name="sir_item_category_access_id" ColumnName="sir_item_category_access_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sir_staff_item">
+      <EntityTypeMapping TypeName="WFPModel.sir_staff_item">
+        <MappingFragment StoreEntitySet="sir_staff_item">
+          <ScalarProperty Name="deleted_datetime" ColumnName="deleted_datetime" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="updated_datetime" ColumnName="updated_datetime" />
+          <ScalarProperty Name="updated_by" ColumnName="updated_by" />
+          <ScalarProperty Name="created_datetime" ColumnName="created_datetime" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="sir_staff_item_status" ColumnName="sir_staff_item_status" />
+          <ScalarProperty Name="sir_staff_item_complete" ColumnName="sir_staff_item_complete" />
+          <ScalarProperty Name="sir_staff_item_file_new_name" ColumnName="sir_staff_item_file_new_name" />
+          <ScalarProperty Name="sir_staff_item_file_old_name" ColumnName="sir_staff_item_file_old_name" />
+          <ScalarProperty Name="sir_staff_item_file_attached" ColumnName="sir_staff_item_file_attached" />
+          <ScalarProperty Name="sir_staff_item_description" ColumnName="sir_staff_item_description" />
+          <ScalarProperty Name="sir_item_id" ColumnName="sir_item_id" />
+          <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+          <ScalarProperty Name="sir_staff_item_id" ColumnName="sir_staff_item_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="staff_login_history">
+      <EntityTypeMapping TypeName="WFPModel.staff_login_history">
+        <MappingFragment StoreEntitySet="staff_login_history">
+          <ScalarProperty Name="staff_login_history_datetime" ColumnName="staff_login_history_datetime" />
+          <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+          <ScalarProperty Name="staff_login_history_id" ColumnName="staff_login_history_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="staff_pwd">
+      <EntityTypeMapping TypeName="WFPModel.staff_pwd">
+        <MappingFragment StoreEntitySet="staff_pwd">
+          <ScalarProperty Name="staff_pwd_need_change" ColumnName="staff_pwd_need_change" />
+          <ScalarProperty Name="staff_pwd_is_expired" ColumnName="staff_pwd_is_expired" />
+          <ScalarProperty Name="staff_pwd_status" ColumnName="staff_pwd_status" />
+          <ScalarProperty Name="staff_pwd_created_datetime" ColumnName="staff_pwd_created_datetime" />
+          <ScalarProperty Name="staff_pwd_created_by" ColumnName="staff_pwd_created_by" />
+          <ScalarProperty Name="staff_pwd_pwd" ColumnName="staff_pwd_pwd" />
+          <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+          <ScalarProperty Name="staff_pwd_id" ColumnName="staff_pwd_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stafftests">
+      <EntityTypeMapping TypeName="WFPModel.stafftest">
+        <MappingFragment StoreEntitySet="stafftest">
+          <ScalarProperty Name="WardenGroupId" ColumnName="WardenGroupId" />
+          <ScalarProperty Name="WardenZone" ColumnName="WardenZone" />
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+          <ScalarProperty Name="international" ColumnName="international" />
+          <ScalarProperty Name="cate" ColumnName="cate" />
+          <ScalarProperty Name="areacode" ColumnName="areacode" />
+          <ScalarProperty Name="governorates_code" ColumnName="governorates_code" />
+          <ScalarProperty Name="countryid" ColumnName="countryid" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Landline" ColumnName="Landline" />
+          <ScalarProperty Name="Call_Sign" ColumnName="Call_Sign" />
+          <ScalarProperty Name="alternate_warden_2" ColumnName="alternate_warden_2" />
+          <ScalarProperty Name="alternate_warden_1" ColumnName="alternate_warden_1" />
+          <ScalarProperty Name="staff_warden" ColumnName="staff_warden" />
+          <ScalarProperty Name="stuff_contract_details" ColumnName="stuff_contract_details" />
+          <ScalarProperty Name="staff_supervisorid" ColumnName="staff_supervisorid" />
+          <ScalarProperty Name="staff_deleted_datetime" ColumnName="staff_deleted_datetime" />
+          <ScalarProperty Name="staff_deleted_by" ColumnName="staff_deleted_by" />
+          <ScalarProperty Name="staff_last_updated_datetime" ColumnName="staff_last_updated_datetime" />
+          <ScalarProperty Name="staff_last_updated_by" ColumnName="staff_last_updated_by" />
+          <ScalarProperty Name="staff_access_admin" ColumnName="staff_access_admin" />
+          <ScalarProperty Name="staff_access_sr" ColumnName="staff_access_sr" />
+          <ScalarProperty Name="staff_access_lc" ColumnName="staff_access_lc" />
+          <ScalarProperty Name="staff_access_li" ColumnName="staff_access_li" />
+          <ScalarProperty Name="staff_access_ct" ColumnName="staff_access_ct" />
+          <ScalarProperty Name="staff_access_tb" ColumnName="staff_access_tb" />
+          <ScalarProperty Name="staff_access_dts" ColumnName="staff_access_dts" />
+          <ScalarProperty Name="staff_access_main" ColumnName="staff_access_main" />
+          <ScalarProperty Name="staff_email" ColumnName="staff_email" />
+          <ScalarProperty Name="staff_extension_number" ColumnName="staff_extension_number" />
+          <ScalarProperty Name="staff_nte" ColumnName="staff_nte" />
+          <ScalarProperty Name="staff_eod" ColumnName="staff_eod" />
+          <ScalarProperty Name="staff_dob" ColumnName="staff_dob" />
+          <ScalarProperty Name="staff_address" ColumnName="staff_address" />
+          <ScalarProperty Name="staff_nationality" ColumnName="staff_nationality" />
+          <ScalarProperty Name="staff_vendor_number" ColumnName="staff_vendor_number" />
+          <ScalarProperty Name="staff_index_number" ColumnName="staff_index_number" />
+          <ScalarProperty Name="staff_status" ColumnName="staff_status" />
+          <ScalarProperty Name="staff_created_datetime" ColumnName="staff_created_datetime" />
+          <ScalarProperty Name="staff_created_by" ColumnName="staff_created_by" />
+          <ScalarProperty Name="staff_last_name" ColumnName="staff_last_name" />
+          <ScalarProperty Name="staff_first_name" ColumnName="staff_first_name" />
+          <ScalarProperty Name="staff_login" ColumnName="staff_login" />
+          <ScalarProperty Name="functional_title_id" ColumnName="functional_title_id" />
+          <ScalarProperty Name="contract_type_id" ColumnName="contract_type_id" />
+          <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+          <ScalarProperty Name="sub_office_id" ColumnName="sub_office_id" />
+          <ScalarProperty Name="country_office_id" ColumnName="country_office_id" />
+          <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stafftesttests">
+      <EntityTypeMapping TypeName="WFPModel.stafftesttest">
+        <MappingFragment StoreEntitySet="stafftesttest">
+          <ScalarProperty Name="WardenGroupId" ColumnName="WardenGroupId" />
+          <ScalarProperty Name="WardenZone" ColumnName="WardenZone" />
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+          <ScalarProperty Name="international" ColumnName="international" />
+          <ScalarProperty Name="cate" ColumnName="cate" />
+          <ScalarProperty Name="areacode" ColumnName="areacode" />
+          <ScalarProperty Name="governorates_code" ColumnName="governorates_code" />
+          <ScalarProperty Name="countryid" ColumnName="countryid" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Landline" ColumnName="Landline" />
+          <ScalarProperty Name="Call_Sign" ColumnName="Call_Sign" />
+          <ScalarProperty Name="alternate_warden_2" ColumnName="alternate_warden_2" />
+          <ScalarProperty Name="alternate_warden_1" ColumnName="alternate_warden_1" />
+          <ScalarProperty Name="stafftest_warden" ColumnName="stafftest_warden" />
+          <ScalarProperty Name="stuff_contract_details" ColumnName="stuff_contract_details" />
+          <ScalarProperty Name="stafftest_supervisorid" ColumnName="stafftest_supervisorid" />
+          <ScalarProperty Name="stafftest_deleted_datetime" ColumnName="stafftest_deleted_datetime" />
+          <ScalarProperty Name="stafftest_deleted_by" ColumnName="stafftest_deleted_by" />
+          <ScalarProperty Name="stafftest_last_updated_datetime" ColumnName="stafftest_last_updated_datetime" />
+          <ScalarProperty Name="stafftest_last_updated_by" ColumnName="stafftest_last_updated_by" />
+          <ScalarProperty Name="stafftest_access_admin" ColumnName="stafftest_access_admin" />
+          <ScalarProperty Name="stafftest_access_sr" ColumnName="stafftest_access_sr" />
+          <ScalarProperty Name="stafftest_access_lc" ColumnName="stafftest_access_lc" />
+          <ScalarProperty Name="stafftest_access_li" ColumnName="stafftest_access_li" />
+          <ScalarProperty Name="stafftest_access_ct" ColumnName="stafftest_access_ct" />
+          <ScalarProperty Name="stafftest_access_tb" ColumnName="stafftest_access_tb" />
+          <ScalarProperty Name="stafftest_access_dts" ColumnName="stafftest_access_dts" />
+          <ScalarProperty Name="stafftest_access_main" ColumnName="stafftest_access_main" />
+          <ScalarProperty Name="stafftest_email" ColumnName="stafftest_email" />
+          <ScalarProperty Name="stafftest_extension_number" ColumnName="stafftest_extension_number" />
+          <ScalarProperty Name="stafftest_nte" ColumnName="stafftest_nte" />
+          <ScalarProperty Name="stafftest_eod" ColumnName="stafftest_eod" />
+          <ScalarProperty Name="stafftest_dob" ColumnName="stafftest_dob" />
+          <ScalarProperty Name="stafftest_address" ColumnName="stafftest_address" />
+          <ScalarProperty Name="stafftest_nationality" ColumnName="stafftest_nationality" />
+          <ScalarProperty Name="stafftest_vendor_number" ColumnName="stafftest_vendor_number" />
+          <ScalarProperty Name="stafftest_index_number" ColumnName="stafftest_index_number" />
+          <ScalarProperty Name="stafftest_status" ColumnName="stafftest_status" />
+          <ScalarProperty Name="stafftest_created_datetime" ColumnName="stafftest_created_datetime" />
+          <ScalarProperty Name="stafftest_created_by" ColumnName="stafftest_created_by" />
+          <ScalarProperty Name="stafftest_last_name" ColumnName="stafftest_last_name" />
+          <ScalarProperty Name="stafftest_first_name" ColumnName="stafftest_first_name" />
+          <ScalarProperty Name="stafftest_login" ColumnName="stafftest_login" />
+          <ScalarProperty Name="functional_title_id" ColumnName="functional_title_id" />
+          <ScalarProperty Name="contract_type_id" ColumnName="contract_type_id" />
+          <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+          <ScalarProperty Name="sub_office_id" ColumnName="sub_office_id" />
+          <ScalarProperty Name="country_office_id" ColumnName="country_office_id" />
+          <ScalarProperty Name="stafftest_id" ColumnName="stafftest_id" />
+          <ScalarProperty Name="stafftestid" ColumnName="stafftestid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="WFPModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VACATION_GROUP_DETAILS">
+      <EntityTypeMapping TypeName="WFPModel.VACATION_GROUP_DETAILS">
+        <MappingFragment StoreEntitySet="VACATION_GROUP_DETAILS">
+          <ScalarProperty Name="MAX_ACC" ColumnName="MAX_ACC" />
+          <ScalarProperty Name="VAC_TYPE_ACC" ColumnName="VAC_TYPE_ACC" />
+          <ScalarProperty Name="ISALLOWED" ColumnName="ISALLOWED" />
+          <ScalarProperty Name="EDGED_HOLIDAY_AS_VAC_END" ColumnName="EDGED_HOLIDAY_AS_VAC_END" />
+          <ScalarProperty Name="EDGED_WEEKEND_AS_VAC_END" ColumnName="EDGED_WEEKEND_AS_VAC_END" />
+          <ScalarProperty Name="EDGED_HOLIDAY_AS_VAC" ColumnName="EDGED_HOLIDAY_AS_VAC" />
+          <ScalarProperty Name="EDGED_WEEKEND_AS_VAC" ColumnName="EDGED_WEEKEND_AS_VAC" />
+          <ScalarProperty Name="CONSIDER_HOLIDAY_AS_VAC" ColumnName="CONSIDER_HOLIDAY_AS_VAC" />
+          <ScalarProperty Name="CONSIDER_WEEKEND_AS_VAC" ColumnName="CONSIDER_WEEKEND_AS_VAC" />
+          <ScalarProperty Name="ALLOW_ACCUMULATION" ColumnName="ALLOW_ACCUMULATION" />
+          <ScalarProperty Name="ALLOWED_COUNT" ColumnName="ALLOWED_COUNT" />
+          <ScalarProperty Name="VACATION_DET_ID" ColumnName="VACATION_DET_ID" />
+          <ScalarProperty Name="VACATION_TYPE_ID" ColumnName="VACATION_TYPE_ID" />
+          <ScalarProperty Name="VACATION_PERIOD_ID" ColumnName="VACATION_PERIOD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VACATION_GROUPS">
+      <EntityTypeMapping TypeName="WFPModel.VACATION_GROUPS">
+        <MappingFragment StoreEntitySet="VACATION_GROUPS">
+          <ScalarProperty Name="VACATION_GROUP_NAME" ColumnName="VACATION_GROUP_NAME" />
+          <ScalarProperty Name="VACATION_GROUP_ID" ColumnName="VACATION_GROUP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VACATION_PERIODS">
+      <EntityTypeMapping TypeName="WFPModel.VACATION_PERIODS">
+        <MappingFragment StoreEntitySet="VACATION_PERIODS">
+          <ScalarProperty Name="V_END" ColumnName="V_END" />
+          <ScalarProperty Name="V_START" ColumnName="V_START" />
+          <ScalarProperty Name="VACATION_GROUP_ID" ColumnName="VACATION_GROUP_ID" />
+          <ScalarProperty Name="VACATION_PERIOD_ID" ColumnName="VACATION_PERIOD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AggregatedCounters">
+      <EntityTypeMapping TypeName="WFPModel.AggregatedCounter">
+        <MappingFragment StoreEntitySet="AggregatedCounter">
+          <ScalarProperty Name="ExpireAt" ColumnName="ExpireAt" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Counters">
+      <EntityTypeMapping TypeName="WFPModel.Counter">
+        <MappingFragment StoreEntitySet="Counter">
+          <ScalarProperty Name="ExpireAt" ColumnName="ExpireAt" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hashes">
+      <EntityTypeMapping TypeName="WFPModel.Hash">
+        <MappingFragment StoreEntitySet="Hash">
+          <ScalarProperty Name="ExpireAt" ColumnName="ExpireAt" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Field" ColumnName="Field" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="WFPModel.Job">
+        <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="ExpireAt" ColumnName="ExpireAt" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="Arguments" ColumnName="Arguments" />
+          <ScalarProperty Name="InvocationData" ColumnName="InvocationData" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobParameters">
+      <EntityTypeMapping TypeName="WFPModel.JobParameter">
+        <MappingFragment StoreEntitySet="JobParameter">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobQueues">
+      <EntityTypeMapping TypeName="WFPModel.JobQueue">
+        <MappingFragment StoreEntitySet="JobQueue">
+          <ScalarProperty Name="FetchedAt" ColumnName="FetchedAt" />
+          <ScalarProperty Name="Queue" ColumnName="Queue" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lists">
+      <EntityTypeMapping TypeName="WFPModel.List">
+        <MappingFragment StoreEntitySet="List">
+          <ScalarProperty Name="ExpireAt" ColumnName="ExpireAt" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schemata">
+      <EntityTypeMapping TypeName="WFPModel.Schema">
+        <MappingFragment StoreEntitySet="Schema">
+          <ScalarProperty Name="Version" ColumnName="Version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servers">
+      <EntityTypeMapping TypeName="WFPModel.Server">
+        <MappingFragment StoreEntitySet="Server">
+          <ScalarProperty Name="LastHeartbeat" ColumnName="LastHeartbeat" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sets">
+      <EntityTypeMapping TypeName="WFPModel.Set">
+        <MappingFragment StoreEntitySet="Set">
+          <ScalarProperty Name="ExpireAt" ColumnName="ExpireAt" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="WFPModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MissionAuthorizationHs">
+      <EntityTypeMapping TypeName="WFPModel.MissionAuthorizationH">
+        <MappingFragment StoreEntitySet="MissionAuthorizationH">
+          <ScalarProperty Name="delete_date" ColumnName="delete_date" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="delted" ColumnName="delted" />
+          <ScalarProperty Name="canbedone" ColumnName="canbedone" />
+          <ScalarProperty Name="RDORDRDDate" ColumnName="RDORDRDDate" />
+          <ScalarProperty Name="RDORDRDSignature" ColumnName="RDORDRDSignature" />
+          <ScalarProperty Name="SignatureDate" ColumnName="SignatureDate" />
+          <ScalarProperty Name="StaffSignature" ColumnName="StaffSignature" />
+          <ScalarProperty Name="FollowUp" ColumnName="FollowUp" />
+          <ScalarProperty Name="Achievements" ColumnName="Achievements" />
+          <ScalarProperty Name="ExpectedOutputs" ColumnName="ExpectedOutputs" />
+          <ScalarProperty Name="MissionObjective" ColumnName="MissionObjective" />
+          <ScalarProperty Name="ClearedBySupervisor" ColumnName="ClearedBySupervisor" />
+          <ScalarProperty Name="funding" ColumnName="funding" />
+          <ScalarProperty Name="MissionItinerary" ColumnName="MissionItinerary" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+          <ScalarProperty Name="MissionID" ColumnName="MissionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYEES">
+      <EntityTypeMapping TypeName="WFPModel.EMPLOYEE">
+        <MappingFragment StoreEntitySet="EMPLOYEES">
+          <ScalarProperty Name="empid" ColumnName="empid" />
+          <ScalarProperty Name="Contract_End" ColumnName="Contract_End" />
+          <ScalarProperty Name="Cont_Type_Id" ColumnName="Cont_Type_Id" />
+          <ScalarProperty Name="Send_Mail" ColumnName="Send_Mail" />
+          <ScalarProperty Name="Portal_UsrNam" ColumnName="Portal_UsrNam" />
+          <ScalarProperty Name="NATIONAL_NO_ED" ColumnName="NATIONAL_NO_ED" />
+          <ScalarProperty Name="MILIT_SERV_EXPDT" ColumnName="MILIT_SERV_EXPDT" />
+          <ScalarProperty Name="MILIT_SERV_ISUDT" ColumnName="MILIT_SERV_ISUDT" />
+          <ScalarProperty Name="MILIT_SERV_NO" ColumnName="MILIT_SERV_NO" />
+          <ScalarProperty Name="RESIGN_REASON_ID" ColumnName="RESIGN_REASON_ID" />
+          <ScalarProperty Name="SSN_DT" ColumnName="SSN_DT" />
+          <ScalarProperty Name="CST_CD" ColumnName="CST_CD" />
+          <ScalarProperty Name="FLEXY_GRPS" ColumnName="FLEXY_GRPS" />
+          <ScalarProperty Name="Contract_Code" ColumnName="Contract_Code" />
+          <ScalarProperty Name="Emp_Insur" ColumnName="Emp_Insur" />
+          <ScalarProperty Name="Emp_Agent_Id" ColumnName="Emp_Agent_Id" />
+          <ScalarProperty Name="STEP_ID" ColumnName="STEP_ID" />
+          <ScalarProperty Name="ZONE_ID" ColumnName="ZONE_ID" />
+          <ScalarProperty Name="MANAGER" ColumnName="MANAGER" />
+          <ScalarProperty Name="EMAIL_ADDRESS" ColumnName="EMAIL_ADDRESS" />
+          <ScalarProperty Name="USER_CARD" ColumnName="USER_CARD" />
+          <ScalarProperty Name="EMPLOYEE1" ColumnName="EMPLOYEE" />
+          <ScalarProperty Name="CUR_ID" ColumnName="CUR_ID" />
+          <ScalarProperty Name="SAL_GRP_ID" ColumnName="SAL_GRP_ID" />
+          <ScalarProperty Name="ACCESS_CARD" ColumnName="ACCESS_CARD" />
+          <ScalarProperty Name="RESIGN_REASON" ColumnName="RESIGN_REASON" />
+          <ScalarProperty Name="RESIGNED" ColumnName="RESIGNED" />
+          <ScalarProperty Name="RESIGN_DATE" ColumnName="RESIGN_DATE" />
+          <ScalarProperty Name="PIC" ColumnName="PIC" />
+          <ScalarProperty Name="OTHERDATE" ColumnName="OTHERDATE" />
+          <ScalarProperty Name="OTHER2" ColumnName="OTHER2" />
+          <ScalarProperty Name="OTHER1" ColumnName="OTHER1" />
+          <ScalarProperty Name="MILIT_SERV" ColumnName="MILIT_SERV" />
+          <ScalarProperty Name="NATIONAL_NO_ID" ColumnName="NATIONAL_NO_ID" />
+          <ScalarProperty Name="NATIONAL_NO_IP" ColumnName="NATIONAL_NO_IP" />
+          <ScalarProperty Name="NATIONAL_NO" ColumnName="NATIONAL_NO" />
+          <ScalarProperty Name="BRANCH_ID" ColumnName="BRANCH_ID" />
+          <ScalarProperty Name="HIRE_DATE" ColumnName="HIRE_DATE" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="GRADU_GRADE" ColumnName="GRADU_GRADE" />
+          <ScalarProperty Name="GRADU_DEPT" ColumnName="GRADU_DEPT" />
+          <ScalarProperty Name="QUAKIFICATION" ColumnName="QUAKIFICATION" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="DEPID" ColumnName="DEPID" />
+          <ScalarProperty Name="HOLIDAY_GROUP_ID" ColumnName="HOLIDAY_GROUP_ID" />
+          <ScalarProperty Name="PERMISSION_GROUP_ID" ColumnName="PERMISSION_GROUP_ID" />
+          <ScalarProperty Name="VACATION_GROUP_ID" ColumnName="VACATION_GROUP_ID" />
+          <ScalarProperty Name="MARTIAL_STATUS_ID" ColumnName="MARTIAL_STATUS_ID" />
+          <ScalarProperty Name="CELL" ColumnName="CELL" />
+          <ScalarProperty Name="ADDRESSID" ColumnName="ADDRESSID" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+          <ScalarProperty Name="BIRTH_PLACE" ColumnName="BIRTH_PLACE" />
+          <ScalarProperty Name="BIRTH_DATE" ColumnName="BIRTH_DATE" />
+          <ScalarProperty Name="NATIONALITY_ID" ColumnName="NATIONALITY_ID" />
+          <ScalarProperty Name="PREFIX" ColumnName="PREFIX" />
+          <ScalarProperty Name="EMP_LAST_NAME" ColumnName="EMP_LAST_NAME" />
+          <ScalarProperty Name="EMP_MIDDLE_NAME" ColumnName="EMP_MIDDLE_NAME" />
+          <ScalarProperty Name="EMP_FIRST_NAME" ColumnName="EMP_FIRST_NAME" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VAC_TRANS">
+      <EntityTypeMapping TypeName="WFPModel.VAC_TRANS">
+        <MappingFragment StoreEntitySet="VAC_TRANS">
+          <ScalarProperty Name="empid" ColumnName="empid" />
+          <ScalarProperty Name="IN_HOLIDAY" ColumnName="IN_HOLIDAY" />
+          <ScalarProperty Name="IN_WEEKEND" ColumnName="IN_WEEKEND" />
+          <ScalarProperty Name="ASSTDATE" ColumnName="ASSTDATE" />
+          <ScalarProperty Name="ASSFDATE" ColumnName="ASSFDATE" />
+          <ScalarProperty Name="SECOND_DAY" ColumnName="SECOND_DAY" />
+          <ScalarProperty Name="DAYTYPENO" ColumnName="DAYTYPENO" />
+          <ScalarProperty Name="VACADDRESS" ColumnName="VACADDRESS" />
+          <ScalarProperty Name="VACPHONE" ColumnName="VACPHONE" />
+          <ScalarProperty Name="TOTIME" ColumnName="TOTIME" />
+          <ScalarProperty Name="FROMTIME" ColumnName="FROMTIME" />
+          <ScalarProperty Name="ISSUE_DATE" ColumnName="ISSUE_DATE" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="REASON" ColumnName="REASON" />
+          <ScalarProperty Name="DAY_COUNT" ColumnName="DAY_COUNT" />
+          <ScalarProperty Name="TO_DATE" ColumnName="TO_DATE" />
+          <ScalarProperty Name="FROM_DATE" ColumnName="FROM_DATE" />
+          <ScalarProperty Name="VACATION_TYPE_ID" ColumnName="VACATION_TYPE_ID" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="TRANS_ID" ColumnName="TRANS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BRANCHES">
+      <EntityTypeMapping TypeName="WFPModel.BRANCH">
+        <MappingFragment StoreEntitySet="BRANCHES">
+          <ScalarProperty Name="BRANCH_DESC" ColumnName="BRANCH_DESC" />
+          <ScalarProperty Name="BRANCH_MANAGER" ColumnName="BRANCH_MANAGER" />
+          <ScalarProperty Name="BRANCH1" ColumnName="BRANCH" />
+          <ScalarProperty Name="BRANCH_ID" ColumnName="BRANCH_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Job_DESCRIPTION">
+      <EntityTypeMapping TypeName="WFPModel.Job_DESCRIPTION">
+        <MappingFragment StoreEntitySet="Job_DESCRIPTION">
+          <ScalarProperty Name="SUPERVISORY_RESP" ColumnName="SUPERVISORY_RESP" />
+          <ScalarProperty Name="OTHER_DUTIES" ColumnName="OTHER_DUTIES" />
+          <ScalarProperty Name="ESSENTIAL_DUTIES" ColumnName="ESSENTIAL_DUTIES" />
+          <ScalarProperty Name="POSITION_PURPOSE" ColumnName="POSITION_PURPOSE" />
+          <ScalarProperty Name="SALARY_RANGE_T" ColumnName="SALARY_RANGE_T" />
+          <ScalarProperty Name="SALARY_RANGE_F" ColumnName="SALARY_RANGE_F" />
+          <ScalarProperty Name="SUPERVISOR_TITLE" ColumnName="SUPERVISOR_TITLE" />
+          <ScalarProperty Name="JOB_TITLE" ColumnName="JOB_TITLE" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAINEES">
+      <EntityTypeMapping TypeName="WFPModel.TRAINEE">
+        <MappingFragment StoreEntitySet="TRAINEES">
+          <ScalarProperty Name="CLASS_ID" ColumnName="CLASS_ID" />
+          <ScalarProperty Name="TRAINER_EVALUATION" ColumnName="TRAINER_EVALUATION" />
+          <ScalarProperty Name="TRAINING_EVALUATION" ColumnName="TRAINING_EVALUATION" />
+          <ScalarProperty Name="PASSED" ColumnName="PASSED" />
+          <ScalarProperty Name="ATTENDED" ColumnName="ATTENDED" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="TRAINING_ID" ColumnName="TRAINING_ID" />
+          <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAINING_CERTIFICATION">
+      <EntityTypeMapping TypeName="WFPModel.TRAINING_CERTIFICATION">
+        <MappingFragment StoreEntitySet="TRAINING_CERTIFICATION">
+          <ScalarProperty Name="CERT3" ColumnName="CERT3" />
+          <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+          <ScalarProperty Name="CERT2" ColumnName="CERT2" />
+          <ScalarProperty Name="CERT1" ColumnName="CERT1" />
+          <ScalarProperty Name="TRAINING_ID" ColumnName="TRAINING_ID" />
+          <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+          <ScalarProperty Name="cert_course_id" ColumnName="cert_course_id" />
+          <ScalarProperty Name="certName" ColumnName="certName" />
+          <ScalarProperty Name="certID" ColumnName="certID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAINING_COMPANIES">
+      <EntityTypeMapping TypeName="WFPModel.TRAINING_COMPANIES">
+        <MappingFragment StoreEntitySet="TRAINING_COMPANIES">
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="ADRESS" ColumnName="ADRESS" />
+          <ScalarProperty Name="TRAINING_COMPANY_NAME" ColumnName="TRAINING_COMPANY_NAME" />
+          <ScalarProperty Name="TRAINING_COMPANY_ID" ColumnName="TRAINING_COMPANY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAINING_PLAN">
+      <EntityTypeMapping TypeName="WFPModel.TRAINING_PLAN">
+        <MappingFragment StoreEntitySet="TRAINING_PLAN">
+          <ScalarProperty Name="PERIOD_TO" ColumnName="PERIOD_TO" />
+          <ScalarProperty Name="PERIOD_FROM" ColumnName="PERIOD_FROM" />
+          <ScalarProperty Name="TRAINING_PLACE" ColumnName="TRAINING_PLACE" />
+          <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAINING_PLAN_TRAINERS">
+      <EntityTypeMapping TypeName="WFPModel.TRAINING_PLAN_TRAINERS">
+        <MappingFragment StoreEntitySet="TRAINING_PLAN_TRAINERS">
+          <ScalarProperty Name="CLASS_ID" ColumnName="CLASS_ID" />
+          <ScalarProperty Name="TRAINING_ID" ColumnName="TRAINING_ID" />
+          <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
+          <ScalarProperty Name="EMPLOYEE_ID" ColumnName="EMPLOYEE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAINING_PLAN_TRAINING_CLASSES">
+      <EntityTypeMapping TypeName="WFPModel.TRAINING_PLAN_TRAINING_CLASSES">
+        <MappingFragment StoreEntitySet="TRAINING_PLAN_TRAINING_CLASSES">
+          <ScalarProperty Name="TO_DATE" ColumnName="TO_DATE" />
+          <ScalarProperty Name="FROM_DATE" ColumnName="FROM_DATE" />
+          <ScalarProperty Name="TO_TIME" ColumnName="TO_TIME" />
+          <ScalarProperty Name="FROM_TIME" ColumnName="FROM_TIME" />
+          <ScalarProperty Name="CLASS_NAME" ColumnName="CLASS_NAME" />
+          <ScalarProperty Name="CLASS_ID" ColumnName="CLASS_ID" />
+          <ScalarProperty Name="TRAINING_ID" ColumnName="TRAINING_ID" />
+          <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAINING_PLAN_TRAINING_COMPANIES">
+      <EntityTypeMapping TypeName="WFPModel.TRAINING_PLAN_TRAINING_COMPANIES">
+        <MappingFragment StoreEntitySet="TRAINING_PLAN_TRAINING_COMPANIES">
+          <ScalarProperty Name="TRAINING_ID" ColumnName="TRAINING_ID" />
+          <ScalarProperty Name="TRAINING_COMPANY_ID" ColumnName="TRAINING_COMPANY_ID" />
+          <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAINING_PLAN_TRAININGS">
+      <EntityTypeMapping TypeName="WFPModel.TRAINING_PLAN_TRAININGS">
+        <MappingFragment StoreEntitySet="TRAINING_PLAN_TRAININGS">
+          <ScalarProperty Name="TRAINING_TYPE" ColumnName="TRAINING_TYPE" />
+          <ScalarProperty Name="IFPASSPERCENTAGE" ColumnName="IFPASSPERCENTAGE" />
+          <ScalarProperty Name="IFFAILPERCENTAGE" ColumnName="IFFAILPERCENTAGE" />
+          <ScalarProperty Name="FAILPASSDEPENDANCY" ColumnName="FAILPASSDEPENDANCY" />
+          <ScalarProperty Name="EMPLPERCENTAGE" ColumnName="EMPLPERCENTAGE" />
+          <ScalarProperty Name="COASTPEREMP" ColumnName="COASTPEREMP" />
+          <ScalarProperty Name="CERTIFICATE_ID" ColumnName="CERTIFICATE_ID" />
+          <ScalarProperty Name="REQUIRE_CERTIFICATE" ColumnName="REQUIRE_CERTIFICATE" />
+          <ScalarProperty Name="TRAINING_ID" ColumnName="TRAINING_ID" />
+          <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAINING_SC">
+      <EntityTypeMapping TypeName="WFPModel.TRAINING_SC">
+        <MappingFragment StoreEntitySet="TRAINING_SC">
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="time_closed" ColumnName="time_closed" />
+          <ScalarProperty Name="extra3" ColumnName="extra3" />
+          <ScalarProperty Name="extra2" ColumnName="extra2" />
+          <ScalarProperty Name="extra1" ColumnName="extra1" />
+          <ScalarProperty Name="time_open" ColumnName="time_open" />
+          <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
+          <ScalarProperty Name="attend" ColumnName="attend" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="to_time" ColumnName="to_time" />
+          <ScalarProperty Name="from_time" ColumnName="from_time" />
+          <ScalarProperty Name="sc_id" ColumnName="sc_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAINING_TRAINING_COMPANIES">
+      <EntityTypeMapping TypeName="WFPModel.TRAINING_TRAINING_COMPANIES">
+        <MappingFragment StoreEntitySet="TRAINING_TRAINING_COMPANIES">
+          <ScalarProperty Name="TRAINING_COMPANY_ID" ColumnName="TRAINING_COMPANY_ID" />
+          <ScalarProperty Name="TRAINING_ID" ColumnName="TRAINING_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAININGS">
+      <EntityTypeMapping TypeName="WFPModel.TRAINING">
+        <MappingFragment StoreEntitySet="TRAININGS">
+          <ScalarProperty Name="PARENT_TRAINING_ID" ColumnName="PARENT_TRAINING_ID" />
+          <ScalarProperty Name="TRAINING_PERIOD" ColumnName="TRAINING_PERIOD" />
+          <ScalarProperty Name="TRAINING_PLACE" ColumnName="TRAINING_PLACE" />
+          <ScalarProperty Name="TRAINING_DESC" ColumnName="TRAINING_DESC" />
+          <ScalarProperty Name="TRAINING_NAME" ColumnName="TRAINING_NAME" />
+          <ScalarProperty Name="TRAINING_ID" ColumnName="TRAINING_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAINING_TYPE">
+      <EntityTypeMapping TypeName="WFPModel.TRAINING_TYPE">
+        <MappingFragment StoreEntitySet="TRAINING_TYPE">
+          <ScalarProperty Name="type22" ColumnName="type22" />
+          <ScalarProperty Name="type02" ColumnName="type02" />
+          <ScalarProperty Name="typ01" ColumnName="typ01" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="type_name" ColumnName="type_name" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MissionAuthorization1">
+      <EntityTypeMapping TypeName="WFPModel.MissionAuthorization1">
+        <MappingFragment StoreEntitySet="MissionAuthorization1">
+          <ScalarProperty Name="non14" ColumnName="non14" />
+          <ScalarProperty Name="non13" ColumnName="non13" />
+          <ScalarProperty Name="non12" ColumnName="non12" />
+          <ScalarProperty Name="non11" ColumnName="non11" />
+          <ScalarProperty Name="non10" ColumnName="non10" />
+          <ScalarProperty Name="Comment3" ColumnName="Comment3" />
+          <ScalarProperty Name="Comment2" ColumnName="Comment2" />
+          <ScalarProperty Name="Comment1" ColumnName="Comment1" />
+          <ScalarProperty Name="nono9" ColumnName="nono9" />
+          <ScalarProperty Name="nonn8" ColumnName="nonn8" />
+          <ScalarProperty Name="non7" ColumnName="non7" />
+          <ScalarProperty Name="non6" ColumnName="non6" />
+          <ScalarProperty Name="Sexpiredate" ColumnName="Sexpiredate" />
+          <ScalarProperty Name="SSAFE" ColumnName="SSAFE" />
+          <ScalarProperty Name="Aexpiredate" ColumnName="Aexpiredate" />
+          <ScalarProperty Name="ASITF" ColumnName="ASITF" />
+          <ScalarProperty Name="Bexpiredate" ColumnName="Bexpiredate" />
+          <ScalarProperty Name="BSITF" ColumnName="BSITF" />
+          <ScalarProperty Name="clearances" ColumnName="clearances" />
+          <ScalarProperty Name="Signature3Date" ColumnName="Signature3Date" />
+          <ScalarProperty Name="Signature3" ColumnName="Signature3" />
+          <ScalarProperty Name="Signature2Date" ColumnName="Signature2Date" />
+          <ScalarProperty Name="Signature2" ColumnName="Signature2" />
+          <ScalarProperty Name="Signature1Date" ColumnName="Signature1Date" />
+          <ScalarProperty Name="Signature1" ColumnName="Signature1" />
+          <ScalarProperty Name="non5" ColumnName="non5" />
+          <ScalarProperty Name="non4" ColumnName="non4" />
+          <ScalarProperty Name="non3" ColumnName="non3" />
+          <ScalarProperty Name="non2" ColumnName="non2" />
+          <ScalarProperty Name="nnon1" ColumnName="nnon1" />
+          <ScalarProperty Name="staffonbehalf" ColumnName="staffonbehalf" />
+          <ScalarProperty Name="canbedone" ColumnName="canbedone" />
+          <ScalarProperty Name="RDORDRDDate" ColumnName="RDORDRDDate" />
+          <ScalarProperty Name="RDORDRDSignature" ColumnName="RDORDRDSignature" />
+          <ScalarProperty Name="SignatureDate" ColumnName="SignatureDate" />
+          <ScalarProperty Name="StaffSignature" ColumnName="StaffSignature" />
+          <ScalarProperty Name="FollowUp" ColumnName="FollowUp" />
+          <ScalarProperty Name="Achievements" ColumnName="Achievements" />
+          <ScalarProperty Name="ExpectedOutputs" ColumnName="ExpectedOutputs" />
+          <ScalarProperty Name="MissionObjective" ColumnName="MissionObjective" />
+          <ScalarProperty Name="ClearedBySupervisor" ColumnName="ClearedBySupervisor" />
+          <ScalarProperty Name="funding" ColumnName="funding" />
+          <ScalarProperty Name="MissionItinerary" ColumnName="MissionItinerary" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+          <ScalarProperty Name="MissionID" ColumnName="MissionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attends">
+      <EntityTypeMapping TypeName="WFPModel.Attend">
+        <MappingFragment StoreEntitySet="Attends">
+          <ScalarProperty Name="non3" ColumnName="non3" />
+          <ScalarProperty Name="non2" ColumnName="non2" />
+          <ScalarProperty Name="non1" ColumnName="non1" />
+          <ScalarProperty Name="agenda" ColumnName="agenda" />
+          <ScalarProperty Name="To_Time" ColumnName="To_Time" />
+          <ScalarProperty Name="From_Time" ColumnName="From_Time" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Present" ColumnName="Present" />
+          <ScalarProperty Name="DayAttend" ColumnName="DayAttend" />
+          <ScalarProperty Name="DayNUM" ColumnName="DayNUM" />
+          <ScalarProperty Name="eventid" ColumnName="eventid" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staff_Event">
+      <EntityTypeMapping TypeName="WFPModel.Staff_Event">
+        <MappingFragment StoreEntitySet="Staff_Event">
+          <ScalarProperty Name="non3" ColumnName="non3" />
+          <ScalarProperty Name="non2" ColumnName="non2" />
+          <ScalarProperty Name="non1" ColumnName="non1" />
+          <ScalarProperty Name="days" ColumnName="days" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+          <ScalarProperty Name="Event_ID" ColumnName="Event_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="requests1">
+      <EntityTypeMapping TypeName="WFPModel.requests1">
+        <MappingFragment StoreEntitySet="requests1">
+          <ScalarProperty Name="ServicesReqOthers" ColumnName="ServicesReqOthers" />
+          <ScalarProperty Name="Writingpads" ColumnName="Writingpads" />
+          <ScalarProperty Name="NameTags" ColumnName="NameTags" />
+          <ScalarProperty Name="Stationary" ColumnName="Stationary" />
+          <ScalarProperty Name="non3" ColumnName="non3" />
+          <ScalarProperty Name="non2" ColumnName="non2" />
+          <ScalarProperty Name="non1" ColumnName="non1" />
+          <ScalarProperty Name="Other_Services" ColumnName="Other_Services" />
+          <ScalarProperty Name="Airport_Picup_Services" ColumnName="Airport_Picup_Services" />
+          <ScalarProperty Name="Transportstion_ForLocal_Staff" ColumnName="Transportstion_ForLocal_Staff" />
+          <ScalarProperty Name="DescripDaysORHours" ColumnName="DescripDaysORHours" />
+          <ScalarProperty Name="Dedicated_IT_SUPP" ColumnName="Dedicated_IT_SUPP" />
+          <ScalarProperty Name="Coctail_Reception" ColumnName="Coctail_Reception" />
+          <ScalarProperty Name="Dinner" ColumnName="Dinner" />
+          <ScalarProperty Name="Lunch" ColumnName="Lunch" />
+          <ScalarProperty Name="COffeBreak_UNM" ColumnName="COffeBreak_UNM" />
+          <ScalarProperty Name="COffeBreak" ColumnName="COffeBreak" />
+          <ScalarProperty Name="BOR_Days" ColumnName="BOR_Days" />
+          <ScalarProperty Name="MMR_Days" ColumnName="MMR_Days" />
+          <ScalarProperty Name="Conf_Call_Device" ColumnName="Conf_Call_Device" />
+          <ScalarProperty Name="HiSpeedInternet" ColumnName="HiSpeedInternet" />
+          <ScalarProperty Name="Microphone" ColumnName="Microphone" />
+          <ScalarProperty Name="Rom_Type" ColumnName="Rom_Type" />
+          <ScalarProperty Name="Check_OutDate" ColumnName="Check_OutDate" />
+          <ScalarProperty Name="Check_inDate" ColumnName="Check_inDate" />
+          <ScalarProperty Name="Number_Roms" ColumnName="Number_Roms" />
+          <ScalarProperty Name="Budget_TR" ColumnName="Budget_TR" />
+          <ScalarProperty Name="OtherPlace" ColumnName="OtherPlace" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="GOV" ColumnName="GOV" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="NumOFP_Other" ColumnName="NumOFP_Other" />
+          <ScalarProperty Name="NumOFP_HQ" ColumnName="NumOFP_HQ" />
+          <ScalarProperty Name="NumOFP_RB" ColumnName="NumOFP_RB" />
+          <ScalarProperty Name="NumOFP_CO" ColumnName="NumOFP_CO" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="FocalPoint" ColumnName="FocalPoint" />
+          <ScalarProperty Name="RequestingUnit" ColumnName="RequestingUnit" />
+          <ScalarProperty Name="RequestingDate" ColumnName="RequestingDate" />
+          <ScalarProperty Name="RequstingBy" ColumnName="RequstingBy" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="evalutions">
+      <EntityTypeMapping TypeName="WFPModel.evalution">
+        <MappingFragment StoreEntitySet="evalution">
+          <ScalarProperty Name="q6" ColumnName="q6" />
+          <ScalarProperty Name="q5" ColumnName="q5" />
+          <ScalarProperty Name="q4" ColumnName="q4" />
+          <ScalarProperty Name="q3" ColumnName="q3" />
+          <ScalarProperty Name="q2" ColumnName="q2" />
+          <ScalarProperty Name="q1" ColumnName="q1" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Event_requests">
+      <EntityTypeMapping TypeName="WFPModel.Event_requests">
+        <MappingFragment StoreEntitySet="Event_requests">
+          <ScalarProperty Name="Other_Services" ColumnName="Other_Services" />
+          <ScalarProperty Name="Airport_Picup_Services" ColumnName="Airport_Picup_Services" />
+          <ScalarProperty Name="Transportstion_ForLocal_Staff" ColumnName="Transportstion_ForLocal_Staff" />
+          <ScalarProperty Name="Dedicated_IT_SUPP" ColumnName="Dedicated_IT_SUPP" />
+          <ScalarProperty Name="Coctail_Reception" ColumnName="Coctail_Reception" />
+          <ScalarProperty Name="Dinner" ColumnName="Dinner" />
+          <ScalarProperty Name="Lunch" ColumnName="Lunch" />
+          <ScalarProperty Name="COffeBreak_UNM" ColumnName="COffeBreak_UNM" />
+          <ScalarProperty Name="COffeBreak" ColumnName="COffeBreak" />
+          <ScalarProperty Name="BOR_Days" ColumnName="BOR_Days" />
+          <ScalarProperty Name="MMR_Days" ColumnName="MMR_Days" />
+          <ScalarProperty Name="Conf_Call_Device" ColumnName="Conf_Call_Device" />
+          <ScalarProperty Name="HiSpeedInternet" ColumnName="HiSpeedInternet" />
+          <ScalarProperty Name="Microphone" ColumnName="Microphone" />
+          <ScalarProperty Name="Rom_Type" ColumnName="Rom_Type" />
+          <ScalarProperty Name="Check_OutDate" ColumnName="Check_OutDate" />
+          <ScalarProperty Name="Check_inDate" ColumnName="Check_inDate" />
+          <ScalarProperty Name="Number_Roms" ColumnName="Number_Roms" />
+          <ScalarProperty Name="Budget_TR" ColumnName="Budget_TR" />
+          <ScalarProperty Name="OtherPlace" ColumnName="OtherPlace" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="GOV" ColumnName="GOV" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="NumOFP_Other" ColumnName="NumOFP_Other" />
+          <ScalarProperty Name="NumOFP_HQ" ColumnName="NumOFP_HQ" />
+          <ScalarProperty Name="NumOFP_RB" ColumnName="NumOFP_RB" />
+          <ScalarProperty Name="NumOFP_CO" ColumnName="NumOFP_CO" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="FocalPoint" ColumnName="FocalPoint" />
+          <ScalarProperty Name="RequestingUnit" ColumnName="RequestingUnit" />
+          <ScalarProperty Name="RequestingDate" ColumnName="RequestingDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MissionItineraries">
+      <EntityTypeMapping TypeName="WFPModel.MissionItinerary">
+        <MappingFragment StoreEntitySet="MissionItinerary">
+          <ScalarProperty Name="Twon2" ColumnName="Twon2" />
+          <ScalarProperty Name="Twon1" ColumnName="Twon1" />
+          <ScalarProperty Name="Totime" ColumnName="Totime" />
+          <ScalarProperty Name="Fromtime" ColumnName="Fromtime" />
+          <ScalarProperty Name="non4" ColumnName="non4" />
+          <ScalarProperty Name="non3" ColumnName="non3" />
+          <ScalarProperty Name="non2" ColumnName="non2" />
+          <ScalarProperty Name="non1" ColumnName="non1" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="ToID" ColumnName="ToID" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="FromID" ColumnName="FromID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MissionID" ColumnName="MissionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MissionTypes">
+      <EntityTypeMapping TypeName="WFPModel.MissionType">
+        <MappingFragment StoreEntitySet="MissionType">
+          <ScalarProperty Name="Non3" ColumnName="Non3" />
+          <ScalarProperty Name="Non2" ColumnName="Non2" />
+          <ScalarProperty Name="Non1" ColumnName="Non1" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BioStarModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TB_EVENT">
+    <Key>
+      <PropertyRef Name="nEventIdn" />
+    </Key>
+    <Property Name="nEventIdn" Type="Int32" Nullable="false" />
+    <Property Name="sName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nPriority" Type="Int16" Nullable="false" />
+    <Property Name="nAck" Type="Int16" Nullable="false" />
+    <Property Name="nSWAlarmIdn" Type="Int32" Nullable="false" />
+    <Property Name="nAlarmEmailIdn" Type="Int32" Nullable="false" />
+    <Property Name="sDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_DATA">
+    <Key>
+      <PropertyRef Name="nEventIdn" />
+    </Key>
+    <Property Name="nEventIdn" Type="Int32" Nullable="false" />
+    <Property Name="sName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_FACE">
+    <Key>
+      <PropertyRef Name="nEventFaceIdn" />
+      <PropertyRef Name="nEventLogIdn" />
+    </Key>
+    <Property Name="nEventFaceIdn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nEventLogIdn" Type="Int32" Nullable="false" />
+    <Property Name="nType" Type="Int16" Nullable="false" />
+    <Property Name="bFaceImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="nFaceImageLen" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_LOG">
+    <Key>
+      <PropertyRef Name="nDateTime" />
+      <PropertyRef Name="nReaderIdn" />
+      <PropertyRef Name="nEventIdn" />
+      <PropertyRef Name="nUserID" />
+    </Key>
+    <Property Name="nEventLogIdn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nDateTime" Type="Int32" Nullable="false" />
+    <Property Name="nReaderIdn" Type="Int32" Nullable="false" />
+    <Property Name="nEventIdn" Type="Int32" Nullable="false" />
+    <Property Name="nUserID" Type="Int32" Nullable="false" />
+    <Property Name="nIsLog" Type="Int16" Nullable="false" />
+    <Property Name="nTNAEvent" Type="Int16" Nullable="false" />
+    <Property Name="nIsUseTA" Type="Int16" Nullable="false" />
+    <Property Name="nType" Type="Int16" Nullable="false" />
+    <Property Name="date" Type="DateTime" annotation:StoreGeneratedPattern="Computed" Precision="3" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_LOG_MANAGER">
+    <Key>
+      <PropertyRef Name="nReaderIdn" />
+    </Key>
+    <Property Name="nReaderIdn" Type="Int32" Nullable="false" />
+    <Property Name="nLastDate" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_LOG_MODIFY">
+    <Key>
+      <PropertyRef Name="nEventLogIdn" />
+    </Key>
+    <Property Name="nEventLogIdn" Type="Int32" Nullable="false" />
+    <Property Name="nDateTime" Type="Int32" Nullable="false" />
+    <Property Name="nReaderIdn" Type="Int32" Nullable="false" />
+    <Property Name="nEventIdn" Type="Int32" Nullable="false" />
+    <Property Name="nUserID" Type="Int32" Nullable="false" />
+    <Property Name="nTNAEvent" Type="Int16" Nullable="false" />
+    <Property Name="nFlag" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_LOG_2">
+    <Key>
+      <PropertyRef Name="nEventLogIdn" />
+      <PropertyRef Name="nDateTime" />
+      <PropertyRef Name="nReaderIdn" />
+      <PropertyRef Name="nEventIdn" />
+      <PropertyRef Name="nUserID" />
+      <PropertyRef Name="nIsLog" />
+      <PropertyRef Name="nTNAEvent" />
+      <PropertyRef Name="nIsUseTA" />
+      <PropertyRef Name="nType" />
+    </Key>
+    <Property Name="nEventLogIdn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nDateTime" Type="Int32" Nullable="false" />
+    <Property Name="nReaderIdn" Type="Int32" Nullable="false" />
+    <Property Name="nEventIdn" Type="Int32" Nullable="false" />
+    <Property Name="nUserID" Type="Int32" Nullable="false" />
+    <Property Name="nIsLog" Type="Int16" Nullable="false" />
+    <Property Name="nTNAEvent" Type="Int16" Nullable="false" />
+    <Property Name="nIsUseTA" Type="Int16" Nullable="false" />
+    <Property Name="nType" Type="Int16" Nullable="false" />
+    <Property Name="date" Type="DateTime" annotation:StoreGeneratedPattern="Computed" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="BioStarEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TB_EVENT" EntityType="Self.TB_EVENT" />
+    <EntitySet Name="TB_EVENT_DATA" EntityType="Self.TB_EVENT_DATA" />
+    <EntitySet Name="TB_EVENT_FACE" EntityType="Self.TB_EVENT_FACE" />
+    <EntitySet Name="TB_EVENT_LOG" EntityType="Self.TB_EVENT_LOG" />
+    <EntitySet Name="TB_EVENT_LOG_MANAGER" EntityType="Self.TB_EVENT_LOG_MANAGER" />
+    <EntitySet Name="TB_EVENT_LOG_MODIFY" EntityType="Self.TB_EVENT_LOG_MODIFY" />
+    <EntitySet Name="TB_EVENT_LOG_2" EntityType="Self.TB_EVENT_LOG_2" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,294 @@
+﻿@using Microsoft.AspNet.Identity
+@if (!Request.IsAuthenticated)
+{
+    Response.Redirect("/RBC-SMS/account/login");
+}
+
+@model PagedList.IPagedList<WFPtest.Models.staff>
+
+
+
+
+    @*@model IEnumerable<WFPtest.Models.staff>*@
+@*@using IEnumerable<wfptest.models.staff>;*@
+    @using WFPtest.Models
+ 
+
+    @using PagedList.Mvc;
+    @using JQueryUIHelpers;
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+    @{
+        ViewBag.Title = "Index";
+    }
+<br>
+ <br>
+<br>
+<p>
+    Staff List
+</p>
+
+    @*@using (Html.BeginForm())
+        {
+            <p>
+                Find by name: @Html.TextBox("SearchString")
+                <input type="submit" value="Search" />
+            </p>
+        }*@
+
+    @using (Html.BeginForm("Index", "Staff", FormMethod.Get))
+    {
+        
+   
+        <br>
+<p>
+            Find by name Or E-mail: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+            <input type="submit" value="Search" />@Html.ActionLink("Reset Filter", "Index")
+        </p>
+    }
+
+
+
+    <table class="table" >
+
+               <tr>
+
+            @*<th>
+                    @Html.DisplayName("Staff Code")
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.staff_login)
+                </th>*@
+            <th>
+                @Html.ActionLink("First Name (Sort)", "Index", new { sortOrder = ViewBag.DateSortParm })
+                @*@Html.DisplayName("First Name")*@
+            </th>
+            <th>
+                @Html.ActionLink("Last Name (Sort)", "Index", new { sortOrder = ViewBag.NameSortParm })
+                @*@Html.DisplayName("Last Name")*@
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.staff_created_by)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.staff_created_datetime)
+                </th>*@
+            @*<th>
+                    @Html.DisplayName("Status")
+                </th>*@
+            @*<th>
+                    @Html.DisplayName("Index Number")
+                </th>
+                <th>
+                    @Html.DisplayName("Vendor Number")
+                </th>*@
+            @*<th>
+                    @Html.DisplayName("Nationality")
+                </th>
+                <th>
+                    @Html.DisplayName("Address")
+                </th>*@
+            @*<th>
+                    @Html.DisplayName("Staff DOB")
+                </th>
+                <th>
+                    @Html.DisplayName("Staff EOD")
+                </th>
+                <th>
+                    @Html.DisplayName("Staff NET")
+                </th>*@
+            <th>
+                @Html.DisplayName("Extension")
+            </th>
+            <th>
+                @Html.DisplayName("E-mail")
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.staff_access_main)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.staff_access_dts)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.staff_access_tb)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.staff_access_ct)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.staff_access_li)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.staff_access_lc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.staff_access_sr)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.staff_access_admin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.staff_last_updated_by)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.staff_last_updated_datetime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.staff_deleted_by)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.staff_deleted_datetime)
+                </th>*@
+            @*<th>
+                    @Html.DisplayName("Contract Details")
+                </th>*@
+            @*<th>
+                    @Html.DisplayName("Contract Type")
+                </th>*@
+            <th>
+                @Html.DisplayName("Office")
+            </th>
+            <th>
+                @Html.DisplayName("Title")
+            </th>
+            @*<th>
+                @Html.DisplayName("Supervisor")
+            </th>*@
+            <th>
+                @Html.DisplayName("Sub Office")
+            </th>
+            <th>
+                @Html.DisplayName("Unit")
+            </th>
+
+            <th></th>
+                   <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.staff_id)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.staff_login)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.staff_first_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.staff_last_name)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.staff_created_by)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_created_datetime)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.staff_status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_index_number)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_vendor_number)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.staff_nationality)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_address)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.staff_dob)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_eod)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_nte)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.staff_extension_number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.staff_email)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.staff_access_main)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_access_dts)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_access_tb)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_access_ct)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_access_li)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_access_lc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_access_sr)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_access_admin)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_last_updated_by)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_last_updated_datetime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_deleted_by)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.staff_deleted_datetime)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.contract_details.contract_details_id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.contract_type.contract_type_description )
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country_office.office_abreviation_english)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.functional_title.functional_title_description_english)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.staff2.staff_email)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.sub_office.office_abreviation_english)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.unit.unit_abreviation_english)
+                </td>
+             
+                <td>
+                    @Html.ActionLink("Create New", "Create") 
+                </td>
+               
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.staffid }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.staffid }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.staffid })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

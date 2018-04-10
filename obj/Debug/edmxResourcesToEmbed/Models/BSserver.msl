@@ -1,0 +1,2469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BioStarModelStoreContainer" CdmEntityContainer="BioStarEntitiesWFP">
+    <EntitySetMapping Name="TB_ACCESSGROUP">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ACCESSGROUP">
+        <MappingFragment StoreEntitySet="TB_ACCESSGROUP">
+          <ScalarProperty Name="nAccessIdn" ColumnName="nAccessIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ACCESSGROUP_DOOR">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ACCESSGROUP_DOOR">
+        <MappingFragment StoreEntitySet="TB_ACCESSGROUP_DOOR">
+          <ScalarProperty Name="nAccessDoorIdn" ColumnName="nAccessDoorIdn" />
+          <ScalarProperty Name="nAccessIdn" ColumnName="nAccessIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nAgentIdn" ColumnName="nAgentIdn" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ACCESSGROUP_USER">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ACCESSGROUP_USER">
+        <MappingFragment StoreEntitySet="TB_ACCESSGROUP_USER">
+          <ScalarProperty Name="nAccessUserIdn" ColumnName="nAccessUserIdn" />
+          <ScalarProperty Name="nAccessIdn" ColumnName="nAccessIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nAgentIdn" ColumnName="nAgentIdn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ACCESSGROUP_ZONE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ACCESSGROUP_ZONE">
+        <MappingFragment StoreEntitySet="TB_ACCESSGROUP_ZONE">
+          <ScalarProperty Name="nAccessIdn" ColumnName="nAccessIdn" />
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ADMIN_OPTION">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ADMIN_OPTION">
+        <MappingFragment StoreEntitySet="TB_ADMIN_OPTION">
+          <ScalarProperty Name="nFieldType" ColumnName="nFieldType" />
+          <ScalarProperty Name="sValue" ColumnName="sValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ALARM">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ALARM">
+        <MappingFragment StoreEntitySet="TB_ALARM">
+          <ScalarProperty Name="nAlarmIdn" ColumnName="nAlarmIdn" />
+          <ScalarProperty Name="nSWAlarmIdn" ColumnName="nSWAlarmIdn" />
+          <ScalarProperty Name="nOutputDeviceSoundIdn" ColumnName="nOutputDeviceSoundIdn" />
+          <ScalarProperty Name="nOutputReaderIdn" ColumnName="nOutputReaderIdn" />
+          <ScalarProperty Name="nOutputPort" ColumnName="nOutputPort" />
+          <ScalarProperty Name="nOutputWaveIdn" ColumnName="nOutputWaveIdn" />
+          <ScalarProperty Name="nAlarmEmailIdn" ColumnName="nAlarmEmailIdn" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ALARM_DEST">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ALARM_DEST">
+        <MappingFragment StoreEntitySet="TB_ALARM_DEST">
+          <ScalarProperty Name="nAlarmDestIdn" ColumnName="nAlarmDestIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nAgent" ColumnName="nAgent" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nAlarmIdn" ColumnName="nAlarmIdn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ALARM_EMAIL">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ALARM_EMAIL">
+        <MappingFragment StoreEntitySet="TB_ALARM_EMAIL">
+          <ScalarProperty Name="nAlarmEmailIdn" ColumnName="nAlarmEmailIdn" />
+          <ScalarProperty Name="nEmailIdn1" ColumnName="nEmailIdn1" />
+          <ScalarProperty Name="nEmailIdn2" ColumnName="nEmailIdn2" />
+          <ScalarProperty Name="nEmailIdn3" ColumnName="nEmailIdn3" />
+          <ScalarProperty Name="nEmailIdn4" ColumnName="nEmailIdn4" />
+          <ScalarProperty Name="nEmailIdn5" ColumnName="nEmailIdn5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ALARM_OUTPUT_WAVE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ALARM_OUTPUT_WAVE">
+        <MappingFragment StoreEntitySet="TB_ALARM_OUTPUT_WAVE">
+          <ScalarProperty Name="nOutputWaveIdn" ColumnName="nOutputWaveIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nDelay" ColumnName="nDelay" />
+          <ScalarProperty Name="nCount" ColumnName="nCount" />
+          <ScalarProperty Name="nHigh" ColumnName="nHigh" />
+          <ScalarProperty Name="nLow" ColumnName="nLow" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ALARM_SW">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ALARM_SW">
+        <MappingFragment StoreEntitySet="TB_ALARM_SW">
+          <ScalarProperty Name="nSWAlarmIdn" ColumnName="nSWAlarmIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sFileName" ColumnName="sFileName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_CARD">
+      <EntityTypeMapping TypeName="BioStarModel.TB_CARD">
+        <MappingFragment StoreEntitySet="TB_CARD">
+          <ScalarProperty Name="nCardIdn" ColumnName="nCardIdn" />
+          <ScalarProperty Name="nIndex" ColumnName="nIndex" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="sCardNo" ColumnName="sCardNo" />
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nSecurityLevel" ColumnName="nSecurityLevel" />
+          <ScalarProperty Name="nAccessgroup" ColumnName="nAccessgroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_CARD_MIFARE_LAYOUT">
+      <EntityTypeMapping TypeName="BioStarModel.TB_CARD_MIFARE_LAYOUT">
+        <MappingFragment StoreEntitySet="TB_CARD_MIFARE_LAYOUT">
+          <ScalarProperty Name="nMifareIdn" ColumnName="nMifareIdn" />
+          <ScalarProperty Name="nCISIdn" ColumnName="nCISIdn" />
+          <ScalarProperty Name="nNumOfTemplate" ColumnName="nNumOfTemplate" />
+          <ScalarProperty Name="nTemplateSize" ColumnName="nTemplateSize" />
+          <ScalarProperty Name="nTemplateBlock1" ColumnName="nTemplateBlock1" />
+          <ScalarProperty Name="nTemplateBlock2" ColumnName="nTemplateBlock2" />
+          <ScalarProperty Name="nTemplateBlock3" ColumnName="nTemplateBlock3" />
+          <ScalarProperty Name="nTemplateBlock4" ColumnName="nTemplateBlock4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_DOOR">
+      <EntityTypeMapping TypeName="BioStarModel.TB_DOOR">
+        <MappingFragment StoreEntitySet="TB_DOOR">
+          <ScalarProperty Name="nDoorIdn" ColumnName="nDoorIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nDoorDept" ColumnName="nDoorDept" />
+          <ScalarProperty Name="nOpenTime" ColumnName="nOpenTime" />
+          <ScalarProperty Name="nHoldTime" ColumnName="nHoldTime" />
+          <ScalarProperty Name="nIOReaderIdn" ColumnName="nIOReaderIdn" />
+          <ScalarProperty Name="nOpenRelayID" ColumnName="nOpenRelayID" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_DOOR_ACTIVE_MODE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_DOOR_ACTIVE_MODE">
+        <MappingFragment StoreEntitySet="TB_DOOR_ACTIVE_MODE">
+          <ScalarProperty Name="nDoorIdn" ColumnName="nDoorIdn" />
+          <ScalarProperty Name="nMode" ColumnName="nMode" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nMethod" ColumnName="nMethod" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_DOOR_DEPT">
+      <EntityTypeMapping TypeName="BioStarModel.TB_DOOR_DEPT">
+        <MappingFragment StoreEntitySet="TB_DOOR_DEPT">
+          <ScalarProperty Name="nDoorDept" ColumnName="nDoorDept" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDepartment" ColumnName="sDepartment" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_DOOR_READER">
+      <EntityTypeMapping TypeName="BioStarModel.TB_DOOR_READER">
+        <MappingFragment StoreEntitySet="TB_DOOR_READER">
+          <ScalarProperty Name="nDoorIdn" ColumnName="nDoorIdn" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nInout" ColumnName="nInout" />
+          <ScalarProperty Name="nOpenRelay" ColumnName="nOpenRelay" />
+          <ScalarProperty Name="nOpenTime" ColumnName="nOpenTime" />
+          <ScalarProperty Name="nCloseTime" ColumnName="nCloseTime" />
+          <ScalarProperty Name="nOpenEvent" ColumnName="nOpenEvent" />
+          <ScalarProperty Name="nRTE" ColumnName="nRTE" />
+          <ScalarProperty Name="nRTEType" ColumnName="nRTEType" />
+          <ScalarProperty Name="nSensor" ColumnName="nSensor" />
+          <ScalarProperty Name="nSensorType" ColumnName="nSensorType" />
+          <ScalarProperty Name="nCloseEvent" ColumnName="nCloseEvent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EVENT">
+      <EntityTypeMapping TypeName="BioStarModel.TB_EVENT">
+        <MappingFragment StoreEntitySet="TB_EVENT">
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nPriority" ColumnName="nPriority" />
+          <ScalarProperty Name="nAck" ColumnName="nAck" />
+          <ScalarProperty Name="nSWAlarmIdn" ColumnName="nSWAlarmIdn" />
+          <ScalarProperty Name="nAlarmEmailIdn" ColumnName="nAlarmEmailIdn" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EVENT_DATA">
+      <EntityTypeMapping TypeName="BioStarModel.TB_EVENT_DATA">
+        <MappingFragment StoreEntitySet="TB_EVENT_DATA">
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EVENT_FACE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_EVENT_FACE">
+        <MappingFragment StoreEntitySet="TB_EVENT_FACE">
+          <ScalarProperty Name="nEventFaceIdn" ColumnName="nEventFaceIdn" />
+          <ScalarProperty Name="nEventLogIdn" ColumnName="nEventLogIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="bFaceImage" ColumnName="bFaceImage" />
+          <ScalarProperty Name="nFaceImageLen" ColumnName="nFaceImageLen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EVENT_LOG">
+      <EntityTypeMapping TypeName="BioStarModel.TB_EVENT_LOG">
+        <MappingFragment StoreEntitySet="TB_EVENT_LOG">
+          <ScalarProperty Name="nEventLogIdn" ColumnName="nEventLogIdn" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+          <ScalarProperty Name="nIsLog" ColumnName="nIsLog" />
+          <ScalarProperty Name="nTNAEvent" ColumnName="nTNAEvent" />
+          <ScalarProperty Name="nIsUseTA" ColumnName="nIsUseTA" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EVENT_LOG_MANAGER">
+      <EntityTypeMapping TypeName="BioStarModel.TB_EVENT_LOG_MANAGER">
+        <MappingFragment StoreEntitySet="TB_EVENT_LOG_MANAGER">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nLastDate" ColumnName="nLastDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EVENT_LOG_MODIFY">
+      <EntityTypeMapping TypeName="BioStarModel.TB_EVENT_LOG_MODIFY">
+        <MappingFragment StoreEntitySet="TB_EVENT_LOG_MODIFY">
+          <ScalarProperty Name="nEventLogIdn" ColumnName="nEventLogIdn" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+          <ScalarProperty Name="nTNAEvent" ColumnName="nTNAEvent" />
+          <ScalarProperty Name="nFlag" ColumnName="nFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_HOLIDAY">
+      <EntityTypeMapping TypeName="BioStarModel.TB_HOLIDAY">
+        <MappingFragment StoreEntitySet="TB_HOLIDAY">
+          <ScalarProperty Name="nHoliday" ColumnName="nHoliday" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_HOLIDAY_DATE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_HOLIDAY_DATE">
+        <MappingFragment StoreEntitySet="TB_HOLIDAY_DATE">
+          <ScalarProperty Name="nHoliday" ColumnName="nHoliday" />
+          <ScalarProperty Name="nDate" ColumnName="nDate" />
+          <ScalarProperty Name="nYearRepeat" ColumnName="nYearRepeat" />
+          <ScalarProperty Name="nDaysLong" ColumnName="nDaysLong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_LEAVE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_LEAVE">
+        <MappingFragment StoreEntitySet="TB_LEAVE">
+          <ScalarProperty Name="nLeaveIdn" ColumnName="nLeaveIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nStartTime" ColumnName="nStartTime" />
+          <ScalarProperty Name="nEndTime" ColumnName="nEndTime" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_OPERATOR">
+      <EntityTypeMapping TypeName="BioStarModel.TB_OPERATOR">
+        <MappingFragment StoreEntitySet="TB_OPERATOR">
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+          <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nPrivilegeIdn" ColumnName="nPrivilegeIdn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_OPERATOR_EMAIL">
+      <EntityTypeMapping TypeName="BioStarModel.TB_OPERATOR_EMAIL">
+        <MappingFragment StoreEntitySet="TB_OPERATOR_EMAIL">
+          <ScalarProperty Name="nEmailIdn" ColumnName="nEmailIdn" />
+          <ScalarProperty Name="sSMTPServer" ColumnName="sSMTPServer" />
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+          <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+          <ScalarProperty Name="sSender" ColumnName="sSender" />
+          <ScalarProperty Name="sRecipient" ColumnName="sRecipient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_OPERATOR_PERMIT">
+      <EntityTypeMapping TypeName="BioStarModel.TB_OPERATOR_PERMIT">
+        <MappingFragment StoreEntitySet="TB_OPERATOR_PERMIT">
+          <ScalarProperty Name="nPermitIdn" ColumnName="nPermitIdn" />
+          <ScalarProperty Name="nPrivilegeIdn" ColumnName="nPrivilegeIdn" />
+          <ScalarProperty Name="nModuleIdn" ColumnName="nModuleIdn" />
+          <ScalarProperty Name="nAgentType" ColumnName="nAgentType" />
+          <ScalarProperty Name="nAgentIdn" ColumnName="nAgentIdn" />
+          <ScalarProperty Name="nPermit" ColumnName="nPermit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_OPERATOR_PRIVILEGE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_OPERATOR_PRIVILEGE">
+        <MappingFragment StoreEntitySet="TB_OPERATOR_PRIVILEGE">
+          <ScalarProperty Name="nPrivilegeIdn" ColumnName="nPrivilegeIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_READER">
+      <EntityTypeMapping TypeName="BioStarModel.TB_READER">
+        <MappingFragment StoreEntitySet="TB_READER">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nDeptIdn" ColumnName="nDeptIdn" />
+          <ScalarProperty Name="sIP" ColumnName="sIP" />
+          <ScalarProperty Name="sMacAddress" ColumnName="sMacAddress" />
+          <ScalarProperty Name="nConnType" ColumnName="nConnType" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_READER_DEPT">
+      <EntityTypeMapping TypeName="BioStarModel.TB_READER_DEPT">
+        <MappingFragment StoreEntitySet="TB_READER_DEPT">
+          <ScalarProperty Name="nDeptIdn" ColumnName="nDeptIdn" />
+          <ScalarProperty Name="nDeptType" ColumnName="nDeptType" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+          <ScalarProperty Name="nParentReaderIdn" ColumnName="nParentReaderIdn" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_READER_DISPLAY">
+      <EntityTypeMapping TypeName="BioStarModel.TB_READER_DISPLAY">
+        <MappingFragment StoreEntitySet="TB_READER_DISPLAY">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nLanguage" ColumnName="nLanguage" />
+          <ScalarProperty Name="nBackground" ColumnName="nBackground" />
+          <ScalarProperty Name="nSubInfo" ColumnName="nSubInfo" />
+          <ScalarProperty Name="nMenuTimeout" ColumnName="nMenuTimeout" />
+          <ScalarProperty Name="nMessageTimeout" ColumnName="nMessageTimeout" />
+          <ScalarProperty Name="nPrivateAuth" ColumnName="nPrivateAuth" />
+          <ScalarProperty Name="nVolume" ColumnName="nVolume" />
+          <ScalarProperty Name="nDateType" ColumnName="nDateType" />
+          <ScalarProperty Name="nTimeSync" ColumnName="nTimeSync" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_READER_FINGER">
+      <EntityTypeMapping TypeName="BioStarModel.TB_READER_FINGER">
+        <MappingFragment StoreEntitySet="TB_READER_FINGER">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nSecurity" ColumnName="nSecurity" />
+          <ScalarProperty Name="nFastMode" ColumnName="nFastMode" />
+          <ScalarProperty Name="nImageQuality" ColumnName="nImageQuality" />
+          <ScalarProperty Name="nViewImage" ColumnName="nViewImage" />
+          <ScalarProperty Name="nTimeout" ColumnName="nTimeout" />
+          <ScalarProperty Name="nFreeScanDelay" ColumnName="nFreeScanDelay" />
+          <ScalarProperty Name="nMatchTimeout" ColumnName="nMatchTimeout" />
+          <ScalarProperty Name="nCheckDuplicate" ColumnName="nCheckDuplicate" />
+          <ScalarProperty Name="nEncryption" ColumnName="nEncryption" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_READER_HW">
+      <EntityTypeMapping TypeName="BioStarModel.TB_READER_HW">
+        <MappingFragment StoreEntitySet="TB_READER_HW">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="sProductName" ColumnName="sProductName" />
+          <ScalarProperty Name="sBoardVersion" ColumnName="sBoardVersion" />
+          <ScalarProperty Name="sFirmwareVersion" ColumnName="sFirmwareVersion" />
+          <ScalarProperty Name="sBlackfinVersion" ColumnName="sBlackfinVersion" />
+          <ScalarProperty Name="sKernelVersion" ColumnName="sKernelVersion" />
+          <ScalarProperty Name="sPrivateKey" ColumnName="sPrivateKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_READER_INPUT">
+      <EntityTypeMapping TypeName="BioStarModel.TB_READER_INPUT">
+        <MappingFragment StoreEntitySet="TB_READER_INPUT">
+          <ScalarProperty Name="nReaderIOIdn" ColumnName="nReaderIOIdn" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nInputType" ColumnName="nInputType" />
+          <ScalarProperty Name="nFunctionType" ColumnName="nFunctionType" />
+          <ScalarProperty Name="nDurationTime" ColumnName="nDurationTime" />
+          <ScalarProperty Name="nSwitchType" ColumnName="nSwitchType" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_READER_IO_EVENT">
+      <EntityTypeMapping TypeName="BioStarModel.TB_READER_IO_EVENT">
+        <MappingFragment StoreEntitySet="TB_READER_IO_EVENT">
+          <ScalarProperty Name="nReaderIOIdn" ColumnName="nReaderIOIdn" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_READER_NETWORK">
+      <EntityTypeMapping TypeName="BioStarModel.TB_READER_NETWORK">
+        <MappingFragment StoreEntitySet="TB_READER_NETWORK">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nPort" ColumnName="nPort" />
+          <ScalarProperty Name="nMaxConnection" ColumnName="nMaxConnection" />
+          <ScalarProperty Name="nSSL" ColumnName="nSSL" />
+          <ScalarProperty Name="nDHCP" ColumnName="nDHCP" />
+          <ScalarProperty Name="sIPAddress" ColumnName="sIPAddress" />
+          <ScalarProperty Name="sGateway" ColumnName="sGateway" />
+          <ScalarProperty Name="sSubnetMask" ColumnName="sSubnetMask" />
+          <ScalarProperty Name="sServerIP" ColumnName="sServerIP" />
+          <ScalarProperty Name="nTimeSync" ColumnName="nTimeSync" />
+          <ScalarProperty Name="sComPort" ColumnName="sComPort" />
+          <ScalarProperty Name="nRS485Mode" ColumnName="nRS485Mode" />
+          <ScalarProperty Name="nRS485Baudrate" ColumnName="nRS485Baudrate" />
+          <ScalarProperty Name="nRS232Baudrate" ColumnName="nRS232Baudrate" />
+          <ScalarProperty Name="nSecureIO" ColumnName="nSecureIO" />
+          <ScalarProperty Name="nIsHistory" ColumnName="nIsHistory" />
+          <ScalarProperty Name="nUpdateDate" ColumnName="nUpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_READER_NETWORK_HISTORY">
+      <EntityTypeMapping TypeName="BioStarModel.TB_READER_NETWORK_HISTORY">
+        <MappingFragment StoreEntitySet="TB_READER_NETWORK_HISTORY">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nUpdateDate" ColumnName="nUpdateDate" />
+          <ScalarProperty Name="sAdminID" ColumnName="sAdminID" />
+          <ScalarProperty Name="sIP" ColumnName="sIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_READER_OUTPUT">
+      <EntityTypeMapping TypeName="BioStarModel.TB_READER_OUTPUT">
+        <MappingFragment StoreEntitySet="TB_READER_OUTPUT">
+          <ScalarProperty Name="nReaderIOIdn" ColumnName="nReaderIOIdn" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nEvent" ColumnName="nEvent" />
+          <ScalarProperty Name="nDeviceID" ColumnName="nDeviceID" />
+          <ScalarProperty Name="nRelayPort" ColumnName="nRelayPort" />
+          <ScalarProperty Name="nRelayOn" ColumnName="nRelayOn" />
+          <ScalarProperty Name="nOutputWaveIdn" ColumnName="nOutputWaveIdn" />
+          <ScalarProperty Name="nPriority" ColumnName="nPriority" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_READER_WLAN">
+      <EntityTypeMapping TypeName="BioStarModel.TB_READER_WLAN">
+        <MappingFragment StoreEntitySet="TB_READER_WLAN">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nPresetIndex" ColumnName="nPresetIndex" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nOperationMode" ColumnName="nOperationMode" />
+          <ScalarProperty Name="sEssid" ColumnName="sEssid" />
+          <ScalarProperty Name="nAuthType" ColumnName="nAuthType" />
+          <ScalarProperty Name="nEncryption" ColumnName="nEncryption" />
+          <ScalarProperty Name="nKeyType" ColumnName="nKeyType" />
+          <ScalarProperty Name="sKey" ColumnName="sKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_SECUREIO">
+      <EntityTypeMapping TypeName="BioStarModel.TB_SECUREIO">
+        <MappingFragment StoreEntitySet="TB_SECUREIO">
+          <ScalarProperty Name="nSecureIOIdn" ColumnName="nSecureIOIdn" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nIndex" ColumnName="nIndex" />
+          <ScalarProperty Name="nInput0" ColumnName="nInput0" />
+          <ScalarProperty Name="nInput1" ColumnName="nInput1" />
+          <ScalarProperty Name="nInput2" ColumnName="nInput2" />
+          <ScalarProperty Name="nInput3" ColumnName="nInput3" />
+          <ScalarProperty Name="nOutput0" ColumnName="nOutput0" />
+          <ScalarProperty Name="nOutput1" ColumnName="nOutput1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_SITEGRAPHICS">
+      <EntityTypeMapping TypeName="BioStarModel.TB_SITEGRAPHICS">
+        <MappingFragment StoreEntitySet="TB_SITEGRAPHICS">
+          <ScalarProperty Name="nSiteGraphicsIdn" ColumnName="nSiteGraphicsIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_SITEGRAPHICS_DOORS">
+      <EntityTypeMapping TypeName="BioStarModel.TB_SITEGRAPHICS_DOORS">
+        <MappingFragment StoreEntitySet="TB_SITEGRAPHICS_DOORS">
+          <ScalarProperty Name="nSiteGraphicsIdn" ColumnName="nSiteGraphicsIdn" />
+          <ScalarProperty Name="nDoorIdn" ColumnName="nDoorIdn" />
+          <ScalarProperty Name="nObjectIdn" ColumnName="nObjectIdn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_SITEGRAPHICS_IMAGEINFO">
+      <EntityTypeMapping TypeName="BioStarModel.TB_SITEGRAPHICS_IMAGEINFO">
+        <MappingFragment StoreEntitySet="TB_SITEGRAPHICS_IMAGEINFO">
+          <ScalarProperty Name="nSiteGraphicsIdn" ColumnName="nSiteGraphicsIdn" />
+          <ScalarProperty Name="bBGImage" ColumnName="bBGImage" />
+          <ScalarProperty Name="nBGImageLen" ColumnName="nBGImageLen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_SITEGRAPHICS_OBJECTINFO">
+      <EntityTypeMapping TypeName="BioStarModel.TB_SITEGRAPHICS_OBJECTINFO">
+        <MappingFragment StoreEntitySet="TB_SITEGRAPHICS_OBJECTINFO">
+          <ScalarProperty Name="nSiteGraphicsIdn" ColumnName="nSiteGraphicsIdn" />
+          <ScalarProperty Name="bDoorsObject" ColumnName="bDoorsObject" />
+          <ScalarProperty Name="nDoorsObjectLen" ColumnName="nDoorsObjectLen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TA_DAILYSCHEDULE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TA_DAILYSCHEDULE">
+        <MappingFragment StoreEntitySet="TB_TA_DAILYSCHEDULE">
+          <ScalarProperty Name="nDailyScheduleIdn" ColumnName="nDailyScheduleIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nDateStartTime" ColumnName="nDateStartTime" />
+          <ScalarProperty Name="nIsFirstAndLastAuth" ColumnName="nIsFirstAndLastAuth" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TA_DEVICE_EVENT_KEY">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TA_DEVICE_EVENT_KEY">
+        <MappingFragment StoreEntitySet="TB_TA_DEVICE_EVENT_KEY">
+          <ScalarProperty Name="nDeviceEventKeyIdn" ColumnName="nDeviceEventKeyIdn" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nKeyIdn" ColumnName="nKeyIdn" />
+          <ScalarProperty Name="nKeyEvent" ColumnName="nKeyEvent" />
+          <ScalarProperty Name="nNoLate" ColumnName="nNoLate" />
+          <ScalarProperty Name="nIsOnlyResult" ColumnName="nIsOnlyResult" />
+          <ScalarProperty Name="nIsWorkTime" ColumnName="nIsWorkTime" />
+          <ScalarProperty Name="sEventName" ColumnName="sEventName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TA_HOLIDAY_RULE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TA_HOLIDAY_RULE">
+        <MappingFragment StoreEntitySet="TB_TA_HOLIDAY_RULE">
+          <ScalarProperty Name="nHolidayRuleIdn" ColumnName="nHolidayRuleIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nDailyScheduleIdn" ColumnName="nDailyScheduleIdn" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TA_HOLIDAY_RULE_DATA">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TA_HOLIDAY_RULE_DATA">
+        <MappingFragment StoreEntitySet="TB_TA_HOLIDAY_RULE_DATA">
+          <ScalarProperty Name="nHolidayRuleDataIdn" ColumnName="nHolidayRuleDataIdn" />
+          <ScalarProperty Name="nHolidayRuleIdn" ColumnName="nHolidayRuleIdn" />
+          <ScalarProperty Name="nHolidayIdn" ColumnName="nHolidayIdn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TA_LOG_HISTORY">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TA_LOG_HISTORY">
+        <MappingFragment StoreEntitySet="TB_TA_LOG_HISTORY">
+          <ScalarProperty Name="nHistroryIdn" ColumnName="nHistroryIdn" />
+          <ScalarProperty Name="nUpdateTime" ColumnName="nUpdateTime" />
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+          <ScalarProperty Name="sIP" ColumnName="sIP" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nTNAEvent" ColumnName="nTNAEvent" />
+          <ScalarProperty Name="nFirstInTime" ColumnName="nFirstInTime" />
+          <ScalarProperty Name="nLastOutTime" ColumnName="nLastOutTime" />
+          <ScalarProperty Name="sFirstInEvent" ColumnName="sFirstInEvent" />
+          <ScalarProperty Name="sLastOutEvent" ColumnName="sLastOutEvent" />
+          <ScalarProperty Name="nTAResult" ColumnName="nTAResult" />
+          <ScalarProperty Name="nWorkTime" ColumnName="nWorkTime" />
+          <ScalarProperty Name="nTimeCategoryIdn" ColumnName="nTimeCategoryIdn" />
+          <ScalarProperty Name="nFlag" ColumnName="nFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TA_RESULT">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TA_RESULT">
+        <MappingFragment StoreEntitySet="TB_TA_RESULT">
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nShiftIdn" ColumnName="nShiftIdn" />
+          <ScalarProperty Name="nDailyScheduleIdn" ColumnName="nDailyScheduleIdn" />
+          <ScalarProperty Name="nStartTime" ColumnName="nStartTime" />
+          <ScalarProperty Name="nEndTime" ColumnName="nEndTime" />
+          <ScalarProperty Name="sStartEvent" ColumnName="sStartEvent" />
+          <ScalarProperty Name="sEndEvent" ColumnName="sEndEvent" />
+          <ScalarProperty Name="nTAResult" ColumnName="nTAResult" />
+          <ScalarProperty Name="nWorkTime" ColumnName="nWorkTime" />
+          <ScalarProperty Name="nIsModify" ColumnName="nIsModify" />
+          <ScalarProperty Name="nLateInTime" ColumnName="nLateInTime" />
+          <ScalarProperty Name="nEarlyOutTime" ColumnName="nEarlyOutTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TA_RESULT_CATEGORY">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TA_RESULT_CATEGORY">
+        <MappingFragment StoreEntitySet="TB_TA_RESULT_CATEGORY">
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nTimeCategoryIdn" ColumnName="nTimeCategoryIdn" />
+          <ScalarProperty Name="nWorkTime" ColumnName="nWorkTime" />
+          <ScalarProperty Name="nTAResult" ColumnName="nTAResult" />
+          <ScalarProperty Name="nIsModify" ColumnName="nIsModify" />
+          <ScalarProperty Name="nLateInTime" ColumnName="nLateInTime" />
+          <ScalarProperty Name="nEarlyOutTime" ColumnName="nEarlyOutTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TA_SHIFT">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TA_SHIFT">
+        <MappingFragment StoreEntitySet="TB_TA_SHIFT">
+          <ScalarProperty Name="nShiftIdn" ColumnName="nShiftIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nStartTime" ColumnName="nStartTime" />
+          <ScalarProperty Name="nEndTime" ColumnName="nEndTime" />
+          <ScalarProperty Name="nCycleType" ColumnName="nCycleType" />
+          <ScalarProperty Name="nCyclePeriod" ColumnName="nCyclePeriod" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TA_SHIFT_DAILY">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TA_SHIFT_DAILY">
+        <MappingFragment StoreEntitySet="TB_TA_SHIFT_DAILY">
+          <ScalarProperty Name="nShiftDailyIdn" ColumnName="nShiftDailyIdn" />
+          <ScalarProperty Name="nShiftIdn" ColumnName="nShiftIdn" />
+          <ScalarProperty Name="nDailyScheduleIdn" ColumnName="nDailyScheduleIdn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TA_TIMECATEGORY">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TA_TIMECATEGORY">
+        <MappingFragment StoreEntitySet="TB_TA_TIMECATEGORY">
+          <ScalarProperty Name="nTimeCategoryIdn" ColumnName="nTimeCategoryIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nTimeRate" ColumnName="nTimeRate" />
+          <ScalarProperty Name="nRoundingUnit" ColumnName="nRoundingUnit" />
+          <ScalarProperty Name="nRoundingType" ColumnName="nRoundingType" />
+          <ScalarProperty Name="nDisplayColor" ColumnName="nDisplayColor" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TA_TIMESLOT">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TA_TIMESLOT">
+        <MappingFragment StoreEntitySet="TB_TA_TIMESLOT">
+          <ScalarProperty Name="nTimeSlotIdn" ColumnName="nTimeSlotIdn" />
+          <ScalarProperty Name="nDailyScheduleIdn" ColumnName="nDailyScheduleIdn" />
+          <ScalarProperty Name="nStartTime" ColumnName="nStartTime" />
+          <ScalarProperty Name="nEndTime" ColumnName="nEndTime" />
+          <ScalarProperty Name="nTimeCategoryIdn" ColumnName="nTimeCategoryIdn" />
+          <ScalarProperty Name="nStartGrace" ColumnName="nStartGrace" />
+          <ScalarProperty Name="nEndGrace" ColumnName="nEndGrace" />
+          <ScalarProperty Name="nInRounding" ColumnName="nInRounding" />
+          <ScalarProperty Name="nOutRounding" ColumnName="nOutRounding" />
+          <ScalarProperty Name="nMinimumDuration" ColumnName="nMinimumDuration" />
+          <ScalarProperty Name="nMustCheckIn" ColumnName="nMustCheckIn" />
+          <ScalarProperty Name="nMustCheckOut" ColumnName="nMustCheckOut" />
+          <ScalarProperty Name="nAutoCheckIn" ColumnName="nAutoCheckIn" />
+          <ScalarProperty Name="nAutoCheckOut" ColumnName="nAutoCheckOut" />
+          <ScalarProperty Name="nAffectingResult" ColumnName="nAffectingResult" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TA_USER">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TA_USER">
+        <MappingFragment StoreEntitySet="TB_TA_USER">
+          <ScalarProperty Name="nUserTAIdn" ColumnName="nUserTAIdn" />
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nTAIdn" ColumnName="nTAIdn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TIMECODE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TIMECODE">
+        <MappingFragment StoreEntitySet="TB_TIMECODE">
+          <ScalarProperty Name="nTimecode" ColumnName="nTimecode" />
+          <ScalarProperty Name="nStartTime1" ColumnName="nStartTime1" />
+          <ScalarProperty Name="nEndTime1" ColumnName="nEndTime1" />
+          <ScalarProperty Name="nStartTime2" ColumnName="nStartTime2" />
+          <ScalarProperty Name="nEndTime2" ColumnName="nEndTime2" />
+          <ScalarProperty Name="nStartTime3" ColumnName="nStartTime3" />
+          <ScalarProperty Name="nEndTime3" ColumnName="nEndTime3" />
+          <ScalarProperty Name="nStartTime4" ColumnName="nStartTime4" />
+          <ScalarProperty Name="nEndTime4" ColumnName="nEndTime4" />
+          <ScalarProperty Name="nStartTime5" ColumnName="nStartTime5" />
+          <ScalarProperty Name="nEndTime5" ColumnName="nEndTime5" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TIMEZONE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TIMEZONE">
+        <MappingFragment StoreEntitySet="TB_TIMEZONE">
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TIMEZONE_DAY">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TIMEZONE_DAY">
+        <MappingFragment StoreEntitySet="TB_TIMEZONE_DAY">
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+          <ScalarProperty Name="nDay" ColumnName="nDay" />
+          <ScalarProperty Name="nHolidayIdn" ColumnName="nHolidayIdn" />
+          <ScalarProperty Name="nTimecode" ColumnName="nTimecode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TRACE_ADMIN">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TRACE_ADMIN">
+        <MappingFragment StoreEntitySet="TB_TRACE_ADMIN">
+          <ScalarProperty Name="nLogIdn" ColumnName="nLogIdn" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="sAdminID" ColumnName="sAdminID" />
+          <ScalarProperty Name="sAdminIP" ColumnName="sAdminIP" />
+          <ScalarProperty Name="sAccessType" ColumnName="sAccessType" />
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+          <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nPrivilegeIdn" ColumnName="nPrivilegeIdn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TRACE_USER">
+      <EntityTypeMapping TypeName="BioStarModel.TB_TRACE_USER">
+        <MappingFragment StoreEntitySet="TB_TRACE_USER">
+          <ScalarProperty Name="nLogIdn" ColumnName="nLogIdn" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="sAdminID" ColumnName="sAdminID" />
+          <ScalarProperty Name="sAdminIP" ColumnName="sAdminIP" />
+          <ScalarProperty Name="sAccessType" ColumnName="sAccessType" />
+          <ScalarProperty Name="sUserName" ColumnName="sUserName" />
+          <ScalarProperty Name="sDepartment" ColumnName="sDepartment" />
+          <ScalarProperty Name="sTelNumber" ColumnName="sTelNumber" />
+          <ScalarProperty Name="sEmail" ColumnName="sEmail" />
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+          <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+          <ScalarProperty Name="nStartDate" ColumnName="nStartDate" />
+          <ScalarProperty Name="nEndDate" ColumnName="nEndDate" />
+          <ScalarProperty Name="nAdminLevel" ColumnName="nAdminLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USER">
+      <EntityTypeMapping TypeName="BioStarModel.TB_USER">
+        <MappingFragment StoreEntitySet="TB_USER">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="sUserName" ColumnName="sUserName" />
+          <ScalarProperty Name="nDepartmentIdn" ColumnName="nDepartmentIdn" />
+          <ScalarProperty Name="sTelNumber" ColumnName="sTelNumber" />
+          <ScalarProperty Name="sEmail" ColumnName="sEmail" />
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+          <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+          <ScalarProperty Name="nStartDate" ColumnName="nStartDate" />
+          <ScalarProperty Name="nEndDate" ColumnName="nEndDate" />
+          <ScalarProperty Name="nAdminLevel" ColumnName="nAdminLevel" />
+          <ScalarProperty Name="nAuthMode" ColumnName="nAuthMode" />
+          <ScalarProperty Name="nAuthLimitCount" ColumnName="nAuthLimitCount" />
+          <ScalarProperty Name="nTimedAPB" ColumnName="nTimedAPB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USER_AC">
+      <EntityTypeMapping TypeName="BioStarModel.TB_USER_AC">
+        <MappingFragment StoreEntitySet="TB_USER_AC">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nDoorIdn" ColumnName="nDoorIdn" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USER_CARD">
+      <EntityTypeMapping TypeName="BioStarModel.TB_USER_CARD">
+        <MappingFragment StoreEntitySet="TB_USER_CARD">
+          <ScalarProperty Name="nCardIdn" ColumnName="nCardIdn" />
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="sCardNo" ColumnName="sCardNo" />
+          <ScalarProperty Name="sCustomNo" ColumnName="sCustomNo" />
+          <ScalarProperty Name="nSecurityLevel" ColumnName="nSecurityLevel" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nExpiryDateTime" ColumnName="nExpiryDateTime" />
+          <ScalarProperty Name="nBypass" ColumnName="nBypass" />
+          <ScalarProperty Name="nStatus" ColumnName="nStatus" />
+          <ScalarProperty Name="nLatest" ColumnName="nLatest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USER_CUSTOMFIELD">
+      <EntityTypeMapping TypeName="BioStarModel.TB_USER_CUSTOMFIELD">
+        <MappingFragment StoreEntitySet="TB_USER_CUSTOMFIELD">
+          <ScalarProperty Name="nFieldIdn" ColumnName="nFieldIdn" />
+          <ScalarProperty Name="sFieldName" ColumnName="sFieldName" />
+          <ScalarProperty Name="nFieldType" ColumnName="nFieldType" />
+          <ScalarProperty Name="nDataType" ColumnName="nDataType" />
+          <ScalarProperty Name="nEssential" ColumnName="nEssential" />
+          <ScalarProperty Name="nValueIdn" ColumnName="nValueIdn" />
+          <ScalarProperty Name="sData" ColumnName="sData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USER_CUSTOMINFO">
+      <EntityTypeMapping TypeName="BioStarModel.TB_USER_CUSTOMINFO">
+        <MappingFragment StoreEntitySet="TB_USER_CUSTOMINFO">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="sFieldValue1" ColumnName="sFieldValue1" />
+          <ScalarProperty Name="sFieldValue2" ColumnName="sFieldValue2" />
+          <ScalarProperty Name="sFieldValue3" ColumnName="sFieldValue3" />
+          <ScalarProperty Name="sFieldValue4" ColumnName="sFieldValue4" />
+          <ScalarProperty Name="sFieldValue5" ColumnName="sFieldValue5" />
+          <ScalarProperty Name="sFieldValue6" ColumnName="sFieldValue6" />
+          <ScalarProperty Name="sFieldValue7" ColumnName="sFieldValue7" />
+          <ScalarProperty Name="sFieldValue8" ColumnName="sFieldValue8" />
+          <ScalarProperty Name="sFieldValue9" ColumnName="sFieldValue9" />
+          <ScalarProperty Name="sFieldValue10" ColumnName="sFieldValue10" />
+          <ScalarProperty Name="sFieldValue11" ColumnName="sFieldValue11" />
+          <ScalarProperty Name="sFieldValue12" ColumnName="sFieldValue12" />
+          <ScalarProperty Name="sFieldValue13" ColumnName="sFieldValue13" />
+          <ScalarProperty Name="sFieldValue14" ColumnName="sFieldValue14" />
+          <ScalarProperty Name="sFieldValue15" ColumnName="sFieldValue15" />
+          <ScalarProperty Name="sFieldValue16" ColumnName="sFieldValue16" />
+          <ScalarProperty Name="sFieldValue17" ColumnName="sFieldValue17" />
+          <ScalarProperty Name="sFieldValue18" ColumnName="sFieldValue18" />
+          <ScalarProperty Name="sFieldValue19" ColumnName="sFieldValue19" />
+          <ScalarProperty Name="sFieldValue20" ColumnName="sFieldValue20" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USER_DEPT">
+      <EntityTypeMapping TypeName="BioStarModel.TB_USER_DEPT">
+        <MappingFragment StoreEntitySet="TB_USER_DEPT">
+          <ScalarProperty Name="nDepartmentIdn" ColumnName="nDepartmentIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDepartment" ColumnName="sDepartment" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USER_DEVICE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_USER_DEVICE">
+        <MappingFragment StoreEntitySet="TB_USER_DEVICE">
+          <ScalarProperty Name="nUserDeviceIdn" ColumnName="nUserDeviceIdn" />
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nDeviceID" ColumnName="nDeviceID" />
+          <ScalarProperty Name="nIsUpdated" ColumnName="nIsUpdated" />
+          <ScalarProperty Name="nIsDelete" ColumnName="nIsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USER_EX">
+      <EntityTypeMapping TypeName="BioStarModel.TB_USER_EX">
+        <MappingFragment StoreEntitySet="TB_USER_EX">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="sSurName" ColumnName="sSurName" />
+          <ScalarProperty Name="sFirstName" ColumnName="sFirstName" />
+          <ScalarProperty Name="sMiddleName" ColumnName="sMiddleName" />
+          <ScalarProperty Name="nImageSize" ColumnName="nImageSize" />
+          <ScalarProperty Name="sImageFilePath" ColumnName="sImageFilePath" />
+          <ScalarProperty Name="nDuration" ColumnName="nDuration" />
+          <ScalarProperty Name="nCountPerDay" ColumnName="nCountPerDay" />
+          <ScalarProperty Name="nUsePrivateImage" ColumnName="nUsePrivateImage" />
+          <ScalarProperty Name="sGreetingMsg" ColumnName="sGreetingMsg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USER_FACE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_USER_FACE">
+        <MappingFragment StoreEntitySet="TB_USER_FACE">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nIndex" ColumnName="nIndex" />
+          <ScalarProperty Name="bTemplate" ColumnName="bTemplate" />
+          <ScalarProperty Name="nTemplatecs" ColumnName="nTemplatecs" />
+          <ScalarProperty Name="nImageLen" ColumnName="nImageLen" />
+          <ScalarProperty Name="bImage" ColumnName="bImage" />
+          <ScalarProperty Name="nEncryption" ColumnName="nEncryption" />
+          <ScalarProperty Name="nSecurityLevel" ColumnName="nSecurityLevel" />
+          <ScalarProperty Name="nAuthLimitCount" ColumnName="nAuthLimitCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USER_TEMPLATE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_USER_TEMPLATE">
+        <MappingFragment StoreEntitySet="TB_USER_TEMPLATE">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nIndex" ColumnName="nIndex" />
+          <ScalarProperty Name="bTemplate" ColumnName="bTemplate" />
+          <ScalarProperty Name="nTemplatecs" ColumnName="nTemplatecs" />
+          <ScalarProperty Name="nDuress" ColumnName="nDuress" />
+          <ScalarProperty Name="nEncryption" ColumnName="nEncryption" />
+          <ScalarProperty Name="nSecurityLevel" ColumnName="nSecurityLevel" />
+          <ScalarProperty Name="nFingerIndex" ColumnName="nFingerIndex" />
+          <ScalarProperty Name="nTemplateIndex" ColumnName="nTemplateIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USER_UPDATE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_USER_UPDATE">
+        <MappingFragment StoreEntitySet="TB_USER_UPDATE">
+          <ScalarProperty Name="nUserUpdateIdn" ColumnName="nUserUpdateIdn" />
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nDeviceID" ColumnName="nDeviceID" />
+          <ScalarProperty Name="nDeviceUpdate" ColumnName="nDeviceUpdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ZONE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ZONE">
+        <MappingFragment StoreEntitySet="TB_ZONE">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nAttribute" ColumnName="nAttribute" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ZONE_ACCESSZONE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ZONE_ACCESSZONE">
+        <MappingFragment StoreEntitySet="TB_ZONE_ACCESSZONE">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nSyncTime" ColumnName="nSyncTime" />
+          <ScalarProperty Name="nSyncUser" ColumnName="nSyncUser" />
+          <ScalarProperty Name="nSyncLog" ColumnName="nSyncLog" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ZONE_ALARM">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ZONE_ALARM">
+        <MappingFragment StoreEntitySet="TB_ZONE_ALARM">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nInputEvent" ColumnName="nInputEvent" />
+          <ScalarProperty Name="nOutputEvent" ColumnName="nOutputEvent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ZONE_ALARMZONE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ZONE_ALARMZONE">
+        <MappingFragment StoreEntitySet="TB_ZONE_ALARMZONE">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nLockDelayTime" ColumnName="nLockDelayTime" />
+          <ScalarProperty Name="nUnlockDelayTime" ColumnName="nUnlockDelayTime" />
+          <ScalarProperty Name="nStatus" ColumnName="nStatus" />
+          <ScalarProperty Name="nSoundStatus" ColumnName="nSoundStatus" />
+          <ScalarProperty Name="nArmKey" ColumnName="nArmKey" />
+          <ScalarProperty Name="nArmCardID" ColumnName="nArmCardID" />
+          <ScalarProperty Name="nArmCustomID" ColumnName="nArmCustomID" />
+          <ScalarProperty Name="nDisarmKey" ColumnName="nDisarmKey" />
+          <ScalarProperty Name="nDisarmCardID" ColumnName="nDisarmCardID" />
+          <ScalarProperty Name="nDisarmCustomID" ColumnName="nDisarmCustomID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ZONE_APBZONE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ZONE_APBZONE">
+        <MappingFragment StoreEntitySet="TB_ZONE_APBZONE">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nUnlockTime" ColumnName="nUnlockTime" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ZONE_CARD">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ZONE_CARD">
+        <MappingFragment StoreEntitySet="TB_ZONE_CARD">
+          <ScalarProperty Name="nZoneCardIdn" ColumnName="nZoneCardIdn" />
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nCardID" ColumnName="nCardID" />
+          <ScalarProperty Name="nCustomID" ColumnName="nCustomID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ZONE_CONTROL">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ZONE_CONTROL">
+        <MappingFragment StoreEntitySet="TB_ZONE_CONTROL">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nNumOfEntrance" ColumnName="nNumOfEntrance" />
+          <ScalarProperty Name="nFlag" ColumnName="nFlag" />
+          <ScalarProperty Name="nTime" ColumnName="nTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ZONE_DOOR">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ZONE_DOOR">
+        <MappingFragment StoreEntitySet="TB_ZONE_DOOR">
+          <ScalarProperty Name="nZoneDoorIdn" ColumnName="nZoneDoorIdn" />
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nDoorIdn" ColumnName="nDoorIdn" />
+          <ScalarProperty Name="nDoorDept" ColumnName="nDoorDept" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ZONE_ELZONE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ZONE_ELZONE">
+        <MappingFragment StoreEntitySet="TB_ZONE_ELZONE">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nLimitTime" ColumnName="nLimitTime" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+          <ScalarProperty Name="nStartTime1" ColumnName="nStartTime1" />
+          <ScalarProperty Name="nEndTime1" ColumnName="nEndTime1" />
+          <ScalarProperty Name="nLimitNumber1" ColumnName="nLimitNumber1" />
+          <ScalarProperty Name="nStartTime2" ColumnName="nStartTime2" />
+          <ScalarProperty Name="nEndTime2" ColumnName="nEndTime2" />
+          <ScalarProperty Name="nLimitNumber2" ColumnName="nLimitNumber2" />
+          <ScalarProperty Name="nStartTime3" ColumnName="nStartTime3" />
+          <ScalarProperty Name="nEndTime3" ColumnName="nEndTime3" />
+          <ScalarProperty Name="nLimitNumber3" ColumnName="nLimitNumber3" />
+          <ScalarProperty Name="nStartTime4" ColumnName="nStartTime4" />
+          <ScalarProperty Name="nEndTime4" ColumnName="nEndTime4" />
+          <ScalarProperty Name="nLimitNumber4" ColumnName="nLimitNumber4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ZONE_INPUT">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ZONE_INPUT">
+        <MappingFragment StoreEntitySet="TB_ZONE_INPUT">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nReaderIOIdn" ColumnName="nReaderIOIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nInputFlag" ColumnName="nInputFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ZONE_MUSTERZONE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ZONE_MUSTERZONE">
+        <MappingFragment StoreEntitySet="TB_ZONE_MUSTERZONE">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nTrackingTime" ColumnName="nTrackingTime" />
+          <ScalarProperty Name="nTimeZone" ColumnName="nTimeZone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ZONE_OUTPUT">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ZONE_OUTPUT">
+        <MappingFragment StoreEntitySet="TB_ZONE_OUTPUT">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nReaderIOIdn" ColumnName="nReaderIOIdn" />
+          <ScalarProperty Name="nOutputFlag" ColumnName="nOutputFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ZONE_READER">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ZONE_READER">
+        <MappingFragment StoreEntitySet="TB_ZONE_READER">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nNodeType" ColumnName="nNodeType" />
+          <ScalarProperty Name="nAttribute" ColumnName="nAttribute" />
+          <ScalarProperty Name="nAttribute2" ColumnName="nAttribute2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ZONE_FIREZONE">
+      <EntityTypeMapping TypeName="BioStarModel.TB_ZONE_FIREZONE">
+        <MappingFragment StoreEntitySet="TB_ZONE_FIREZONE">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_LogData">
+      <EntityTypeMapping TypeName="BioStarModel.View_LogData">
+        <MappingFragment StoreEntitySet="View_LogData">
+          <ScalarProperty Name="sLogTime" ColumnName="sLogTime" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_DeleteAccessGroupACInfo" FunctionName="BioStarModel.Store.sp_DeleteAccessGroupACInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteAccessGroupInfo" FunctionName="BioStarModel.Store.sp_DeleteAccessGroupInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteAccessGroupUserInfo" FunctionName="BioStarModel.Store.sp_DeleteAccessGroupUserInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteAdminEmailInfo" FunctionName="BioStarModel.Store.sp_DeleteAdminEmailInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteAlarmEmailInfo" FunctionName="BioStarModel.Store.sp_DeleteAlarmEmailInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteAlarmInfo" FunctionName="BioStarModel.Store.sp_DeleteAlarmInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteAlarmSWInfo" FunctionName="BioStarModel.Store.sp_DeleteAlarmSWInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteAlarmWaveInfo" FunctionName="BioStarModel.Store.sp_DeleteAlarmWaveInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteAllData" FunctionName="BioStarModel.Store.sp_DeleteAllData" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteDepartment" FunctionName="BioStarModel.Store.sp_DeleteDepartment" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteDeviceInfo" FunctionName="BioStarModel.Store.sp_DeleteDeviceInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteDoorDepartment" FunctionName="BioStarModel.Store.sp_DeleteDoorDepartment" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteDoorInfo" FunctionName="BioStarModel.Store.sp_DeleteDoorInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteDoorReader" FunctionName="BioStarModel.Store.sp_DeleteDoorReader" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteDoorReaderInfo" FunctionName="BioStarModel.Store.sp_DeleteDoorReaderInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteHolidayDataInfo" FunctionName="BioStarModel.Store.sp_DeleteHolidayDataInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteHolidayInfo" FunctionName="BioStarModel.Store.sp_DeleteHolidayInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteLoginInfo" FunctionName="BioStarModel.Store.sp_DeleteLoginInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeletePrivilegeInfo" FunctionName="BioStarModel.Store.sp_DeletePrivilegeInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeletePrivilegeInfoData" FunctionName="BioStarModel.Store.sp_DeletePrivilegeInfoData" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteReaderInfo" FunctionName="BioStarModel.Store.sp_DeleteReaderInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteReaderInputInfo" FunctionName="BioStarModel.Store.sp_DeleteReaderInputInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteReaderIOEventInfo" FunctionName="BioStarModel.Store.sp_DeleteReaderIOEventInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteReaderIOInfo" FunctionName="BioStarModel.Store.sp_DeleteReaderIOInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteReaderOutputInfo" FunctionName="BioStarModel.Store.sp_DeleteReaderOutputInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteSiteGraphicsDoorsInfo" FunctionName="BioStarModel.Store.sp_DeleteSiteGraphicsDoorsInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteSiteGraphicsDoorsObjectInfo" FunctionName="BioStarModel.Store.sp_DeleteSiteGraphicsDoorsObjectInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteSiteGraphicsImageInfo" FunctionName="BioStarModel.Store.sp_DeleteSiteGraphicsImageInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteSiteGraphicsInfo" FunctionName="BioStarModel.Store.sp_DeleteSiteGraphicsInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteTimecodeInfo" FunctionName="BioStarModel.Store.sp_DeleteTimecodeInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteTimezoneInfo" FunctionName="BioStarModel.Store.sp_DeleteTimezoneInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteUserACInfo" FunctionName="BioStarModel.Store.sp_DeleteUserACInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteUserCardInfo" FunctionName="BioStarModel.Store.sp_DeleteUserCardInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteUserCustomField" FunctionName="BioStarModel.Store.sp_DeleteUserCustomField" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteUserDeviceUpdateInfo" FunctionName="BioStarModel.Store.sp_DeleteUserDeviceUpdateInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteUserFaceInfo" FunctionName="BioStarModel.Store.sp_DeleteUserFaceInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteUserFingerPrintInfo" FunctionName="BioStarModel.Store.sp_DeleteUserFingerPrintInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteUserInfo" FunctionName="BioStarModel.Store.sp_DeleteUserInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteZoneACInfo" FunctionName="BioStarModel.Store.sp_DeleteZoneACInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteZoneInfo" FunctionName="BioStarModel.Store.sp_DeleteZoneInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteZoneInputInfo" FunctionName="BioStarModel.Store.sp_DeleteZoneInputInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteZoneIOInfo" FunctionName="BioStarModel.Store.sp_DeleteZoneIOInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteZoneOutputInfo" FunctionName="BioStarModel.Store.sp_DeleteZoneOutputInfo" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteZoneReaderInfo" FunctionName="BioStarModel.Store.sp_DeleteZoneReaderInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertAccessGroupACInfo" FunctionName="BioStarModel.Store.sp_InsertAccessGroupACInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertAccessGroupBasicInfo" FunctionName="BioStarModel.Store.sp_InsertAccessGroupBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertAccessGroupUserInfo" FunctionName="BioStarModel.Store.sp_InsertAccessGroupUserInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertAdminEmailInfo" FunctionName="BioStarModel.Store.sp_InsertAdminEmailInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertAlarmEmailInfo" FunctionName="BioStarModel.Store.sp_InsertAlarmEmailInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertAlarmInfo" FunctionName="BioStarModel.Store.sp_InsertAlarmInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertAlarmSWInfo" FunctionName="BioStarModel.Store.sp_InsertAlarmSWInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertAlarmWaveInfo" FunctionName="BioStarModel.Store.sp_InsertAlarmWaveInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertDepartment" FunctionName="BioStarModel.Store.sp_InsertDepartment" />
+    <FunctionImportMapping FunctionImportName="sp_InsertDeviceSecureIOInfo" FunctionName="BioStarModel.Store.sp_InsertDeviceSecureIOInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertDoorBasicInfo" FunctionName="BioStarModel.Store.sp_InsertDoorBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertDoorDepartment" FunctionName="BioStarModel.Store.sp_InsertDoorDepartment" />
+    <FunctionImportMapping FunctionImportName="sp_InsertDoorReaderInfo" FunctionName="BioStarModel.Store.sp_InsertDoorReaderInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertEventFaceInfo" FunctionName="BioStarModel.Store.sp_InsertEventFaceInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertEventTypeInfo" FunctionName="BioStarModel.Store.sp_InsertEventTypeInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertHolidayBasicInfo" FunctionName="BioStarModel.Store.sp_InsertHolidayBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertHolidayDataInfo" FunctionName="BioStarModel.Store.sp_InsertHolidayDataInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertLogDataInfo" FunctionName="BioStarModel.Store.sp_InsertLogDataInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertLoginInfo" FunctionName="BioStarModel.Store.sp_InsertLoginInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertPrivilegeInfo" FunctionName="BioStarModel.Store.sp_InsertPrivilegeInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertPrivilegeInfoData" FunctionName="BioStarModel.Store.sp_InsertPrivilegeInfoData" />
+    <FunctionImportMapping FunctionImportName="sp_InsertReaderBasicInfo" FunctionName="BioStarModel.Store.sp_InsertReaderBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertReaderConsoleInfo" FunctionName="BioStarModel.Store.sp_InsertReaderConsoleInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertReaderInputInfo" FunctionName="BioStarModel.Store.sp_InsertReaderInputInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertReaderIOEventInfo" FunctionName="BioStarModel.Store.sp_InsertReaderIOEventInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertReaderIOInfo" FunctionName="BioStarModel.Store.sp_InsertReaderIOInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertReaderOutputInfo" FunctionName="BioStarModel.Store.sp_InsertReaderOutputInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertSiteGraphicsBasicInfo" FunctionName="BioStarModel.Store.sp_InsertSiteGraphicsBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertSiteGraphicsDoorsInfo" FunctionName="BioStarModel.Store.sp_InsertSiteGraphicsDoorsInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertSiteGraphicsDoorsObjectInfo" FunctionName="BioStarModel.Store.sp_InsertSiteGraphicsDoorsObjectInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertSiteGraphicsImageInfo" FunctionName="BioStarModel.Store.sp_InsertSiteGraphicsImageInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertTimecodeInfo" FunctionName="BioStarModel.Store.sp_InsertTimecodeInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertTimezoneBasicInfo" FunctionName="BioStarModel.Store.sp_InsertTimezoneBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertUserACInfo" FunctionName="BioStarModel.Store.sp_InsertUserACInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertUserBasicInfo" FunctionName="BioStarModel.Store.sp_InsertUserBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertUserCardInfo" FunctionName="BioStarModel.Store.sp_InsertUserCardInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertUserCustomFieldInfo" FunctionName="BioStarModel.Store.sp_InsertUserCustomFieldInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertUserDeviceUpdateInfo" FunctionName="BioStarModel.Store.sp_InsertUserDeviceUpdateInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertUserFaceInfo" FunctionName="BioStarModel.Store.sp_InsertUserFaceInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertUserFingerPrintInfo" FunctionName="BioStarModel.Store.sp_InsertUserFingerPrintInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertZoneACInfo" FunctionName="BioStarModel.Store.sp_InsertZoneACInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertZoneBasicInfo" FunctionName="BioStarModel.Store.sp_InsertZoneBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertZoneInputInfo" FunctionName="BioStarModel.Store.sp_InsertZoneInputInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertZoneOutputInfo" FunctionName="BioStarModel.Store.sp_InsertZoneOutputInfo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertZoneReaderInfo" FunctionName="BioStarModel.Store.sp_InsertZoneReaderInfo" />
+    <FunctionImportMapping FunctionImportName="sp_SelectAccessGroupACInfo" FunctionName="BioStarModel.Store.sp_SelectAccessGroupACInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectAccessGroupACInfo_Result">
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nAgentIdn" ColumnName="nAgentIdn" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectAccessGroupBasicInfo" FunctionName="BioStarModel.Store.sp_SelectAccessGroupBasicInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectAccessGroupBasicInfo_Result">
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectAccessGroupList" FunctionName="BioStarModel.Store.sp_SelectAccessGroupList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectAccessGroupList_Result">
+          <ScalarProperty Name="nAccessIdn" ColumnName="nAccessIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectAccessGroupReaderACInfo" FunctionName="BioStarModel.Store.sp_SelectAccessGroupReaderACInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectAccessGroupReaderACInfo_Result">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectAccessGroupTreeList" FunctionName="BioStarModel.Store.sp_SelectAccessGroupTreeList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectAccessGroupTreeList_Result">
+          <ScalarProperty Name="nAccessIdn" ColumnName="nAccessIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectAccessGroupUserInfo" FunctionName="BioStarModel.Store.sp_SelectAccessGroupUserInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectAccessGroupUserInfo_Result">
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nAgentIdn" ColumnName="nAgentIdn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectAdminEmailInfo" FunctionName="BioStarModel.Store.sp_SelectAdminEmailInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectAdminEmailInfo_Result">
+          <ScalarProperty Name="nEmailIdn" ColumnName="nEmailIdn" />
+          <ScalarProperty Name="sSMTPServer" ColumnName="sSMTPServer" />
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+          <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+          <ScalarProperty Name="sSender" ColumnName="sSender" />
+          <ScalarProperty Name="sRecipient" ColumnName="sRecipient" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectAdminOption" FunctionName="BioStarModel.Store.sp_SelectAdminOption">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectAdminOption_Result">
+          <ScalarProperty Name="nFieldType" ColumnName="nFieldType" />
+          <ScalarProperty Name="sValue" ColumnName="sValue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectAlarmEmailInfo" FunctionName="BioStarModel.Store.sp_SelectAlarmEmailInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectAlarmEmailInfo_Result">
+          <ScalarProperty Name="nEmailIdn1" ColumnName="nEmailIdn1" />
+          <ScalarProperty Name="nEmailIdn2" ColumnName="nEmailIdn2" />
+          <ScalarProperty Name="nEmailIdn3" ColumnName="nEmailIdn3" />
+          <ScalarProperty Name="nEmailIdn4" ColumnName="nEmailIdn4" />
+          <ScalarProperty Name="nEmailIdn5" ColumnName="nEmailIdn5" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectAlarmInfo" FunctionName="BioStarModel.Store.sp_SelectAlarmInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectAlarmInfo_Result">
+          <ScalarProperty Name="nAlarmIdn" ColumnName="nAlarmIdn" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nSWAlarmIdn" ColumnName="nSWAlarmIdn" />
+          <ScalarProperty Name="nOutputDeviceSoundIdn" ColumnName="nOutputDeviceSoundIdn" />
+          <ScalarProperty Name="nOutputReaderIdn" ColumnName="nOutputReaderIdn" />
+          <ScalarProperty Name="nOutputPort" ColumnName="nOutputPort" />
+          <ScalarProperty Name="nOutputWaveIdn" ColumnName="nOutputWaveIdn" />
+          <ScalarProperty Name="nAlarmEmailIdn" ColumnName="nAlarmEmailIdn" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectAlarmSWInfo" FunctionName="BioStarModel.Store.sp_SelectAlarmSWInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectAlarmSWInfo_Result">
+          <ScalarProperty Name="nSWAlarmIdn" ColumnName="nSWAlarmIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sFileName" ColumnName="sFileName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectAlarmWaveInfo" FunctionName="BioStarModel.Store.sp_SelectAlarmWaveInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectAlarmWaveInfo_Result">
+          <ScalarProperty Name="nOutputWaveIdn" ColumnName="nOutputWaveIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nDelay" ColumnName="nDelay" />
+          <ScalarProperty Name="nCount" ColumnName="nCount" />
+          <ScalarProperty Name="nHigh" ColumnName="nHigh" />
+          <ScalarProperty Name="nLow" ColumnName="nLow" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectAllUserFaceInfo" FunctionName="BioStarModel.Store.sp_SelectAllUserFaceInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectAllUserFaceInfo_Result">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nIndex" ColumnName="nIndex" />
+          <ScalarProperty Name="bTemplate" ColumnName="bTemplate" />
+          <ScalarProperty Name="nTemplatecs" ColumnName="nTemplatecs" />
+          <ScalarProperty Name="nImageLen" ColumnName="nImageLen" />
+          <ScalarProperty Name="bImage" ColumnName="bImage" />
+          <ScalarProperty Name="nEncryption" ColumnName="nEncryption" />
+          <ScalarProperty Name="nSecurityLevel" ColumnName="nSecurityLevel" />
+          <ScalarProperty Name="nAuthLimitCount" ColumnName="nAuthLimitCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectAllUserFingerPrintInfo" FunctionName="BioStarModel.Store.sp_SelectAllUserFingerPrintInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectAllUserFingerPrintInfo_Result">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nIndex" ColumnName="nIndex" />
+          <ScalarProperty Name="bTemplate" ColumnName="bTemplate" />
+          <ScalarProperty Name="nTemplatecs" ColumnName="nTemplatecs" />
+          <ScalarProperty Name="nDuress" ColumnName="nDuress" />
+          <ScalarProperty Name="nEncryption" ColumnName="nEncryption" />
+          <ScalarProperty Name="nSecurityLevel" ColumnName="nSecurityLevel" />
+          <ScalarProperty Name="nFingerIndex" ColumnName="nFingerIndex" />
+          <ScalarProperty Name="nTemplateIndex" ColumnName="nTemplateIndex" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDepartmentIndex" FunctionName="BioStarModel.Store.sp_SelectDepartmentIndex" />
+    <FunctionImportMapping FunctionImportName="sp_SelectDepartmentInfoList" FunctionName="BioStarModel.Store.sp_SelectDepartmentInfoList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDepartmentInfoList_Result">
+          <ScalarProperty Name="nDepartmentIdn" ColumnName="nDepartmentIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDepartment" ColumnName="sDepartment" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDepartmentList" FunctionName="BioStarModel.Store.sp_SelectDepartmentList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDepartmentList_Result">
+          <ScalarProperty Name="nDepartmentIdn" ColumnName="nDepartmentIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDeptDeviceList" FunctionName="BioStarModel.Store.sp_SelectDeptDeviceList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDeptDeviceList_Result">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="sProductName" ColumnName="sProductName" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+          <ScalarProperty Name="nParentReaderIdn" ColumnName="nParentReaderIdn" />
+          <ScalarProperty Name="nType1" ColumnName="nType1" />
+          <ScalarProperty Name="nPort" ColumnName="nPort" />
+          <ScalarProperty Name="sIPAddress" ColumnName="sIPAddress" />
+          <ScalarProperty Name="sComPort" ColumnName="sComPort" />
+          <ScalarProperty Name="nRS485Baudrate" ColumnName="nRS485Baudrate" />
+          <ScalarProperty Name="nRS232Baudrate" ColumnName="nRS232Baudrate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDeptDeviceTreeList" FunctionName="BioStarModel.Store.sp_SelectDeptDeviceTreeList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDeptDeviceTreeList_Result">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nParentReaderIdn" ColumnName="nParentReaderIdn" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+          <ScalarProperty Name="nJobType" ColumnName="nJobType" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDeptUserList" FunctionName="BioStarModel.Store.sp_SelectDeptUserList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDeptUserList_Result">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="sUserName" ColumnName="sUserName" />
+          <ScalarProperty Name="nDepartmentIdn" ColumnName="nDepartmentIdn" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="sTelNumber" ColumnName="sTelNumber" />
+          <ScalarProperty Name="sEmail" ColumnName="sEmail" />
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+          <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+          <ScalarProperty Name="nStartDate" ColumnName="nStartDate" />
+          <ScalarProperty Name="nEndDate" ColumnName="nEndDate" />
+          <ScalarProperty Name="nAdminLevel" ColumnName="nAdminLevel" />
+          <ScalarProperty Name="nAuthMode" ColumnName="nAuthMode" />
+          <ScalarProperty Name="nAuthLimitCount" ColumnName="nAuthLimitCount" />
+          <ScalarProperty Name="nTimedAPB" ColumnName="nTimedAPB" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDeptUserTreeList" FunctionName="BioStarModel.Store.sp_SelectDeptUserTreeList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDeptUserTreeList_Result">
+          <ScalarProperty Name="nDepartmentIdn" ColumnName="nDepartmentIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDeviceConsoleList" FunctionName="BioStarModel.Store.sp_SelectDeviceConsoleList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDeviceConsoleList_Result">
+          <ScalarProperty Name="nConsoleIdn" ColumnName="nConsoleIdn" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDeviceList" FunctionName="BioStarModel.Store.sp_SelectDeviceList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDeviceList_Result">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="sProductName" ColumnName="sProductName" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+          <ScalarProperty Name="nParentReaderIdn" ColumnName="nParentReaderIdn" />
+          <ScalarProperty Name="nType1" ColumnName="nType1" />
+          <ScalarProperty Name="nPort" ColumnName="nPort" />
+          <ScalarProperty Name="sIPAddress" ColumnName="sIPAddress" />
+          <ScalarProperty Name="sComPort" ColumnName="sComPort" />
+          <ScalarProperty Name="nRS485Baudrate" ColumnName="nRS485Baudrate" />
+          <ScalarProperty Name="nRS232Baudrate" ColumnName="nRS232Baudrate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDeviceTreeList" FunctionName="BioStarModel.Store.sp_SelectDeviceTreeList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDeviceTreeList_Result">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nParentReaderIdn" ColumnName="nParentReaderIdn" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+          <ScalarProperty Name="nJobType" ColumnName="nJobType" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDoorACInfo" FunctionName="BioStarModel.Store.sp_SelectDoorACInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDoorACInfo_Result">
+          <ScalarProperty Name="nAccessIdn" ColumnName="nAccessIdn" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDoorBasicInfo" FunctionName="BioStarModel.Store.sp_SelectDoorBasicInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDoorBasicInfo_Result">
+          <ScalarProperty Name="nDoorIdn" ColumnName="nDoorIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDoorDepartmentList" FunctionName="BioStarModel.Store.sp_SelectDoorDepartmentList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDoorDepartmentList_Result">
+          <ScalarProperty Name="nDoorDept" ColumnName="nDoorDept" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDoorEventInfo" FunctionName="BioStarModel.Store.sp_SelectDoorEventInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDoorEventInfo_Result">
+          <ScalarProperty Name="nEventLogIdn" ColumnName="nEventLogIdn" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nTNAEvent" ColumnName="nTNAEvent" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDoorList" FunctionName="BioStarModel.Store.sp_SelectDoorList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDoorList_Result">
+          <ScalarProperty Name="nDoorIdn" ColumnName="nDoorIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nOpenTime" ColumnName="nOpenTime" />
+          <ScalarProperty Name="nHoldTime" ColumnName="nHoldTime" />
+          <ScalarProperty Name="nIOReaderIdn" ColumnName="nIOReaderIdn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDoorOperationInfo" FunctionName="BioStarModel.Store.sp_SelectDoorOperationInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDoorOperationInfo_Result">
+          <ScalarProperty Name="nMode" ColumnName="nMode" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nMethod" ColumnName="nMethod" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDoorReaderInfo" FunctionName="BioStarModel.Store.sp_SelectDoorReaderInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDoorReaderInfo_Result">
+          <ScalarProperty Name="nDoorIdn" ColumnName="nDoorIdn" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nInout" ColumnName="nInout" />
+          <ScalarProperty Name="nOpenRelay" ColumnName="nOpenRelay" />
+          <ScalarProperty Name="nOpenTime" ColumnName="nOpenTime" />
+          <ScalarProperty Name="nCloseTime" ColumnName="nCloseTime" />
+          <ScalarProperty Name="nOpenEvent" ColumnName="nOpenEvent" />
+          <ScalarProperty Name="nRTE" ColumnName="nRTE" />
+          <ScalarProperty Name="nRTEType" ColumnName="nRTEType" />
+          <ScalarProperty Name="nSensor" ColumnName="nSensor" />
+          <ScalarProperty Name="nSensorType" ColumnName="nSensorType" />
+          <ScalarProperty Name="nCloseEvent" ColumnName="nCloseEvent" />
+          <ScalarProperty Name="sIP" ColumnName="sIP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDoorSubInfo" FunctionName="BioStarModel.Store.sp_SelectDoorSubInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDoorSubInfo_Result">
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nOpenTime" ColumnName="nOpenTime" />
+          <ScalarProperty Name="nHoldTime" ColumnName="nHoldTime" />
+          <ScalarProperty Name="nOpenRelayID" ColumnName="nOpenRelayID" />
+          <ScalarProperty Name="nIOReaderIdn" ColumnName="nIOReaderIdn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDoorTreeList" FunctionName="BioStarModel.Store.sp_SelectDoorTreeList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDoorTreeList_Result">
+          <ScalarProperty Name="nDoorIdn" ColumnName="nDoorIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nDoorDept" ColumnName="nDoorDept" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+          <ScalarProperty Name="nJobType" ColumnName="nJobType" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectDoorZoneInfo" FunctionName="BioStarModel.Store.sp_SelectDoorZoneInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectDoorZoneInfo_Result">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nAttribute" ColumnName="nAttribute" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectEventFaceInfo" FunctionName="BioStarModel.Store.sp_SelectEventFaceInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectEventFaceInfo_Result">
+          <ScalarProperty Name="nFaceImageLen" ColumnName="nFaceImageLen" />
+          <ScalarProperty Name="bFaceImage" ColumnName="bFaceImage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectEventIdn" FunctionName="BioStarModel.Store.sp_SelectEventIdn" />
+    <FunctionImportMapping FunctionImportName="sp_SelectEventList" FunctionName="BioStarModel.Store.sp_SelectEventList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectEventList_Result">
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nPriority" ColumnName="nPriority" />
+          <ScalarProperty Name="nAck" ColumnName="nAck" />
+          <ScalarProperty Name="nSWAlarmIdn" ColumnName="nSWAlarmIdn" />
+          <ScalarProperty Name="nAlarmEmailIdn" ColumnName="nAlarmEmailIdn" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectEventLog" FunctionName="BioStarModel.Store.sp_SelectEventLog">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectEventLog_Result">
+          <ScalarProperty Name="nEventLogIdn" ColumnName="nEventLogIdn" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nTNAEvent" ColumnName="nTNAEvent" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectHolidayBasicInfo" FunctionName="BioStarModel.Store.sp_SelectHolidayBasicInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectHolidayBasicInfo_Result">
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectHolidayDataInfo" FunctionName="BioStarModel.Store.sp_SelectHolidayDataInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectHolidayDataInfo_Result">
+          <ScalarProperty Name="nDate" ColumnName="nDate" />
+          <ScalarProperty Name="nYearRepeat" ColumnName="nYearRepeat" />
+          <ScalarProperty Name="nDaysLong" ColumnName="nDaysLong" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectHolidayList" FunctionName="BioStarModel.Store.sp_SelectHolidayList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectHolidayList_Result">
+          <ScalarProperty Name="nHoliday" ColumnName="nHoliday" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectHolidayTreeList" FunctionName="BioStarModel.Store.sp_SelectHolidayTreeList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectHolidayTreeList_Result">
+          <ScalarProperty Name="nHoliday" ColumnName="nHoliday" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectLatestEventDate" FunctionName="BioStarModel.Store.sp_SelectLatestEventDate" />
+    <FunctionImportMapping FunctionImportName="sp_SelectLoginAdminList" FunctionName="BioStarModel.Store.sp_SelectLoginAdminList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectLoginAdminList_Result">
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+          <ScalarProperty Name="nPrivilegeIdn" ColumnName="nPrivilegeIdn" />
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectLoginCount" FunctionName="BioStarModel.Store.sp_SelectLoginCount" />
+    <FunctionImportMapping FunctionImportName="sp_SelectLoginInfo" FunctionName="BioStarModel.Store.sp_SelectLoginInfo" />
+    <FunctionImportMapping FunctionImportName="sp_SelectLogList" FunctionName="BioStarModel.Store.sp_SelectLogList" />
+    <FunctionImportMapping FunctionImportName="sp_SelectMifareLayout" FunctionName="BioStarModel.Store.sp_SelectMifareLayout">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectMifareLayout_Result">
+          <ScalarProperty Name="nCISIdn" ColumnName="nCISIdn" />
+          <ScalarProperty Name="nNumOfTemplate" ColumnName="nNumOfTemplate" />
+          <ScalarProperty Name="nTemplateSize" ColumnName="nTemplateSize" />
+          <ScalarProperty Name="nTemplateBlock1" ColumnName="nTemplateBlock1" />
+          <ScalarProperty Name="nTemplateBlock2" ColumnName="nTemplateBlock2" />
+          <ScalarProperty Name="nTemplateBlock3" ColumnName="nTemplateBlock3" />
+          <ScalarProperty Name="nTemplateBlock4" ColumnName="nTemplateBlock4" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectPrivilegeList" FunctionName="BioStarModel.Store.sp_SelectPrivilegeList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectPrivilegeList_Result">
+          <ScalarProperty Name="nPrivilegeIdn" ColumnName="nPrivilegeIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectPrivilegePermitInfo" FunctionName="BioStarModel.Store.sp_SelectPrivilegePermitInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectPrivilegePermitInfo_Result">
+          <ScalarProperty Name="nPermitIdn" ColumnName="nPermitIdn" />
+          <ScalarProperty Name="nModuleIdn" ColumnName="nModuleIdn" />
+          <ScalarProperty Name="nAgentType" ColumnName="nAgentType" />
+          <ScalarProperty Name="nAgentIdn" ColumnName="nAgentIdn" />
+          <ScalarProperty Name="nPermit" ColumnName="nPermit" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectReaderBasicInfo" FunctionName="BioStarModel.Store.sp_SelectReaderBasicInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectReaderBasicInfo_Result">
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sProductName" ColumnName="sProductName" />
+          <ScalarProperty Name="sBoardVersion" ColumnName="sBoardVersion" />
+          <ScalarProperty Name="sFirmwareVersion" ColumnName="sFirmwareVersion" />
+          <ScalarProperty Name="sBlackfinVersion" ColumnName="sBlackfinVersion" />
+          <ScalarProperty Name="sKernelVersion" ColumnName="sKernelVersion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectReaderDisplayInfo" FunctionName="BioStarModel.Store.sp_SelectReaderDisplayInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectReaderDisplayInfo_Result">
+          <ScalarProperty Name="nLanguage" ColumnName="nLanguage" />
+          <ScalarProperty Name="nBackground" ColumnName="nBackground" />
+          <ScalarProperty Name="nSubInfo" ColumnName="nSubInfo" />
+          <ScalarProperty Name="nMenuTimeout" ColumnName="nMenuTimeout" />
+          <ScalarProperty Name="nMessageTimeout" ColumnName="nMessageTimeout" />
+          <ScalarProperty Name="nPrivateAuth" ColumnName="nPrivateAuth" />
+          <ScalarProperty Name="nVolume" ColumnName="nVolume" />
+          <ScalarProperty Name="nDateType" ColumnName="nDateType" />
+          <ScalarProperty Name="nTimeSync" ColumnName="nTimeSync" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectReaderInputInfo" FunctionName="BioStarModel.Store.sp_SelectReaderInputInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectReaderInputInfo_Result">
+          <ScalarProperty Name="nInputType" ColumnName="nInputType" />
+          <ScalarProperty Name="nFunctionType" ColumnName="nFunctionType" />
+          <ScalarProperty Name="nDurationTime" ColumnName="nDurationTime" />
+          <ScalarProperty Name="nSwitchType" ColumnName="nSwitchType" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectReaderIOEventInfo" FunctionName="BioStarModel.Store.sp_SelectReaderIOEventInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectReaderIOEventInfo_Result">
+          <ScalarProperty Name="nReaderIOIdn" ColumnName="nReaderIOIdn" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectReaderNetworkInfo" FunctionName="BioStarModel.Store.sp_SelectReaderNetworkInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectReaderNetworkInfo_Result">
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nPort" ColumnName="nPort" />
+          <ScalarProperty Name="nMaxConnection" ColumnName="nMaxConnection" />
+          <ScalarProperty Name="nSSL" ColumnName="nSSL" />
+          <ScalarProperty Name="nDHCP" ColumnName="nDHCP" />
+          <ScalarProperty Name="sIPAddress" ColumnName="sIPAddress" />
+          <ScalarProperty Name="sGateWay" ColumnName="sGateWay" />
+          <ScalarProperty Name="sSubnetmask" ColumnName="sSubnetmask" />
+          <ScalarProperty Name="sServerIP" ColumnName="sServerIP" />
+          <ScalarProperty Name="nTimeSync" ColumnName="nTimeSync" />
+          <ScalarProperty Name="nRS485Mode" ColumnName="nRS485Mode" />
+          <ScalarProperty Name="nRS485Baudrate" ColumnName="nRS485Baudrate" />
+          <ScalarProperty Name="nRS232Baudrate" ColumnName="nRS232Baudrate" />
+          <ScalarProperty Name="nSecureIO" ColumnName="nSecureIO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectReaderNetworkInfo_WLAN" FunctionName="BioStarModel.Store.sp_SelectReaderNetworkInfo_WLAN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectReaderNetworkInfo_WLAN_Result">
+          <ScalarProperty Name="nPresetIndex" ColumnName="nPresetIndex" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nOperationMode" ColumnName="nOperationMode" />
+          <ScalarProperty Name="sEssid" ColumnName="sEssid" />
+          <ScalarProperty Name="nAuthType" ColumnName="nAuthType" />
+          <ScalarProperty Name="nEncryption" ColumnName="nEncryption" />
+          <ScalarProperty Name="nKeyType" ColumnName="nKeyType" />
+          <ScalarProperty Name="sKey" ColumnName="sKey" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectReaderNetworkInfoHistory" FunctionName="BioStarModel.Store.sp_SelectReaderNetworkInfoHistory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectReaderNetworkInfoHistory_Result">
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nPort" ColumnName="nPort" />
+          <ScalarProperty Name="nMaxConnection" ColumnName="nMaxConnection" />
+          <ScalarProperty Name="nSSL" ColumnName="nSSL" />
+          <ScalarProperty Name="nDHCP" ColumnName="nDHCP" />
+          <ScalarProperty Name="sIPAddress" ColumnName="sIPAddress" />
+          <ScalarProperty Name="sGateWay" ColumnName="sGateWay" />
+          <ScalarProperty Name="sSubnetmask" ColumnName="sSubnetmask" />
+          <ScalarProperty Name="sServerIP" ColumnName="sServerIP" />
+          <ScalarProperty Name="nTimeSync" ColumnName="nTimeSync" />
+          <ScalarProperty Name="nRS485Mode" ColumnName="nRS485Mode" />
+          <ScalarProperty Name="nRS485Baudrate" ColumnName="nRS485Baudrate" />
+          <ScalarProperty Name="nRS232Baudrate" ColumnName="nRS232Baudrate" />
+          <ScalarProperty Name="nSecureIO" ColumnName="nSecureIO" />
+          <ScalarProperty Name="nUpdateDate" ColumnName="nUpdateDate" />
+          <ScalarProperty Name="sAdminID" ColumnName="sAdminID" />
+          <ScalarProperty Name="sIP" ColumnName="sIP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectReaderOutputInfo" FunctionName="BioStarModel.Store.sp_SelectReaderOutputInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectReaderOutputInfo_Result">
+          <ScalarProperty Name="nEvent" ColumnName="nEvent" />
+          <ScalarProperty Name="nDeviceID" ColumnName="nDeviceID" />
+          <ScalarProperty Name="nRelayPort" ColumnName="nRelayPort" />
+          <ScalarProperty Name="nRelayOn" ColumnName="nRelayOn" />
+          <ScalarProperty Name="nDelay" ColumnName="nDelay" />
+          <ScalarProperty Name="nCount" ColumnName="nCount" />
+          <ScalarProperty Name="nHigh" ColumnName="nHigh" />
+          <ScalarProperty Name="nLow" ColumnName="nLow" />
+          <ScalarProperty Name="nPriority" ColumnName="nPriority" />
+          <ScalarProperty Name="nOutputWaveIdn" ColumnName="nOutputWaveIdn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectSiteGraphicsBasicInfo" FunctionName="BioStarModel.Store.sp_SelectSiteGraphicsBasicInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectSiteGraphicsBasicInfo_Result">
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectSiteGraphicsDoorsInfo" FunctionName="BioStarModel.Store.sp_SelectSiteGraphicsDoorsInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectSiteGraphicsDoorsInfo_Result">
+          <ScalarProperty Name="nDoorIdn" ColumnName="nDoorIdn" />
+          <ScalarProperty Name="nObjectIdn" ColumnName="nObjectIdn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectSiteGraphicsDoorsObjectInfo" FunctionName="BioStarModel.Store.sp_SelectSiteGraphicsDoorsObjectInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectSiteGraphicsDoorsObjectInfo_Result">
+          <ScalarProperty Name="nDoorsObjectLen" ColumnName="nDoorsObjectLen" />
+          <ScalarProperty Name="bDoorsObject" ColumnName="bDoorsObject" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectSiteGraphicsImageInfo" FunctionName="BioStarModel.Store.sp_SelectSiteGraphicsImageInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectSiteGraphicsImageInfo_Result">
+          <ScalarProperty Name="nBGImageLen" ColumnName="nBGImageLen" />
+          <ScalarProperty Name="bBGImage" ColumnName="bBGImage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectSiteGraphicsList" FunctionName="BioStarModel.Store.sp_SelectSiteGraphicsList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectSiteGraphicsList_Result">
+          <ScalarProperty Name="nSiteGraphicsIdn" ColumnName="nSiteGraphicsIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectSiteGraphicsTreeList" FunctionName="BioStarModel.Store.sp_SelectSiteGraphicsTreeList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectSiteGraphicsTreeList_Result">
+          <ScalarProperty Name="nSiteGraphicsIdn" ColumnName="nSiteGraphicsIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectSubDeviceList" FunctionName="BioStarModel.Store.sp_SelectSubDeviceList" />
+    <FunctionImportMapping FunctionImportName="sp_SelectTimecodeInfo" FunctionName="BioStarModel.Store.sp_SelectTimecodeInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectTimecodeInfo_Result">
+          <ScalarProperty Name="nDay" ColumnName="nDay" />
+          <ScalarProperty Name="nHolidayIdn" ColumnName="nHolidayIdn" />
+          <ScalarProperty Name="nStartTime1" ColumnName="nStartTime1" />
+          <ScalarProperty Name="nEndTime1" ColumnName="nEndTime1" />
+          <ScalarProperty Name="nStartTime2" ColumnName="nStartTime2" />
+          <ScalarProperty Name="nEndTime2" ColumnName="nEndTime2" />
+          <ScalarProperty Name="nStartTime3" ColumnName="nStartTime3" />
+          <ScalarProperty Name="nEndTime3" ColumnName="nEndTime3" />
+          <ScalarProperty Name="nStartTime4" ColumnName="nStartTime4" />
+          <ScalarProperty Name="nEndTime4" ColumnName="nEndTime4" />
+          <ScalarProperty Name="nStartTime5" ColumnName="nStartTime5" />
+          <ScalarProperty Name="nEndTime5" ColumnName="nEndTime5" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectTimezoneBasicInfo" FunctionName="BioStarModel.Store.sp_SelectTimezoneBasicInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectTimezoneBasicInfo_Result">
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectTimezoneList" FunctionName="BioStarModel.Store.sp_SelectTimezoneList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectTimezoneList_Result">
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectTimezoneTreeList" FunctionName="BioStarModel.Store.sp_SelectTimezoneTreeList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectTimezoneTreeList_Result">
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserACDeviceInfo" FunctionName="BioStarModel.Store.sp_SelectUserACDeviceInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserACDeviceInfo_Result">
+          <ScalarProperty Name="nAgentIdn" ColumnName="nAgentIdn" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserACInfo" FunctionName="BioStarModel.Store.sp_SelectUserACInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserACInfo_Result">
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nAccessIdn" ColumnName="nAccessIdn" />
+          <ScalarProperty Name="nDoorIdn" ColumnName="nDoorIdn" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserACReaderInfo" FunctionName="BioStarModel.Store.sp_SelectUserACReaderInfo" />
+    <FunctionImportMapping FunctionImportName="sp_SelectUserBasicInfo" FunctionName="BioStarModel.Store.sp_SelectUserBasicInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserBasicInfo_Result">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="sUserName" ColumnName="sUserName" />
+          <ScalarProperty Name="nDepartmentIdn" ColumnName="nDepartmentIdn" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="sTelNumber" ColumnName="sTelNumber" />
+          <ScalarProperty Name="sEmail" ColumnName="sEmail" />
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+          <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+          <ScalarProperty Name="nStartDate" ColumnName="nStartDate" />
+          <ScalarProperty Name="nEndDate" ColumnName="nEndDate" />
+          <ScalarProperty Name="nAdminLevel" ColumnName="nAdminLevel" />
+          <ScalarProperty Name="nAuthMode" ColumnName="nAuthMode" />
+          <ScalarProperty Name="nAuthLimitCount" ColumnName="nAuthLimitCount" />
+          <ScalarProperty Name="nTimedAPB" ColumnName="nTimedAPB" />
+          <ScalarProperty Name="sSurName" ColumnName="sSurName" />
+          <ScalarProperty Name="sFirstName" ColumnName="sFirstName" />
+          <ScalarProperty Name="sMiddleName" ColumnName="sMiddleName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserCardDeviceInfo" FunctionName="BioStarModel.Store.sp_SelectUserCardDeviceInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserCardDeviceInfo_Result">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="sCardNo" ColumnName="sCardNo" />
+          <ScalarProperty Name="sCustomNo" ColumnName="sCustomNo" />
+          <ScalarProperty Name="nBypass" ColumnName="nBypass" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserCardInfo" FunctionName="BioStarModel.Store.sp_SelectUserCardInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserCardInfo_Result">
+          <ScalarProperty Name="nCardIdn" ColumnName="nCardIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="sCardNo" ColumnName="sCardNo" />
+          <ScalarProperty Name="sCustomNo" ColumnName="sCustomNo" />
+          <ScalarProperty Name="nSecurityLevel" ColumnName="nSecurityLevel" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nExpiryDateTime" ColumnName="nExpiryDateTime" />
+          <ScalarProperty Name="nBypass" ColumnName="nBypass" />
+          <ScalarProperty Name="nStatus" ColumnName="nStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserCustomFieldInfo" FunctionName="BioStarModel.Store.sp_SelectUserCustomFieldInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserCustomFieldInfo_Result">
+          <ScalarProperty Name="sFieldName" ColumnName="sFieldName" />
+          <ScalarProperty Name="nFieldType" ColumnName="nFieldType" />
+          <ScalarProperty Name="nDataType" ColumnName="nDataType" />
+          <ScalarProperty Name="nEssential" ColumnName="nEssential" />
+          <ScalarProperty Name="nValueIdn" ColumnName="nValueIdn" />
+          <ScalarProperty Name="sData" ColumnName="sData" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserCustomList" FunctionName="BioStarModel.Store.sp_SelectUserCustomList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserCustomList_Result">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="sFieldValue1" ColumnName="sFieldValue1" />
+          <ScalarProperty Name="sFieldValue2" ColumnName="sFieldValue2" />
+          <ScalarProperty Name="sFieldValue3" ColumnName="sFieldValue3" />
+          <ScalarProperty Name="sFieldValue4" ColumnName="sFieldValue4" />
+          <ScalarProperty Name="sFieldValue5" ColumnName="sFieldValue5" />
+          <ScalarProperty Name="sFieldValue6" ColumnName="sFieldValue6" />
+          <ScalarProperty Name="sFieldValue7" ColumnName="sFieldValue7" />
+          <ScalarProperty Name="sFieldValue8" ColumnName="sFieldValue8" />
+          <ScalarProperty Name="sFieldValue9" ColumnName="sFieldValue9" />
+          <ScalarProperty Name="sFieldValue10" ColumnName="sFieldValue10" />
+          <ScalarProperty Name="sFieldValue11" ColumnName="sFieldValue11" />
+          <ScalarProperty Name="sFieldValue12" ColumnName="sFieldValue12" />
+          <ScalarProperty Name="sFieldValue13" ColumnName="sFieldValue13" />
+          <ScalarProperty Name="sFieldValue14" ColumnName="sFieldValue14" />
+          <ScalarProperty Name="sFieldValue15" ColumnName="sFieldValue15" />
+          <ScalarProperty Name="sFieldValue16" ColumnName="sFieldValue16" />
+          <ScalarProperty Name="sFieldValue17" ColumnName="sFieldValue17" />
+          <ScalarProperty Name="sFieldValue18" ColumnName="sFieldValue18" />
+          <ScalarProperty Name="sFieldValue19" ColumnName="sFieldValue19" />
+          <ScalarProperty Name="sFieldValue20" ColumnName="sFieldValue20" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserDeviceInfo" FunctionName="BioStarModel.Store.sp_SelectUserDeviceInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserDeviceInfo_Result">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+          <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+          <ScalarProperty Name="sUserName" ColumnName="sUserName" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="nStartDate" ColumnName="nStartDate" />
+          <ScalarProperty Name="nEndDate" ColumnName="nEndDate" />
+          <ScalarProperty Name="nAdminLevel" ColumnName="nAdminLevel" />
+          <ScalarProperty Name="nAuthMode" ColumnName="nAuthMode" />
+          <ScalarProperty Name="nAuthLimitCount" ColumnName="nAuthLimitCount" />
+          <ScalarProperty Name="nTimedAPB" ColumnName="nTimedAPB" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserDeviceUpdateInfo" FunctionName="BioStarModel.Store.sp_SelectUserDeviceUpdateInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserDeviceUpdateInfo_Result">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nDeviceID" ColumnName="nDeviceID" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserEventInfo" FunctionName="BioStarModel.Store.sp_SelectUserEventInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserEventInfo_Result">
+          <ScalarProperty Name="nEventLogIdn" ColumnName="nEventLogIdn" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nTNAEvent" ColumnName="nTNAEvent" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserFaceDeviceInfo" FunctionName="BioStarModel.Store.sp_SelectUserFaceDeviceInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserFaceDeviceInfo_Result">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nTemplatecs" ColumnName="nTemplatecs" />
+          <ScalarProperty Name="nSecurityLevel" ColumnName="nSecurityLevel" />
+          <ScalarProperty Name="nAuthLimitCount" ColumnName="nAuthLimitCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserFaceInfo" FunctionName="BioStarModel.Store.sp_SelectUserFaceInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserFaceInfo_Result">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nIndex" ColumnName="nIndex" />
+          <ScalarProperty Name="bTemplate" ColumnName="bTemplate" />
+          <ScalarProperty Name="nTemplatecs" ColumnName="nTemplatecs" />
+          <ScalarProperty Name="nImageLen" ColumnName="nImageLen" />
+          <ScalarProperty Name="bImage" ColumnName="bImage" />
+          <ScalarProperty Name="nEncryption" ColumnName="nEncryption" />
+          <ScalarProperty Name="nSecurityLevel" ColumnName="nSecurityLevel" />
+          <ScalarProperty Name="nAuthLimitCount" ColumnName="nAuthLimitCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserFingerPrintInfo" FunctionName="BioStarModel.Store.sp_SelectUserFingerPrintInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserFingerPrintInfo_Result">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nIndex" ColumnName="nIndex" />
+          <ScalarProperty Name="bTemplate" ColumnName="bTemplate" />
+          <ScalarProperty Name="nTemplatecs" ColumnName="nTemplatecs" />
+          <ScalarProperty Name="nDuress" ColumnName="nDuress" />
+          <ScalarProperty Name="nEncryption" ColumnName="nEncryption" />
+          <ScalarProperty Name="nSecurityLevel" ColumnName="nSecurityLevel" />
+          <ScalarProperty Name="nFingerIndex" ColumnName="nFingerIndex" />
+          <ScalarProperty Name="nTemplateIndex" ColumnName="nTemplateIndex" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserID" FunctionName="BioStarModel.Store.sp_SelectUserID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserID_Result">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserImageInfo" FunctionName="BioStarModel.Store.sp_SelectUserImageInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserImageInfo_Result">
+          <ScalarProperty Name="nImageSize" ColumnName="nImageSize" />
+          <ScalarProperty Name="sImageFilePath" ColumnName="sImageFilePath" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserIndex" FunctionName="BioStarModel.Store.sp_SelectUserIndex" />
+    <FunctionImportMapping FunctionImportName="sp_SelectUserIndexFromCardID" FunctionName="BioStarModel.Store.sp_SelectUserIndexFromCardID" />
+    <FunctionImportMapping FunctionImportName="sp_SelectUserList" FunctionName="BioStarModel.Store.sp_SelectUserList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserList_Result">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="sUserName" ColumnName="sUserName" />
+          <ScalarProperty Name="nDepartmentIdn" ColumnName="nDepartmentIdn" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="sTelNumber" ColumnName="sTelNumber" />
+          <ScalarProperty Name="sEmail" ColumnName="sEmail" />
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+          <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+          <ScalarProperty Name="nStartDate" ColumnName="nStartDate" />
+          <ScalarProperty Name="nEndDate" ColumnName="nEndDate" />
+          <ScalarProperty Name="nAdminLevel" ColumnName="nAdminLevel" />
+          <ScalarProperty Name="nAuthMode" ColumnName="nAuthMode" />
+          <ScalarProperty Name="nAuthLimitCount" ColumnName="nAuthLimitCount" />
+          <ScalarProperty Name="nTimedAPB" ColumnName="nTimedAPB" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserPermitInfo" FunctionName="BioStarModel.Store.sp_SelectUserPermitInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserPermitInfo_Result">
+          <ScalarProperty Name="nPermitIdn" ColumnName="nPermitIdn" />
+          <ScalarProperty Name="nModuleIdn" ColumnName="nModuleIdn" />
+          <ScalarProperty Name="nAgentType" ColumnName="nAgentType" />
+          <ScalarProperty Name="nAgentIdn" ColumnName="nAgentIdn" />
+          <ScalarProperty Name="nPermit" ColumnName="nPermit" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserPermitType" FunctionName="BioStarModel.Store.sp_SelectUserPermitType" />
+    <FunctionImportMapping FunctionImportName="sp_SelectUserPrivateInfo" FunctionName="BioStarModel.Store.sp_SelectUserPrivateInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserPrivateInfo_Result">
+          <ScalarProperty Name="nDuration" ColumnName="nDuration" />
+          <ScalarProperty Name="nCountPerDay" ColumnName="nCountPerDay" />
+          <ScalarProperty Name="nUseprivateImage" ColumnName="nUseprivateImage" />
+          <ScalarProperty Name="sGreetingMsg" ColumnName="sGreetingMsg" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserSubInfo" FunctionName="BioStarModel.Store.sp_SelectUserSubInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserSubInfo_Result">
+          <ScalarProperty Name="sFieldValue1" ColumnName="sFieldValue1" />
+          <ScalarProperty Name="sFieldValue2" ColumnName="sFieldValue2" />
+          <ScalarProperty Name="sFieldValue3" ColumnName="sFieldValue3" />
+          <ScalarProperty Name="sFieldValue4" ColumnName="sFieldValue4" />
+          <ScalarProperty Name="sFieldValue5" ColumnName="sFieldValue5" />
+          <ScalarProperty Name="sFieldValue6" ColumnName="sFieldValue6" />
+          <ScalarProperty Name="sFieldValue7" ColumnName="sFieldValue7" />
+          <ScalarProperty Name="sFieldValue8" ColumnName="sFieldValue8" />
+          <ScalarProperty Name="sFieldValue9" ColumnName="sFieldValue9" />
+          <ScalarProperty Name="sFieldValue10" ColumnName="sFieldValue10" />
+          <ScalarProperty Name="sFieldValue11" ColumnName="sFieldValue11" />
+          <ScalarProperty Name="sFieldValue12" ColumnName="sFieldValue12" />
+          <ScalarProperty Name="sFieldValue13" ColumnName="sFieldValue13" />
+          <ScalarProperty Name="sFieldValue14" ColumnName="sFieldValue14" />
+          <ScalarProperty Name="sFieldValue15" ColumnName="sFieldValue15" />
+          <ScalarProperty Name="sFieldValue16" ColumnName="sFieldValue16" />
+          <ScalarProperty Name="sFieldValue17" ColumnName="sFieldValue17" />
+          <ScalarProperty Name="sFieldValue18" ColumnName="sFieldValue18" />
+          <ScalarProperty Name="sFieldValue19" ColumnName="sFieldValue19" />
+          <ScalarProperty Name="sFieldValue20" ColumnName="sFieldValue20" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserTemplateDeviceInfo" FunctionName="BioStarModel.Store.sp_SelectUserTemplateDeviceInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserTemplateDeviceInfo_Result">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="nTemplatecs" ColumnName="nTemplatecs" />
+          <ScalarProperty Name="nDuress" ColumnName="nDuress" />
+          <ScalarProperty Name="nSecurityLevel" ColumnName="nSecurityLevel" />
+          <ScalarProperty Name="nFingerIndex" ColumnName="nFingerIndex" />
+          <ScalarProperty Name="nTemplateIndex" ColumnName="nTemplateIndex" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectUserTreeList" FunctionName="BioStarModel.Store.sp_SelectUserTreeList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectUserTreeList_Result">
+          <ScalarProperty Name="nDepartmentIdn" ColumnName="nDepartmentIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneAccessZoneInfo" FunctionName="BioStarModel.Store.sp_SelectZoneAccessZoneInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneAccessZoneInfo_Result">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nSyncTime" ColumnName="nSyncTime" />
+          <ScalarProperty Name="nSyncUser" ColumnName="nSyncUser" />
+          <ScalarProperty Name="nSyncLog" ColumnName="nSyncLog" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneACInfo" FunctionName="BioStarModel.Store.sp_SelectZoneACInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneACInfo_Result">
+          <ScalarProperty Name="nAccessIdn" ColumnName="nAccessIdn" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneAlarmZoneInfo" FunctionName="BioStarModel.Store.sp_SelectZoneAlarmZoneInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneAlarmZoneInfo_Result">
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nLockDelayTime" ColumnName="nLockDelayTime" />
+          <ScalarProperty Name="nUnlockDelayTime" ColumnName="nUnlockDelayTime" />
+          <ScalarProperty Name="nStatus" ColumnName="nStatus" />
+          <ScalarProperty Name="nSoundStatus" ColumnName="nSoundStatus" />
+          <ScalarProperty Name="nArmKey" ColumnName="nArmKey" />
+          <ScalarProperty Name="nDisarmKey" ColumnName="nDisarmKey" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneAPBZoneInfo" FunctionName="BioStarModel.Store.sp_SelectZoneAPBZoneInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneAPBZoneInfo_Result">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nUnlockTime" ColumnName="nUnlockTime" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneBasicInfo" FunctionName="BioStarModel.Store.sp_SelectZoneBasicInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneBasicInfo_Result">
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nAttribute" ColumnName="nAttribute" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneCardInfo" FunctionName="BioStarModel.Store.sp_SelectZoneCardInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneCardInfo_Result">
+          <ScalarProperty Name="nCardID" ColumnName="nCardID" />
+          <ScalarProperty Name="nCustomID" ColumnName="nCustomID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneEntranceLimitZoneInfo" FunctionName="BioStarModel.Store.sp_SelectZoneEntranceLimitZoneInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneEntranceLimitZoneInfo_Result">
+          <ScalarProperty Name="nLimitTime" ColumnName="nLimitTime" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+          <ScalarProperty Name="nStartTime1" ColumnName="nStartTime1" />
+          <ScalarProperty Name="nEndTime1" ColumnName="nEndTime1" />
+          <ScalarProperty Name="nLimitNumber1" ColumnName="nLimitNumber1" />
+          <ScalarProperty Name="nStartTime2" ColumnName="nStartTime2" />
+          <ScalarProperty Name="nEndTime2" ColumnName="nEndTime2" />
+          <ScalarProperty Name="nLimitNumber2" ColumnName="nLimitNumber2" />
+          <ScalarProperty Name="nStartTime3" ColumnName="nStartTime3" />
+          <ScalarProperty Name="nEndTime3" ColumnName="nEndTime3" />
+          <ScalarProperty Name="nLimitNumber3" ColumnName="nLimitNumber3" />
+          <ScalarProperty Name="nStartTime4" ColumnName="nStartTime4" />
+          <ScalarProperty Name="nEndTime4" ColumnName="nEndTime4" />
+          <ScalarProperty Name="nLimitNumber4" ColumnName="nLimitNumber4" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneEventInfo" FunctionName="BioStarModel.Store.sp_SelectZoneEventInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneEventInfo_Result">
+          <ScalarProperty Name="nEventLogIdn" ColumnName="nEventLogIdn" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+          <ScalarProperty Name="nTNAEvent" ColumnName="nTNAEvent" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneFireAlarmZoneInfo" FunctionName="BioStarModel.Store.sp_SelectZoneFireAlarmZoneInfo" />
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneInputInfo" FunctionName="BioStarModel.Store.sp_SelectZoneInputInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneInputInfo_Result">
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nReaderIOIdn" ColumnName="nReaderIOIdn" />
+          <ScalarProperty Name="nInputFlag" ColumnName="nInputFlag" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nInputType" ColumnName="nInputType" />
+          <ScalarProperty Name="nFunctionType" ColumnName="nFunctionType" />
+          <ScalarProperty Name="nDurationTime" ColumnName="nDurationTime" />
+          <ScalarProperty Name="nSwitchType" ColumnName="nSwitchType" />
+          <ScalarProperty Name="nTimezone" ColumnName="nTimezone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneIOInfo" FunctionName="BioStarModel.Store.sp_SelectZoneIOInfo" />
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneList" FunctionName="BioStarModel.Store.sp_SelectZoneList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneList_Result">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nAttribute" ColumnName="nAttribute" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneMusterZoneInfo" FunctionName="BioStarModel.Store.sp_SelectZoneMusterZoneInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneMusterZoneInfo_Result">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nTrackingTime" ColumnName="nTrackingTime" />
+          <ScalarProperty Name="nTimeZone" ColumnName="nTimeZone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneOutputInfo" FunctionName="BioStarModel.Store.sp_SelectZoneOutputInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneOutputInfo_Result">
+          <ScalarProperty Name="nReaderIOIdn" ColumnName="nReaderIOIdn" />
+          <ScalarProperty Name="nOutputFlag" ColumnName="nOutputFlag" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nEvent" ColumnName="nEvent" />
+          <ScalarProperty Name="nDeviceID" ColumnName="nDeviceID" />
+          <ScalarProperty Name="nRelayPort" ColumnName="nRelayPort" />
+          <ScalarProperty Name="nRelayOn" ColumnName="nRelayOn" />
+          <ScalarProperty Name="nOutputWaveIdn" ColumnName="nOutputWaveIdn" />
+          <ScalarProperty Name="nPriority" ColumnName="nPriority" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneReaderInfo" FunctionName="BioStarModel.Store.sp_SelectZoneReaderInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneReaderInfo_Result">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nAttribute" ColumnName="nAttribute" />
+          <ScalarProperty Name="nNodeType" ColumnName="nNodeType" />
+          <ScalarProperty Name="nAttribute2" ColumnName="nAttribute2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneReaderList" FunctionName="BioStarModel.Store.sp_SelectZoneReaderList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneReaderList_Result">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nNodeType" ColumnName="nNodeType" />
+          <ScalarProperty Name="nAttribute" ColumnName="nAttribute" />
+          <ScalarProperty Name="nAttribute2" ColumnName="nAttribute2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SelectZoneTreeList" FunctionName="BioStarModel.Store.sp_SelectZoneTreeList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BioStarModel.sp_SelectZoneTreeList_Result">
+          <ScalarProperty Name="nZoneIdn" ColumnName="nZoneIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nParentIdn" ColumnName="nParentIdn" />
+          <ScalarProperty Name="nDepth" ColumnName="nDepth" />
+          <ScalarProperty Name="nJobType" ColumnName="nJobType" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_UpdateAccessGroupBasicInfo" FunctionName="BioStarModel.Store.sp_UpdateAccessGroupBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateAccessGroupName" FunctionName="BioStarModel.Store.sp_UpdateAccessGroupName" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateAdminEmailInfo" FunctionName="BioStarModel.Store.sp_UpdateAdminEmailInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateAdminOption" FunctionName="BioStarModel.Store.sp_UpdateAdminOption" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateAlarmEmailInfo" FunctionName="BioStarModel.Store.sp_UpdateAlarmEmailInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateAlarmInfo" FunctionName="BioStarModel.Store.sp_UpdateAlarmInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateAlarmSWInfo" FunctionName="BioStarModel.Store.sp_UpdateAlarmSWInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateAlarmWaveInfo" FunctionName="BioStarModel.Store.sp_UpdateAlarmWaveInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateDepartment" FunctionName="BioStarModel.Store.sp_UpdateDepartment" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateDoorBasicInfo" FunctionName="BioStarModel.Store.sp_UpdateDoorBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateDoorDepartment" FunctionName="BioStarModel.Store.sp_UpdateDoorDepartment" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateDoorName" FunctionName="BioStarModel.Store.sp_UpdateDoorName" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateDoorOperationInfo" FunctionName="BioStarModel.Store.sp_UpdateDoorOperationInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateDoorReaderInfo" FunctionName="BioStarModel.Store.sp_UpdateDoorReaderInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateDoorSubInfo" FunctionName="BioStarModel.Store.sp_UpdateDoorSubInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateEventInfo" FunctionName="BioStarModel.Store.sp_UpdateEventInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateHolidayBasicInfo" FunctionName="BioStarModel.Store.sp_UpdateHolidayBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateHolidayName" FunctionName="BioStarModel.Store.sp_UpdateHolidayName" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateLatestEventDate" FunctionName="BioStarModel.Store.sp_UpdateLatestEventDate" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateLoginInfo" FunctionName="BioStarModel.Store.sp_UpdateLoginInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdatePrivilegeInfo" FunctionName="BioStarModel.Store.sp_UpdatePrivilegeInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateReaderBasicInfo" FunctionName="BioStarModel.Store.sp_UpdateReaderBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateReaderDisplayInfo" FunctionName="BioStarModel.Store.sp_UpdateReaderDisplayInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateReaderInputInfo" FunctionName="BioStarModel.Store.sp_UpdateReaderInputInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateReaderName" FunctionName="BioStarModel.Store.sp_UpdateReaderName" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateReaderNetworkInfo" FunctionName="BioStarModel.Store.sp_UpdateReaderNetworkInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateReaderNetworkInfo_WLAN" FunctionName="BioStarModel.Store.sp_UpdateReaderNetworkInfo_WLAN" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateSiteGraphicsBasicInfo" FunctionName="BioStarModel.Store.sp_UpdateSiteGraphicsBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateSiteGraphicsName" FunctionName="BioStarModel.Store.sp_UpdateSiteGraphicsName" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateTimezoneBasicInfo" FunctionName="BioStarModel.Store.sp_UpdateTimezoneBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateTimezoneName" FunctionName="BioStarModel.Store.sp_UpdateTimezoneName" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserACInfo" FunctionName="BioStarModel.Store.sp_UpdateUserACInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserBasicInfo" FunctionName="BioStarModel.Store.sp_UpdateUserBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserCardInfo" FunctionName="BioStarModel.Store.sp_UpdateUserCardInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserDateInfo" FunctionName="BioStarModel.Store.sp_UpdateUserDateInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserDepartment" FunctionName="BioStarModel.Store.sp_UpdateUserDepartment" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserFaceInfo" FunctionName="BioStarModel.Store.sp_UpdateUserFaceInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserFaceSecurityLevel" FunctionName="BioStarModel.Store.sp_UpdateUserFaceSecurityLevel" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserFingerPrintInfo" FunctionName="BioStarModel.Store.sp_UpdateUserFingerPrintInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserFingerPrintSecurityLevel" FunctionName="BioStarModel.Store.sp_UpdateUserFingerPrintSecurityLevel" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserImageInfo" FunctionName="BioStarModel.Store.sp_UpdateUserImageInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserName" FunctionName="BioStarModel.Store.sp_UpdateUserName" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserPrivateInfo" FunctionName="BioStarModel.Store.sp_UpdateUserPrivateInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserSubInfo" FunctionName="BioStarModel.Store.sp_UpdateUserSubInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateZoneACCESSZoneInfo" FunctionName="BioStarModel.Store.sp_UpdateZoneACCESSZoneInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateZoneACInfo" FunctionName="BioStarModel.Store.sp_UpdateZoneACInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateZoneAlarmZoneInfo" FunctionName="BioStarModel.Store.sp_UpdateZoneAlarmZoneInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateZoneAPBZoneInfo" FunctionName="BioStarModel.Store.sp_UpdateZoneAPBZoneInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateZoneBasicInfo" FunctionName="BioStarModel.Store.sp_UpdateZoneBasicInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateZoneEntranceLimitZoneInfo" FunctionName="BioStarModel.Store.sp_UpdateZoneEntranceLimitZoneInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateZoneFireAlarmZoneInfo" FunctionName="BioStarModel.Store.sp_UpdateZoneFireAlarmZoneInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateZoneMusterZoneInfo" FunctionName="BioStarModel.Store.sp_UpdateZoneMusterZoneInfo" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateZoneName" FunctionName="BioStarModel.Store.sp_UpdateZoneName" />
+    <FunctionImportMapping FunctionImportName="spSelectOPModeInfoBEPL" FunctionName="BioStarModel.Store.spSelectOPModeInfoBEPL" />
+    <FunctionImportMapping FunctionImportName="spSelectOPModeInfoBST" FunctionName="BioStarModel.Store.spSelectOPModeInfoBST" />
+    <FunctionImportMapping FunctionImportName="spUpdateOPModeInfoBEPL" FunctionName="BioStarModel.Store.spUpdateOPModeInfoBEPL" />
+    <EntitySetMapping Name="TB_EVENT_LOG_2">
+      <EntityTypeMapping TypeName="BioStarModel.TB_EVENT_LOG_2">
+        <MappingFragment StoreEntitySet="TB_EVENT_LOG_2">
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="nIsUseTA" ColumnName="nIsUseTA" />
+          <ScalarProperty Name="nTNAEvent" ColumnName="nTNAEvent" />
+          <ScalarProperty Name="nIsLog" ColumnName="nIsLog" />
+          <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nEventLogIdn" ColumnName="nEventLogIdn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

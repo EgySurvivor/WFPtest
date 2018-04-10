@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mvc.Validation</name>
+    </assembly>
+    <members>
+        <member name="T:Mvc.Validation.ValidationUtils">
+            <summary>
+            This class contains extension methods to support both 
+            server-side validation and client-side script generation.
+            </summary>
+        </member>
+        <member name="F:Mvc.Validation.ValidationUtils.UrlPattern">
+            <summary>
+            Regular expression pattern for URLs
+            </summary>
+        </member>
+        <member name="F:Mvc.Validation.ValidationUtils.EmailPattern">
+            <summary>
+            Regular expression pattern for emails
+            </summary>
+        </member>
+        <member name="F:Mvc.Validation.ValidationUtils.DatePattern">
+            <summary>
+            Regular expression pattern for dates
+            </summary>
+        </member>
+        <member name="F:Mvc.Validation.ValidationUtils.AlphaNumericPattern">
+            <summary>
+            Regular expression pattern for alphanumeric values
+            </summary>
+        </member>
+        <member name="M:Mvc.Validation.ValidationUtils.Validate``1(``0)">
+            <summary>
+            Validates all annotated properties of the specified <paramref name="entity"/>.
+            </summary>
+            <param name="entity">The entity to be validated.</param>
+            <exception cref="T:Mvc.Validation.EntityValidationException">when there is one or more validation errors.</exception>
+        </member>
+        <member name="M:Mvc.Validation.ValidationUtils.Validate``1(``0,System.String[])">
+            <summary>
+            Validates the properties specified in the <paramref name="includedProperties"/>
+            parameter.  If <paramref name="includedProperties"/> is null, all annotated 
+            properties will be validated.
+            </summary>
+            <param name="entity">The entity to be validated.</param>
+            <param name="includedProperties">Array of properties to be included in the validation.</param>
+            <exception cref="T:Mvc.Validation.EntityValidationException">when there is one or more validation errors.</exception>
+        </member>
+        <member name="M:Mvc.Validation.ValidationUtils.FilterResults(Microsoft.Practices.EnterpriseLibrary.Validation.ValidationResults,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Selects only results for properties included in the <paramref name="includedProperties"/>.
+            </summary>
+        </member>
+        <member name="M:Mvc.Validation.ValidationUtils.PopulateWithErrors(System.Web.Mvc.ModelStateDictionary,Mvc.Validation.EntityValidationException)">
+            <summary>
+            Populates the <paramref name="modelState"/> with all errors in the 
+            exception object <paramref name="ex"/>.
+            </summary>
+            <param name="modelState">The view model state which needs to be populated with 
+            error information.</param>
+            <param name="ex">The exception from which errors will be retrieved.</param>
+        </member>
+        <member name="M:Mvc.Validation.ValidationUtils.PopulateWithErrors(System.Web.Mvc.ModelStateDictionary,Mvc.Validation.EntityValidationException,System.String)">
+            <summary>
+            Populates the <paramref name="modelState"/> with all errors in the 
+            exception object <paramref name="ex"/>.
+            </summary>
+            <param name="modelState">The view model state which needs to be populated with 
+            error information.</param>
+            <param name="ex">The exception from which errors will be retrieved.</param>
+            <param name="prefix">The prefix of property name.</param>
+        </member>
+        <member name="M:Mvc.Validation.ValidationUtils.ClientSideValidation``1(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Invokes <code>ClientSideValidation(formName, ignoreMissingElements)</code> with
+            <code>formName</code> as null and <code>ignoreMissingElements</code> as false.
+            </summary>
+        </member>
+        <member name="M:Mvc.Validation.ValidationUtils.ClientSideValidation``1(System.Web.Mvc.HtmlHelper,System.Boolean)">
+            <summary>
+            Invokes <code>ClientSideValidation(formName, ignoreMissingElements)</code> with
+            <code>formName</code> as null.
+            </summary>
+        </member>
+        <member name="M:Mvc.Validation.ValidationUtils.ClientSideValidation``1(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Invokes <code>ClientSideValidation(formName, ignoreMissingElements)</code> with
+            <code>ignoreMissingElements</code> as false.
+            </summary>
+        </member>
+        <member name="M:Mvc.Validation.ValidationUtils.ClientSideValidation``1(System.Web.Mvc.HtmlHelper,System.String,System.Boolean)">
+            <summary>
+            Invokes <code>ClientSideValidation(formName, ignoreMissingElements, readyFunctionName)</code> with
+            <code>readyFunctionName</code> as <code>null</code> (i.e. use default jQuery's ready 
+            function).
+            </summary>
+        </member>
+        <member name="M:Mvc.Validation.ValidationUtils.ClientSideValidation``1(System.Web.Mvc.HtmlHelper,System.String,System.Boolean,System.String)">
+            <summary>
+            Invokes <code>ClientSideValidation(formName, ignoreMissingElements, readyFunctionName, validateFunctionName)</code> 
+            with <code>validateFunctionName</code> as <code>null</code> (i.e. use default jQuery Validate function).
+            </summary>
+        </member>
+        <member name="M:Mvc.Validation.ValidationUtils.ClientSideValidation``1(System.Web.Mvc.HtmlHelper,System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            Generates client-side validation code.
+            
+            If <paramref name="formName"/> is null or empty, the <code>$("#formId").validate(...)</code> 
+            won't be emitted and you are supposed to write that code somewhere in your final 
+            page output for the client-side validation to work. 
+            
+            If <paramref name="formName"/> is not null or empty and if 
+            <param name="validateFunctionName" /> is specified, the function is used 
+            to register the validation.  For example if <param name="validateFunctionName" /> is
+            <code>setupFormValidation</code> then instead of emitting <code>$("#formId").validate(...)</code>,
+            the library will emit <code>setupFormValidation("#formId")</code>.  
+            
+            If <paramref name="ignoreMissingElements"/> is true, the undefined-checking code will
+            be emitted for each element.
+            
+            Sample format of generated script (with <param name="ignoreMissingElements"/> is false)
+            is as follows:
+            
+            $().ready(function() {
+                $("#id").rules("add", {
+                    required: val,
+                    minlength: len,
+                    messages: {
+                        required: msg,
+                        minlength: msg
+                    }
+                });
+            
+                ... repeat for other properties ...
+            });
+            
+            If <param name="readyFunctionName" /> is specified, it is used in place of jQuery's initialization
+            method.  For example if <param name="readyFunctionName" /> is <code>onLoad</code>, then instead 
+            of emitting <code>$().ready(function() {...})</code>, the library will emit 
+            <code>onLoad(function(){...})</code>.
+            </summary>
+        </member>
+        <member name="T:Mvc.Validation.Validators.RemoteValidatorAttribute">
+            <summary>
+            Validates a property using jQuery remote function on the client-side.  On the server-side
+            a customer validator must be specified to actually carry out the validation.  
+            </summary>
+        </member>
+        <member name="T:Mvc.Validation.Validators.DelegatingValidatorAttribute">
+            <summary>
+            Allows developer to specify a <see cref="T:Mvc.Validation.IValidator"/> type which 
+            will perform the custom validation.
+            </summary>
+        </member>
+        <member name="T:Mvc.Validation.Validators.CustomValidatorAttribute">
+            <summary>
+            Base class for all validation attributes of this library.
+            </summary>
+        </member>
+        <member name="P:Mvc.Validation.Validators.CustomValidatorAttribute.ClientFunctionName">
+            <summary>
+            The JavaScript function that performs the client-side validation.
+            </summary>
+        </member>
+        <member name="P:Mvc.Validation.Validators.CustomValidatorAttribute.FormattedMessageTemplate">
+            <summary>
+            Message to be displayed when validation fails.
+            </summary>
+        </member>
+        <member name="P:Mvc.Validation.Validators.DelegatingValidatorAttribute.ValidatorType">
+            <summary>
+            The custom validation type used to perform the actual server-side validation.
+            Must be of type <code>IValidator</code>.
+            </summary>
+        </member>
+        <member name="P:Mvc.Validation.Validators.RemoteValidatorAttribute.ServerMethod">
+            <summary>
+            The endpoint that will be invoked by jQuery's remote to get validation result.
+            </summary>
+        </member>
+        <member name="P:Mvc.Validation.Validators.RemoteValidatorAttribute.IsPost">
+            <summary>
+            Whether the endpoint expects GET or POST method.
+            </summary>
+        </member>
+        <member name="T:Mvc.Validation.JQueryCodeGenerator">
+            <summary>
+            Class to generate corresponding client-side validation code for an VAB-annotated
+            type.
+            
+            The generated JavaScript code targets the jQuery validation plugin:
+            http://bassistance.de/jquery-plugins/jquery-plugin-validation/.
+            </summary>
+        </member>
+        <member name="T:Mvc.Validation.IValidationCodeGenerator">
+            <summary>
+            Interface representing a client code generator which can reflect
+            the validation attributes to generate corresponding JavaScript code.
+            </summary>
+        </member>
+        <member name="M:Mvc.Validation.JQueryCodeGenerator.GenerateScriptBody``1(System.Boolean)">
+            <summary>
+            Generates the body of the script by inspecting all properties and their
+            attributes.
+            </summary>
+        </member>
+        <member name="M:Mvc.Validation.JQueryCodeGenerator.GenerateScriptWrapper(System.String,System.String,System.String,System.String)">
+            <summary>
+            Generates the wrapper and initialization JS code for the validation.
+            </summary>
+        </member>
+        <member name="M:Mvc.Validation.JQueryCodeGenerator.GetRulesOfProperty(System.ComponentModel.MemberDescriptor)">
+            <summary>
+            Retrieves all the validation attributes for the specified <param name="prop"/>
+            </summary>
+        </member>
+        <member name="M:Mvc.Validation.JQueryCodeGenerator.GenerateScriptForRules``1(System.ComponentModel.MemberDescriptor,System.Collections.Generic.IList{Microsoft.Practices.EnterpriseLibrary.Validation.Validators.BaseValidationAttribute},System.Boolean)">
+            <summary>
+            Generates the validation script for the specified <paramref name="prop"/>
+            </summary>
+        </member>
+        <member name="T:Mvc.Validation.Validators.RegularExpressionValidatorAttribute">
+            <summary>
+            Validates a property against a regular expression pattern.  
+            </summary>
+        </member>
+        <member name="P:Mvc.Validation.Validators.RegularExpressionValidatorAttribute.Pattern">
+            <summary>
+            The regular expression pattern used to validate the value.
+            </summary>
+        </member>
+        <member name="T:Mvc.Validation.Validators.NotNullOrEmptyValidator">
+            <summary>
+            Logs an error if the string to validate is <see langword="null"/> or empty.
+            </summary>
+        </member>
+        <member name="T:Mvc.Validation.Validators.DelegatingValidator">
+            <summary>
+            This validator delegates the actual validation to an instance of the supplied 
+            <see cref="T:Mvc.Validation.IValidator"/> type.
+            </summary>
+        </member>
+        <member name="P:Mvc.Validation.Validators.DelegatingValidator.ValidatorType">
+            <summary>
+            The custom validation type used to perform the actual server-side validation.
+            Must be of type <code>IValidator</code>.
+            </summary>
+        </member>
+        <member name="T:Mvc.Validation.Validators.DateTimeValidator">
+            <summary>
+            Logs an error if the string to validate is not between the specified range.
+            The version of Enterprise Library works with <code>DateTime</code> type only.
+            </summary>
+        </member>
+        <member name="T:Mvc.Validation.IValidator">
+            <summary>
+            Interface to be implemented by customer validator (e.g. when used with 
+            DelegatingValidatorAttribute or RemoteValidatorAttribute)
+            </summary>
+        </member>
+        <member name="M:Mvc.Validation.IValidator.IsValid(System.Object)">
+            <summary>
+            Returns true if <paramref name="value"/> passes validation.  False otherwise.
+            </summary>
+            <param name="value">The value to be validated against the custom rule</param>
+            <returns>true if <paramref name="value"/> passes validation.  False otherwise.</returns>
+        </member>
+        <member name="T:Mvc.Validation.Validators.DateTimeValidatorAttribute">
+            <summary>
+            Logs an error if the string to validate is not between the specified range.
+            The version of Enterprise Library works with <code>DateTime</code> type only.
+            </summary>
+        </member>
+        <member name="P:Mvc.Validation.Validators.DateTimeValidatorAttribute.UpperBound">
+            <summary>
+            The upperbound for the date time value.
+            </summary>
+        </member>
+        <member name="P:Mvc.Validation.Validators.DateTimeValidatorAttribute.LowerBound">
+            <summary>
+            The lowerbound for the date timme value.
+            </summary>
+        </member>
+        <member name="T:Mvc.Validation.ClientIDAttribute">
+            <summary>
+            This attribute can be applied to property whose client-side ID is different from
+            the property name.  For example, a property named Location might have a client-side
+            name 'loc'.
+            </summary>
+        </member>
+        <member name="F:Mvc.Validation.ClientIDAttribute.ClientId">
+            <summary>
+            The client-side ID.
+            </summary>
+        </member>
+        <member name="M:Mvc.Validation.ClientIDAttribute.#ctor(System.String)">
+            <summary>
+            Initializes this attribute with <paramref name="clientId"/>.
+            </summary>
+            <param name="clientId">The client-side ID of the property.</param>
+        </member>
+        <member name="T:Mvc.Validation.Validators.NotNullOrEmptyValidatorAttribute">
+            <summary>
+            Validates to make sure the string is not null or empty.
+            </summary>
+        </member>
+        <member name="T:Mvc.Validation.EntityValidationException">
+            <summary>
+            Represents a validation exception which contains an object of 
+            type <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.ValidationResults"/>.
+            </summary>
+        </member>
+        <member name="M:Mvc.Validation.EntityValidationException.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.ValidationResults)">
+            <summary>
+            An exception representing a list of validation errors.
+            </summary>
+            <param name="errors">The enterprise library's <code>ValidationResults</code></param>
+        </member>
+        <member name="M:Mvc.Validation.EntityValidationException.#ctor(System.String)">
+            <summary>
+            An exception not associated with any specific property.
+            </summary>
+            <param name="error">The validation error.</param>
+        </member>
+        <member name="M:Mvc.Validation.EntityValidationException.#ctor(System.String,System.String)">
+            <summary>
+            An exception associated with a specific <paramref name="key"/> (property).
+            </summary>
+            <param name="key">The property this exception is associated with.</param>
+            <param name="error">The validation error.</param>
+        </member>
+        <member name="P:Mvc.Validation.EntityValidationException.Errors">
+            <summary>
+            The enterprise library's <code>ValidationResults</code>.
+            </summary>
+        </member>
+    </members>
+</doc>

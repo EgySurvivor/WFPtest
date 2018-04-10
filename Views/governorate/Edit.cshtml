@@ -1,0 +1,57 @@
+﻿@model WFPtest.Models.governorate 
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>governorates</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.governorates_code)
+
+        <table class=" table">
+            <tr>
+                <th>
+                    @Html.Label("Name")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.governorates_name)
+                    @Html.ValidationMessageFor(model => model.governorates_name)
+                </td>
+
+                <th>
+                    @Html.Label("description")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.governorates_description)
+                    @Html.ValidationMessageFor(model => model.governorates_description)
+                </td>
+
+                <th>
+                    @Html.Label("Country")
+                </th>
+                <td>
+                    @Html.DropDownList("country_code", String.Empty)
+                    @Html.ValidationMessageFor(model => model.country_code)
+</tr>
+        </table>
+    <table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </td>
+                <td>
+                    @Html.ActionLink("Back to List", "Index")
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+

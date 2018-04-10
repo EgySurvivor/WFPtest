@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WFPtest.Models.TB_EVENT_LOG_2>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+    <table>
+
+    <tr>
+
+
+        <th>
+            @Html.DisplayName("Date")
+        </th>
+        <th>
+            @Html.DisplayName("Office")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        var nReaderIdn = "";
+        if (item.nReaderIdn == 37410)
+        {
+            nReaderIdn = "IN Man Office";
+        }
+        else if (item.nReaderIdn == 37372)
+        {
+            nReaderIdn = "OUT Man Office";
+        }
+
+        int daysLeft = 0;  //(item.date.Value - item.date.Value).Days;
+
+
+        <tr>
+            <td class="table">
+                @Html.DisplayFor(modelItem => item.date)
+            </td>
+            <td bgcolor="@(daysLeft == 0 ? "#fffff" : "#FF0000")">
+                @Html.DisplayName(nReaderIdn)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.nUserID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.nUserID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.nUserID })
+            </td>
+        </tr>
+    }
+
+</table>
+

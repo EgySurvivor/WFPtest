@@ -1,0 +1,89 @@
+﻿@model IEnumerable<WFPtest.Models.CourseSession>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>IndexPartial</title>
+</head>
+<body>
+ 
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayName("Course Name")
+            </th>
+            <th>
+                @Html.DisplayName("Course Duration")
+            </th>
+            <th>
+                @Html.DisplayName("Course Start Time")
+            </th>
+            <th>
+                @Html.DisplayName("Course End Time")
+            </th>
+            <th>
+                @Html.DisplayName("Course Start Date")
+            </th>
+            <th>
+                @Html.DisplayName("Course End Date")
+            </th>
+            <th>
+                @Html.DisplayName("Course Location")
+            </th>
+            <th>
+                @Html.DisplayName("Session Name")
+            </th>
+            <th>
+                @Html.DisplayName("Course Prerequisite")
+            </th>
+            
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cours.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseDuration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseStartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseEndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseEndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SessionName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoursePrerequisite)
+            </td>
+           
+            @*<td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Sessionid }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Sessionid }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Sessionid })
+            </td>*@
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

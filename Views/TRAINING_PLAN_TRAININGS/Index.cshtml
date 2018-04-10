@@ -1,0 +1,81 @@
+﻿@model IEnumerable<WFPtest.Models.TRAINING_PLAN_TRAININGS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.REQUIRE_CERTIFICATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CERTIFICATE_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COASTPEREMP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMPLPERCENTAGE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FAILPASSDEPENDANCY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IFFAILPERCENTAGE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IFPASSPERCENTAGE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRAINING_PLAN.TRAINING_PLACE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRAINING_TYPE1.type_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.REQUIRE_CERTIFICATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CERTIFICATE_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COASTPEREMP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMPLPERCENTAGE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FAILPASSDEPENDANCY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IFFAILPERCENTAGE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IFPASSPERCENTAGE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRAINING_PLAN.TRAINING_PLACE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRAINING_TYPE1.type_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

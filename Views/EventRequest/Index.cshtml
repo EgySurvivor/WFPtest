@@ -1,0 +1,316 @@
+﻿@using Microsoft.AspNet.Identity
+@*@if (!Request.IsAuthenticated)
+    {
+        Response.Redirect("/RBC-SMS/account/login");
+    }*@
+
+@model PagedList.IPagedList<WFPtest.Models.requests1>
+
+@*@model IEnumerable<WFPtest.Models.staff>*@
+@*@using IEnumerable<wfptest.models.staff>;*@
+@using WFPtest.Models
+
+
+@using PagedList.Mvc;
+@using JQueryUIHelpers;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    <h2>Event Request List</h2>
+</p>
+
+@using (Html.BeginForm("Index", "requests1", FormMethod.Get))
+{
+
+
+    <br>
+    <p>
+        Find by name : @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />&nbsp;&nbsp;@Html.ActionLink("Reset Filter", "Index")
+    </p>
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Requesting BY")
+        </th>
+        <th>
+                @Html.DisplayName("Requesting Date")
+            </th>
+            <th>
+                @Html.DisplayName("Requesting Unit")
+            </th>
+            <th>
+                @Html.DisplayName("Focal Point")
+            </th>
+            <th>
+                @Html.DisplayName("Purpose")
+            </th>
+            <th>
+                @Html.DisplayName("From Date")
+            </th>
+            <th>
+                @Html.DisplayName("ToDate")
+            </th>
+        <th>
+            @Html.DisplayName("Approval")
+        </th>
+        <th>
+            @Html.DisplayName("Approval Date")
+        </th>
+            @*<th>
+                @Html.DisplayName("Number OF Persons EGYCO")
+            </th>
+            <th>
+                @Html.DisplayName("Number OF Persons RB")
+            </th>
+            <th>
+                @Html.DisplayName("Number OF Persons HQ")
+            </th>
+            <th>
+                @Html.DisplayName("Number OF Persons Other")
+            </th>*@
+            @*<th>
+                @Html.DisplayName("Country")
+            </th>
+            <th>
+                @Html.DisplayName("Governorate")
+            </th>
+            <th>
+                @Html.DisplayName("District")
+            </th>
+            <th>
+                @Html.DisplayName("Other Place")
+            </th>*@
+            @*<th>
+                @Html.DisplayName("Budget/TR")
+            </th>
+            <th>
+                @Html.DisplayName("Number of Roms")
+            </th>
+            <th>
+                @Html.DisplayName("Check in Date")
+            </th>
+            <th>
+                @Html.DisplayName("Check Out Date")
+            </th>
+            <th>
+                @Html.DisplayName("Rom Type")
+            </th>
+            <th>
+                @Html.DisplayName("Microphone")
+            </th>
+            <th>
+                @Html.DisplayName("Hi Speed Internet")
+            </th>
+            <th>
+                @Html.DisplayName("Confirance Call Device")
+            </th>
+            <th>
+                @Html.DisplayName("Main Meeting Rome Days")
+            </th>
+            <th>
+                @Html.DisplayName("Breakout Area Days")
+            </th>
+            <th>
+                @Html.DisplayName("COffe Break")
+            </th>
+            <th>
+                @Html.DisplayName("COffe Break Number")
+            </th>
+            <th>
+                @Html.DisplayName("Lunch")
+            </th>
+        <th>
+            @Html.DisplayName("Dinner")
+        </th>
+        <th>
+            @Html.DisplayName("Coctail Reception")
+        </th>
+        <th>
+            @Html.DisplayName("Dedicated IT Support")
+        </th>
+        <th>
+            @Html.DisplayName("Descrip Days OR Hours")
+        </th>
+        <th>
+            @Html.DisplayName("Display Name")
+        </th>
+        <th>
+            @Html.DisplayName("Airport Picup Services")
+        </th>
+        <th>
+            @Html.DisplayName("Other Services")
+        </th>
+        <th>
+            @Html.DisplayName("non1")
+        </th>
+        <th>
+            @Html.DisplayName("non2")
+        </th>
+        <th>
+            @Html.DisplayName("non3")
+        </th>*@
+       <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+       
+        
+        
+        <tr>
+            <td>
+                    @Html.Display("requestingbyFullName")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RequestingDate)
+                </td>
+                <td>
+                    @Html.Display("unitname")
+                </td>
+                <td>
+                    @Html.Display("focalpointFullName")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Purpose)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FromDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ToDate)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.non1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.non3 )
+            </td>
+
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.NumOFP_CO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumOFP_RB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumOFP_HQ)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumOFP_Other)
+                </td>*@
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GOV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.District)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OtherPlace)
+                </td>*@
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.Budget_TR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Number_Roms)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Check_inDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Check_OutDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rom_Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Microphone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HiSpeedInternet)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Conf_Call_Device)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MMR_Days)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BOR_Days)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.COffeBreak)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.COffeBreak_UNM)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lunch)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dinner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Coctail_Reception)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dedicated_IT_SUPP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripDaysORHours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transportstion_ForLocal_Staff)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Airport_Picup_Services)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Other_Services)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.non1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.non2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.non3)
+            </td>*@
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID, staffid = item.RequstingBy, staffname = ViewBag . requestingbyFullName }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID, staffid = item.RequstingBy, staffname = ViewBag.requestingbyFullName })
+            </td>
+            
+        </tr>
+
+    }
+
+</table>
+<table border="0">
+    <tr>
+        <td>
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        </td>
+    </tr>
+</table>
+
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

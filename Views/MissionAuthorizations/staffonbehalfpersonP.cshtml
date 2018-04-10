@@ -1,0 +1,53 @@
+﻿
+<div class="modal-body">
+
+    @using (Html.BeginForm("staffonbehalfperson", "MissionAuthorizations", FormMethod.Post))
+    {
+        @*@model IEnumerable<WFPtest.Models.contract_details >*@
+
+
+
+
+        <br>
+
+        <div>
+
+            <p>
+                <h2>Staff Details</h2>
+            </p>
+            <table class="table" align="left">
+
+                <tr>
+
+                    <th>
+                        @Html.DisplayName("Name")
+
+                        @Html.Display("ss")
+                    </th>
+
+                    <td>
+                        @Html.Display("stafffullname")
+                    </td>
+
+                    <th>
+                        @Html.DisplayName("Nationality")
+                    </th>
+
+                    <td>
+                        @Html.Display("stafnationality")
+                    </td>
+                </tr>
+
+
+            </table>
+
+
+
+
+
+
+        </div>
+    }
+
+
+</div>

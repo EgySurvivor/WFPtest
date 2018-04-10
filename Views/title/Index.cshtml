@@ -1,0 +1,142 @@
+﻿
+@using Microsoft.AspNet.Identity
+@if (!Request.IsAuthenticated)
+{
+    Response.Redirect("/RBC-SMS/account/login");
+}
+
+
+@*@model IEnumerable<WFPtest.Models.functional_title>*@
+@model PagedList.IPagedList<WFPtest.Models.functional_title >
+
+
+@using WFPtest.Models
+@using PagedList.Mvc;
+@using JQueryUIHelpers;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Index";
+}
+<br>
+
+<p>
+ <h2> Title List </h2>
+</p>
+
+@using (Html.BeginForm("Index", "title", FormMethod.Get))
+    {
+
+
+    <br>
+    <p>
+        Find by English Description Or Abreviation: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />&nbsp;&nbsp;@Html.ActionLink("Reset Filter", "Index")
+    </p>
+}
+  <table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayName("Title Code")
+        </th>*@
+        <th>
+            @*@Html.DisplayName("English Description")*@
+            @Html.ActionLink("English Description (Sort)", "Index", new { sortOrder = ViewBag.DateSortParm })
+        </th>
+        <th>
+            @*@Html.DisplayName("English Abreviation")*@
+            @Html.ActionLink("English Abreviation (Sort)", "Index", new { sortOrder = ViewBag.NameSortParm })
+
+        </th>
+        <th>
+            @Html.DisplayName("French Description")
+        </th>
+        <th>
+            @Html.DisplayName("French Abreviation")
+        </th>
+        <th>
+            @Html.DisplayName("Status")
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.functional_title_created_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.functional_title_created_datetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.functional_title_last_modified_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.functional_title_last_modified_datetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.functional_title_deleted_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.functional_title_deleted_datetime)
+        </th>*@
+        <th></th>
+       
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.functional_title_id)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.functional_title_description_english)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.functional_title_abreviation_english)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.functional_title_description_french)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.functional_title_abreviation_french)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.functional_title_status)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.functional_title_created_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.functional_title_created_datetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.functional_title_last_modified_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.functional_title_last_modified_datetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.functional_title_deleted_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.functional_title_deleted_datetime)
+        </td>*@
+      
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.functionaltitleid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.functionaltitleid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.functionaltitleid })
+        </td>
+    </tr>
+}
+
+</table>
+<table>
+    <tr>
+        <td>
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        </td>
+    </tr>
+</table>
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

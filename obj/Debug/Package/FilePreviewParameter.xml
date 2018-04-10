@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Default Web Site/WFPlogin" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Ahmed\.Badr\\Desktop\\wfp\\WFPtest\\WFPtest\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Ahmed\.Badr\\Desktop\\wfp\\WFPtest\\WFPtest\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Add write permission to App_Data Folder" description="Add write permission to App_Data folder" value="Default Web Site/WFPlogin/App_Data" tags="Hidden">
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Ahmed\.Badr\\Desktop\\wfp\\WFPtest\\WFPtest\\obj\\Debug\\Package\\PackageTmp\\App_Data$" />
+  </parameter>
+  <parameter name="ADConnectionString-Web.config Connection String" description="" value="LDAP://WFPEGADCP02.GLOBAL.wfp.org:389" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ahmed\.Badr\\Desktop\\wfp\\WFPtest\\WFPtest\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ADConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="LDAP://WFPEGADCP02.GLOBAL.wfp.org:389 " tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ahmed\.Badr\\Desktop\\wfp\\WFPtest\\WFPtest\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="WFPEntities-Web.config Connection String" description="" value="metadata=res://*/Models.WFPModel.csdl|res://*/Models.WFPModel.ssdl|res://*/Models.WFPModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.\;initial catalog=WFP;integrated security=True;application name=EntityFramework;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ahmed\.Badr\\Desktop\\wfp\\WFPtest\\WFPtest\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WFPEntities']/@connectionString" />
+  </parameter>
+  <parameter name="WFPEntities1-Web.config Connection String" description="" value="metadata=res://*/Models.wfpmodel.csdl|res://*/Models.wfpmodel.ssdl|res://*/Models.wfpmodel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=.\;Initial Catalog=WFP;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ahmed\.Badr\\Desktop\\wfp\\WFPtest\\WFPtest\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WFPEntities1']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BioStarModel1StoreContainer" CdmEntityContainer="BioStarEntities">
+    <EntitySetMapping Name="TB_EVENT">
+      <EntityTypeMapping TypeName="BioStarModel1.TB_EVENT">
+        <MappingFragment StoreEntitySet="TB_EVENT">
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nPriority" ColumnName="nPriority" />
+          <ScalarProperty Name="nAck" ColumnName="nAck" />
+          <ScalarProperty Name="nSWAlarmIdn" ColumnName="nSWAlarmIdn" />
+          <ScalarProperty Name="nAlarmEmailIdn" ColumnName="nAlarmEmailIdn" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EVENT_DATA">
+      <EntityTypeMapping TypeName="BioStarModel1.TB_EVENT_DATA">
+        <MappingFragment StoreEntitySet="TB_EVENT_DATA">
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EVENT_FACE">
+      <EntityTypeMapping TypeName="BioStarModel1.TB_EVENT_FACE">
+        <MappingFragment StoreEntitySet="TB_EVENT_FACE">
+          <ScalarProperty Name="nEventFaceIdn" ColumnName="nEventFaceIdn" />
+          <ScalarProperty Name="nEventLogIdn" ColumnName="nEventLogIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="bFaceImage" ColumnName="bFaceImage" />
+          <ScalarProperty Name="nFaceImageLen" ColumnName="nFaceImageLen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EVENT_LOG">
+      <EntityTypeMapping TypeName="BioStarModel1.TB_EVENT_LOG">
+        <MappingFragment StoreEntitySet="TB_EVENT_LOG">
+          <ScalarProperty Name="nEventLogIdn" ColumnName="nEventLogIdn" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+          <ScalarProperty Name="nIsLog" ColumnName="nIsLog" />
+          <ScalarProperty Name="nTNAEvent" ColumnName="nTNAEvent" />
+          <ScalarProperty Name="nIsUseTA" ColumnName="nIsUseTA" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EVENT_LOG_MANAGER">
+      <EntityTypeMapping TypeName="BioStarModel1.TB_EVENT_LOG_MANAGER">
+        <MappingFragment StoreEntitySet="TB_EVENT_LOG_MANAGER">
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nLastDate" ColumnName="nLastDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EVENT_LOG_MODIFY">
+      <EntityTypeMapping TypeName="BioStarModel1.TB_EVENT_LOG_MODIFY">
+        <MappingFragment StoreEntitySet="TB_EVENT_LOG_MODIFY">
+          <ScalarProperty Name="nEventLogIdn" ColumnName="nEventLogIdn" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+          <ScalarProperty Name="nTNAEvent" ColumnName="nTNAEvent" />
+          <ScalarProperty Name="nFlag" ColumnName="nFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EVENT_LOG_2">
+      <EntityTypeMapping TypeName="BioStarModel1.TB_EVENT_LOG_2">
+        <MappingFragment StoreEntitySet="TB_EVENT_LOG_2">
+          <ScalarProperty Name="nEventLogIdn" ColumnName="nEventLogIdn" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+          <ScalarProperty Name="nIsLog" ColumnName="nIsLog" />
+          <ScalarProperty Name="nTNAEvent" ColumnName="nTNAEvent" />
+          <ScalarProperty Name="nIsUseTA" ColumnName="nIsUseTA" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,121 @@
+﻿@model WFPtest.Models.functional_title
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br>
+
+<p>
+   <h2> Title Details</h2>
+</p>
+
+
+<div>
+    
+	<hr />
+  <table class=" table" >
+      <tr>
+        <th>
+            @Html.DisplayName("Title Code")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.functional_title_id)
+        </td>
+
+        <th>
+            @Html.DisplayName("English Description")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.functional_title_description_english)
+        </td>
+
+        <th>
+            @Html.DisplayName("English Abreviation")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.functional_title_abreviation_english)
+        </td>
+</tr>
+      <tr>
+        <th>
+            @Html.DisplayName("French Description")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.functional_title_description_french)
+        </td>
+
+        <th>
+            @Html.DisplayName("French Abreviation")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.functional_title_abreviation_french)
+        </td>
+
+        <th>
+            @Html.DisplayName("Status")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.functional_title_status)
+        </td>
+
+        @*<th>
+            @Html.DisplayNameFor(model => model.functional_title_created_by)
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.functional_title_created_by)
+        </td>
+
+        <th>
+            @Html.DisplayNameFor(model => model.functional_title_created_datetime)
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.functional_title_created_datetime)
+        </td>
+
+        <th>
+            @Html.DisplayNameFor(model => model.functional_title_last_modified_by)
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.functional_title_last_modified_by)
+        </td>
+
+        <th>
+            @Html.DisplayNameFor(model => model.functional_title_last_modified_datetime)
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.functional_title_last_modified_datetime)
+        </td>
+
+        <th>
+            @Html.DisplayNameFor(model => model.functional_title_deleted_by)
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.functional_title_deleted_by)
+        </td>
+
+        <th>
+            @Html.DisplayNameFor(model => model.functional_title_deleted_datetime)
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.functional_title_deleted_datetime)
+        </td>*@
+          </tr>
+    </table> 
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.functionaltitleid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

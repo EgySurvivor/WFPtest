@@ -1,0 +1,120 @@
+﻿@model WFPtest.Models.MissionAuthorization
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Mission Authorization</h4>
+    <hr />
+    @*<dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FromDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionItinerary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionItinerary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.funding)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.funding)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClearedBySupervisor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClearedBySupervisor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionObjective)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionObjective)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpectedOutputs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpectedOutputs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Achievements)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Achievements)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FollowUp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FollowUp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StaffSignature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StaffSignature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SignatureDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SignatureDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff.staff_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff.staff_id)
+        </dd>
+
+    </dl>*@
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

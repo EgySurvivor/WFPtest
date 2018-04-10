@@ -1,0 +1,230 @@
+﻿@model PagedList.IPagedList<WFPtest.Models.MissionItinerary>
+
+@{
+    Layout = null;
+}
+
+@*@model IEnumerable<WFPtest.Models.staff>*@
+@*@using IEnumerable<wfptest.models.staff>;*@
+@using WFPtest.Models
+
+
+@using PagedList.Mvc;
+@using JQueryUIHelpers;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+@*@section scripts {
+        <script language="javascript" type="text/javascript">
+
+            $(function () {
+                $('#tree1').tree({
+                    closedIcon: $('<i class="fa fa-plus"></i>'),
+                    openedIcon: $('<i class="fa fa-minus"></i>'),
+                    dragAndDrop: false,
+                    selectable: false
+                });
+
+                // bind 'tree.click' event
+                $('#tree1').bind(
+                    'tree.click',
+                    function (event) {
+                        // The clicked node is 'event.node'
+                        var node = event.node;
+                        console.log('clicked ' + node.name);
+                    }
+                );
+            });
+
+        </script>
+    }*@
+<br>
+
+
+@*@using (Html.BeginForm("IndexItinerary", "MissionAuthorizations", FormMethod.Get))
+    {
+
+
+        <br>
+        <p>
+            Find by name Or E-mail Or Unit: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+            <input type="submit" value="Search" />&nbsp;&nbsp;@Html.ActionLink("Reset Filter", "Index")
+        </p>
+    }*@
+
+
+@*@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "myForm" }))
+    {
+
+        <br>
+        <p>
+            Find by From Date Or E-mail : @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+            <input type="submit" value="Search" />&nbsp;&nbsp;@Html.ActionLink("Reset Filter", "Index")
+        </p>
+    }*@
+
+
+@*<div id="tree1" data-url="/nodes/">
+        @Html.Display("nnode")
+    </div>*@
+
+@*@Html.Partial("Simple")*@
+@*@{Html.RenderPartial("Simple");}*@
+
+@*<table border="0">
+        <tr>
+            <td>
+                <p>
+                    @Html.ActionLink("Submit Now", "Approval")
+                </p>
+            </td>
+        </tr>
+    </table>
+    <br />*@
+
+        @{  Html.RenderAction("CreateItinerary");}
+
+
+        @{ Html.RenderAction("DeleteItinerary", new { id = ViewBag.id });}
+  
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayName("Number")
+                </th>
+                @* <th>
+                        @Html.DisplayName("Mission ID")
+                    </th>*@
+                @*<th>
+                        @Html.DisplayName("Description")
+                    </th>*@
+                <th>
+                    @Html.DisplayName("Departure")
+                </th>
+               
+                <th>
+                    @Html.DisplayName("Date/Time")
+                </th>
+                @*<th>
+                        @Html.DisplayName("To ID")
+                    </th>*@
+                <th>
+                    @Html.DisplayName("Arrival")
+                </th>
+                <th>
+                    @Html.DisplayName("Date/Time")
+                </th>
+                @*<th>
+                        @Html.DisplayNameFor(model => model.non1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.non2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.non3)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.non4)
+                    </th>*@
+
+
+                @*<th>
+                        @Html.DisplayName("country3")
+                    </th>*@
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.MissionID)
+                        </td>*@
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.country.country_name) / @Html.DisplayFor(modelItem => item.Twon1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FromDate, "ShortDateTime") @Html.DisplayFor(modelItem => item.Fromtime)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.country1 .country_name)
+                        </td>*@
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.country1.country_name) / @Html.DisplayFor(modelItem => item.Twon2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ToDate, "ShortDateTime") @Html.DisplayFor(modelItem => item.Totime)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.non1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.non2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.non3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.non4)
+                        </td>*@
+
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.MissionAuthorization.Mission_Type)
+
+
+                        </td>*@
+
+                </tr>
+
+
+            }
+
+        </table>
+        <br />
+
+        <br />
+        @*Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+            @Html.PagedListPager(Model, page => Url.Action("Index",
+            new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))*@
+        <script>
+
+            $(document).ready(function () {
+
+
+                $("#btnSubmit").click(function () {
+
+                    $("#loaderDiv").show();
+
+                    var myformdata = $("#myForm").serialize();
+
+                    $.ajax({
+
+                        type: "POST",
+                        url: "/MissionItineraries/Create",
+                        data: myformdata,
+                        success: function () {
+                            $("#loaderDiv").hide();
+                            $("#myModal").modal("hide");
+
+                        }
+
+                    })
+                })
+
+            })
+
+
+        </script>

@@ -1,0 +1,41 @@
+﻿@model WFPtest.Models.MissionAuthorization1
+
+@{
+    ViewBag.Title = "Upload DSS Approval";
+}
+@section Scripts{
+    <script type="text/javascript">
+        $(function () {
+            if (window.FileReader != null) {
+                $('#single').hide();
+                $('.single').prop('disabled', true);
+            } else {
+                $('#multiple').hide();
+                $('.multiple').prop('disabled', true);
+            }
+        });
+    </script>
+}
+<h2>Upload DSS Approval</h2>
+@Html.TextBoxFor(model => model.non6, new { @readonly = "readonly", @Value = ViewBag.missionID, @class = "hidden" })
+@*@model UploadingFilesUsingMVC.Models.FileUploadModel*@
+
+@*@{
+    ViewBag.Title = "www.compilemode.com";
+}*@
+@using (Html.BeginForm("UploadFilesM", "MissionAuthorization1", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.TextBoxFor(model => model.non6, new { @readonly = "readonly", @Value = ViewBag.missionID, @class = "hidden" })
+    <div id="multiple">
+        <input type="file" class="multiple" name="files" multiple />
+     
+    </div>
+    <div id="single" style=" align-content :center ">
+        <input type="file" class="single" name="files" /><br />
+        <input type="file" class="single" name="files" /><br />
+        <input type="file" class="single" name="files" /><br />
+        <input type="file" class="single" name="files" /><br />
+       
+    </div>
+    <input type="submit" value="Upload" class="btn btn-default"/>
+}

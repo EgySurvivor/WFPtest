@@ -1,0 +1,2408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BioStarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TB_ACCESSGROUP">
+    <Key>
+      <PropertyRef Name="nAccessIdn" />
+    </Key>
+    <Property Name="nAccessIdn" Type="int" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ACCESSGROUP_DOOR">
+    <Key>
+      <PropertyRef Name="nAccessDoorIdn" />
+    </Key>
+    <Property Name="nAccessDoorIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nAccessIdn" Type="int" Nullable="false" />
+    <Property Name="nType" Type="int" Nullable="false" />
+    <Property Name="nAgentIdn" Type="int" Nullable="false" />
+    <Property Name="nTimezone" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ACCESSGROUP_USER">
+    <Key>
+      <PropertyRef Name="nAccessUserIdn" />
+    </Key>
+    <Property Name="nAccessUserIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nAccessIdn" Type="int" Nullable="false" />
+    <Property Name="nType" Type="int" Nullable="false" />
+    <Property Name="nAgentIdn" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ACCESSGROUP_ZONE">
+    <Key>
+      <PropertyRef Name="nAccessIdn" />
+      <PropertyRef Name="nZoneIdn" />
+    </Key>
+    <Property Name="nAccessIdn" Type="int" Nullable="false" />
+    <Property Name="nZoneIdn" Type="int" Nullable="false" />
+    <Property Name="nTimezone" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ADMIN_OPTION">
+    <Key>
+      <PropertyRef Name="nFieldType" />
+    </Key>
+    <Property Name="nFieldType" Type="int" Nullable="false" />
+    <Property Name="sValue" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ALARM">
+    <Key>
+      <PropertyRef Name="nAlarmIdn" />
+    </Key>
+    <Property Name="nAlarmIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nSWAlarmIdn" Type="int" Nullable="false" />
+    <Property Name="nOutputDeviceSoundIdn" Type="int" Nullable="false" />
+    <Property Name="nOutputReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nOutputPort" Type="int" Nullable="false" />
+    <Property Name="nOutputWaveIdn" Type="int" Nullable="false" />
+    <Property Name="nAlarmEmailIdn" Type="int" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ALARM_DEST">
+    <Key>
+      <PropertyRef Name="nAlarmDestIdn" />
+    </Key>
+    <Property Name="nAlarmDestIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nType" Type="int" Nullable="false" />
+    <Property Name="nAgent" Type="int" Nullable="false" />
+    <Property Name="nEventIdn" Type="int" Nullable="false" />
+    <Property Name="nAlarmIdn" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ALARM_EMAIL">
+    <Key>
+      <PropertyRef Name="nAlarmEmailIdn" />
+    </Key>
+    <Property Name="nAlarmEmailIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nEmailIdn1" Type="int" Nullable="false" />
+    <Property Name="nEmailIdn2" Type="int" Nullable="false" />
+    <Property Name="nEmailIdn3" Type="int" Nullable="false" />
+    <Property Name="nEmailIdn4" Type="int" Nullable="false" />
+    <Property Name="nEmailIdn5" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ALARM_OUTPUT_WAVE">
+    <Key>
+      <PropertyRef Name="nOutputWaveIdn" />
+    </Key>
+    <Property Name="nOutputWaveIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="nDelay" Type="int" Nullable="false" />
+    <Property Name="nCount" Type="int" Nullable="false" />
+    <Property Name="nHigh" Type="int" Nullable="false" />
+    <Property Name="nLow" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ALARM_SW">
+    <Key>
+      <PropertyRef Name="nSWAlarmIdn" />
+    </Key>
+    <Property Name="nSWAlarmIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="sFileName" Type="nvarchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_CARD">
+    <Key>
+      <PropertyRef Name="nCardIdn" />
+    </Key>
+    <Property Name="nCardIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nIndex" Type="smallint" Nullable="false" />
+    <Property Name="nType" Type="smallint" Nullable="false" />
+    <Property Name="sCardNo" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="nSecurityLevel" Type="int" Nullable="false" />
+    <Property Name="nAccessgroup" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_CARD_MIFARE_LAYOUT">
+    <Key>
+      <PropertyRef Name="nMifareIdn" />
+    </Key>
+    <Property Name="nMifareIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nCISIdn" Type="int" Nullable="false" />
+    <Property Name="nNumOfTemplate" Type="int" Nullable="false" />
+    <Property Name="nTemplateSize" Type="int" Nullable="false" />
+    <Property Name="nTemplateBlock1" Type="int" Nullable="false" />
+    <Property Name="nTemplateBlock2" Type="int" Nullable="false" />
+    <Property Name="nTemplateBlock3" Type="int" Nullable="false" />
+    <Property Name="nTemplateBlock4" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_DOOR">
+    <Key>
+      <PropertyRef Name="nDoorIdn" />
+    </Key>
+    <Property Name="nDoorIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="nDoorDept" Type="int" Nullable="false" />
+    <Property Name="nOpenTime" Type="int" Nullable="false" />
+    <Property Name="nHoldTime" Type="int" Nullable="false" />
+    <Property Name="nIOReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nOpenRelayID" Type="int" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_DOOR_ACTIVE_MODE">
+    <Key>
+      <PropertyRef Name="nDoorIdn" />
+    </Key>
+    <Property Name="nDoorIdn" Type="int" Nullable="false" />
+    <Property Name="nMode" Type="int" Nullable="false" />
+    <Property Name="nType" Type="int" Nullable="false" />
+    <Property Name="nMethod" Type="int" Nullable="false" />
+    <Property Name="nTimezone" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_DOOR_DEPT">
+    <Key>
+      <PropertyRef Name="nDoorDept" />
+    </Key>
+    <Property Name="nDoorDept" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="sDepartment" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="nDepth" Type="smallint" Nullable="false" />
+    <Property Name="nParentIdn" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_DOOR_READER">
+    <Key>
+      <PropertyRef Name="nReaderIdn" />
+    </Key>
+    <Property Name="nDoorIdn" Type="int" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nInout" Type="smallint" Nullable="false" />
+    <Property Name="nOpenRelay" Type="int" Nullable="false" />
+    <Property Name="nOpenTime" Type="int" Nullable="false" />
+    <Property Name="nCloseTime" Type="int" Nullable="false" />
+    <Property Name="nOpenEvent" Type="int" Nullable="false" />
+    <Property Name="nRTE" Type="int" Nullable="false" />
+    <Property Name="nRTEType" Type="int" Nullable="false" />
+    <Property Name="nSensor" Type="int" Nullable="false" />
+    <Property Name="nSensorType" Type="int" Nullable="false" />
+    <Property Name="nCloseEvent" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EVENT">
+    <Key>
+      <PropertyRef Name="nEventIdn" />
+    </Key>
+    <Property Name="nEventIdn" Type="int" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="nPriority" Type="smallint" Nullable="false" />
+    <Property Name="nAck" Type="smallint" Nullable="false" />
+    <Property Name="nSWAlarmIdn" Type="int" Nullable="false" />
+    <Property Name="nAlarmEmailIdn" Type="int" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_DATA">
+    <Key>
+      <PropertyRef Name="nEventIdn" />
+    </Key>
+    <Property Name="nEventIdn" Type="int" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_FACE">
+    <Key>
+      <PropertyRef Name="nEventFaceIdn" />
+      <PropertyRef Name="nEventLogIdn" />
+    </Key>
+    <Property Name="nEventFaceIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nEventLogIdn" Type="int" Nullable="false" />
+    <Property Name="nType" Type="smallint" Nullable="false" />
+    <Property Name="bFaceImage" Type="varbinary(max)" />
+    <Property Name="nFaceImageLen" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_LOG">
+    <Key>
+      <PropertyRef Name="nDateTime" />
+      <PropertyRef Name="nReaderIdn" />
+      <PropertyRef Name="nEventIdn" />
+      <PropertyRef Name="nUserID" />
+    </Key>
+    <Property Name="nEventLogIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nDateTime" Type="int" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nEventIdn" Type="int" Nullable="false" />
+    <Property Name="nUserID" Type="int" Nullable="false" />
+    <Property Name="nIsLog" Type="smallint" Nullable="false" />
+    <Property Name="nTNAEvent" Type="smallint" Nullable="false" />
+    <Property Name="nIsUseTA" Type="smallint" Nullable="false" />
+    <Property Name="nType" Type="smallint" Nullable="false" />
+    <Property Name="date" Type="datetime" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BioStar.dbo.TB_EVENT_LOG_2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TB_EVENT_LOG_2">
+    <Key>
+      <PropertyRef Name="nEventLogIdn" />
+      <PropertyRef Name="nDateTime" />
+      <PropertyRef Name="nReaderIdn" />
+      <PropertyRef Name="nEventIdn" />
+      <PropertyRef Name="nUserID" />
+      <PropertyRef Name="nIsLog" />
+      <PropertyRef Name="nTNAEvent" />
+      <PropertyRef Name="nIsUseTA" />
+      <PropertyRef Name="nType" />
+    </Key>
+    <Property Name="nEventLogIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nDateTime" Type="int" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nEventIdn" Type="int" Nullable="false" />
+    <Property Name="nUserID" Type="int" Nullable="false" />
+    <Property Name="nIsLog" Type="smallint" Nullable="false" />
+    <Property Name="nTNAEvent" Type="smallint" Nullable="false" />
+    <Property Name="nIsUseTA" Type="smallint" Nullable="false" />
+    <Property Name="nType" Type="smallint" Nullable="false" />
+    <Property Name="date" Type="datetime" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_LOG_MANAGER">
+    <Key>
+      <PropertyRef Name="nReaderIdn" />
+    </Key>
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nLastDate" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_LOG_MODIFY">
+    <Key>
+      <PropertyRef Name="nEventLogIdn" />
+    </Key>
+    <Property Name="nEventLogIdn" Type="int" Nullable="false" />
+    <Property Name="nDateTime" Type="int" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nEventIdn" Type="int" Nullable="false" />
+    <Property Name="nUserID" Type="int" Nullable="false" />
+    <Property Name="nTNAEvent" Type="smallint" Nullable="false" />
+    <Property Name="nFlag" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_HOLIDAY">
+    <Key>
+      <PropertyRef Name="nHoliday" />
+    </Key>
+    <Property Name="nHoliday" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_HOLIDAY_DATE">
+    <Key>
+      <PropertyRef Name="nHoliday" />
+      <PropertyRef Name="nDate" />
+    </Key>
+    <Property Name="nHoliday" Type="int" Nullable="false" />
+    <Property Name="nDate" Type="int" Nullable="false" />
+    <Property Name="nYearRepeat" Type="smallint" Nullable="false" />
+    <Property Name="nDaysLong" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_LEAVE">
+    <Key>
+      <PropertyRef Name="nLeaveIdn" />
+    </Key>
+    <Property Name="nLeaveIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="nType" Type="int" Nullable="false" />
+    <Property Name="nStartTime" Type="int" Nullable="false" />
+    <Property Name="nEndTime" Type="int" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_OPERATOR">
+    <Key>
+      <PropertyRef Name="sUserID" />
+    </Key>
+    <Property Name="sUserID" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="sPassword" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="nPrivilegeIdn" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_OPERATOR_EMAIL">
+    <Key>
+      <PropertyRef Name="nEmailIdn" />
+    </Key>
+    <Property Name="nEmailIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sSMTPServer" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sUserID" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sPassword" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="sSender" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sRecipient" Type="varchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_OPERATOR_PERMIT">
+    <Key>
+      <PropertyRef Name="nPermitIdn" />
+    </Key>
+    <Property Name="nPermitIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nPrivilegeIdn" Type="int" Nullable="false" />
+    <Property Name="nModuleIdn" Type="int" Nullable="false" />
+    <Property Name="nAgentType" Type="int" Nullable="false" />
+    <Property Name="nAgentIdn" Type="int" Nullable="false" />
+    <Property Name="nPermit" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_OPERATOR_PRIVILEGE">
+    <Key>
+      <PropertyRef Name="nPrivilegeIdn" />
+    </Key>
+    <Property Name="nPrivilegeIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nType" Type="int" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_READER">
+    <Key>
+      <PropertyRef Name="nReaderIdn" />
+    </Key>
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="nType" Type="int" Nullable="false" />
+    <Property Name="nDeptIdn" Type="int" Nullable="false" />
+    <Property Name="sIP" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sMacAddress" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="nConnType" Type="int" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_READER_DEPT">
+    <Key>
+      <PropertyRef Name="nDeptIdn" />
+    </Key>
+    <Property Name="nDeptIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nDeptType" Type="int" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="nDepth" Type="int" Nullable="false" />
+    <Property Name="nParentIdn" Type="int" Nullable="false" />
+    <Property Name="nParentReaderIdn" Type="int" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_READER_DISPLAY">
+    <Key>
+      <PropertyRef Name="nReaderIdn" />
+    </Key>
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nLanguage" Type="int" Nullable="false" />
+    <Property Name="nBackground" Type="int" Nullable="false" />
+    <Property Name="nSubInfo" Type="int" Nullable="false" />
+    <Property Name="nMenuTimeout" Type="int" Nullable="false" />
+    <Property Name="nMessageTimeout" Type="int" Nullable="false" />
+    <Property Name="nPrivateAuth" Type="smallint" Nullable="false" />
+    <Property Name="nVolume" Type="int" Nullable="false" />
+    <Property Name="nDateType" Type="smallint" Nullable="false" />
+    <Property Name="nTimeSync" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_READER_FINGER">
+    <Key>
+      <PropertyRef Name="nReaderIdn" />
+    </Key>
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nSecurity" Type="int" Nullable="false" />
+    <Property Name="nFastMode" Type="int" Nullable="false" />
+    <Property Name="nImageQuality" Type="int" Nullable="false" />
+    <Property Name="nViewImage" Type="smallint" Nullable="false" />
+    <Property Name="nTimeout" Type="int" Nullable="false" />
+    <Property Name="nFreeScanDelay" Type="int" Nullable="false" />
+    <Property Name="nMatchTimeout" Type="int" Nullable="false" />
+    <Property Name="nCheckDuplicate" Type="smallint" Nullable="false" />
+    <Property Name="nEncryption" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_READER_HW">
+    <Key>
+      <PropertyRef Name="nReaderIdn" />
+    </Key>
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="sProductName" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="sBoardVersion" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="sFirmwareVersion" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="sBlackfinVersion" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="sKernelVersion" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="sPrivateKey" Type="varchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_READER_INPUT">
+    <Key>
+      <PropertyRef Name="nReaderIOIdn" />
+    </Key>
+    <Property Name="nReaderIOIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nInputType" Type="int" Nullable="false" />
+    <Property Name="nFunctionType" Type="int" Nullable="false" />
+    <Property Name="nDurationTime" Type="int" Nullable="false" />
+    <Property Name="nSwitchType" Type="int" Nullable="false" />
+    <Property Name="nTimezone" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_READER_IO_EVENT">
+    <Key>
+      <PropertyRef Name="nReaderIOIdn" />
+    </Key>
+    <Property Name="nReaderIOIdn" Type="int" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nEventIdn" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_READER_NETWORK">
+    <Key>
+      <PropertyRef Name="nReaderIdn" />
+      <PropertyRef Name="nUpdateDate" />
+    </Key>
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nType" Type="smallint" Nullable="false" />
+    <Property Name="nPort" Type="int" Nullable="false" />
+    <Property Name="nMaxConnection" Type="int" Nullable="false" />
+    <Property Name="nSSL" Type="smallint" Nullable="false" />
+    <Property Name="nDHCP" Type="smallint" Nullable="false" />
+    <Property Name="sIPAddress" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sGateway" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sSubnetMask" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sServerIP" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="nTimeSync" Type="smallint" Nullable="false" />
+    <Property Name="sComPort" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="nRS485Mode" Type="int" Nullable="false" />
+    <Property Name="nRS485Baudrate" Type="int" Nullable="false" />
+    <Property Name="nRS232Baudrate" Type="int" Nullable="false" />
+    <Property Name="nSecureIO" Type="int" Nullable="false" />
+    <Property Name="nIsHistory" Type="smallint" Nullable="false" />
+    <Property Name="nUpdateDate" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_READER_NETWORK_HISTORY">
+    <Key>
+      <PropertyRef Name="nReaderIdn" />
+      <PropertyRef Name="nUpdateDate" />
+    </Key>
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nUpdateDate" Type="int" Nullable="false" />
+    <Property Name="sAdminID" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sIP" Type="varchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_READER_OUTPUT">
+    <Key>
+      <PropertyRef Name="nReaderIOIdn" />
+    </Key>
+    <Property Name="nReaderIOIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nEvent" Type="int" Nullable="false" />
+    <Property Name="nDeviceID" Type="int" Nullable="false" />
+    <Property Name="nRelayPort" Type="smallint" Nullable="false" />
+    <Property Name="nRelayOn" Type="smallint" Nullable="false" />
+    <Property Name="nOutputWaveIdn" Type="int" Nullable="false" />
+    <Property Name="nPriority" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_READER_WLAN">
+    <Key>
+      <PropertyRef Name="nReaderIdn" />
+    </Key>
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nPresetIndex" Type="smallint" Nullable="false" />
+    <Property Name="sName" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="nOperationMode" Type="int" Nullable="false" />
+    <Property Name="sEssid" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="nAuthType" Type="int" Nullable="false" />
+    <Property Name="nEncryption" Type="int" Nullable="false" />
+    <Property Name="nKeyType" Type="int" Nullable="false" />
+    <Property Name="sKey" Type="varchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_SECUREIO">
+    <Key>
+      <PropertyRef Name="nSecureIOIdn" />
+    </Key>
+    <Property Name="nSecureIOIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nIndex" Type="int" Nullable="false" />
+    <Property Name="nInput0" Type="smallint" Nullable="false" />
+    <Property Name="nInput1" Type="smallint" Nullable="false" />
+    <Property Name="nInput2" Type="smallint" Nullable="false" />
+    <Property Name="nInput3" Type="smallint" Nullable="false" />
+    <Property Name="nOutput0" Type="smallint" Nullable="false" />
+    <Property Name="nOutput1" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_SITEGRAPHICS">
+    <Key>
+      <PropertyRef Name="nSiteGraphicsIdn" />
+    </Key>
+    <Property Name="nSiteGraphicsIdn" Type="int" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_SITEGRAPHICS_DOORS">
+    <Key>
+      <PropertyRef Name="nSiteGraphicsIdn" />
+      <PropertyRef Name="nDoorIdn" />
+    </Key>
+    <Property Name="nSiteGraphicsIdn" Type="int" Nullable="false" />
+    <Property Name="nDoorIdn" Type="int" Nullable="false" />
+    <Property Name="nObjectIdn" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_SITEGRAPHICS_IMAGEINFO">
+    <Key>
+      <PropertyRef Name="nSiteGraphicsIdn" />
+    </Key>
+    <Property Name="nSiteGraphicsIdn" Type="int" Nullable="false" />
+    <Property Name="bBGImage" Type="varbinary(max)" />
+    <Property Name="nBGImageLen" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_SITEGRAPHICS_OBJECTINFO">
+    <Key>
+      <PropertyRef Name="nSiteGraphicsIdn" />
+    </Key>
+    <Property Name="nSiteGraphicsIdn" Type="int" Nullable="false" />
+    <Property Name="bDoorsObject" Type="varbinary(max)" />
+    <Property Name="nDoorsObjectLen" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TA_DAILYSCHEDULE">
+    <Key>
+      <PropertyRef Name="nDailyScheduleIdn" />
+    </Key>
+    <Property Name="nDailyScheduleIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="nDateStartTime" Type="int" Nullable="false" />
+    <Property Name="nIsFirstAndLastAuth" Type="smallint" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TA_DEVICE_EVENT_KEY">
+    <Key>
+      <PropertyRef Name="nDeviceEventKeyIdn" />
+    </Key>
+    <Property Name="nDeviceEventKeyIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nKeyIdn" Type="int" Nullable="false" />
+    <Property Name="nKeyEvent" Type="int" Nullable="false" />
+    <Property Name="nNoLate" Type="smallint" Nullable="false" />
+    <Property Name="nIsOnlyResult" Type="smallint" Nullable="false" />
+    <Property Name="nIsWorkTime" Type="smallint" Nullable="false" />
+    <Property Name="sEventName" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TA_HOLIDAY_RULE">
+    <Key>
+      <PropertyRef Name="nHolidayRuleIdn" />
+    </Key>
+    <Property Name="nHolidayRuleIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="nType" Type="int" Nullable="false" />
+    <Property Name="nDailyScheduleIdn" Type="int" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TA_HOLIDAY_RULE_DATA">
+    <Key>
+      <PropertyRef Name="nHolidayRuleDataIdn" />
+    </Key>
+    <Property Name="nHolidayRuleDataIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nHolidayRuleIdn" Type="int" Nullable="false" />
+    <Property Name="nHolidayIdn" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TA_LOG_HISTORY">
+    <Key>
+      <PropertyRef Name="nHistroryIdn" />
+    </Key>
+    <Property Name="nHistroryIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nUpdateTime" Type="int" Nullable="false" />
+    <Property Name="sUserID" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="sIP" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="nDateTime" Type="int" Nullable="false" />
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nTNAEvent" Type="smallint" Nullable="false" />
+    <Property Name="nFirstInTime" Type="int" Nullable="false" />
+    <Property Name="nLastOutTime" Type="int" Nullable="false" />
+    <Property Name="sFirstInEvent" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="sLastOutEvent" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="nTAResult" Type="int" Nullable="false" />
+    <Property Name="nWorkTime" Type="int" Nullable="false" />
+    <Property Name="nTimeCategoryIdn" Type="int" Nullable="false" />
+    <Property Name="nFlag" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TA_RESULT">
+    <Key>
+      <PropertyRef Name="nDateTime" />
+      <PropertyRef Name="nUserIdn" />
+      <PropertyRef Name="nShiftIdn" />
+    </Key>
+    <Property Name="nDateTime" Type="int" Nullable="false" />
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="nShiftIdn" Type="int" Nullable="false" />
+    <Property Name="nDailyScheduleIdn" Type="int" Nullable="false" />
+    <Property Name="nStartTime" Type="int" Nullable="false" />
+    <Property Name="nEndTime" Type="int" Nullable="false" />
+    <Property Name="sStartEvent" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="sEndEvent" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="nTAResult" Type="int" Nullable="false" />
+    <Property Name="nWorkTime" Type="int" Nullable="false" />
+    <Property Name="nIsModify" Type="int" Nullable="false" />
+    <Property Name="nLateInTime" Type="int" Nullable="false" />
+    <Property Name="nEarlyOutTime" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TA_RESULT_CATEGORY">
+    <Key>
+      <PropertyRef Name="nDateTime" />
+      <PropertyRef Name="nUserIdn" />
+      <PropertyRef Name="nTimeCategoryIdn" />
+    </Key>
+    <Property Name="nDateTime" Type="int" Nullable="false" />
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="nTimeCategoryIdn" Type="int" Nullable="false" />
+    <Property Name="nWorkTime" Type="int" Nullable="false" />
+    <Property Name="nTAResult" Type="int" Nullable="false" />
+    <Property Name="nIsModify" Type="int" Nullable="false" />
+    <Property Name="nLateInTime" Type="int" Nullable="false" />
+    <Property Name="nEarlyOutTime" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TA_SHIFT">
+    <Key>
+      <PropertyRef Name="nShiftIdn" />
+    </Key>
+    <Property Name="nShiftIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="nStartTime" Type="int" Nullable="false" />
+    <Property Name="nEndTime" Type="int" Nullable="false" />
+    <Property Name="nCycleType" Type="smallint" Nullable="false" />
+    <Property Name="nCyclePeriod" Type="int" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TA_SHIFT_DAILY">
+    <Key>
+      <PropertyRef Name="nShiftDailyIdn" />
+    </Key>
+    <Property Name="nShiftDailyIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nShiftIdn" Type="int" Nullable="false" />
+    <Property Name="nDailyScheduleIdn" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TA_TIMECATEGORY">
+    <Key>
+      <PropertyRef Name="nTimeCategoryIdn" />
+    </Key>
+    <Property Name="nTimeCategoryIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="nTimeRate" Type="real" Nullable="false" />
+    <Property Name="nRoundingUnit" Type="int" Nullable="false" />
+    <Property Name="nRoundingType" Type="smallint" Nullable="false" />
+    <Property Name="nDisplayColor" Type="int" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TA_TIMESLOT">
+    <Key>
+      <PropertyRef Name="nTimeSlotIdn" />
+    </Key>
+    <Property Name="nTimeSlotIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nDailyScheduleIdn" Type="int" Nullable="false" />
+    <Property Name="nStartTime" Type="int" Nullable="false" />
+    <Property Name="nEndTime" Type="int" Nullable="false" />
+    <Property Name="nTimeCategoryIdn" Type="int" Nullable="false" />
+    <Property Name="nStartGrace" Type="int" Nullable="false" />
+    <Property Name="nEndGrace" Type="int" Nullable="false" />
+    <Property Name="nInRounding" Type="int" Nullable="false" />
+    <Property Name="nOutRounding" Type="int" Nullable="false" />
+    <Property Name="nMinimumDuration" Type="int" Nullable="false" />
+    <Property Name="nMustCheckIn" Type="smallint" Nullable="false" />
+    <Property Name="nMustCheckOut" Type="smallint" Nullable="false" />
+    <Property Name="nAutoCheckIn" Type="smallint" Nullable="false" />
+    <Property Name="nAutoCheckOut" Type="smallint" Nullable="false" />
+    <Property Name="nAffectingResult" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TA_USER">
+    <Key>
+      <PropertyRef Name="nUserTAIdn" />
+    </Key>
+    <Property Name="nUserTAIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="nType" Type="int" Nullable="false" />
+    <Property Name="nTAIdn" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TIMECODE">
+    <Key>
+      <PropertyRef Name="nTimecode" />
+    </Key>
+    <Property Name="nTimecode" Type="int" Nullable="false" />
+    <Property Name="nStartTime1" Type="int" Nullable="false" />
+    <Property Name="nEndTime1" Type="int" Nullable="false" />
+    <Property Name="nStartTime2" Type="int" Nullable="false" />
+    <Property Name="nEndTime2" Type="int" Nullable="false" />
+    <Property Name="nStartTime3" Type="int" Nullable="false" />
+    <Property Name="nEndTime3" Type="int" Nullable="false" />
+    <Property Name="nStartTime4" Type="int" Nullable="false" />
+    <Property Name="nEndTime4" Type="int" Nullable="false" />
+    <Property Name="nStartTime5" Type="int" Nullable="false" />
+    <Property Name="nEndTime5" Type="int" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TIMEZONE">
+    <Key>
+      <PropertyRef Name="nTimezone" />
+    </Key>
+    <Property Name="nTimezone" Type="int" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TIMEZONE_DAY">
+    <Key>
+      <PropertyRef Name="nTimezone" />
+      <PropertyRef Name="nDay" />
+    </Key>
+    <Property Name="nTimezone" Type="int" Nullable="false" />
+    <Property Name="nDay" Type="int" Nullable="false" />
+    <Property Name="nHolidayIdn" Type="int" Nullable="false" />
+    <Property Name="nTimecode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TRACE_ADMIN">
+    <Key>
+      <PropertyRef Name="nLogIdn" />
+    </Key>
+    <Property Name="nLogIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nDateTime" Type="int" Nullable="false" />
+    <Property Name="sAdminID" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="sAdminIP" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="sAccessType" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="sUserID" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="sPassword" Type="nvarchar" MaxLength="32" />
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="nPrivilegeIdn" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TRACE_USER">
+    <Key>
+      <PropertyRef Name="nLogIdn" />
+    </Key>
+    <Property Name="nLogIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nDateTime" Type="int" Nullable="false" />
+    <Property Name="sAdminID" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="sAdminIP" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="sAccessType" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="sUserName" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="sDepartment" Type="nvarchar" MaxLength="64" />
+    <Property Name="sTelNumber" Type="varchar" MaxLength="50" />
+    <Property Name="sEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="sUserID" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="sPassword" Type="nvarchar" MaxLength="32" />
+    <Property Name="nStartDate" Type="int" Nullable="false" />
+    <Property Name="nEndDate" Type="int" Nullable="false" />
+    <Property Name="nAdminLevel" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_USER">
+    <Key>
+      <PropertyRef Name="nUserIdn" />
+    </Key>
+    <Property Name="nUserIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sUserName" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="nDepartmentIdn" Type="int" Nullable="false" />
+    <Property Name="sTelNumber" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="sUserID" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sPassword" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="nStartDate" Type="int" Nullable="false" />
+    <Property Name="nEndDate" Type="int" Nullable="false" />
+    <Property Name="nAdminLevel" Type="int" Nullable="false" />
+    <Property Name="nAuthMode" Type="int" Nullable="false" />
+    <Property Name="nAuthLimitCount" Type="int" Nullable="false" />
+    <Property Name="nTimedAPB" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_USER_AC">
+    <Key>
+      <PropertyRef Name="nUserIdn" />
+      <PropertyRef Name="nDoorIdn" />
+    </Key>
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="nDoorIdn" Type="int" Nullable="false" />
+    <Property Name="nTimezone" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_USER_CARD">
+    <Key>
+      <PropertyRef Name="nCardIdn" />
+    </Key>
+    <Property Name="nCardIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="nType" Type="smallint" Nullable="false" />
+    <Property Name="sCardNo" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="sCustomNo" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="nSecurityLevel" Type="int" Nullable="false" />
+    <Property Name="nDateTime" Type="int" Nullable="false" />
+    <Property Name="nExpiryDateTime" Type="int" Nullable="false" />
+    <Property Name="nBypass" Type="smallint" Nullable="false" />
+    <Property Name="nStatus" Type="int" Nullable="false" />
+    <Property Name="nLatest" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_USER_CUSTOMFIELD">
+    <Key>
+      <PropertyRef Name="nFieldIdn" />
+    </Key>
+    <Property Name="nFieldIdn" Type="int" Nullable="false" />
+    <Property Name="sFieldName" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="nFieldType" Type="int" Nullable="false" />
+    <Property Name="nDataType" Type="int" Nullable="false" />
+    <Property Name="nEssential" Type="smallint" Nullable="false" />
+    <Property Name="nValueIdn" Type="int" Nullable="false" />
+    <Property Name="sData" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_USER_CUSTOMINFO">
+    <Key>
+      <PropertyRef Name="nUserIdn" />
+    </Key>
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="sFieldValue1" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue2" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue3" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue4" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue5" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue6" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue7" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue8" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue9" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue10" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue11" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue12" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue13" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue14" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue15" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue16" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue17" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue18" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue19" Type="nvarchar" MaxLength="64" />
+    <Property Name="sFieldValue20" Type="nvarchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="TB_USER_DEPT">
+    <Key>
+      <PropertyRef Name="nDepartmentIdn" />
+    </Key>
+    <Property Name="nDepartmentIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="sDepartment" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="nDepth" Type="smallint" Nullable="false" />
+    <Property Name="nParentIdn" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_USER_DEVICE">
+    <Key>
+      <PropertyRef Name="nUserDeviceIdn" />
+    </Key>
+    <Property Name="nUserDeviceIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="nDeviceID" Type="int" Nullable="false" />
+    <Property Name="nIsUpdated" Type="smallint" Nullable="false" />
+    <Property Name="nIsDelete" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_USER_EX">
+    <Key>
+      <PropertyRef Name="nUserIdn" />
+    </Key>
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="sSurName" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="sFirstName" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="sMiddleName" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="nImageSize" Type="int" Nullable="false" />
+    <Property Name="sImageFilePath" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="nDuration" Type="int" Nullable="false" />
+    <Property Name="nCountPerDay" Type="int" Nullable="false" />
+    <Property Name="nUsePrivateImage" Type="smallint" Nullable="false" />
+    <Property Name="sGreetingMsg" Type="nvarchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_USER_FACE">
+    <Key>
+      <PropertyRef Name="nUserIdn" />
+      <PropertyRef Name="nIndex" />
+    </Key>
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="nIndex" Type="smallint" Nullable="false" />
+    <Property Name="bTemplate" Type="binary" MaxLength="2284" Nullable="false" />
+    <Property Name="nTemplatecs" Type="int" Nullable="false" />
+    <Property Name="nImageLen" Type="int" Nullable="false" />
+    <Property Name="bImage" Type="varbinary(max)" />
+    <Property Name="nEncryption" Type="smallint" Nullable="false" />
+    <Property Name="nSecurityLevel" Type="int" Nullable="false" />
+    <Property Name="nAuthLimitCount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_USER_TEMPLATE">
+    <Key>
+      <PropertyRef Name="nUserIdn" />
+      <PropertyRef Name="nIndex" />
+      <PropertyRef Name="nTemplateIndex" />
+    </Key>
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="nIndex" Type="smallint" Nullable="false" />
+    <Property Name="bTemplate" Type="binary" MaxLength="384" Nullable="false" />
+    <Property Name="nTemplatecs" Type="int" Nullable="false" />
+    <Property Name="nDuress" Type="smallint" Nullable="false" />
+    <Property Name="nEncryption" Type="smallint" Nullable="false" />
+    <Property Name="nSecurityLevel" Type="int" Nullable="false" />
+    <Property Name="nFingerIndex" Type="int" Nullable="false" />
+    <Property Name="nTemplateIndex" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_USER_UPDATE">
+    <Key>
+      <PropertyRef Name="nUserIdn" />
+      <PropertyRef Name="nDeviceID" />
+    </Key>
+    <Property Name="nUserUpdateIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="nDeviceID" Type="int" Nullable="false" />
+    <Property Name="nDeviceUpdate" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ZONE">
+    <Key>
+      <PropertyRef Name="nZoneIdn" />
+    </Key>
+    <Property Name="nZoneIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="nType" Type="smallint" Nullable="false" />
+    <Property Name="nAttribute" Type="int" Nullable="false" />
+    <Property Name="nTimezone" Type="int" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ZONE_ACCESSZONE">
+    <Key>
+      <PropertyRef Name="nZoneIdn" />
+    </Key>
+    <Property Name="nZoneIdn" Type="int" Nullable="false" />
+    <Property Name="nSyncTime" Type="int" Nullable="false" />
+    <Property Name="nSyncUser" Type="int" Nullable="false" />
+    <Property Name="nSyncLog" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ZONE_ALARM">
+    <Key>
+      <PropertyRef Name="nZoneIdn" />
+    </Key>
+    <Property Name="nZoneIdn" Type="int" Nullable="false" />
+    <Property Name="nInputEvent" Type="int" Nullable="false" />
+    <Property Name="nOutputEvent" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ZONE_ALARMZONE">
+    <Key>
+      <PropertyRef Name="nZoneIdn" />
+    </Key>
+    <Property Name="nZoneIdn" Type="int" Nullable="false" />
+    <Property Name="nType" Type="int" Nullable="false" />
+    <Property Name="nLockDelayTime" Type="int" Nullable="false" />
+    <Property Name="nUnlockDelayTime" Type="int" Nullable="false" />
+    <Property Name="nStatus" Type="int" Nullable="false" />
+    <Property Name="nSoundStatus" Type="smallint" Nullable="false" />
+    <Property Name="nArmKey" Type="int" Nullable="false" />
+    <Property Name="nArmCardID" Type="int" Nullable="false" />
+    <Property Name="nArmCustomID" Type="int" Nullable="false" />
+    <Property Name="nDisarmKey" Type="int" Nullable="false" />
+    <Property Name="nDisarmCardID" Type="int" Nullable="false" />
+    <Property Name="nDisarmCustomID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ZONE_APBZONE">
+    <Key>
+      <PropertyRef Name="nZoneIdn" />
+    </Key>
+    <Property Name="nZoneIdn" Type="int" Nullable="false" />
+    <Property Name="nType" Type="int" Nullable="false" />
+    <Property Name="nUnlockTime" Type="int" Nullable="false" />
+    <Property Name="nTimezone" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ZONE_CARD">
+    <Key>
+      <PropertyRef Name="nZoneCardIdn" />
+    </Key>
+    <Property Name="nZoneCardIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nZoneIdn" Type="int" Nullable="false" />
+    <Property Name="nCardID" Type="int" Nullable="false" />
+    <Property Name="nCustomID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ZONE_CONTROL">
+    <Key>
+      <PropertyRef Name="nZoneIdn" />
+      <PropertyRef Name="nUserIdn" />
+    </Key>
+    <Property Name="nZoneIdn" Type="int" Nullable="false" />
+    <Property Name="nUserIdn" Type="int" Nullable="false" />
+    <Property Name="nNumOfEntrance" Type="int" Nullable="false" />
+    <Property Name="nFlag" Type="smallint" Nullable="false" />
+    <Property Name="nTime" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ZONE_DOOR">
+    <Key>
+      <PropertyRef Name="nZoneDoorIdn" />
+    </Key>
+    <Property Name="nZoneDoorIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nZoneIdn" Type="int" Nullable="false" />
+    <Property Name="nDoorIdn" Type="int" Nullable="false" />
+    <Property Name="nDoorDept" Type="int" Nullable="false" />
+    <Property Name="nTimezone" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ZONE_ELZONE">
+    <Key>
+      <PropertyRef Name="nZoneIdn" />
+    </Key>
+    <Property Name="nZoneIdn" Type="int" Nullable="false" />
+    <Property Name="nLimitTime" Type="int" Nullable="false" />
+    <Property Name="nTimezone" Type="int" Nullable="false" />
+    <Property Name="nStartTime1" Type="int" Nullable="false" />
+    <Property Name="nEndTime1" Type="int" Nullable="false" />
+    <Property Name="nLimitNumber1" Type="int" Nullable="false" />
+    <Property Name="nStartTime2" Type="int" Nullable="false" />
+    <Property Name="nEndTime2" Type="int" Nullable="false" />
+    <Property Name="nLimitNumber2" Type="int" Nullable="false" />
+    <Property Name="nStartTime3" Type="int" Nullable="false" />
+    <Property Name="nEndTime3" Type="int" Nullable="false" />
+    <Property Name="nLimitNumber3" Type="int" Nullable="false" />
+    <Property Name="nStartTime4" Type="int" Nullable="false" />
+    <Property Name="nEndTime4" Type="int" Nullable="false" />
+    <Property Name="nLimitNumber4" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BioStar.dbo.TB_ZONE_FIREZONE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TB_ZONE_FIREZONE">
+    <Key>
+      <PropertyRef Name="nZoneIdn" />
+      <PropertyRef Name="nType" />
+    </Key>
+    <Property Name="nZoneIdn" Type="int" Nullable="false" />
+    <Property Name="nType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ZONE_INPUT">
+    <Key>
+      <PropertyRef Name="nZoneIdn" />
+      <PropertyRef Name="nReaderIOIdn" />
+    </Key>
+    <Property Name="nZoneIdn" Type="int" Nullable="false" />
+    <Property Name="nReaderIOIdn" Type="int" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="nInputFlag" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ZONE_MUSTERZONE">
+    <Key>
+      <PropertyRef Name="nZoneIdn" />
+    </Key>
+    <Property Name="nZoneIdn" Type="int" Nullable="false" />
+    <Property Name="nType" Type="int" Nullable="false" />
+    <Property Name="nTrackingTime" Type="int" Nullable="false" />
+    <Property Name="nTimeZone" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ZONE_OUTPUT">
+    <Key>
+      <PropertyRef Name="nZoneIdn" />
+      <PropertyRef Name="nReaderIOIdn" />
+    </Key>
+    <Property Name="nZoneIdn" Type="int" Nullable="false" />
+    <Property Name="nReaderIOIdn" Type="int" Nullable="false" />
+    <Property Name="nOutputFlag" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ZONE_READER">
+    <Key>
+      <PropertyRef Name="nZoneIdn" />
+      <PropertyRef Name="nReaderIdn" />
+    </Key>
+    <Property Name="nZoneIdn" Type="int" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nNodeType" Type="int" Nullable="false" />
+    <Property Name="nAttribute" Type="int" Nullable="false" />
+    <Property Name="nAttribute2" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BioStar.dbo.View_LogData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_LogData">
+    <Key>
+      <PropertyRef Name="sName" />
+      <PropertyRef Name="nEventIdn" />
+      <PropertyRef Name="nUserID" />
+    </Key>
+    <Property Name="sLogTime" Type="nvarchar" MaxLength="32" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="nEventIdn" Type="int" Nullable="false" />
+    <Property Name="nUserID" Type="int" Nullable="false" />
+  </EntityType>
+  <Function Name="sp_DeleteAccessGroupACInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAccessIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteAccessGroupInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAccessIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteAccessGroupUserInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAccessIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteAdminEmailInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nEmailIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteAlarmEmailInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAlarmEmailIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteAlarmInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAlarmIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteAlarmSWInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSWAlarmIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteAlarmWaveInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nOutputWaveIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteAllData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_DeleteDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDepartmentIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteDeviceInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDeviceType" Type="int" Mode="In" />
+    <Parameter Name="nDeviceIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteDoorDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorDept" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteDoorInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteDoorReader" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteDoorReaderInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteHolidayDataInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nHoliday" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteHolidayInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nHoliday" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteLoginInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_DeletePrivilegeInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nPrivilegeIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeletePrivilegeInfoData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nPrivilegeIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteReaderInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteReaderInputInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nInputType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteReaderIOEventInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteReaderIOInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteReaderOutputInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nDeviceID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteSiteGraphicsDoorsInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSiteGraphicsIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteSiteGraphicsDoorsObjectInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSGIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteSiteGraphicsImageInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSGIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteSiteGraphicsInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSGIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteTimecodeInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteTimezoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteUserACInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nAccessgroup" Type="int" Mode="In" />
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteUserCardInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nCardIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteUserCustomField" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_DeleteUserDeviceUpdateInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nDeviceID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteUserFaceInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteUserFingerPrintInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteUserInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteZoneACInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="nAccessIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteZoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteZoneInputInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteZoneIOInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteZoneOutputInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeleteZoneReaderInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertAccessGroupACInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAccessIdn" Type="int" Mode="In" />
+    <Parameter Name="nType" Type="int" Mode="In" />
+    <Parameter Name="nAgentIdn" Type="int" Mode="In" />
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertAccessGroupBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAccessIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertAccessGroupUserInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAccessIdn" Type="int" Mode="In" />
+    <Parameter Name="nType" Type="int" Mode="In" />
+    <Parameter Name="nAgentIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertAdminEmailInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sSMTPServer" Type="varchar" Mode="In" />
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+    <Parameter Name="sPassword" Type="varchar" Mode="In" />
+    <Parameter Name="sSender" Type="varchar" Mode="In" />
+    <Parameter Name="sRecipient" Type="varchar" Mode="In" />
+    <Parameter Name="nEmailIdn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_InsertAlarmEmailInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nEmailIdn1" Type="int" Mode="In" />
+    <Parameter Name="nEmailIdn2" Type="int" Mode="In" />
+    <Parameter Name="nEmailIdn3" Type="int" Mode="In" />
+    <Parameter Name="nEmailIdn4" Type="int" Mode="In" />
+    <Parameter Name="nEmailIdn5" Type="int" Mode="In" />
+    <Parameter Name="nAlarmEmailIdn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_InsertAlarmInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nType" Type="int" Mode="In" />
+    <Parameter Name="nAgent" Type="int" Mode="In" />
+    <Parameter Name="nEventIdn" Type="int" Mode="In" />
+    <Parameter Name="nSWAlarmIdn" Type="int" Mode="In" />
+    <Parameter Name="nOutputDeviceSoundIdn" Type="int" Mode="In" />
+    <Parameter Name="nOutputReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nOutputPort" Type="int" Mode="In" />
+    <Parameter Name="nOutputWaveIdn" Type="int" Mode="In" />
+    <Parameter Name="nAlarmEmailIdn" Type="int" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+    <Parameter Name="nAlarmIdn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_InsertAlarmSWInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sFileName" Type="nvarchar" Mode="In" />
+    <Parameter Name="nSWAlarmIdn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_InsertAlarmWaveInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="nDelay" Type="int" Mode="In" />
+    <Parameter Name="nCount" Type="int" Mode="In" />
+    <Parameter Name="nHigh" Type="int" Mode="In" />
+    <Parameter Name="nLow" Type="int" Mode="In" />
+    <Parameter Name="nOutputWaveIdn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_InsertDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nParentDepartIdn" Type="int" Mode="In" />
+    <Parameter Name="sDepartment" Type="nvarchar" Mode="In" />
+    <Parameter Name="nDepartmentIdn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_InsertDeviceSecureIOInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSecureIOIdn" Type="int" Mode="In" />
+    <Parameter Name="nParentIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertDoorBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorDept" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+    <Parameter Name="nDoorIdn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_InsertDoorDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nParentDepartIdn" Type="int" Mode="In" />
+    <Parameter Name="sDepartment" Type="nvarchar" Mode="In" />
+    <Parameter Name="nDoorDept" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_InsertDoorReaderInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertEventFaceInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nEventLogIdn" Type="int" Mode="In" />
+    <Parameter Name="nType" Type="smallint" Mode="In" />
+    <Parameter Name="nFaceImageLen" Type="int" Mode="In" />
+    <Parameter Name="bFaceImage" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertEventTypeInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nEventLogIdn" Type="int" Mode="In" />
+    <Parameter Name="nType" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertHolidayBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+    <Parameter Name="nHoliday" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_InsertHolidayDataInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nHoliday" Type="int" Mode="In" />
+    <Parameter Name="nDay" Type="int" Mode="In" />
+    <Parameter Name="nYearRepeat" Type="smallint" Mode="In" />
+    <Parameter Name="nDaysLong" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertLogDataInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDateTime" Type="int" Mode="In" />
+    <Parameter Name="nEventIdn" Type="int" Mode="In" />
+    <Parameter Name="nUserID" Type="int" Mode="In" />
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nIsLog" Type="smallint" Mode="In" />
+    <Parameter Name="nTNAEvent" Type="smallint" Mode="In" />
+    <Parameter Name="nType" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertLoginInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+    <Parameter Name="sPassword" Type="varchar" Mode="In" />
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nPrivilegeIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertPrivilegeInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nType" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+    <Parameter Name="nRtn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_InsertPrivilegeInfoData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nPrivilegeIdn" Type="int" Mode="In" />
+    <Parameter Name="nModuleIdn" Type="int" Mode="In" />
+    <Parameter Name="nAgentType" Type="int" Mode="In" />
+    <Parameter Name="nAgentIdn" Type="int" Mode="In" />
+    <Parameter Name="nPermit" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertReaderBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="varchar" Mode="In" />
+    <Parameter Name="nDeviceType" Type="int" Mode="In" />
+    <Parameter Name="sIP" Type="varchar" Mode="In" />
+    <Parameter Name="nConnType" Type="int" Mode="In" />
+    <Parameter Name="nConnTopType" Type="int" Mode="In" />
+    <Parameter Name="nParentIdn" Type="int" Mode="In" />
+    <Parameter Name="sMacAddress" Type="varchar" Mode="In" />
+    <Parameter Name="sProductName" Type="varchar" Mode="In" />
+    <Parameter Name="sBoardVersion" Type="varchar" Mode="In" />
+    <Parameter Name="sFirmwareVersion" Type="varchar" Mode="In" />
+    <Parameter Name="sBlackfinVersion" Type="varchar" Mode="In" />
+    <Parameter Name="sKernelVersion" Type="varchar" Mode="In" />
+    <Parameter Name="nIsBioStar" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertReaderConsoleInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sName" Type="varchar" Mode="In" />
+    <Parameter Name="sIP" Type="varchar" Mode="In" />
+    <Parameter Name="nConsoleIdn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_InsertReaderInputInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nInputType" Type="int" Mode="In" />
+    <Parameter Name="nFunctionType" Type="int" Mode="In" />
+    <Parameter Name="nDurationTime" Type="int" Mode="In" />
+    <Parameter Name="nSwitchType" Type="int" Mode="In" />
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertReaderIOEventInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nReaderIOIdn" Type="int" Mode="In" />
+    <Parameter Name="nEventIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertReaderIOInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nType" Type="int" Mode="In" />
+    <Parameter Name="nIONumber" Type="int" Mode="In" />
+    <Parameter Name="nSwitch" Type="int" Mode="In" />
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+    <Parameter Name="nDurationTime" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertReaderOutputInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nEvent" Type="int" Mode="In" />
+    <Parameter Name="nDeviceID" Type="int" Mode="In" />
+    <Parameter Name="nRelayPort" Type="smallint" Mode="In" />
+    <Parameter Name="nRelayOn" Type="smallint" Mode="In" />
+    <Parameter Name="nDelay" Type="int" Mode="In" />
+    <Parameter Name="nCount" Type="int" Mode="In" />
+    <Parameter Name="nHigh" Type="int" Mode="In" />
+    <Parameter Name="nLow" Type="int" Mode="In" />
+    <Parameter Name="nPriority" Type="int" Mode="In" />
+    <Parameter Name="nOutputWaveIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertSiteGraphicsBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSGIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertSiteGraphicsDoorsInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSiteGraphicsIdn" Type="int" Mode="In" />
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+    <Parameter Name="nObjectIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertSiteGraphicsDoorsObjectInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSGIdn" Type="int" Mode="In" />
+    <Parameter Name="nDoorsObjectLen" Type="int" Mode="In" />
+    <Parameter Name="bDoorsObject" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertSiteGraphicsImageInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSGIdn" Type="int" Mode="In" />
+    <Parameter Name="nBGImageLen" Type="int" Mode="In" />
+    <Parameter Name="bBGImage" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertTimecodeInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+    <Parameter Name="nDay" Type="int" Mode="In" />
+    <Parameter Name="nHolidayIdn" Type="int" Mode="In" />
+    <Parameter Name="nStartTime1" Type="int" Mode="In" />
+    <Parameter Name="nEndTime1" Type="int" Mode="In" />
+    <Parameter Name="nStartTime2" Type="int" Mode="In" />
+    <Parameter Name="nEndTime2" Type="int" Mode="In" />
+    <Parameter Name="nStartTime3" Type="int" Mode="In" />
+    <Parameter Name="nEndTime3" Type="int" Mode="In" />
+    <Parameter Name="nStartTime4" Type="int" Mode="In" />
+    <Parameter Name="nEndTime4" Type="int" Mode="In" />
+    <Parameter Name="nStartTime5" Type="int" Mode="In" />
+    <Parameter Name="nEndTime5" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertTimezoneBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertUserACInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nAccessgroup" Type="int" Mode="In" />
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertUserBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sUserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="nDepartmentIdn" Type="int" Mode="In" />
+    <Parameter Name="sTelNumber" Type="varchar" Mode="In" />
+    <Parameter Name="sEmail" Type="nvarchar" Mode="In" />
+    <Parameter Name="sSurName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sFirstName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sMiddleName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+    <Parameter Name="sPassword" Type="varchar" Mode="In" />
+    <Parameter Name="nStartDate" Type="int" Mode="In" />
+    <Parameter Name="nEndDate" Type="int" Mode="In" />
+    <Parameter Name="nAdminLevel" Type="int" Mode="In" />
+    <Parameter Name="nAuthMode" Type="int" Mode="In" />
+    <Parameter Name="nAuthLimitCount" Type="int" Mode="In" />
+    <Parameter Name="nTimedAPB" Type="int" Mode="In" />
+    <Parameter Name="nUserIdn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_InsertUserCardInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nType" Type="smallint" Mode="In" />
+    <Parameter Name="sCardNo" Type="varchar" Mode="In" />
+    <Parameter Name="sCustomNo" Type="varchar" Mode="In" />
+    <Parameter Name="nSecurityLevel" Type="int" Mode="In" />
+    <Parameter Name="nDateTime" Type="int" Mode="In" />
+    <Parameter Name="nExpiryDateTime" Type="int" Mode="In" />
+    <Parameter Name="nBypass" Type="smallint" Mode="In" />
+    <Parameter Name="nStatus" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertUserCustomFieldInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nFieldIdn" Type="int" Mode="In" />
+    <Parameter Name="sFieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="nFieldType" Type="int" Mode="In" />
+    <Parameter Name="nDataType" Type="int" Mode="In" />
+    <Parameter Name="nEssential" Type="smallint" Mode="In" />
+    <Parameter Name="nValueIdn" Type="int" Mode="In" />
+    <Parameter Name="sData" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertUserDeviceUpdateInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nDeviceID" Type="int" Mode="In" />
+    <Parameter Name="nDeviceUpdate" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertUserFaceInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nIndex" Type="smallint" Mode="In" />
+    <Parameter Name="bTemplate" Type="binary" Mode="In" />
+    <Parameter Name="nTemplatecs" Type="int" Mode="In" />
+    <Parameter Name="nImageLen" Type="int" Mode="In" />
+    <Parameter Name="bImage" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="nEncryption" Type="smallint" Mode="In" />
+    <Parameter Name="nSecurityLevel" Type="int" Mode="In" />
+    <Parameter Name="nAuthLimitCount" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertUserFingerPrintInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nIndex" Type="smallint" Mode="In" />
+    <Parameter Name="bTemplate" Type="binary" Mode="In" />
+    <Parameter Name="nTemplatecs" Type="int" Mode="In" />
+    <Parameter Name="nDuress" Type="smallint" Mode="In" />
+    <Parameter Name="nEncryption" Type="smallint" Mode="In" />
+    <Parameter Name="nSecurityLevel" Type="int" Mode="In" />
+    <Parameter Name="nFingerIndex" Type="int" Mode="In" />
+    <Parameter Name="nTemplateIndex" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertZoneACInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="nAccessIdn" Type="int" Mode="In" />
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertZoneBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="nType" Type="int" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+    <Parameter Name="nZoneIdn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_InsertZoneInputInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="nReaderIOIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="nInputFlag" Type="int" Mode="In" />
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nInputType" Type="int" Mode="In" />
+    <Parameter Name="nFunctionType" Type="int" Mode="In" />
+    <Parameter Name="nDurationTime" Type="int" Mode="In" />
+    <Parameter Name="nSwitchType" Type="int" Mode="In" />
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertZoneOutputInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="nReaderIOIdn" Type="int" Mode="In" />
+    <Parameter Name="nOutputFlag" Type="int" Mode="In" />
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nEvent" Type="int" Mode="In" />
+    <Parameter Name="nDeviceID" Type="int" Mode="In" />
+    <Parameter Name="nRelayID" Type="int" Mode="In" />
+    <Parameter Name="nRelayOn" Type="int" Mode="In" />
+    <Parameter Name="nWavIdn" Type="int" Mode="In" />
+    <Parameter Name="nPriorty" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertZoneReaderInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nNodeType" Type="int" Mode="In" />
+    <Parameter Name="nAttribute" Type="int" Mode="In" />
+    <Parameter Name="nAttribute2" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectAccessGroupACInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAccessIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectAccessGroupBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAccessIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectAccessGroupList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectAccessGroupReaderACInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAccessIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectAccessGroupTreeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectAccessGroupUserInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAccessIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectAdminEmailInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nEmailIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectAdminOption" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectAlarmEmailInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAlarmEmailIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectAlarmInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nType" Type="int" Mode="In" />
+    <Parameter Name="nAgent" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectAlarmSWInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectAlarmWaveInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectAllUserFaceInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectAllUserFingerPrintInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectDepartmentIndex" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sFullDepartmentName" Type="nvarchar" Mode="In" />
+    <Parameter Name="nDepartmentIdn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_SelectDepartmentInfoList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectDepartmentList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDepartmentIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectDeptDeviceList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectDeptDeviceTreeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectDeptUserList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+    <Parameter Name="nSubTree" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectDeptUserTreeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+    <Parameter Name="nSubTree" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectDeviceConsoleList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectDeviceList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectDeviceTreeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectDoorACInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectDoorBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectDoorDepartmentList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorDept" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectDoorEventInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+    <Parameter Name="nBeginTime" Type="int" Mode="In" />
+    <Parameter Name="nEndTime" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectDoorList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nTreeIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectDoorOperationInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectDoorReaderInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectDoorSubInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectDoorTreeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectDoorZoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectEventFaceInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nEventLogIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectEventIdn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nEventIdn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_SelectEventList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectEventLog" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nEventLogIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectHolidayBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nHoliday" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectHolidayDataInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nHolidayIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectHolidayList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectHolidayTreeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectLatestEventDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nLastDate" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_SelectLoginAdminList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectLoginCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_SelectLoginInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+    <Parameter Name="sPassword" Type="varchar" Mode="In" />
+    <Parameter Name="nPrivilegeIdn" Type="int" Mode="InOut" />
+    <Parameter Name="nUserIdn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_SelectLogList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nStartTime" Type="int" Mode="In" />
+    <Parameter Name="nEndTime" Type="int" Mode="In" />
+    <Parameter Name="nUserID" Type="int" Mode="In" />
+    <Parameter Name="nUserDept" Type="int" Mode="In" />
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+    <Parameter Name="nDoorDept" Type="int" Mode="In" />
+    <Parameter Name="nEventIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectMifareLayout" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nMifareIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectPrivilegeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectPrivilegePermitInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nPrivilegeIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectReaderBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectReaderDisplayInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectReaderInputInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectReaderIOEventInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectReaderNetworkInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectReaderNetworkInfo_WLAN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectReaderNetworkInfoHistory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectReaderOutputInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectSiteGraphicsBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSGIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectSiteGraphicsDoorsInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSiteGraphicsIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectSiteGraphicsDoorsObjectInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSGIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectSiteGraphicsImageInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSGIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectSiteGraphicsList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectSiteGraphicsTreeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectSubDeviceList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectTimecodeInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectTimezoneBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectTimezoneList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectTimezoneTreeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectUserACDeviceInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserACInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserACReaderInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserCardDeviceInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nLatestCard" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserCardInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserCustomFieldInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectUserCustomList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nTreeIdn" Type="int" Mode="In" />
+    <Parameter Name="nSubTree" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserDeviceInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserDeviceUpdateInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SelectUserEventInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserID" Type="int" Mode="In" />
+    <Parameter Name="nBeginTime" Type="int" Mode="In" />
+    <Parameter Name="nEndTime" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserFaceDeviceInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserFaceInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserFingerPrintInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserImageInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserIndex" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserIndexFromCardID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sCardNo" Type="varchar" Mode="In" />
+    <Parameter Name="sCustomNo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nTreeIdn" Type="int" Mode="In" />
+    <Parameter Name="nSubTree" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserPermitInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserPermitType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+    <Parameter Name="nType" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_SelectUserPrivateInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserSubInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserTemplateDeviceInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectUserTreeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nTreeIdn" Type="int" Mode="In" />
+    <Parameter Name="nSubTree" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneAccessZoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneACInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneAlarmZoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneAPBZoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneCardInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneEntranceLimitZoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneEventInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="nBeginTime" Type="int" Mode="In" />
+    <Parameter Name="nEndTime" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneFireAlarmZoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneInputInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneIOInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneMusterZoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneOutputInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneReaderInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneReaderList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_SelectZoneTreeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_UpdateAccessGroupBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAcccessIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateAccessGroupName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAcccessIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateAdminEmailInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nEmailIdn" Type="int" Mode="In" />
+    <Parameter Name="sSMTPServer" Type="varchar" Mode="In" />
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+    <Parameter Name="sPassword" Type="varchar" Mode="In" />
+    <Parameter Name="sSender" Type="varchar" Mode="In" />
+    <Parameter Name="sRecipient" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateAdminOption" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nFieldType" Type="int" Mode="In" />
+    <Parameter Name="sValue" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateAlarmEmailInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAlarmEmailIdn" Type="int" Mode="In" />
+    <Parameter Name="nEmailIdn1" Type="int" Mode="In" />
+    <Parameter Name="nEmailIdn2" Type="int" Mode="In" />
+    <Parameter Name="nEmailIdn3" Type="int" Mode="In" />
+    <Parameter Name="nEmailIdn4" Type="int" Mode="In" />
+    <Parameter Name="nEmailIdn5" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateAlarmInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nAlarmIdn" Type="int" Mode="In" />
+    <Parameter Name="nSWAlarmIdn" Type="int" Mode="In" />
+    <Parameter Name="nOutputDeviceSoundIdn" Type="int" Mode="In" />
+    <Parameter Name="nOutputReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nOutputPort" Type="int" Mode="In" />
+    <Parameter Name="nOutputWaveIdn" Type="int" Mode="In" />
+    <Parameter Name="nAlarmEmailIdn" Type="int" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateAlarmSWInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSWAlarmIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sFileName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateAlarmWaveInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nOutputWaveIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="nDelay" Type="int" Mode="In" />
+    <Parameter Name="nCount" Type="int" Mode="In" />
+    <Parameter Name="nHigh" Type="int" Mode="In" />
+    <Parameter Name="nLow" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDepartmentIdn" Type="int" Mode="In" />
+    <Parameter Name="nNewParentIdn" Type="int" Mode="In" />
+    <Parameter Name="sNewName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateDoorBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="nDoorDept" Type="int" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateDoorDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorDept" Type="int" Mode="In" />
+    <Parameter Name="nNewParentIdn" Type="int" Mode="In" />
+    <Parameter Name="sNewName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateDoorName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateDoorOperationInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+    <Parameter Name="nMode" Type="int" Mode="In" />
+    <Parameter Name="nType" Type="int" Mode="In" />
+    <Parameter Name="nMethod" Type="int" Mode="In" />
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateDoorReaderInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nInout" Type="int" Mode="In" />
+    <Parameter Name="nOpenRelay" Type="int" Mode="In" />
+    <Parameter Name="nOpenTime" Type="int" Mode="In" />
+    <Parameter Name="nCloseTime" Type="int" Mode="In" />
+    <Parameter Name="nOpenEvent" Type="int" Mode="In" />
+    <Parameter Name="nRTE" Type="int" Mode="In" />
+    <Parameter Name="nRTEType" Type="int" Mode="In" />
+    <Parameter Name="nSensor" Type="int" Mode="In" />
+    <Parameter Name="nSensorType" Type="int" Mode="In" />
+    <Parameter Name="nCloseEvent" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateDoorSubInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+    <Parameter Name="nOpenedTime" Type="int" Mode="In" />
+    <Parameter Name="nHoldTime" Type="int" Mode="In" />
+    <Parameter Name="nOpenRelayID" Type="int" Mode="In" />
+    <Parameter Name="nIOReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateEventInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nEventIdn" Type="int" Mode="In" />
+    <Parameter Name="sEventName" Type="nvarchar" Mode="In" />
+    <Parameter Name="nPriority" Type="int" Mode="In" />
+    <Parameter Name="nACK" Type="int" Mode="In" />
+    <Parameter Name="nSWAlarmIdn" Type="int" Mode="In" />
+    <Parameter Name="nAlarmEmailIdn" Type="int" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateHolidayBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nHoliday" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateHolidayName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nHoliday" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateLatestEventDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nLastDate" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateLoginInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+    <Parameter Name="sPassword" Type="varchar" Mode="In" />
+    <Parameter Name="nPrivilegeIdn" Type="int" Mode="In" />
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdatePrivilegeInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nPrivilegeIdn" Type="int" Mode="In" />
+    <Parameter Name="nType" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+    <Parameter Name="nRtn" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_UpdateReaderBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUpdateType" Type="int" Mode="In" />
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="varchar" Mode="In" />
+    <Parameter Name="nDeviceType" Type="int" Mode="In" />
+    <Parameter Name="sIP" Type="varchar" Mode="In" />
+    <Parameter Name="nConnType" Type="int" Mode="In" />
+    <Parameter Name="nConnTopType" Type="int" Mode="In" />
+    <Parameter Name="nParentIdn" Type="int" Mode="In" />
+    <Parameter Name="sMacAddress" Type="varchar" Mode="In" />
+    <Parameter Name="sProductName" Type="varchar" Mode="In" />
+    <Parameter Name="sBoardVersion" Type="varchar" Mode="In" />
+    <Parameter Name="sFirmwareVersion" Type="varchar" Mode="In" />
+    <Parameter Name="sBlackfinVersion" Type="varchar" Mode="In" />
+    <Parameter Name="sKernelVersion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateReaderDisplayInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nLanguage" Type="int" Mode="In" />
+    <Parameter Name="nBackground" Type="int" Mode="In" />
+    <Parameter Name="nSubInfo" Type="int" Mode="In" />
+    <Parameter Name="nMenuTimeout" Type="int" Mode="In" />
+    <Parameter Name="nMessageTimeout" Type="int" Mode="In" />
+    <Parameter Name="nPrivateAuth" Type="int" Mode="In" />
+    <Parameter Name="nVolume" Type="int" Mode="In" />
+    <Parameter Name="nDateType" Type="int" Mode="In" />
+    <Parameter Name="nTimeSync" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateReaderInputInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nInputType" Type="int" Mode="In" />
+    <Parameter Name="nFunctionType" Type="int" Mode="In" />
+    <Parameter Name="nDurationTime" Type="int" Mode="In" />
+    <Parameter Name="nSwitchType" Type="int" Mode="In" />
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateReaderName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateReaderNetworkInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nType" Type="int" Mode="In" />
+    <Parameter Name="nPort" Type="int" Mode="In" />
+    <Parameter Name="nMaxConnection" Type="int" Mode="In" />
+    <Parameter Name="nSSL" Type="int" Mode="In" />
+    <Parameter Name="nDHCP" Type="int" Mode="In" />
+    <Parameter Name="sIPAddress" Type="varchar" Mode="In" />
+    <Parameter Name="sGateWay" Type="varchar" Mode="In" />
+    <Parameter Name="sSubnetmask" Type="varchar" Mode="In" />
+    <Parameter Name="sServerIP" Type="varchar" Mode="In" />
+    <Parameter Name="nTimeSync" Type="int" Mode="In" />
+    <Parameter Name="sComPort" Type="varchar" Mode="In" />
+    <Parameter Name="nRS485Mode" Type="int" Mode="In" />
+    <Parameter Name="nRS485Baudrate" Type="int" Mode="In" />
+    <Parameter Name="nRS232Baudrate" Type="int" Mode="In" />
+    <Parameter Name="nSecureIO" Type="int" Mode="In" />
+    <Parameter Name="nUpdateDate" Type="int" Mode="In" />
+    <Parameter Name="sAdminID" Type="varchar" Mode="In" />
+    <Parameter Name="sAdminIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateReaderNetworkInfo_WLAN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nPresetIndex" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="varchar" Mode="In" />
+    <Parameter Name="nOperationMode" Type="int" Mode="In" />
+    <Parameter Name="sEssid" Type="varchar" Mode="In" />
+    <Parameter Name="nAuthType" Type="int" Mode="In" />
+    <Parameter Name="nEncryption" Type="int" Mode="In" />
+    <Parameter Name="nKeyType" Type="int" Mode="In" />
+    <Parameter Name="sKey" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateSiteGraphicsBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSGIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateSiteGraphicsName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nSGIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateTimezoneBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateTimezoneName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateUserACInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nAccessgroup" Type="int" Mode="In" />
+    <Parameter Name="nDoorIdn" Type="int" Mode="In" />
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateUserBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="sUserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="nDepartmentIdn" Type="int" Mode="In" />
+    <Parameter Name="sTelNumber" Type="varchar" Mode="In" />
+    <Parameter Name="sEmail" Type="nvarchar" Mode="In" />
+    <Parameter Name="sSurName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sFirstName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sMiddleName" Type="nvarchar" Mode="In" />
+    <Parameter Name="sUserID" Type="varchar" Mode="In" />
+    <Parameter Name="sPassword" Type="varchar" Mode="In" />
+    <Parameter Name="nStartDate" Type="int" Mode="In" />
+    <Parameter Name="nEndDate" Type="int" Mode="In" />
+    <Parameter Name="nAdminLevel" Type="int" Mode="In" />
+    <Parameter Name="nAuthMode" Type="int" Mode="In" />
+    <Parameter Name="nAuthLimitCount" Type="int" Mode="In" />
+    <Parameter Name="nTimedAPB" Type="int" Mode="In" />
+    <Parameter Name="nResult" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_UpdateUserCardInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nCardIdn" Type="int" Mode="In" />
+    <Parameter Name="nType" Type="smallint" Mode="In" />
+    <Parameter Name="sCardNo" Type="varchar" Mode="In" />
+    <Parameter Name="sCustomNo" Type="varchar" Mode="In" />
+    <Parameter Name="nSecurityLevel" Type="int" Mode="In" />
+    <Parameter Name="nDateTime" Type="int" Mode="In" />
+    <Parameter Name="nExpiryDateTime" Type="int" Mode="In" />
+    <Parameter Name="nBypass" Type="smallint" Mode="In" />
+    <Parameter Name="nStatus" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateUserDateInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nStartDate" Type="int" Mode="In" />
+    <Parameter Name="nEndDate" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateUserDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nNewDepartmentIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateUserFaceInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nIndex" Type="smallint" Mode="In" />
+    <Parameter Name="bTemplate" Type="binary" Mode="In" />
+    <Parameter Name="nTemplatecs" Type="int" Mode="In" />
+    <Parameter Name="nImageLen" Type="int" Mode="In" />
+    <Parameter Name="bImage" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="nEncryption" Type="smallint" Mode="In" />
+    <Parameter Name="nSecurityLevel" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateUserFaceSecurityLevel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nSecurityLevel" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateUserFingerPrintInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nIndex" Type="smallint" Mode="In" />
+    <Parameter Name="bTemplate" Type="binary" Mode="In" />
+    <Parameter Name="nTemplatecs" Type="int" Mode="In" />
+    <Parameter Name="nDuress" Type="smallint" Mode="In" />
+    <Parameter Name="nEncryption" Type="smallint" Mode="In" />
+    <Parameter Name="nSecurityLevel" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateUserFingerPrintSecurityLevel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nSecurityLevel" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateUserImageInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nImageSize" Type="int" Mode="In" />
+    <Parameter Name="sImageFilePath" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateUserName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="sUserName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateUserPrivateInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="nDuration" Type="int" Mode="In" />
+    <Parameter Name="nCountPerDay" Type="int" Mode="In" />
+    <Parameter Name="nUsePrivateImage" Type="smallint" Mode="In" />
+    <Parameter Name="sGreetingMsg" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateUserSubInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUserIdn" Type="int" Mode="In" />
+    <Parameter Name="sField1" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField2" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField3" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField4" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField5" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField6" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField7" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField8" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField9" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField10" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField11" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField12" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField13" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField14" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField15" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField16" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField17" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField18" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField19" Type="nvarchar" Mode="In" />
+    <Parameter Name="sField20" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateZoneACCESSZoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="nSyncTime" Type="int" Mode="In" />
+    <Parameter Name="nSyncUser" Type="int" Mode="In" />
+    <Parameter Name="nSyncLog" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateZoneACInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="nAccessIdn" Type="int" Mode="In" />
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateZoneAlarmZoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="nType" Type="int" Mode="In" />
+    <Parameter Name="nLockDelayTime" Type="int" Mode="In" />
+    <Parameter Name="nUnlockDelayTime" Type="int" Mode="In" />
+    <Parameter Name="nStatus" Type="int" Mode="In" />
+    <Parameter Name="nSoundStatus" Type="int" Mode="In" />
+    <Parameter Name="nArmKey" Type="int" Mode="In" />
+    <Parameter Name="nDisarmKey" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateZoneAPBZoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="nType" Type="int" Mode="In" />
+    <Parameter Name="nUnlockTime" Type="int" Mode="In" />
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateZoneBasicInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+    <Parameter Name="nType" Type="int" Mode="In" />
+    <Parameter Name="sDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateZoneEntranceLimitZoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="nLimitTime" Type="int" Mode="In" />
+    <Parameter Name="nTimezone" Type="int" Mode="In" />
+    <Parameter Name="nStartTime1" Type="int" Mode="In" />
+    <Parameter Name="nEndTime1" Type="int" Mode="In" />
+    <Parameter Name="nLimitNumber1" Type="int" Mode="In" />
+    <Parameter Name="nStartTime2" Type="int" Mode="In" />
+    <Parameter Name="nEndTime2" Type="int" Mode="In" />
+    <Parameter Name="nLimitNumber2" Type="int" Mode="In" />
+    <Parameter Name="nStartTime3" Type="int" Mode="In" />
+    <Parameter Name="nEndTime3" Type="int" Mode="In" />
+    <Parameter Name="nLimitNumber3" Type="int" Mode="In" />
+    <Parameter Name="nStartTime4" Type="int" Mode="In" />
+    <Parameter Name="nEndTime4" Type="int" Mode="In" />
+    <Parameter Name="nLimitNumber4" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateZoneFireAlarmZoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="nType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateZoneMusterZoneInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="nType" Type="int" Mode="In" />
+    <Parameter Name="nTrackingTime" Type="int" Mode="In" />
+    <Parameter Name="nTimeZone" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateZoneName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nZoneIdn" Type="int" Mode="In" />
+    <Parameter Name="sName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spSelectOPModeInfoBEPL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSelectOPModeInfoBST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spUpdateOPModeInfoBEPL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nReaderIdn" Type="int" Mode="In" />
+    <Parameter Name="nOPModeSchedule1" Type="int" Mode="In" />
+    <Parameter Name="nOPModeSchedule2" Type="int" Mode="In" />
+    <Parameter Name="nOPModeSchedule3" Type="int" Mode="In" />
+    <Parameter Name="nOPModeSchedule4" Type="int" Mode="In" />
+    <Parameter Name="nOPDoubleMode1" Type="int" Mode="In" />
+    <Parameter Name="nOPDoubleMode2" Type="int" Mode="In" />
+    <Parameter Name="nOPDoubleMode3" Type="int" Mode="In" />
+    <Parameter Name="nOPDoubleMode4" Type="int" Mode="In" />
+    <Parameter Name="nSecurityLevel" Type="int" Mode="In" />
+    <Parameter Name="nFastMode" Type="int" Mode="In" />
+    <Parameter Name="nTimeout" Type="int" Mode="In" />
+    <Parameter Name="nMatchTimeout" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="BioStarModelStoreContainer">
+    <EntitySet Name="TB_ACCESSGROUP" EntityType="Self.TB_ACCESSGROUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ACCESSGROUP_DOOR" EntityType="Self.TB_ACCESSGROUP_DOOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ACCESSGROUP_USER" EntityType="Self.TB_ACCESSGROUP_USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ACCESSGROUP_ZONE" EntityType="Self.TB_ACCESSGROUP_ZONE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ADMIN_OPTION" EntityType="Self.TB_ADMIN_OPTION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ALARM" EntityType="Self.TB_ALARM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ALARM_DEST" EntityType="Self.TB_ALARM_DEST" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ALARM_EMAIL" EntityType="Self.TB_ALARM_EMAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ALARM_OUTPUT_WAVE" EntityType="Self.TB_ALARM_OUTPUT_WAVE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ALARM_SW" EntityType="Self.TB_ALARM_SW" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_CARD" EntityType="Self.TB_CARD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_CARD_MIFARE_LAYOUT" EntityType="Self.TB_CARD_MIFARE_LAYOUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_DOOR" EntityType="Self.TB_DOOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_DOOR_ACTIVE_MODE" EntityType="Self.TB_DOOR_ACTIVE_MODE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_DOOR_DEPT" EntityType="Self.TB_DOOR_DEPT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_DOOR_READER" EntityType="Self.TB_DOOR_READER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EVENT" EntityType="Self.TB_EVENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EVENT_DATA" EntityType="Self.TB_EVENT_DATA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EVENT_FACE" EntityType="Self.TB_EVENT_FACE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EVENT_LOG" EntityType="Self.TB_EVENT_LOG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EVENT_LOG_MANAGER" EntityType="Self.TB_EVENT_LOG_MANAGER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EVENT_LOG_MODIFY" EntityType="Self.TB_EVENT_LOG_MODIFY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_HOLIDAY" EntityType="Self.TB_HOLIDAY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_HOLIDAY_DATE" EntityType="Self.TB_HOLIDAY_DATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_LEAVE" EntityType="Self.TB_LEAVE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_OPERATOR" EntityType="Self.TB_OPERATOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_OPERATOR_EMAIL" EntityType="Self.TB_OPERATOR_EMAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_OPERATOR_PERMIT" EntityType="Self.TB_OPERATOR_PERMIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_OPERATOR_PRIVILEGE" EntityType="Self.TB_OPERATOR_PRIVILEGE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_READER" EntityType="Self.TB_READER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_READER_DEPT" EntityType="Self.TB_READER_DEPT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_READER_DISPLAY" EntityType="Self.TB_READER_DISPLAY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_READER_FINGER" EntityType="Self.TB_READER_FINGER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_READER_HW" EntityType="Self.TB_READER_HW" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_READER_INPUT" EntityType="Self.TB_READER_INPUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_READER_IO_EVENT" EntityType="Self.TB_READER_IO_EVENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_READER_NETWORK" EntityType="Self.TB_READER_NETWORK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_READER_NETWORK_HISTORY" EntityType="Self.TB_READER_NETWORK_HISTORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_READER_OUTPUT" EntityType="Self.TB_READER_OUTPUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_READER_WLAN" EntityType="Self.TB_READER_WLAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_SECUREIO" EntityType="Self.TB_SECUREIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_SITEGRAPHICS" EntityType="Self.TB_SITEGRAPHICS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_SITEGRAPHICS_DOORS" EntityType="Self.TB_SITEGRAPHICS_DOORS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_SITEGRAPHICS_IMAGEINFO" EntityType="Self.TB_SITEGRAPHICS_IMAGEINFO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_SITEGRAPHICS_OBJECTINFO" EntityType="Self.TB_SITEGRAPHICS_OBJECTINFO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TA_DAILYSCHEDULE" EntityType="Self.TB_TA_DAILYSCHEDULE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TA_DEVICE_EVENT_KEY" EntityType="Self.TB_TA_DEVICE_EVENT_KEY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TA_HOLIDAY_RULE" EntityType="Self.TB_TA_HOLIDAY_RULE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TA_HOLIDAY_RULE_DATA" EntityType="Self.TB_TA_HOLIDAY_RULE_DATA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TA_LOG_HISTORY" EntityType="Self.TB_TA_LOG_HISTORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TA_RESULT" EntityType="Self.TB_TA_RESULT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TA_RESULT_CATEGORY" EntityType="Self.TB_TA_RESULT_CATEGORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TA_SHIFT" EntityType="Self.TB_TA_SHIFT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TA_SHIFT_DAILY" EntityType="Self.TB_TA_SHIFT_DAILY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TA_TIMECATEGORY" EntityType="Self.TB_TA_TIMECATEGORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TA_TIMESLOT" EntityType="Self.TB_TA_TIMESLOT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TA_USER" EntityType="Self.TB_TA_USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TIMECODE" EntityType="Self.TB_TIMECODE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TIMEZONE" EntityType="Self.TB_TIMEZONE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TIMEZONE_DAY" EntityType="Self.TB_TIMEZONE_DAY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TRACE_ADMIN" EntityType="Self.TB_TRACE_ADMIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TRACE_USER" EntityType="Self.TB_TRACE_USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USER" EntityType="Self.TB_USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USER_AC" EntityType="Self.TB_USER_AC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USER_CARD" EntityType="Self.TB_USER_CARD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USER_CUSTOMFIELD" EntityType="Self.TB_USER_CUSTOMFIELD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USER_CUSTOMINFO" EntityType="Self.TB_USER_CUSTOMINFO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USER_DEPT" EntityType="Self.TB_USER_DEPT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USER_DEVICE" EntityType="Self.TB_USER_DEVICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USER_EX" EntityType="Self.TB_USER_EX" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USER_FACE" EntityType="Self.TB_USER_FACE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USER_TEMPLATE" EntityType="Self.TB_USER_TEMPLATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USER_UPDATE" EntityType="Self.TB_USER_UPDATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ZONE" EntityType="Self.TB_ZONE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ZONE_ACCESSZONE" EntityType="Self.TB_ZONE_ACCESSZONE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ZONE_ALARM" EntityType="Self.TB_ZONE_ALARM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ZONE_ALARMZONE" EntityType="Self.TB_ZONE_ALARMZONE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ZONE_APBZONE" EntityType="Self.TB_ZONE_APBZONE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ZONE_CARD" EntityType="Self.TB_ZONE_CARD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ZONE_CONTROL" EntityType="Self.TB_ZONE_CONTROL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ZONE_DOOR" EntityType="Self.TB_ZONE_DOOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ZONE_ELZONE" EntityType="Self.TB_ZONE_ELZONE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ZONE_INPUT" EntityType="Self.TB_ZONE_INPUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ZONE_MUSTERZONE" EntityType="Self.TB_ZONE_MUSTERZONE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ZONE_OUTPUT" EntityType="Self.TB_ZONE_OUTPUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ZONE_READER" EntityType="Self.TB_ZONE_READER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EVENT_LOG_2" EntityType="Self.TB_EVENT_LOG_2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TB_EVENT_LOG_2].[nEventLogIdn] AS [nEventLogIdn], 
+    [TB_EVENT_LOG_2].[nDateTime] AS [nDateTime], 
+    [TB_EVENT_LOG_2].[nReaderIdn] AS [nReaderIdn], 
+    [TB_EVENT_LOG_2].[nEventIdn] AS [nEventIdn], 
+    [TB_EVENT_LOG_2].[nUserID] AS [nUserID], 
+    [TB_EVENT_LOG_2].[nIsLog] AS [nIsLog], 
+    [TB_EVENT_LOG_2].[nTNAEvent] AS [nTNAEvent], 
+    [TB_EVENT_LOG_2].[nIsUseTA] AS [nIsUseTA], 
+    [TB_EVENT_LOG_2].[nType] AS [nType], 
+    [TB_EVENT_LOG_2].[date] AS [date]
+    FROM [dbo].[TB_EVENT_LOG_2] AS [TB_EVENT_LOG_2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TB_ZONE_FIREZONE" EntityType="Self.TB_ZONE_FIREZONE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TB_ZONE_FIREZONE].[nZoneIdn] AS [nZoneIdn], 
+    [TB_ZONE_FIREZONE].[nType] AS [nType]
+    FROM [dbo].[TB_ZONE_FIREZONE] AS [TB_ZONE_FIREZONE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_LogData" EntityType="Self.View_LogData" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_LogData].[sLogTime] AS [sLogTime], 
+    [View_LogData].[sName] AS [sName], 
+    [View_LogData].[nEventIdn] AS [nEventIdn], 
+    [View_LogData].[nUserID] AS [nUserID]
+    FROM [dbo].[View_LogData] AS [View_LogData]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

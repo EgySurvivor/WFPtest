@@ -1,0 +1,66 @@
+﻿@model WFPtest.Models.TB_EVENT_LOG
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TB_EVENT_LOG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nEventLogIdn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nEventLogIdn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nIsLog)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nIsLog)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nTNAEvent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nTNAEvent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nIsUseTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nIsUseTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

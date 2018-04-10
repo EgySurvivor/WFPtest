@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f2c0ad559cd440be8343ffa92d291a6c" Name="Diagram1" ZoomLevel="105">
+        <EntityTypeShape EntityType="WFPModel.contract_details" Width="1.5" PointX="9.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFPModel.contract_type" Width="1.5" PointX="11.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFPModel.country" Width="1.5" PointX="0.5" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFPModel.Country_office" Width="1.5" PointX="2.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFPModel.dependent" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFPModel.Evaluation" Width="1.5" PointX="9.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFPModel.functional_title" Width="1.5" PointX="9.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFPModel.Fund" Width="1.5" PointX="4.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFPModel.staff" Width="1.5" PointX="7.5" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFPModel.sub_office" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFPModel.unit" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="WFPModel.FK_contract_details_Funds" ManuallyRouted="false" />
+        <AssociationConnector Association="WFPModel.FK_staff_contract_details" ManuallyRouted="false" />
+        <AssociationConnector Association="WFPModel.FK_staff_contract_type" ManuallyRouted="false" />
+        <AssociationConnector Association="WFPModel.FK_Country_office_countries" ManuallyRouted="false" />
+        <AssociationConnector Association="WFPModel.FK_staff_Country_office" ManuallyRouted="false" />
+        <AssociationConnector Association="WFPModel.FK_sub_office_Country_office" ManuallyRouted="false" />
+        <AssociationConnector Association="WFPModel.FK_dependents_staff" ManuallyRouted="false" />
+        <AssociationConnector Association="WFPModel.FK_Evaluation_staff" ManuallyRouted="false" />
+        <AssociationConnector Association="WFPModel.FK_staff_functional_title" ManuallyRouted="false" />
+        <AssociationConnector Association="WFPModel.FK_staff_staff" ManuallyRouted="false" />
+        <AssociationConnector Association="WFPModel.FK_staff_sub_office" ManuallyRouted="false" />
+        <AssociationConnector Association="WFPModel.FK_staff_unit" ManuallyRouted="false" />
+        <AssociationConnector Association="WFPModel.FK_unit_Country_office" />
+        <AssociationConnector Association="WFPModel.FK_contract_details_staff" />
+        <AssociationConnector Association="WFPModel.FK_contract_type_staff" />
+        <AssociationConnector Association="WFPModel.FK_staff_countries" />
+        <AssociationConnector Association="WFPModel.FK_functional_title_staff" />
+        <AssociationConnector Association="WFPModel.FK_staff_staff1" />
+        <AssociationConnector Association="WFPModel.FK_staff_staff2" />
+        <AssociationConnector Association="WFPModel.FK_staff_staff3" />
+        <EntityTypeShape EntityType="WFPModel.governorate" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <AssociationConnector Association="WFPModel.FK_governorates_countries" />
+        <AssociationConnector Association="WFPModel.FK_staff_governorates" />
+        <EntityTypeShape EntityType="WFPModel.district" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <AssociationConnector Association="WFPModel.FK_district_countries" />
+        <AssociationConnector Association="WFPModel.FK_district_governorates" />
+        <AssociationConnector Association="WFPModel.FK_staff_district" />
+        <EntityTypeShape EntityType="WFPModel.category" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="WFPModel.FK_staff_categories" />
+        <AssociationConnector Association="WFPModel.FK_staff_district1" />
+        <EntityTypeShape EntityType="WFPModel.WardenGroup" Width="1.5" PointX="12.125" PointY="5.5" IsExpanded="true" />
+        <AssociationConnector Association="WFPModel.FK_WardenGroups_district" />
+        <AssociationConnector Association="WFPModel.FK_staff_WardenGroups" />
+        <EntityTypeShape EntityType="WFPModel.CourseReg" Width="1.5" PointX="9.75" PointY="14.875" />
+        <EntityTypeShape EntityType="WFPModel.Cours" Width="1.5" PointX="7.5" PointY="22.375" />
+        <EntityTypeShape EntityType="WFPModel.CourseSession" Width="1.5" PointX="7.5" PointY="24.875" />
+        <AssociationConnector Association="WFPModel.FK_CourseReg_Courses" />
+        <AssociationConnector Association="WFPModel.FK_CourseReg_CourseSession" />
+        <AssociationConnector Association="WFPModel.FK_CourseReg_staff" />
+        <AssociationConnector Association="WFPModel.FK_CourseSession_Courses" />
+        <EntityTypeShape EntityType="WFPModel.MissionAuthorization" Width="3.375" PointX="14" PointY="8.75" />
+        <AssociationConnector Association="WFPModel.FK_MissionAuthorization_staff" />
+        <EntityTypeShape EntityType="WFPModel.request" Width="1.5" PointX="12" PointY="10.875" />
+        <AssociationConnector Association="WFPModel.FK_requests_functional_title" />
+        <AssociationConnector Association="WFPModel.FK_requests_staff" />
+        <AssociationConnector Association="WFPModel.FK_requests_staff1" />
+        <AssociationConnector Association="WFPModel.FK_requests_unit" />
+        <EntityTypeShape EntityType="WFPModel.CourseDetail" Width="1.5" PointX="11.25" PointY="24.875" />
+        <EntityTypeShape EntityType="WFPModel.CourseTypt" Width="1.5" PointX="10.75" PointY="1" />
+        <AssociationConnector Association="WFPModel.FK_CourseDetails_Courses" />
+        <AssociationConnector Association="WFPModel.FK_Courses_CourseTypt" />
+        <AssociationConnector Association="WFPModel.FK_Courses_unit" />
+        <EntityTypeShape EntityType="WFPModel.VACATION_TYPE_LIST" Width="1.5" PointX="0.75" PointY="0.875" />
+        <EntityTypeShape EntityType="WFPModel.DEPARTMENT" Width="1.5" PointX="13.375" PointY="0.875" />
+        <EntityTypeShape EntityType="WFPModel.securitytracking" Width="1.5" PointX="15.75" PointY="0.75" />
+        <EntityTypeShape EntityType="WFPModel.sir_category" Width="1.5" PointX="14.75" PointY="13.125" />
+        <EntityTypeShape EntityType="WFPModel.sir_category_access" Width="1.5" PointX="17" PointY="13.125" />
+        <EntityTypeShape EntityType="WFPModel.sir_item_category_access" Width="1.5" PointX="20" PointY="13" />
+        <EntityTypeShape EntityType="WFPModel.sir_staff_item" Width="1.5" PointX="20" PointY="17.75" />
+        <EntityTypeShape EntityType="WFPModel.staff_login_history" Width="1.5" PointX="16.375" PointY="11" />
+        <EntityTypeShape EntityType="WFPModel.staff_pwd" Width="1.5" PointX="17.75" PointY="0.75" />
+        <EntityTypeShape EntityType="WFPModel.stafftest" Width="1.5" PointX="3.625" PointY="22.375" />
+        <EntityTypeShape EntityType="WFPModel.stafftesttest" Width="1.5" PointX="19.75" PointY="0.75" />
+        <EntityTypeShape EntityType="WFPModel.sysdiagram" Width="1.5" PointX="12.75" PointY="20.75" />
+        <EntityTypeShape EntityType="WFPModel.VACATION_GROUP_DETAILS" Width="1.5" PointX="14.75" PointY="20.75" />
+        <EntityTypeShape EntityType="WFPModel.VACATION_GROUPS" Width="1.5" PointX="15.375" PointY="7.5" />
+        <EntityTypeShape EntityType="WFPModel.VACATION_PERIODS" Width="1.5" PointX="16.75" PointY="20.75" />
+        <EntityTypeShape EntityType="WFPModel.Counter" Width="1.5" PointX="0.75" PointY="21.75" />
+        <EntityTypeShape EntityType="WFPModel.Hash" Width="1.5" PointX="21.75" PointY="3.75" />
+        <EntityTypeShape EntityType="WFPModel.Job" Width="1.5" PointX="15.375" PointY="1.875" />
+        <EntityTypeShape EntityType="WFPModel.JobParameter" Width="1.5" PointX="17" PointY="7.875" />
+        <EntityTypeShape EntityType="WFPModel.JobQueue" Width="1.5" PointX="21.75" PointY="6.75" />
+        <EntityTypeShape EntityType="WFPModel.List" Width="1.5" PointX="21.75" PointY="9.75" />
+        <EntityTypeShape EntityType="WFPModel.Schema" Width="1.5" PointX="18.75" PointY="10.75" />
+        <EntityTypeShape EntityType="WFPModel.Server" Width="1.5" PointX="22.75" PointY="12.75" />
+        <EntityTypeShape EntityType="WFPModel.Set" Width="1.5" PointX="22.75" PointY="15.75" />
+        <EntityTypeShape EntityType="WFPModel.State" Width="1.5" PointX="17" PointY="5" />
+        <EntityTypeShape EntityType="WFPModel.MissionAuthorizationH" Width="2.5" PointX="22.75" PointY="18.75" />
+        <AssociationConnector Association="WFPModel.FK__sir_categ__sir_c__4CA06362" />
+        <AssociationConnector Association="WFPModel.FK__sir_item___sir_c__5BE2A6F2" />
+        <AssociationConnector Association="WFPModel.FK_HangFire_JobParameter_Job" />
+        <AssociationConnector Association="WFPModel.FK_HangFire_State_Job" />
+        <EntityTypeShape EntityType="WFPModel.VAC_TRANS" Width="1.5" PointX="7.125" PointY="0.875" />
+        <AssociationConnector Association="WFPModel.FK_VAC_TRANS_staff" />
+        <AssociationConnector Association="WFPModel.FK_VAC_TRANS_VACATION_TYPE_LIST" />
+        <EntityTypeShape EntityType="WFPModel.BRANCH" Width="1.5" PointX="0.75" PointY="9.875" />
+        <EntityTypeShape EntityType="WFPModel.Job_DESCRIPTION" Width="1.5" PointX="0.75" PointY="13.375" />
+        <EntityTypeShape EntityType="WFPModel.TRAINEE" Width="1.5" PointX="3.375" PointY="14.75" />
+        <EntityTypeShape EntityType="WFPModel.TRAINING_CERTIFICATION" Width="1.5" PointX="16.5" PointY="25.125" />
+        <EntityTypeShape EntityType="WFPModel.TRAINING_COMPANIES" Width="1.5" PointX="27.25" PointY="12.25" />
+        <EntityTypeShape EntityType="WFPModel.TRAINING_PLAN" Width="1.5" PointX="0.75" PointY="18.25" />
+        <EntityTypeShape EntityType="WFPModel.TRAINING_PLAN_TRAINERS" Width="2.625" PointX="13.875" PointY="31.125" />
+        <EntityTypeShape EntityType="WFPModel.TRAINING_PLAN_TRAINING_CLASSES" Width="1.5" PointX="3" PointY="18" />
+        <EntityTypeShape EntityType="WFPModel.TRAINING_PLAN_TRAINING_COMPANIES" Width="1.5" PointX="29.5" PointY="13.625" />
+        <EntityTypeShape EntityType="WFPModel.TRAINING_PLAN_TRAININGS" Width="1.5" PointX="3" PointY="34" />
+        <EntityTypeShape EntityType="WFPModel.TRAINING_SC" Width="1.5" PointX="3" PointY="30.125" />
+        <EntityTypeShape EntityType="WFPModel.TRAINING_TRAINING_COMPANIES" Width="1.5" PointX="29.5" PointY="11.375" />
+        <EntityTypeShape EntityType="WFPModel.TRAINING" Width="1.5" PointX="14.25" PointY="26.75" />
+        <AssociationConnector Association="WFPModel.FK_TRAINING_CERTIFICATION_staff" />
+        <AssociationConnector Association="WFPModel.FK_TRAINEES_TRAINING_PLAN_TRAINING_CLASSES" />
+        <AssociationConnector Association="WFPModel.FK_TRAINING_CERTIFICATION_TRAININGS" />
+        <AssociationConnector Association="WFPModel.FK_TRAINING_PLAN_TRAINING_COMPANIES_TRAINING_COMPANIES" />
+        <AssociationConnector Association="WFPModel.FK_TRAINING_TRAINING_COMPANIES_TRAINING_COMPANIES" />
+        <AssociationConnector Association="WFPModel.FK_TRAINING_PLAN_TRAINING_CLASSES_TRAINING_PLAN" />
+        <AssociationConnector Association="WFPModel.FK_TRAINING_PLAN_TRAININGS_TRAINING_PLAN" />
+        <AssociationConnector Association="WFPModel.FK_TRAINING_SC_TRAINING_PLAN" />
+        <AssociationConnector Association="WFPModel.FK_TRAININGS_TRAININGS" />
+        <AssociationConnector Association="WFPModel.FK_TRAINEES_TRAININGS" />
+        <EntityTypeShape EntityType="WFPModel.TRAINING_TYPE" Width="1.5" PointX="26.375" PointY="0.875" />
+        <AssociationConnector Association="WFPModel.FK_TRAINING_PLAN_TRAININGS_TRAINING_TYPE" />
+        <EntityTypeShape EntityType="WFPModel.MissionAuthorization1" Width="2.5" PointX="9.75" PointY="26.125" />
+        <AssociationConnector Association="WFPModel.FK_MissionAuthorization_staff1" />
+        <EntityTypeShape EntityType="WFPModel.Attend" Width="1.5" PointX="19.75" PointY="22.875" />
+        <EntityTypeShape EntityType="WFPModel.Staff_Event" Width="1.5" PointX="19" PointY="28" />
+        <AssociationConnector Association="WFPModel.FK_Attends_staff" />
+        <EntityTypeShape EntityType="WFPModel.requests1" Width="1.5" PointX="22.375" PointY="24.5" />
+        <AssociationConnector Association="WFPModel.FK_Attends_requests" />
+        <AssociationConnector Association="WFPModel.FK_Staff_Event_staff" />
+        <AssociationConnector Association="WFPModel.FK_Staff_Event_requests" />
+        <EntityTypeShape EntityType="WFPModel.MissionType" Width="2.25" PointX="0.75" PointY="24.875" />
+        <AssociationConnector Association="WFPModel.FK_MissionAuthorization_MissionType" />
+        <EntityTypeShape EntityType="WFPModel.MissionItinerary" Width="3.125" PointX="24.375" PointY="3.75" />
+        <AssociationConnector Association="WFPModel.FK_MissionItinerary_countries" />
+        <AssociationConnector Association="WFPModel.FK_MissionItinerary_countries1" />
+        <AssociationConnector Association="WFPModel.FK_MissionItinerary_MissionAuthorization" />
+        <EntityTypeShape EntityType="WFPModel.evalution" Width="1.5" PointX="0.5" PointY="27" />
+        <EntityTypeShape EntityType="WFPModel.Event_requests" Width="1.5" PointX="28.75" PointY="4" />
+        <AssociationConnector Association="WFPModel.FK_MissionAuthorization_countries" />
+        <AssociationConnector Association="WFPModel.FK_MissionAuthorization_staff11" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

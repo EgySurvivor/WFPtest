@@ -1,0 +1,52 @@
+﻿@model WFPtest.Models.staff
+
+@{
+    ViewBag.Title = "alternate_warden_1Details";
+}
+<br>
+<br>
+<br>
+
+<p>
+    <h2>Alternate Warden 1 Details</h2>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("First Name")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.staff_first_name)
+        </td>
+
+        <th>
+            @Html.DisplayName("Last Name")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.staff_last_name)
+        </td>
+
+        <th>
+            @Html.DisplayName("Extention")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.staff_extension_number)
+        </td>
+        <th>
+            @Html.DisplayName("E-mail")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.staff_email)
+        </td>
+
+    </tr>
+</table>
+<p>
+    @Html.ActionLink("Back to List", "index")
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.contractdetailsid }) |
+        @Html.ActionLink("Back to List", "Index")*@
+</p>

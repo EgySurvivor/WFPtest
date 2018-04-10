@@ -1,0 +1,123 @@
+﻿@*@model IEnumerable<WFPtest.Models.CourseSession>*@
+
+@{
+    ViewBag.Title = "CourseSessionIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model PagedList.IPagedList<WFPtest.Models.CourseSession >
+@*@model IEnumerable<WFPtest.Models.staff>*@
+@*@using IEnumerable<wfptest.models.staff>;*@
+@using WFPtest.Models
+
+
+@using PagedList.Mvc;
+@using JQueryUIHelpers;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<h2>Courses Schedule</h2>
+
+@*@using (Html.BeginForm())
+    {
+        <p>
+            Find by name: @Html.TextBox("SearchString")
+            <input type="submit" value="Search" />
+        </p>
+    }*@
+
+@using (Html.BeginForm("Index", "CourseSessions", FormMethod.Get))
+{
+
+
+    <br>
+    <p>
+        Find by Course name Or Duration Or Location: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />&nbsp;&nbsp;@Html.ActionLink("Reset Filter", "Index")
+    </p>
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Course Duration")
+        </th>
+        <th>
+            @Html.DisplayName("Course Start Time")
+        </th>
+        <th>
+            @Html.DisplayName("Course End Time")
+        </th>
+        <th>
+            @Html.DisplayName("Course Start Date")
+        </th>
+        <th>
+            @Html.DisplayName("Course End Date")
+        </th>
+        <th>
+            @Html.DisplayName("Course Location")
+        </th>
+        <th>
+            @Html.DisplayName("Session Name")
+        </th>
+        <th>
+            @Html.DisplayName("Course Prerequisite")
+        </th>
+        <th>
+            @Html.DisplayName("Course Name")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseDuration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseStartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseEndTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseStartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseEndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SessionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CoursePrerequisite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cours.CourseName)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Sessionid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Sessionid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Sessionid })
+        </td>*@
+    </tr>
+}
+
+</table>
+@*<table border="0">
+    <tr>
+        <td>
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        </td>
+    </tr>
+</table>*@
+
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

@@ -1,0 +1,312 @@
+﻿@model WFPtest.Models.staff
+
+@{
+    ViewBag.Title = "Delete";
+}
+<br>
+
+<p>
+   <h2> Delete Staff</h2> 
+</p>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+   
+    <hr />
+    <table class="table" align="left">
+
+        <tr>
+            <th>
+                @Html.DisplayName("Code")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.staff_id)
+            </td>
+
+            <th>
+                @Html.DisplayName("First Name")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.staff_first_name)
+            </td>
+
+            <th>
+                @Html.DisplayName("Last Name")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.staff_last_name)
+            </td>
+            <th>
+                @Html.DisplayName("Status")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.staff_status)
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                @Html.DisplayName("Index Number")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.staff_index_number)
+            </td>
+
+            <th>
+                @Html.DisplayName("Staff Vendor")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.staff_vendor_number)
+            </td>
+
+            <th>
+                @Html.DisplayName("Nationality")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.staff_nationality)
+            </td>
+
+            <th>
+                @Html.DisplayName("Address")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.staff_address)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayName("Staff DOB")
+            </th>
+
+            <td>
+
+
+
+                @Html.DisplayFor(model => model.staff_dob)
+            </td>
+
+            <th>
+                @Html.DisplayName("Staff EOD")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.staff_eod)
+            </td>
+
+            <th>
+                @Html.DisplayName("Staff Net")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.staff_nte)
+            </td>
+
+            <th>
+                @Html.DisplayName("Extension")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.staff_extension_number)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayName("E-mail")
+
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.staff_email)
+            </td>
+
+            <th>
+                @Html.DisplayName("Contract Type")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.contract_type.contract_type_description)
+            </td>
+
+            <th>
+                @Html.DisplayName("Country Office")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.Country_office.office_abreviation_english)
+            </td>
+
+            <th>
+                @Html.DisplayName("Title")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.functional_title.functional_title_abreviation_english)
+            </td>
+
+            @*<dt>
+                    @Html.DisplayName("Supervisor")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.staff2.staff_email )
+                </dd>*@
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayName("Sub Office")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.sub_office.office_abreviation_english)
+            </td>
+
+            <th>
+                @Html.DisplayName("Unit")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.unit.unit_abreviation_english)
+            </td>
+
+           
+        </tr>
+    </table>
+    @*hidden*@
+
+    @*<dt>
+            @Html.DisplayNameFor(model => model.staff_access_main)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_main)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_dts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_dts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_tb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_tb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_ct)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_ct)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_li)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_li)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_lc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_lc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_sr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_sr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_admin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_admin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_last_updated_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_last_updated_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_last_updated_datetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_last_updated_datetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_deleted_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_deleted_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_deleted_datetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_deleted_datetime)
+        </dd>*@
+    @*<dt>
+            @Html.DisplayNameFor(model => model.staff_created_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_created_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_created_datetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_created_datetime)
+        </dd>*@
+    @*<dt>
+            @Html.DisplayNameFor(model => model.staff_login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_login)
+        </dd>*@
+
+
+
+
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

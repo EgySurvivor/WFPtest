@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   
+       
+    
+     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - WFP MS</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryui")
+</head>
+<body>
+   
+   
+    <div style="background-color: #0094ff; text-emphasis-color :#ffffff" @*class="navbar navbar-inverse navbar-fixed-top"*@>
+        <div class="container">
+            <div class="navbar-header">
+                <img src="~/Content/images/wfplogo.jpg" />
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    @*<span class="icon-bar"></span>*@
+
+                </button>
+
+                @*@Html.ActionLink("WFP MS", "Index", "staff", null, new { @class = "navbar-brand" })*@
+            </div>
+            <div ></div>
+                <ul class="nav navbar-nav" >
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Staff", "Index", "staff")</li>
+                    <li>@Html.ActionLink("Dependents", "Index", "dependent")</li>
+                    <li>@Html.ActionLink("Contract Type", "index", "contracttype")</li>
+                    <li>@Html.ActionLink("Contract Details", "Create", "contractdetails")</li>
+                    <li>@Html.ActionLink("Titles", "Index", "title")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+       
+        <footer dir="ltr" >
+            <p>&copy; @DateTime.Now.Year -WFP Application</p>
+        </footer>
+    </div>
+  
+
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

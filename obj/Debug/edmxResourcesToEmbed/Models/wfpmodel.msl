@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WFPModelStoreContainer" CdmEntityContainer="WFPEntities1">
+    <EntitySetMapping Name="contract_details">
+      <EntityTypeMapping TypeName="WFPModel.contract_details">
+        <MappingFragment StoreEntitySet="contract_details">
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+          <ScalarProperty Name="contractdetailsid" ColumnName="contractdetailsid" />
+          <ScalarProperty Name="contract_details_id" ColumnName="contract_details_id" />
+          <ScalarProperty Name="contract_details_description_english" ColumnName="contract_details_description_english" />
+          <ScalarProperty Name="contract_details_abreviation_english" ColumnName="contract_details_abreviation_english" />
+          <ScalarProperty Name="contract_details_description_french" ColumnName="contract_details_description_french" />
+          <ScalarProperty Name="contract_details_abreviation_french" ColumnName="contract_details_abreviation_french" />
+          <ScalarProperty Name="contract_details_status" ColumnName="contract_details_status" />
+          <ScalarProperty Name="contract_details_created_by" ColumnName="contract_details_created_by" />
+          <ScalarProperty Name="contract_details_created_datetime" ColumnName="contract_details_created_datetime" />
+          <ScalarProperty Name="contract_details_last_modified_by" ColumnName="contract_details_last_modified_by" />
+          <ScalarProperty Name="contract_details_last_modified_datetime" ColumnName="contract_details_last_modified_datetime" />
+          <ScalarProperty Name="contract_details_deleted_by" ColumnName="contract_details_deleted_by" />
+          <ScalarProperty Name="contract_details_deleted_datetime" ColumnName="contract_details_deleted_datetime" />
+          <ScalarProperty Name="contract_type_code" ColumnName="contract_type_code" />
+          <ScalarProperty Name="fundid" ColumnName="fundid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contract_type">
+      <EntityTypeMapping TypeName="WFPModel.contract_type">
+        <MappingFragment StoreEntitySet="contract_type">
+          <ScalarProperty Name="stafid" ColumnName="stafid" />
+          <ScalarProperty Name="contractTypeid" ColumnName="contractTypeid" />
+          <ScalarProperty Name="contract_Type_code" ColumnName="contract_Type_code" />
+          <ScalarProperty Name="contract_type_name" ColumnName="contract_type_name" />
+          <ScalarProperty Name="contract_type_description" ColumnName="contract_type_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="countries">
+      <EntityTypeMapping TypeName="WFPModel.country">
+        <MappingFragment StoreEntitySet="countries">
+          <ScalarProperty Name="countryid" ColumnName="countryid" />
+          <ScalarProperty Name="country_name" ColumnName="country_name" />
+          <ScalarProperty Name="country_description" ColumnName="country_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country_office">
+      <EntityTypeMapping TypeName="WFPModel.Country_office">
+        <MappingFragment StoreEntitySet="Country_office">
+          <ScalarProperty Name="countryofficeid" ColumnName="countryofficeid" />
+          <ScalarProperty Name="office_id" ColumnName="office_id" />
+          <ScalarProperty Name="office_description_english" ColumnName="office_description_english" />
+          <ScalarProperty Name="office_abreviation_english" ColumnName="office_abreviation_english" />
+          <ScalarProperty Name="office_description_french" ColumnName="office_description_french" />
+          <ScalarProperty Name="office_abreviation_french" ColumnName="office_abreviation_french" />
+          <ScalarProperty Name="office_status" ColumnName="office_status" />
+          <ScalarProperty Name="office_created_by" ColumnName="office_created_by" />
+          <ScalarProperty Name="office_created_datetime" ColumnName="office_created_datetime" />
+          <ScalarProperty Name="office_last_modified_by" ColumnName="office_last_modified_by" />
+          <ScalarProperty Name="office_last_modified_datetime" ColumnName="office_last_modified_datetime" />
+          <ScalarProperty Name="office_deleted_by" ColumnName="office_deleted_by" />
+          <ScalarProperty Name="office_deleted_datetime" ColumnName="office_deleted_datetime" />
+          <ScalarProperty Name="country_code" ColumnName="country_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dependents">
+      <EntityTypeMapping TypeName="WFPModel.dependent">
+        <MappingFragment StoreEntitySet="dependents">
+          <ScalarProperty Name="dependentsid" ColumnName="dependentsid" />
+          <ScalarProperty Name="dependents_code" ColumnName="dependents_code" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+          <ScalarProperty Name="dependents_first_name" ColumnName="dependents_first_name" />
+          <ScalarProperty Name="dependents_last_name" ColumnName="dependents_last_name" />
+          <ScalarProperty Name="dependents_gender" ColumnName="dependents_gender" />
+          <ScalarProperty Name="dependents_phone_num" ColumnName="dependents_phone_num" />
+          <ScalarProperty Name="dependents_blood_group" ColumnName="dependents_blood_group" />
+          <ScalarProperty Name="dependents_passport_num" ColumnName="dependents_passport_num" />
+          <ScalarProperty Name="dependents_passport_expiry_date" ColumnName="dependents_passport_expiry_date" />
+          <ScalarProperty Name="dependents_notes" ColumnName="dependents_notes" />
+          <ScalarProperty Name="dependents_medical_condition" ColumnName="dependents_medical_condition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Evaluations">
+      <EntityTypeMapping TypeName="WFPModel.Evaluation">
+        <MappingFragment StoreEntitySet="Evaluation">
+          <ScalarProperty Name="evaid" ColumnName="evaid" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Duty_station" ColumnName="Duty_station" />
+          <ScalarProperty Name="OrgUnit" ColumnName="OrgUnit" />
+          <ScalarProperty Name="from" ColumnName="from" />
+          <ScalarProperty Name="to" ColumnName="to" />
+          <ScalarProperty Name="Part2" ColumnName="Part2" />
+          <ScalarProperty Name="Part3" ColumnName="Part3" />
+          <ScalarProperty Name="ActionMangement" ColumnName="ActionMangement" />
+          <ScalarProperty Name="Communications" ColumnName="Communications" />
+          <ScalarProperty Name="ethicsAndValues" ColumnName="ethicsAndValues" />
+          <ScalarProperty Name="Teamwork" ColumnName="Teamwork" />
+          <ScalarProperty Name="Interpersonal_Relations" ColumnName="Interpersonal Relations" />
+          <ScalarProperty Name="clientOrientation" ColumnName="clientOrientation" />
+          <ScalarProperty Name="TechnicalSkills" ColumnName="TechnicalSkills" />
+          <ScalarProperty Name="BehaviouralFlexibilty" ColumnName="BehaviouralFlexibilty" />
+          <ScalarProperty Name="Negotiation" ColumnName="Negotiation" />
+          <ScalarProperty Name="OvarallPerformanceRating" ColumnName="OvarallPerformanceRating" />
+          <ScalarProperty Name="part5" ColumnName="part5" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="functional_title">
+      <EntityTypeMapping TypeName="WFPModel.functional_title">
+        <MappingFragment StoreEntitySet="functional_title">
+          <ScalarProperty Name="stafid" ColumnName="stafid" />
+          <ScalarProperty Name="functionaltitleid" ColumnName="functionaltitleid" />
+          <ScalarProperty Name="functional_title_id" ColumnName="functional_title_id" />
+          <ScalarProperty Name="functional_title_description_english" ColumnName="functional_title_description_english" />
+          <ScalarProperty Name="functional_title_abreviation_english" ColumnName="functional_title_abreviation_english" />
+          <ScalarProperty Name="functional_title_description_french" ColumnName="functional_title_description_french" />
+          <ScalarProperty Name="functional_title_abreviation_french" ColumnName="functional_title_abreviation_french" />
+          <ScalarProperty Name="functional_title_status" ColumnName="functional_title_status" />
+          <ScalarProperty Name="functional_title_created_by" ColumnName="functional_title_created_by" />
+          <ScalarProperty Name="functional_title_created_datetime" ColumnName="functional_title_created_datetime" />
+          <ScalarProperty Name="functional_title_last_modified_by" ColumnName="functional_title_last_modified_by" />
+          <ScalarProperty Name="functional_title_last_modified_datetime" ColumnName="functional_title_last_modified_datetime" />
+          <ScalarProperty Name="functional_title_deleted_by" ColumnName="functional_title_deleted_by" />
+          <ScalarProperty Name="functional_title_deleted_datetime" ColumnName="functional_title_deleted_datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Funds">
+      <EntityTypeMapping TypeName="WFPModel.Fund">
+        <MappingFragment StoreEntitySet="Funds">
+          <ScalarProperty Name="fundid" ColumnName="fundid" />
+          <ScalarProperty Name="fund_code" ColumnName="fund_code" />
+          <ScalarProperty Name="resource" ColumnName="resource" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="staffs">
+      <EntityTypeMapping TypeName="WFPModel.staff">
+        <MappingFragment StoreEntitySet="staff">
+          <ScalarProperty Name="WardenGroupId" ColumnName="WardenGroupId" />
+          <ScalarProperty Name="WardenZone" ColumnName="WardenZone" />
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+          <ScalarProperty Name="cate" ColumnName="cate" />
+          <ScalarProperty Name="international" ColumnName="international" />
+          <ScalarProperty Name="areacode" ColumnName="areacode" />
+          <ScalarProperty Name="governorates_code" ColumnName="governorates_code" />
+          <ScalarProperty Name="countryid" ColumnName="countryid" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Landline" ColumnName="Landline" />
+          <ScalarProperty Name="Call_Sign" ColumnName="Call_Sign" />
+          <ScalarProperty Name="alternate_warden_2" ColumnName="alternate_warden_2" />
+          <ScalarProperty Name="alternate_warden_1" ColumnName="alternate_warden_1" />
+          <ScalarProperty Name="staff_warden" ColumnName="staff_warden" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+          <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+          <ScalarProperty Name="country_office_id" ColumnName="country_office_id" />
+          <ScalarProperty Name="sub_office_id" ColumnName="sub_office_id" />
+          <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+          <ScalarProperty Name="contract_type_id" ColumnName="contract_type_id" />
+          <ScalarProperty Name="functional_title_id" ColumnName="functional_title_id" />
+          <ScalarProperty Name="staff_login" ColumnName="staff_login" />
+          <ScalarProperty Name="staff_first_name" ColumnName="staff_first_name" />
+          <ScalarProperty Name="staff_last_name" ColumnName="staff_last_name" />
+          <ScalarProperty Name="staff_created_by" ColumnName="staff_created_by" />
+          <ScalarProperty Name="staff_created_datetime" ColumnName="staff_created_datetime" />
+          <ScalarProperty Name="staff_status" ColumnName="staff_status" />
+          <ScalarProperty Name="staff_index_number" ColumnName="staff_index_number" />
+          <ScalarProperty Name="staff_vendor_number" ColumnName="staff_vendor_number" />
+          <ScalarProperty Name="staff_nationality" ColumnName="staff_nationality" />
+          <ScalarProperty Name="staff_address" ColumnName="staff_address" />
+          <ScalarProperty Name="staff_dob" ColumnName="staff_dob" />
+          <ScalarProperty Name="staff_eod" ColumnName="staff_eod" />
+          <ScalarProperty Name="staff_nte" ColumnName="staff_nte" />
+          <ScalarProperty Name="staff_extension_number" ColumnName="staff_extension_number" />
+          <ScalarProperty Name="staff_email" ColumnName="staff_email" />
+          <ScalarProperty Name="staff_access_main" ColumnName="staff_access_main" />
+          <ScalarProperty Name="staff_access_dts" ColumnName="staff_access_dts" />
+          <ScalarProperty Name="staff_access_tb" ColumnName="staff_access_tb" />
+          <ScalarProperty Name="staff_access_ct" ColumnName="staff_access_ct" />
+          <ScalarProperty Name="staff_access_li" ColumnName="staff_access_li" />
+          <ScalarProperty Name="staff_access_lc" ColumnName="staff_access_lc" />
+          <ScalarProperty Name="staff_access_sr" ColumnName="staff_access_sr" />
+          <ScalarProperty Name="staff_access_admin" ColumnName="staff_access_admin" />
+          <ScalarProperty Name="staff_last_updated_by" ColumnName="staff_last_updated_by" />
+          <ScalarProperty Name="staff_last_updated_datetime" ColumnName="staff_last_updated_datetime" />
+          <ScalarProperty Name="staff_deleted_by" ColumnName="staff_deleted_by" />
+          <ScalarProperty Name="staff_deleted_datetime" ColumnName="staff_deleted_datetime" />
+          <ScalarProperty Name="staff_supervisorid" ColumnName="staff_supervisorid" />
+          <ScalarProperty Name="stuff_contract_details" ColumnName="stuff_contract_details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sub_office">
+      <EntityTypeMapping TypeName="WFPModel.sub_office">
+        <MappingFragment StoreEntitySet="sub_office">
+          <ScalarProperty Name="subofficeid" ColumnName="subofficeid" />
+          <ScalarProperty Name="sub_office_id" ColumnName="sub_office_id" />
+          <ScalarProperty Name="office_description_english" ColumnName="office_description_english" />
+          <ScalarProperty Name="office_abreviation_english" ColumnName="office_abreviation_english" />
+          <ScalarProperty Name="office_description_french" ColumnName="office_description_french" />
+          <ScalarProperty Name="office_abreviation_french" ColumnName="office_abreviation_french" />
+          <ScalarProperty Name="office_status" ColumnName="office_status" />
+          <ScalarProperty Name="office_created_by" ColumnName="office_created_by" />
+          <ScalarProperty Name="office_created_datetime" ColumnName="office_created_datetime" />
+          <ScalarProperty Name="office_last_modified_by" ColumnName="office_last_modified_by" />
+          <ScalarProperty Name="office_last_modified_datetime" ColumnName="office_last_modified_datetime" />
+          <ScalarProperty Name="office_deleted_by" ColumnName="office_deleted_by" />
+          <ScalarProperty Name="office_deleted_datetime" ColumnName="office_deleted_datetime" />
+          <ScalarProperty Name="countryofficeid" ColumnName="countryofficeid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="units">
+      <EntityTypeMapping TypeName="WFPModel.unit">
+        <MappingFragment StoreEntitySet="unit">
+          <ScalarProperty Name="unitid" ColumnName="unitid" />
+          <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+          <ScalarProperty Name="unit_description_english" ColumnName="unit_description_english" />
+          <ScalarProperty Name="unit_abreviation_english" ColumnName="unit_abreviation_english" />
+          <ScalarProperty Name="unit_description_french" ColumnName="unit_description_french" />
+          <ScalarProperty Name="unit_abreviation_french" ColumnName="unit_abreviation_french" />
+          <ScalarProperty Name="unit_status" ColumnName="unit_status" />
+          <ScalarProperty Name="unit_created_by" ColumnName="unit_created_by" />
+          <ScalarProperty Name="unit_created_datetime" ColumnName="unit_created_datetime" />
+          <ScalarProperty Name="unit_last_modified_by" ColumnName="unit_last_modified_by" />
+          <ScalarProperty Name="unit_last_modified_datetime" ColumnName="unit_last_modified_datetime" />
+          <ScalarProperty Name="unit_deleted_by" ColumnName="unit_deleted_by" />
+          <ScalarProperty Name="unit_deleted_datetime" ColumnName="unit_deleted_datetime" />
+          <ScalarProperty Name="unit_short_abreviation" ColumnName="unit_short_abreviation" />
+          <ScalarProperty Name="office_id" ColumnName="office_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="governorates">
+      <EntityTypeMapping TypeName="WFPModel.governorate">
+        <MappingFragment StoreEntitySet="governorates">
+          <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+          <ScalarProperty Name="country_code" ColumnName="country_code" />
+          <ScalarProperty Name="governorates_description" ColumnName="governorates_description" />
+          <ScalarProperty Name="governorates_name" ColumnName="governorates_name" />
+          <ScalarProperty Name="governorates_code" ColumnName="governorates_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="districts">
+      <EntityTypeMapping TypeName="WFPModel.district">
+        <MappingFragment StoreEntitySet="district">
+          <ScalarProperty Name="governorates_code" ColumnName="governorates_code" />
+          <ScalarProperty Name="countryid" ColumnName="countryid" />
+          <ScalarProperty Name="area_name" ColumnName="area_name" />
+          <ScalarProperty Name="areacode" ColumnName="areacode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="WFPModel.category">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="CatDescription" ColumnName="CatDescription" />
+          <ScalarProperty Name="CatName" ColumnName="CatName" />
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WardenGroups">
+      <EntityTypeMapping TypeName="WFPModel.WardenGroup">
+        <MappingFragment StoreEntitySet="WardenGroups">
+          <ScalarProperty Name="GroupDescription" ColumnName="GroupDescription" />
+          <ScalarProperty Name="GroupZone" ColumnName="GroupZone" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

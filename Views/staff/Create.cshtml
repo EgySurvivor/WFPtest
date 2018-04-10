@@ -1,0 +1,465 @@
+﻿@model WFPtest.Models.staff
+
+@{
+    ViewBag.Title = "Create";
+}
+<br>
+
+<p><h2>
+    Create Staff</h2> 
+</p>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+      
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <table class=" table">
+            <tr>
+                <th>
+                    @Html.Label("Staff Code")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.staff_id)
+                    @Html.ValidationMessageFor(model => model.staff_id)
+                </td>
+
+                <th>
+                    @Html.Label("Office")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.DropDownList("country_office_id", String.Empty)
+                    @Html.ValidationMessageFor(model => model.country_office_id)
+                </td>
+
+                <th>
+                    @Html.Label("Sub Office")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.DropDownList("sub_office_id", String.Empty)
+                    @Html.ValidationMessageFor(model => model.sub_office_id)
+                </td>
+
+
+            </tr>
+
+
+
+            <tr>
+
+                <th>
+                    @Html.Label("Unit")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.DropDownList("unit_id", String.Empty)
+                    @Html.ValidationMessageFor(model => model.unit_id)
+                </td>
+
+                <th>
+                    @Html.Label("Contract Type")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.DropDownList("contract_type_id", String.Empty)
+                    @Html.ValidationMessageFor(model => model.contract_type_id)
+                </td>
+
+                <th>
+                    @Html.Label("Title")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.DropDownList("functional_title_id", String.Empty)
+                    @Html.ValidationMessageFor(model => model.functional_title_id)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.Label("First Name")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.staff_first_name)
+                    @Html.ValidationMessageFor(model => model.staff_first_name )
+                </td>
+
+                <th>
+                    @Html.Label("Last Name")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.staff_last_name)
+                    @Html.ValidationMessageFor(model => model.staff_last_name)
+                </td>
+
+                <th>
+                    @Html.Label("Status")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.staff_status)
+                    @Html.ValidationMessageFor(model => model.staff_status)
+                </td>
+            </tr>
+            <tr>
+
+                <th>
+                    @Html.Label("Index Number")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.staff_index_number)
+                    @Html.ValidationMessageFor(model => model.staff_index_number)
+                </td>
+
+                <th>
+                    @Html.Label("Vendor Number")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.staff_vendor_number)
+                    @Html.ValidationMessageFor(model => model.staff_vendor_number)
+                </td>
+                <th>
+                    @Html.Label("Nationality")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.staff_nationality)
+                    @Html.ValidationMessageFor(model => model.staff_nationality)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.Label("Address")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.staff_address)
+                    @Html.ValidationMessageFor(model => model.staff_address)
+                </td>
+                <th>
+                    @Html.Label("Staff not to exceed")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.JQueryUI().DatepickerFor(model => model.staff_nte)
+                    
+                    @Html.ValidationMessageFor(model => model.staff_nte)
+                </td>
+
+                <th>
+                    @Html.Label("Extension")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.staff_extension_number)
+                    @Html.ValidationMessageFor(model => model.staff_extension_number)
+                </td>
+
+            </tr>
+            <tr>
+
+
+
+                <th>
+                    @Html.Label("E-mail")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.staff_email)
+                    @Html.ValidationMessageFor(model => model.staff_email)
+                </td>
+
+                <th>
+                    @Html.Label("Staff Date Of Birth")<b style="color:Red;">*</b>
+                </th>
+                <td>
+
+                    @Html.JQueryUI().DatepickerFor(model => model.staff_dob)
+                    @*@Html.EditorFor(model => model.staff_dob)*@
+                    @Html.ValidationMessageFor(model => model.staff_dob)
+
+                </td>
+
+                <th>
+                    @Html.Label("Staff Entry on Duty")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.JQueryUI().DatepickerFor(model => model.staff_eod)
+                    @*@Html.EditorFor(model => model.staff_eod)*@
+                    @Html.ValidationMessageFor(model => model.staff_eod)
+                </td>
+
+
+
+            </tr>
+
+            <tr>
+
+
+
+                <th>
+                    @Html.Label("Supervisor")
+                </th>
+                <td>
+                    @Html.DropDownList("staff_supervisorid", String.Empty)
+                    @Html.ValidationMessageFor(model => model.staff_supervisorid)
+                </td>
+
+
+                <th>
+                    @Html.Label("Warden")
+                </th>
+                <td>
+                    @Html.DropDownList("staff_warden", String.Empty)
+                    @Html.ValidationMessageFor(model => model.staff_warden)
+                </td>
+
+                <th>
+                    @Html.Label("Call Sign")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.Call_Sign)
+                    @Html.ValidationMessageFor(model => model.Call_Sign)
+                </td>
+
+                </tr>
+            <tr>
+                
+
+               
+
+                <th>
+                    @Html.Label("Landline")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.Landline)
+                    @Html.ValidationMessageFor(model => model.Landline)
+                </td>
+
+                <th>
+                    @Html.Label("Mobile")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.Mobile)
+                    @Html.ValidationMessageFor(model => model.Mobile)
+                </td>
+
+                <th>
+                    @Html.Label("Country")
+                </th>
+                <td>
+                    @Html.DropDownList("countryid", String.Empty)
+                    @Html.ValidationMessageFor(model => model.countryid)
+                </td>
+
+                </tr>
+                <tr>
+                                     
+
+                    <th>
+                        @Html.Label("governorate")
+                    </th>
+                    <td>
+                        @Html.DropDownList("governorates_code", String.Empty)
+                        @Html.ValidationMessageFor(model => model.governorates_code)
+                    </td>
+
+
+                    <th>
+                        @Html.Label("district")
+                    </th>
+                    <td>
+                        @Html.DropDownList("areacode", String.Empty)
+                        @Html.ValidationMessageFor(model => model.areacode)
+                    </td>
+                    <th>
+                        @Html.Label("National")
+                    </th>
+                    <td>
+                        @Html.DropDownList("CatID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.CatID)
+                        @*@Html.RadioButton("cate", "True", String.Empty) National
+            @Html.RadioButton("cate", "false", String.Empty) imternational
+            @Html.ValidationMessageFor(model => model.cate)*@
+                    </td>
+
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.Label("Warden Zone")
+                        </th>
+                        <td>
+                            @Html.DropDownList("WardenZone", String.Empty)
+                            @Html.ValidationMessageFor(model => model.areacode)
+                        </td>
+                   
+                        @*<th>
+                            @Html.Label("International")
+                        </th>
+                        <td>
+                            @Html.RadioButton("International", "International", String.Empty)
+                            @Html.ValidationMessageFor(model => model.international)
+                        </td>*@
+
+                @*<th>
+                    @Html.Label("Contract Details")
+                </th>
+                <td>
+                    @Html.DropDownList("stuff_contract_details", String.Empty)
+                    @Html.ValidationMessageFor(model => model.stuff_contract_details)
+                </td>*@
+
+
+                @*hidden*@
+
+
+                        @*<th>
+                            @Html.Label("alternate warden 1")
+                        </th>
+                        <td>
+                            @Html.DropDownList("alternate_warden_1", String.Empty)
+                            @Html.ValidationMessageFor(model => model.staff_warden)
+                        </td>*@
+
+                        @*<th>
+                            @Html.Label("alternate warden 2")
+                        </th>
+                        <td>
+                            @Html.DropDownList("alternate_warden_2", String.Empty)
+                            @Html.ValidationMessageFor(model => model.staff_warden)
+                        </td>*@
+
+                @*<div class="form-group">
+                    @Html.LabelFor(model => model.staff_login, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_login)
+                        @Html.ValidationMessageFor(model => model.staff_login)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.staff_created_by, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_created_by)
+                        @Html.ValidationMessageFor(model => model.staff_created_by)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.staff_created_datetime, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_created_datetime)
+                        @Html.ValidationMessageFor(model => model.staff_created_datetime)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.staff_access_main, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_access_main)
+                        @Html.ValidationMessageFor(model => model.staff_access_main)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.staff_access_dts, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_access_dts)
+                        @Html.ValidationMessageFor(model => model.staff_access_dts)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.staff_access_tb, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_access_tb)
+                        @Html.ValidationMessageFor(model => model.staff_access_tb)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.staff_access_ct, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_access_ct)
+                        @Html.ValidationMessageFor(model => model.staff_access_ct)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.staff_access_li, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_access_li)
+                        @Html.ValidationMessageFor(model => model.staff_access_li)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.staff_access_lc, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_access_lc)
+                        @Html.ValidationMessageFor(model => model.staff_access_lc)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.staff_access_sr, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_access_sr)
+                        @Html.ValidationMessageFor(model => model.staff_access_sr)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.staff_access_admin, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_access_admin)
+                        @Html.ValidationMessageFor(model => model.staff_access_admin)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.staff_last_updated_by, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_last_updated_by)
+                        @Html.ValidationMessageFor(model => model.staff_last_updated_by)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.staff_last_updated_datetime, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_last_updated_datetime)
+                        @Html.ValidationMessageFor(model => model.staff_last_updated_datetime)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.staff_deleted_by, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_deleted_by)
+                        @Html.ValidationMessageFor(model => model.staff_deleted_by)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.staff_deleted_datetime, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.staff_deleted_datetime)
+                        @Html.ValidationMessageFor(model => model.staff_deleted_datetime)
+                    </div>
+                </div>*@
+
+
+
+            </tr>
+        </table>
+        <br>
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </td>
+                <td>
+                    @Html.ActionLink("Back to List", "Index")
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

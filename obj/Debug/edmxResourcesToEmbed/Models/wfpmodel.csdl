@@ -1,0 +1,804 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WFPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="contract_details">
+    <Key>
+      <PropertyRef Name="contractdetailsid" />
+    </Key>
+    <Property Name="contractdetailsid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="contract_details_id" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="contract_details_description_english" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="contract_details_abreviation_english" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="contract_details_description_french" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="contract_details_abreviation_french" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="contract_details_status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="contract_details_created_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="contract_details_created_datetime" Type="DateTime" Precision="3" />
+    <Property Name="contract_details_last_modified_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="contract_details_last_modified_datetime" Type="DateTime" Precision="3" />
+    <Property Name="contract_details_deleted_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="contract_details_deleted_datetime" Type="DateTime" Precision="3" />
+    <Property Name="contract_type_code" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="fundid" Type="Int32" />
+    <NavigationProperty Name="Fund" Relationship="Self.FK_contract_details_Funds" FromRole="contract_details" ToRole="Funds" />
+    <NavigationProperty Name="staffs" Relationship="Self.FK_staff_contract_details" FromRole="contract_details" ToRole="staff" />
+    <Property Name="staffid" Type="Int32" />
+    <NavigationProperty Name="staff" Relationship="WFPModel.FK_contract_details_staff" FromRole="contract_details" ToRole="staff" />
+  </EntityType>
+  <EntityType Name="contract_type">
+    <Key>
+      <PropertyRef Name="contractTypeid" />
+    </Key>
+    <Property Name="contractTypeid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="contract_Type_code" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="contract_type_name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="contract_type_description" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="staffs" Relationship="Self.FK_staff_contract_type" FromRole="contract_type" ToRole="staff" />
+    <Property Name="stafid" Type="Int32" />
+    <NavigationProperty Name="staff" Relationship="WFPModel.FK_contract_type_staff" FromRole="contract_type" ToRole="staff" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="countryid" />
+    </Key>
+    <Property Name="countryid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="country_name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="country_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Country_office" Relationship="Self.FK_Country_office_countries" FromRole="countries" ToRole="Country_office" />
+    <NavigationProperty Name="staffs" Relationship="WFPModel.FK_staff_countries" FromRole="country" ToRole="staff" />
+    <NavigationProperty Name="governorates" Relationship="WFPModel.FK_governorates_countries" FromRole="country" ToRole="governorate" />
+    <NavigationProperty Name="districts" Relationship="WFPModel.FK_district_countries" FromRole="country" ToRole="district" />
+  </EntityType>
+  <EntityType Name="Country_office">
+    <Key>
+      <PropertyRef Name="countryofficeid" />
+    </Key>
+    <Property Name="countryofficeid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="office_id" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="office_description_english" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="office_abreviation_english" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="office_description_french" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="office_abreviation_french" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="office_status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="office_created_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="office_created_datetime" Type="DateTime" Precision="3" />
+    <Property Name="office_last_modified_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="office_last_modified_datetime" Type="DateTime" Precision="3" />
+    <Property Name="office_deleted_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="office_deleted_datetime" Type="DateTime" Precision="3" />
+    <Property Name="country_code" Type="Int32" />
+    <NavigationProperty Name="country" Relationship="Self.FK_Country_office_countries" FromRole="Country_office" ToRole="countries" />
+    <NavigationProperty Name="staffs" Relationship="Self.FK_staff_Country_office" FromRole="Country_office" ToRole="staff" />
+    <NavigationProperty Name="sub_office" Relationship="Self.FK_sub_office_Country_office" FromRole="Country_office" ToRole="sub_office" />
+    <NavigationProperty Name="units" Relationship="WFPModel.FK_unit_Country_office" FromRole="Country_office" ToRole="unit" />
+  </EntityType>
+  <EntityType Name="dependent">
+    <Key>
+      <PropertyRef Name="dependentsid" />
+    </Key>
+    <Property Name="dependentsid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dependents_code" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="staffid" Type="Int32" />
+    <Property Name="dependents_first_name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="dependents_last_name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="dependents_gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="dependents_phone_num" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="dependents_blood_group" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="dependents_passport_num" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="dependents_passport_expiry_date" Type="DateTime" Precision="0" />
+    <Property Name="dependents_notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dependents_medical_condition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="staff" Relationship="Self.FK_dependents_staff" FromRole="dependents" ToRole="staff" />
+  </EntityType>
+  <EntityType Name="Evaluation">
+    <Key>
+      <PropertyRef Name="evaid" />
+    </Key>
+    <Property Name="evaid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="ContractNo" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Duty_station" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="OrgUnit" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="from" Type="DateTime" Precision="0" />
+    <Property Name="to" Type="DateTime" Precision="0" />
+    <Property Name="Part2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Part3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ActionMangement" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Communications" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="ethicsAndValues" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Teamwork" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Interpersonal_Relations" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="clientOrientation" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="TechnicalSkills" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="BehaviouralFlexibilty" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Negotiation" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="OvarallPerformanceRating" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="part5" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="staffid" Type="Int32" />
+    <NavigationProperty Name="staff" Relationship="Self.FK_Evaluation_staff" FromRole="Evaluation" ToRole="staff" />
+  </EntityType>
+  <EntityType Name="functional_title">
+    <Key>
+      <PropertyRef Name="functionaltitleid" />
+    </Key>
+    <Property Name="functionaltitleid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="functional_title_id" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="functional_title_description_english" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="functional_title_abreviation_english" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="functional_title_description_french" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="functional_title_abreviation_french" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="functional_title_status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="functional_title_created_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="functional_title_created_datetime" Type="DateTime" Precision="3" />
+    <Property Name="functional_title_last_modified_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="functional_title_last_modified_datetime" Type="DateTime" Precision="3" />
+    <Property Name="functional_title_deleted_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="functional_title_deleted_datetime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="staffs" Relationship="Self.FK_staff_functional_title" FromRole="functional_title" ToRole="staff" />
+    <Property Name="stafid" Type="Int32" />
+    <NavigationProperty Name="staff" Relationship="WFPModel.FK_functional_title_staff" FromRole="functional_title" ToRole="staff" />
+  </EntityType>
+  <EntityType Name="Fund">
+    <Key>
+      <PropertyRef Name="fundid" />
+    </Key>
+    <Property Name="fundid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fund_code" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="resource" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="contract_details" Relationship="Self.FK_contract_details_Funds" FromRole="Funds" ToRole="contract_details" />
+  </EntityType>
+  <EntityType Name="staff">
+    <Key>
+      <PropertyRef Name="staffid" />
+    </Key>
+    <Property Name="staffid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="staff_id" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="country_office_id" Type="Int32" />
+    <Property Name="sub_office_id" Type="Int32" />
+    <Property Name="unit_id" Type="Int32" />
+    <Property Name="contract_type_id" Type="Int32" />
+    <Property Name="functional_title_id" Type="Int32" />
+    <Property Name="staff_login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="staff_first_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="staff_last_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="staff_created_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="staff_created_datetime" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="staff_status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="staff_index_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="staff_vendor_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="staff_nationality" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="staff_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="staff_dob" Type="DateTime" Precision="0" />
+    <Property Name="staff_eod" Type="DateTime" Precision="0" />
+    <Property Name="staff_nte" Type="DateTime" Precision="0" />
+    <Property Name="staff_extension_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="staff_email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="staff_access_main" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="staff_access_dts" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="staff_access_tb" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="staff_access_ct" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="staff_access_li" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="staff_access_lc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="staff_access_sr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="staff_access_admin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="staff_last_updated_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="staff_last_updated_datetime" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="staff_deleted_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="staff_deleted_datetime" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="staff_supervisorid" Type="Int32" />
+    <Property Name="stuff_contract_details" Type="Int32" />
+    <NavigationProperty Name="contract_details" Relationship="Self.FK_staff_contract_details" FromRole="staff" ToRole="contract_details" />
+    <NavigationProperty Name="contract_type" Relationship="Self.FK_staff_contract_type" FromRole="staff" ToRole="contract_type" />
+    <NavigationProperty Name="Country_office" Relationship="Self.FK_staff_Country_office" FromRole="staff" ToRole="Country_office" />
+    <NavigationProperty Name="dependents" Relationship="Self.FK_dependents_staff" FromRole="staff" ToRole="dependents" />
+    <NavigationProperty Name="Evaluations" Relationship="Self.FK_Evaluation_staff" FromRole="staff" ToRole="Evaluation" />
+    <NavigationProperty Name="functional_title" Relationship="Self.FK_staff_functional_title" FromRole="staff" ToRole="functional_title" />
+    <NavigationProperty Name="staff1" Relationship="Self.FK_staff_staff" FromRole="staff" ToRole="staff1" />
+    <NavigationProperty Name="staff2" Relationship="Self.FK_staff_staff" FromRole="staff1" ToRole="staff" />
+    <NavigationProperty Name="sub_office" Relationship="Self.FK_staff_sub_office" FromRole="staff" ToRole="sub_office" />
+    <NavigationProperty Name="unit" Relationship="Self.FK_staff_unit" FromRole="staff" ToRole="unit" />
+    <Property Name="staff_warden" Type="Int32" />
+    <Property Name="alternate_warden_1" Type="Int32" />
+    <Property Name="alternate_warden_2" Type="Int32" />
+    <Property Name="Call_Sign" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Landline" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="countryid" Type="Int32" />
+    <Property Name="governorates_code" Type="Int32" />
+    <Property Name="areacode" Type="Int32" />
+    <NavigationProperty Name="contract_details1" Relationship="WFPModel.FK_contract_details_staff" FromRole="staff" ToRole="contract_details" />
+    <NavigationProperty Name="contract_type1" Relationship="WFPModel.FK_contract_type_staff" FromRole="staff" ToRole="contract_type" />
+    <NavigationProperty Name="country" Relationship="WFPModel.FK_staff_countries" FromRole="staff" ToRole="country" />
+    <NavigationProperty Name="functional_title1" Relationship="WFPModel.FK_functional_title_staff" FromRole="staff" ToRole="functional_title" />
+    <NavigationProperty Name="staff11" Relationship="WFPModel.FK_staff_staff1" FromRole="staff" ToRole="staff1" />
+    <NavigationProperty Name="staff3" Relationship="WFPModel.FK_staff_staff1" FromRole="staff1" ToRole="staff" />
+    <NavigationProperty Name="staff12" Relationship="WFPModel.FK_staff_staff2" FromRole="staff" ToRole="staff1" />
+    <NavigationProperty Name="staff4" Relationship="WFPModel.FK_staff_staff2" FromRole="staff1" ToRole="staff" />
+    <NavigationProperty Name="staff13" Relationship="WFPModel.FK_staff_staff3" FromRole="staff" ToRole="staff1" />
+    <NavigationProperty Name="staff5" Relationship="WFPModel.FK_staff_staff3" FromRole="staff1" ToRole="staff" />
+    <NavigationProperty Name="governorate" Relationship="WFPModel.FK_staff_governorates" FromRole="staff" ToRole="governorate" />
+    <NavigationProperty Name="district" Relationship="WFPModel.FK_staff_district" FromRole="staff" ToRole="district" />
+    <Property Name="international" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+    <Property Name="cate" Type="Boolean" />
+    <Property Name="CatID" Type="Int32" />
+    <NavigationProperty Name="category" Relationship="WFPModel.FK_staff_categories" FromRole="staff" ToRole="category" />
+    <Property Name="WardenZone" Type="Int32" />
+    <NavigationProperty Name="district1" Relationship="WFPModel.FK_staff_district1" FromRole="staff" ToRole="district" />
+    <Property Name="WardenGroupId" Type="Int32" />
+    <NavigationProperty Name="WardenGroup" Relationship="WFPModel.FK_staff_WardenGroups" FromRole="staff" ToRole="WardenGroup" />
+  </EntityType>
+  <EntityType Name="sub_office">
+    <Key>
+      <PropertyRef Name="subofficeid" />
+    </Key>
+    <Property Name="subofficeid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sub_office_id" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="office_description_english" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="office_abreviation_english" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="office_description_french" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="office_abreviation_french" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="office_status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="office_created_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="office_created_datetime" Type="DateTime" Precision="3" />
+    <Property Name="office_last_modified_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="office_last_modified_datetime" Type="DateTime" Precision="3" />
+    <Property Name="office_deleted_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="office_deleted_datetime" Type="DateTime" Precision="3" />
+    <Property Name="countryofficeid" Type="Int32" />
+    <NavigationProperty Name="Country_office" Relationship="Self.FK_sub_office_Country_office" FromRole="sub_office" ToRole="Country_office" />
+    <NavigationProperty Name="staffs" Relationship="Self.FK_staff_sub_office" FromRole="sub_office" ToRole="staff" />
+  </EntityType>
+  <EntityType Name="unit">
+    <Key>
+      <PropertyRef Name="unitid" />
+    </Key>
+    <Property Name="unitid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="unit_id" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="unit_description_english" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="unit_abreviation_english" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="unit_description_french" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="unit_abreviation_french" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="unit_status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="unit_created_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="unit_created_datetime" Type="DateTime" Precision="3" />
+    <Property Name="unit_last_modified_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="unit_last_modified_datetime" Type="DateTime" Precision="3" />
+    <Property Name="unit_deleted_by" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="unit_deleted_datetime" Type="DateTime" Precision="3" />
+    <Property Name="unit_short_abreviation" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="office_id" Type="Int32" Nullable="true" />
+    <NavigationProperty Name="staffs" Relationship="Self.FK_staff_unit" FromRole="unit" ToRole="staff" />
+    <NavigationProperty Name="Country_office" Relationship="WFPModel.FK_unit_Country_office" FromRole="unit" ToRole="Country_office" />
+  </EntityType>
+  <Association Name="FK_contract_details_Funds">
+    <End Role="Funds" Type="Self.Fund" Multiplicity="0..1" />
+    <End Role="contract_details" Type="Self.contract_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funds">
+        <PropertyRef Name="fundid" />
+      </Principal>
+      <Dependent Role="contract_details">
+        <PropertyRef Name="fundid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_contract_details">
+    <End Role="contract_details" Type="Self.contract_details" Multiplicity="0..1" />
+    <End Role="staff" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contract_details">
+        <PropertyRef Name="contractdetailsid" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="stuff_contract_details" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_contract_type">
+    <End Role="contract_type" Type="Self.contract_type" Multiplicity="0..1" />
+    <End Role="staff" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contract_type">
+        <PropertyRef Name="contractTypeid" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="contract_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Country_office_countries">
+    <End Role="countries" Type="Self.country" Multiplicity="0..1" />
+    <End Role="Country_office" Type="Self.Country_office" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="countries">
+        <PropertyRef Name="countryid" />
+      </Principal>
+      <Dependent Role="Country_office">
+        <PropertyRef Name="country_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_Country_office">
+    <End Role="Country_office" Type="Self.Country_office" Multiplicity="0..1" />
+    <End Role="staff" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_office">
+        <PropertyRef Name="countryofficeid" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="country_office_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sub_office_Country_office">
+    <End Role="Country_office" Type="Self.Country_office" Multiplicity="0..1" />
+    <End Role="sub_office" Type="Self.sub_office" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_office">
+        <PropertyRef Name="countryofficeid" />
+      </Principal>
+      <Dependent Role="sub_office">
+        <PropertyRef Name="countryofficeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dependents_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="dependents" Type="Self.dependent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="dependents">
+        <PropertyRef Name="staffid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Evaluation_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="Evaluation" Type="Self.Evaluation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="Evaluation">
+        <PropertyRef Name="staffid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_functional_title">
+    <End Role="functional_title" Type="Self.functional_title" Multiplicity="0..1" />
+    <End Role="staff" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="functional_title">
+        <PropertyRef Name="functionaltitleid" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="functional_title_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_staff">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1" />
+    <End Role="staff1" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="staff1">
+        <PropertyRef Name="staff_supervisorid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_sub_office">
+    <End Role="sub_office" Type="Self.sub_office" Multiplicity="0..1" />
+    <End Role="staff" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sub_office">
+        <PropertyRef Name="subofficeid" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="sub_office_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_unit">
+    <End Role="unit" Type="Self.unit" Multiplicity="0..1" />
+    <End Role="staff" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="unit">
+        <PropertyRef Name="unitid" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="unit_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WFPEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="contract_details" EntityType="Self.contract_details" />
+    <EntitySet Name="contract_type" EntityType="Self.contract_type" />
+    <EntitySet Name="countries" EntityType="Self.country" />
+    <EntitySet Name="Country_office" EntityType="Self.Country_office" />
+    <EntitySet Name="dependents" EntityType="Self.dependent" />
+    <EntitySet Name="Evaluations" EntityType="Self.Evaluation" />
+    <EntitySet Name="functional_title" EntityType="Self.functional_title" />
+    <EntitySet Name="Funds" EntityType="Self.Fund" />
+    <EntitySet Name="staffs" EntityType="Self.staff" />
+    <EntitySet Name="sub_office" EntityType="Self.sub_office" />
+    <EntitySet Name="units" EntityType="Self.unit" />
+    <AssociationSet Name="FK_contract_details_Funds" Association="Self.FK_contract_details_Funds">
+      <End Role="Funds" EntitySet="Funds" />
+      <End Role="contract_details" EntitySet="contract_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_contract_details" Association="Self.FK_staff_contract_details">
+      <End Role="contract_details" EntitySet="contract_details" />
+      <End Role="staff" EntitySet="staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_contract_type" Association="Self.FK_staff_contract_type">
+      <End Role="contract_type" EntitySet="contract_type" />
+      <End Role="staff" EntitySet="staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Country_office_countries" Association="Self.FK_Country_office_countries">
+      <End Role="countries" EntitySet="countries" />
+      <End Role="Country_office" EntitySet="Country_office" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_Country_office" Association="Self.FK_staff_Country_office">
+      <End Role="Country_office" EntitySet="Country_office" />
+      <End Role="staff" EntitySet="staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sub_office_Country_office" Association="Self.FK_sub_office_Country_office">
+      <End Role="Country_office" EntitySet="Country_office" />
+      <End Role="sub_office" EntitySet="sub_office" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dependents_staff" Association="Self.FK_dependents_staff">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="dependents" EntitySet="dependents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Evaluation_staff" Association="Self.FK_Evaluation_staff">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="Evaluation" EntitySet="Evaluations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_functional_title" Association="Self.FK_staff_functional_title">
+      <End Role="functional_title" EntitySet="functional_title" />
+      <End Role="staff" EntitySet="staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_staff" Association="Self.FK_staff_staff">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="staff1" EntitySet="staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_sub_office" Association="Self.FK_staff_sub_office">
+      <End Role="sub_office" EntitySet="sub_office" />
+      <End Role="staff" EntitySet="staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_unit" Association="Self.FK_staff_unit">
+      <End Role="unit" EntitySet="units" />
+      <End Role="staff" EntitySet="staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_unit_Country_office" Association="WFPModel.FK_unit_Country_office">
+      <End Role="Country_office" EntitySet="Country_office" />
+      <End Role="unit" EntitySet="units" />
+    </AssociationSet>
+    <AssociationSet Name="FK_contract_details_staff" Association="WFPModel.FK_contract_details_staff">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="contract_details" EntitySet="contract_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_contract_type_staff" Association="WFPModel.FK_contract_type_staff">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="contract_type" EntitySet="contract_type" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_countries" Association="WFPModel.FK_staff_countries">
+      <End Role="country" EntitySet="countries" />
+      <End Role="staff" EntitySet="staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_functional_title_staff" Association="WFPModel.FK_functional_title_staff">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="functional_title" EntitySet="functional_title" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_staff1" Association="WFPModel.FK_staff_staff1">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="staff1" EntitySet="staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_staff2" Association="WFPModel.FK_staff_staff2">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="staff1" EntitySet="staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_staff3" Association="WFPModel.FK_staff_staff3">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="staff1" EntitySet="staffs" />
+    </AssociationSet>
+    <EntitySet Name="governorates" EntityType="WFPModel.governorate" />
+    <AssociationSet Name="FK_governorates_countries" Association="WFPModel.FK_governorates_countries">
+      <End Role="country" EntitySet="countries" />
+      <End Role="governorate" EntitySet="governorates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_governorates" Association="WFPModel.FK_staff_governorates">
+      <End Role="governorate" EntitySet="governorates" />
+      <End Role="staff" EntitySet="staffs" />
+    </AssociationSet>
+    <EntitySet Name="districts" EntityType="WFPModel.district" />
+    <AssociationSet Name="FK_district_countries" Association="WFPModel.FK_district_countries">
+      <End Role="country" EntitySet="countries" />
+      <End Role="district" EntitySet="districts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_district_governorates" Association="WFPModel.FK_district_governorates">
+      <End Role="governorate" EntitySet="governorates" />
+      <End Role="district" EntitySet="districts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_district" Association="WFPModel.FK_staff_district">
+      <End Role="district" EntitySet="districts" />
+      <End Role="staff" EntitySet="staffs" />
+    </AssociationSet>
+    <EntitySet Name="categories" EntityType="WFPModel.category" />
+    <AssociationSet Name="FK_staff_categories" Association="WFPModel.FK_staff_categories">
+      <End Role="category" EntitySet="categories" />
+      <End Role="staff" EntitySet="staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_district1" Association="WFPModel.FK_staff_district1">
+      <End Role="district" EntitySet="districts" />
+      <End Role="staff" EntitySet="staffs" />
+    </AssociationSet>
+    <EntitySet Name="WardenGroups" EntityType="WFPModel.WardenGroup" />
+    <AssociationSet Name="FK_WardenGroups_district" Association="WFPModel.FK_WardenGroups_district">
+      <End Role="district" EntitySet="districts" />
+      <End Role="WardenGroup" EntitySet="WardenGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff_WardenGroups" Association="WFPModel.FK_staff_WardenGroups">
+      <End Role="WardenGroup" EntitySet="WardenGroups" />
+      <End Role="staff" EntitySet="staffs" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_unit_Country_office">
+    <End Type="WFPModel.Country_office" Role="Country_office" Multiplicity="0..1" />
+    <End Type="WFPModel.unit" Role="unit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_office">
+        <PropertyRef Name="countryofficeid" />
+      </Principal>
+      <Dependent Role="unit">
+        <PropertyRef Name="office_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_contract_details_staff">
+    <End Type="WFPModel.staff" Role="staff" Multiplicity="0..1" />
+    <End Type="WFPModel.contract_details" Role="contract_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="contract_details">
+        <PropertyRef Name="staffid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_contract_type_staff">
+    <End Type="WFPModel.staff" Role="staff" Multiplicity="0..1" />
+    <End Type="WFPModel.contract_type" Role="contract_type" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="contract_type">
+        <PropertyRef Name="stafid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_countries">
+    <End Type="WFPModel.country" Role="country" Multiplicity="0..1" />
+    <End Type="WFPModel.staff" Role="staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="countryid" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="countryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_functional_title_staff">
+    <End Type="WFPModel.staff" Role="staff" Multiplicity="0..1" />
+    <End Type="WFPModel.functional_title" Role="functional_title" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="functional_title">
+        <PropertyRef Name="stafid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_staff1">
+    <End Type="WFPModel.staff" Role="staff" Multiplicity="0..1" />
+    <End Type="WFPModel.staff" Role="staff1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="staff1">
+        <PropertyRef Name="staff_warden" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_staff2">
+    <End Type="WFPModel.staff" Role="staff" Multiplicity="0..1" />
+    <End Type="WFPModel.staff" Role="staff1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="staff1">
+        <PropertyRef Name="alternate_warden_1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_staff3">
+    <End Type="WFPModel.staff" Role="staff" Multiplicity="0..1" />
+    <End Type="WFPModel.staff" Role="staff1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="staffid" />
+      </Principal>
+      <Dependent Role="staff1">
+        <PropertyRef Name="alternate_warden_2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="governorate">
+    <Key>
+      <PropertyRef Name="governorates_code" />
+    </Key>
+    <Property Name="governorates_code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="governorates_name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="governorates_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="country_code" Type="Int32" />
+    <Property Name="staff_id" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="country" Relationship="WFPModel.FK_governorates_countries" FromRole="governorate" ToRole="country" />
+    <NavigationProperty Name="staffs" Relationship="WFPModel.FK_staff_governorates" FromRole="governorate" ToRole="staff" />
+    <NavigationProperty Name="districts" Relationship="WFPModel.FK_district_governorates" FromRole="governorate" ToRole="district" />
+  </EntityType>
+  <Association Name="FK_governorates_countries">
+    <End Type="WFPModel.country" Role="country" Multiplicity="0..1" />
+    <End Type="WFPModel.governorate" Role="governorate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="countryid" />
+      </Principal>
+      <Dependent Role="governorate">
+        <PropertyRef Name="country_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_governorates">
+    <End Type="WFPModel.governorate" Role="governorate" Multiplicity="0..1" />
+    <End Type="WFPModel.staff" Role="staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="governorate">
+        <PropertyRef Name="governorates_code" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="governorates_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="district">
+    <Key>
+      <PropertyRef Name="areacode" />
+    </Key>
+    <Property Name="areacode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="area_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="countryid" Type="Int32" />
+    <Property Name="governorates_code" Type="Int32" />
+    <NavigationProperty Name="country" Relationship="WFPModel.FK_district_countries" FromRole="district" ToRole="country" />
+    <NavigationProperty Name="governorate" Relationship="WFPModel.FK_district_governorates" FromRole="district" ToRole="governorate" />
+    <NavigationProperty Name="staffs" Relationship="WFPModel.FK_staff_district" FromRole="district" ToRole="staff" />
+    <NavigationProperty Name="staffs1" Relationship="WFPModel.FK_staff_district1" FromRole="district" ToRole="staff" />
+    <NavigationProperty Name="WardenGroups" Relationship="WFPModel.FK_WardenGroups_district" FromRole="district" ToRole="WardenGroup" />
+  </EntityType>
+  <Association Name="FK_district_countries">
+    <End Type="WFPModel.country" Role="country" Multiplicity="0..1" />
+    <End Type="WFPModel.district" Role="district" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="countryid" />
+      </Principal>
+      <Dependent Role="district">
+        <PropertyRef Name="countryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_district_governorates">
+    <End Type="WFPModel.governorate" Role="governorate" Multiplicity="0..1" />
+    <End Type="WFPModel.district" Role="district" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="governorate">
+        <PropertyRef Name="governorates_code" />
+      </Principal>
+      <Dependent Role="district">
+        <PropertyRef Name="governorates_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_district">
+    <End Type="WFPModel.district" Role="district" Multiplicity="0..1" />
+    <End Type="WFPModel.staff" Role="staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="district">
+        <PropertyRef Name="areacode" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="areacode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="CatID" />
+    </Key>
+    <Property Name="CatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CatName" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="CatDescription" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="staffs" Relationship="WFPModel.FK_staff_categories" FromRole="category" ToRole="staff" />
+  </EntityType>
+  <Association Name="FK_staff_categories">
+    <End Type="WFPModel.category" Role="category" Multiplicity="0..1" />
+    <End Type="WFPModel.staff" Role="staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="CatID" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="CatID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_district1">
+    <End Type="WFPModel.district" Role="district" Multiplicity="0..1" />
+    <End Type="WFPModel.staff" Role="staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="district">
+        <PropertyRef Name="areacode" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="WardenZone" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="WardenGroup">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="GroupZone" Type="Int32" />
+    <Property Name="GroupDescription" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="district" Relationship="WFPModel.FK_WardenGroups_district" FromRole="WardenGroup" ToRole="district" />
+    <NavigationProperty Name="staffs" Relationship="WFPModel.FK_staff_WardenGroups" FromRole="WardenGroup" ToRole="staff" />
+  </EntityType>
+  <Association Name="FK_WardenGroups_district">
+    <End Type="WFPModel.district" Role="district" Multiplicity="0..1" />
+    <End Type="WFPModel.WardenGroup" Role="WardenGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="district">
+        <PropertyRef Name="areacode" />
+      </Principal>
+      <Dependent Role="WardenGroup">
+        <PropertyRef Name="GroupZone" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff_WardenGroups">
+    <End Type="WFPModel.WardenGroup" Role="WardenGroup" Multiplicity="0..1" />
+    <End Type="WFPModel.staff" Role="staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WardenGroup">
+        <PropertyRef Name="GroupId" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="WardenGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

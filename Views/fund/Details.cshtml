@@ -1,0 +1,44 @@
+﻿@model WFPtest.Models.Fund
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Fund</h4>
+	<hr />
+    <table class=" table">
+        <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fund_code)
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.fund_code)
+        </td>
+
+        <th>
+            @Html.DisplayNameFor(model => model.resource)
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.resource)
+        </td>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.Description)
+        </td>
+
+   </tr>
+        </table>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.fundid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

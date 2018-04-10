@@ -1,0 +1,50 @@
+﻿@model WFPtest.Models.CourseReg
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CourseReg</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LMSPre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LMSPre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cours.CourseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cours.CourseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseSession.CourseDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseSession.CourseDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff.staff_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff.staff_id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RegID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

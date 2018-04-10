@@ -1,0 +1,113 @@
+﻿@model WFPtest.Models.dependent
+
+@{
+    ViewBag.Title = "Details";
+}
+<br>
+
+<p>
+   <h2> Dependents Details</h2>
+</p>
+
+<div>
+   
+	<hr />
+   <table class=" table" >
+       <tr>
+           <th>
+               @Html.DisplayName("Code")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_code)
+           </td>
+
+           <th>
+               @Html.DisplayName("First Name")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_first_name)
+           </td>
+
+           <th>
+               @Html.DisplayName("Last Name")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_last_name)
+           </td>
+
+           <th>
+               @Html.DisplayName("Dependents Gender")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_gender)
+           </td>
+
+           <th>
+               @Html.DisplayName("Phone Num")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_phone_num)
+           </td>
+       </tr>
+       <tr>
+           <th>
+               @Html.DisplayName("Blood Group")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_blood_group)
+           </td>
+
+           <th>
+               @Html.DisplayName("Passport Number")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_passport_num)
+           </td>
+
+           <th>
+               @Html.DisplayName("Expiry Date")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_passport_expiry_date)
+           </td>
+
+           <th>
+               @Html.DisplayName("Dependents Notes")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_notes)
+           </td>
+
+           <th>
+               @Html.DisplayName("Medical Condition")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_medical_condition)
+           </td>
+       </tr>
+       <tr>
+           <th>
+               @Html.DisplayName("Staff E-mail")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.staff.staff_email)
+           </td>
+       </tr>
+       </table>
+   
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.dependentsid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

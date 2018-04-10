@@ -1,0 +1,560 @@
+﻿@using Microsoft.AspNet.Identity
+@if (!Request.IsAuthenticated)
+{
+    Response.Redirect("/RBC-SMS/account/login");
+}
+@model WFPtest.Models.request
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class=" form-create ">
+        <p>
+            <h2>Edit request</h2>
+        </p>
+        
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.request_no)
+
+        <style type="text/css">
+            .form-create {
+                background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+                background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+                margin: auto;
+                position: relative;
+                width: 1250px;
+                height: 1360px;
+                font-family: Tahoma, Geneva, sans-serif;
+                font-size: 14px;
+                font-style: italic;
+                line-height: 24px;
+                font-weight: bold;
+                color: #09C;
+                text-decoration: none;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                padding: 10px;
+                border: 1px solid #999;
+                border: inset 1px solid #333;
+                -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+                -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            }
+
+            .ui-datepicker {
+                background: #fff; /* Old browsers */
+                background: #fff -moz-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* FF3.6+ */
+                background: #fff -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc)), color-stop(100%,#fff)); /* Chrome,Safari4+ */
+                background: #fff -webkit-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* Chrome10+,Safari5.1+ */
+                background: #fff -o-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* Opera11.10+ */
+                background: #fff -ms-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* IE10+ */
+                background: #fff linear-gradient(top, #fcfcfc 0%, #fff 100%); /* W3C */
+                font-size: 11px;
+                padding: 10px;
+                border: 1px solid #ccc;
+            }
+
+                .ui-datepicker table {
+                    width: 278px;
+                }
+
+                    .ui-datepicker table td {
+                        text-align: center;
+                    }
+
+                .ui-datepicker a {
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+
+            .ui-datepicker-prev {
+                float: left;
+            }
+
+            .ui-datepicker-next {
+                float: right;
+            }
+
+            .ui-datepicker-title {
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .parent {
+                display: table;
+                /* optional, just for the demo */
+                height: 300px;
+                background: yellow;
+            }
+
+            .child {
+                display: table-cell;
+                vertical-align: middle;
+                /* optional, just for the demo */
+                background: #6D929B;
+            }
+
+            .content {
+                /* optional, just for the demo */
+                background: white;
+                width: 1px;
+                word-wrap: break-word;
+                font-family: monospace; /* this is just for good looks */
+                font-size: large;
+                text-decoration-color: #CAE8EA;
+            }
+
+            .vertical-text {
+                transform: rotate(90deg);
+                transform-origin: left top 0;
+                word-wrap: normal;
+                font-family: monospace; /* this is just for good looks */
+            }
+
+            }
+        </style>
+
+
+
+        <table class=" table">
+            <tr>
+                <td rowspan="33"></td>
+
+            </tr>
+            <tr>
+
+                <td style=" border-right :none  " colspan="6"><h4>Personal Information</h4></td>
+
+
+            </tr>
+            <tr>
+
+                <td style=" border-right :none" colspan="6"></td>
+
+
+
+            </tr>
+            <tr>
+                <th>
+                    @Html.Label("First Name")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.first_name)
+                    @Html.ValidationMessageFor(model => model.first_name)
+                </td>
+
+
+                <th>
+                    @Html.Label("Last Name")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.last_name)
+                    @Html.ValidationMessageFor(model => model.last_name)
+                </td>
+
+
+                <th>
+                    @Html.Label("Job Title")
+                </th>
+                <td>
+                    @Html.DropDownList("job_title", null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.job_title)
+                </td>
+
+            </tr>
+            <tr>
+                <td style=" border-right:none " colspan="6"></td>
+
+            </tr>
+            <tr>
+
+                <th>
+                    @Html.Label("Unit")
+                </th>
+                <td>
+                    @Html.DropDownList("unit", null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.unit)
+                </td>
+
+
+                <th>
+                    @Html.Label("Budget Code")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.budget_code)
+                    @Html.ValidationMessageFor(model => model.budget_code)
+                </td>
+
+
+
+                <th>
+                    @Html.Label("Index Number)")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.index_number)
+                    @Html.ValidationMessageFor(model => model.index_number)
+                </td>
+            </tr>
+            <tr>
+                <td style=" border-right:none " colspan="6"></td>
+
+            </tr>
+
+            <tr>
+
+
+                <th>
+                    @Html.Label("Duty  Station")
+                </th>
+                <td>
+                    @Html.DropDownList("duty_station", new List<SelectListItem>
+
+                 {
+                    new SelectListItem{ Text="RBC", Value = "RBC" },
+                    new SelectListItem{ Text="Egy CO", Value = "Egy CO" },
+                    new SelectListItem{ Text="EMOP", Value = "EMOP" }
+
+                 }, htmlAttributes: new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.duty_station)
+                </td>
+
+                <th>
+                    @Html.Label("Supervisor Email")
+                </th>
+                <td>
+                    @Html.DropDownList("supervisor_email", null, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.supervisor_email)
+                </td>
+                <td style=" border-right :none" colspan="6"></td>
+
+            </tr>
+            <tr>
+
+                <td style=" border-right :none" colspan="6"><h4>Contract Information</h4></td>
+
+
+            </tr>
+            <tr>
+
+                <th>
+                    @Html.Label("Appointment Type")
+                </th>
+                <td>
+                    @Html.DropDownList("appointment_type", new List<SelectListItem>
+
+                 {
+                    new SelectListItem{ Text="Continuing (no NTE)", Value = "Continuing (no NTE)" },
+                    new SelectListItem{ Text="Fixed-Term", Value = "Fixed-Term" },
+                    new SelectListItem{ Text="SC", Value = "SC" },
+                    new SelectListItem{ Text="SSA", Value = "SSA" },
+                    new SelectListItem{ Text="TDY/Mission", Value = "TDY/Mission" },
+                     new SelectListItem{ Text="Volunteer", Value = "Volunteer" },
+                    new SelectListItem{ Text="Intern", Value = "Intern" }
+                 }, htmlAttributes: new { @class = "form-control" })
+
+
+                    @*@Html.EditorFor(model => model.appointment_type)*@
+                    @Html.ValidationMessageFor(model => model.appointment_type)
+                </td>
+                <td style=" border-right:none " colspan="4"></td>
+            </tr>
+            <tr>
+                <td style=" border-right:none  " colspan="6"></td>
+
+            </tr>
+            <tr>
+
+                <th>
+                    @Html.Label("Start Date")
+                </th>
+                <td>
+                    @Html.JQueryUI().DatepickerFor(model => model.start_date)
+                    @*@Html.EditorFor(model => model.start_date)*@
+                    @Html.ValidationMessageFor(model => model.start_date)
+                </td>
+
+                <th>
+                    @Html.Label("End Date")
+                </th>
+                <td colspan=" 3">
+                    @Html.JQueryUI().DatepickerFor(model => model.end_date)
+                    @*@Html.EditorFor(model => model.end_date)*@
+                    @Html.ValidationMessageFor(model => model.end_date)
+                </td>
+
+            </tr>
+            <tr>
+
+                <td style=" border-right :none  " colspan="6"><h4>Services and Equipment</h4></td>
+
+
+            </tr>
+            <tr>
+
+                <td style=" border-right :none  " colspan="6">Please select the required IT services or equipment for the staff member.</td>
+
+
+
+            </tr>
+            <tr>
+
+                <th style=" border-right :none  " colspan="6">Computer Type.</th>
+
+
+
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.DropDownList("IphoneService", new List<SelectListItem>
+
+                 {
+                    new SelectListItem{ Text="Desktop", Value = "Desktop" },
+                    new SelectListItem{ Text="Laptop", Value = "Laptop" },
+                    new SelectListItem{ Text="NON", Value = "NON" }
+                 }, htmlAttributes: new { @class = "form-control" })
+                </td>
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+
+                <th style=" border-right :none  " colspan="6">Services.</th>
+
+
+
+            </tr>
+            <tr>
+                <td>
+                    E-mail @Html.EditorFor(model => model.email)
+                    @Html.ValidationMessageFor(model => model.email)
+                </td>
+
+
+                <td style=" border-right :none  " colspan="6">
+                    Access P Drive @Html.EditorFor(model => model.access_P)
+                    @Html.ValidationMessageFor(model => model.access_P)
+                </td>
+            </tr>
+            <tr>
+
+                <th style=" border-right :none  " colspan="6">communication .</th>
+
+
+
+            </tr>
+
+            <tr>
+                <td>
+                    Telephone EXT @Html.EditorFor(model => model.telephone)
+                    @Html.ValidationMessageFor(model => model.telephone)
+                </td>
+
+
+                <td style=" border-right :none  " colspan="6">
+                    Pincode for external calls @Html.EditorFor(model => model.pincode_ext)
+                    @Html.ValidationMessageFor(model => model.pincode_ext)
+                </td>
+            </tr>
+
+            <tr>
+
+                <td style=" border-right :none  " colspan="6"></td>
+
+
+
+            </tr>
+            <tr>
+
+                <td style=" border-right :none  " colspan="6">This part of equipment and services are available only for essential staff and it will require supervisor approval by sending an email to ODC.ICT@wfp.org</td>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+                <td>
+
+
+                    Local Mobile SIM @Html.CheckBoxFor(model => model.local_sim@*, new {onchange = "OnChangeEvent()"}*@)
+
+                    @Html.ValidationMessageFor(model => model.local_sim)
+                </td>
+
+
+
+
+                <td>
+                    International @Html.EditorFor(model => model.international)
+                    @Html.ValidationMessageFor(model => model.international)
+                </td>
+
+
+                <td>
+                    Roaming @Html.EditorFor(model => model.roaming)
+                    @Html.ValidationMessageFor(model => model.roaming)
+                </td>
+                <td>
+                    usb modem @Html.EditorFor(model => model.usb_modem)
+                    @Html.ValidationMessageFor(model => model.usb_modem)
+                </td>
+                <td colspan="4"></td>
+            </tr>
+
+
+            <tr></tr>
+            <tr>
+
+                <td style=" border-right :none  " colspan="6"><h4></h4></td>
+
+
+            </tr>
+            <tr>
+
+                <th style=" border-right :none  " colspan="6">Phones</th>
+
+
+            </tr>
+            <tr>
+
+                <td>
+                    @Html.DropDownList("mobile_phone", new List<SelectListItem>
+
+                 {
+                    
+                    new SelectListItem{ Text="SMART PHONE", Value = "SMART PHONE" },
+                    new SelectListItem{ Text="BASIC PHONE", Value = "BASIC PHONE" },
+                    new SelectListItem{ Text="NON", Value = "NON" }
+                 }, htmlAttributes: new { @class = "form-control" })
+
+                </td>
+                <td style=" border-right :none " colspan="6"></td>
+
+            </tr>
+
+
+            <tr>
+
+                <td style=" border-right :none " colspan="6"></td>
+
+
+
+            </tr>
+            <tr>
+
+                <td style=" border-right :none" colspan="6">To maintain a Green environment only one focal point per unit should be granted this option.</td>
+
+
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.LabelFor(model => model.color_printer, htmlAttributes: new { @class = "control-label col-md-2" })
+                </th>
+                <td colspan="6">
+                    @Html.EditorFor(model => model.color_printer)
+                    @Html.ValidationMessageFor(model => model.color_printer)
+                </td>
+            </tr>
+
+            <tr>
+
+                <td style=" border-right :none  " colspan="6"></td>
+
+
+
+            </tr>
+            <tr>
+
+                <td style=" border-right :none  " colspan="6"><h4>Others Information.</h4></td>
+
+
+            </tr>
+
+
+
+
+
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.BlackberryService, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.BlackberryService)
+                    @Html.ValidationMessageFor(model => model.BlackberryService)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.IphoneService, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.IphoneService)
+                    @Html.ValidationMessageFor(model => model.IphoneService)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.mobile_phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.mobile_phone)
+                    @Html.ValidationMessageFor(model => model.mobile_phone)
+                </div>
+            </div>*@
+            <tr>
+
+                <th>
+                    @Html.Label("Other Requirements ")
+                </th>
+                <td>
+                    @Html.TextAreaFor(model => model.other)
+                    @Html.ValidationMessageFor(model => model.other)
+                </td>
+
+                <th>
+                    @Html.Label("Sitting Location")
+                </th>
+                <td>
+                    @Html.TextAreaFor(model => model.location)
+                    @Html.ValidationMessageFor(model => model.location)
+                </td>
+
+                <th>
+                    @Html.Label("requested by")
+                </th>
+                <td>
+                    @Html.Display("requested_byName")
+                    @Html.TextBoxFor(model => model.requested_by, new { @readonly = "readonly", @Value = ViewBag.requested_byID, @class = "hidden" })
+
+                    @*@Html.DropDownList("requested_by", String.Empty)*@
+                    @Html.ValidationMessageFor(model => model.requested_by)
+                </td>
+
+
+        </table>
+        <br>
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </td>
+                <td>
+                    @Html.ActionLink("Back", "Index")
+                </td>
+            </tr>
+        </table>
+
+    </div>
+}
+

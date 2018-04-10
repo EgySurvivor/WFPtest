@@ -1,0 +1,88 @@
+﻿@using Microsoft.AspNet.Identity
+@if (!Request.IsAuthenticated)
+{
+    Response.Redirect("/RBC-SMS/account/login");
+}
+
+
+
+    @*@model IEnumerable<WFPtest.Models.country>*@
+
+    @model PagedList.IPagedList<WFPtest.Models.governorate>
+    @using WFPtest.Models
+
+
+    @using PagedList.Mvc;
+    @using JQueryUIHelpers;
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+
+    @{
+    ViewBag.Title = "Index";
+    }
+
+    <h2>Governorates List</h2>
+
+    @using (Html.BeginForm("Index", "governorate", FormMethod.Get))
+{
+         <br>
+    <p>
+        Find by name Or Description: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />&nbsp;&nbsp;@Html.ActionLink("Reset Filter", "Index")
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Name")
+        </th>
+        <th>
+            @Html.DisplayName("description")
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.staff_id)
+        </th>*@
+        <th>
+            @Html.DisplayName("Country")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.governorates_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.governorates_description)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.staff_id)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.country.country_name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.governorates_code }) |
+                @Html.ActionLink("Details", "Details", new { id = item.governorates_code }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.governorates_code })
+            </td>
+        </tr>
+    }
+
+</table>
+<table border="0">
+    <tr>
+        <td>
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        </td>
+    </tr>
+</table>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

@@ -1,0 +1,7 @@
+﻿/*Simple Angular UI
+Time Picker
+Authors: Amir Azizi
+Email: web1392@yahoo.com
+Version: 1.0.5*/
+
+.addon-no-border{border-left:0;border-right:0;padding:5px!important}.rtl-timepicker{direction:ltr}.rtl-timepicker .form-control:first-child{border-radius:4px 0 0 4px}.rtl-timepicker .form-control:last-child{border-radius:0 4px 4px 0}.rtl-timepicker-lg .form-control:first-child{border-radius:6px 0 0 6px}.rtl-timepicker-lg .form-control:last-child{border-radius:0 6px 6px 0}.rtl-timepicker-sm .form-control:first-child{border-radius:3px 0 0 3px}.rtl-timepicker-sm .form-control:last-child{border-radius:0 3px 3px 0}.required-alert{border-right:5px solid red!important}.required-alert:focus{border:1px solid red!important;-webkit-box-shadow:0 0 0 0 red;-ms-box-shadow:0 0 0 0 red;box-shadow:0 0 0 0 red;border-right:5px solid red!important}.required-alert-ok{border-right:5px solid #ccc!important}

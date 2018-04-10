@@ -1,0 +1,73 @@
+﻿@model WFPtest.Models.TRAINEE
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>TRAINEE</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.PLAN_ID)
+
+        @Html.HiddenFor(model => model.TRAINING_ID)
+
+        @Html.HiddenFor(model => model.EMP_ID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ATTENDED, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ATTENDED)
+                @Html.ValidationMessageFor(model => model.ATTENDED)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PASSED, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PASSED)
+                @Html.ValidationMessageFor(model => model.PASSED)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TRAINING_EVALUATION, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TRAINING_EVALUATION)
+                @Html.ValidationMessageFor(model => model.TRAINING_EVALUATION)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TRAINER_EVALUATION, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TRAINER_EVALUATION)
+                @Html.ValidationMessageFor(model => model.TRAINER_EVALUATION)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CLASS_ID, "CLASS_ID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("CLASS_ID", String.Empty)
+                @Html.ValidationMessageFor(model => model.CLASS_ID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

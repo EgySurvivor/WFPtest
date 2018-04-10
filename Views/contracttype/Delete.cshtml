@@ -1,0 +1,52 @@
+﻿@model WFPtest.Models.contract_type
+
+@{
+    ViewBag.Title = "Delete";
+}
+<br>
+
+<p>
+    <h2>Delete Contract Type</h2>
+</p>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    
+    <hr />
+    <table class=" table">
+        <tr>
+            <th>
+                @Html.DisplayName("Contract Type Code")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.contract_Type_code)
+            </td>
+
+            <th>
+                @Html.DisplayName("Contract Type Name")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.contract_type_name)
+            </td>
+
+            <th>
+                @Html.DisplayName("Contract Type Description")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.contract_type_description)
+            </td>
+        </tr>
+    </table>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

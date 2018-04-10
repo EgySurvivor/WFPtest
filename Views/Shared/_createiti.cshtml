@@ -1,0 +1,11 @@
+﻿@model WFPtest.Models.MissionItinerary
+
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+@Html.AntiForgeryToken()
+@if (ViewBag.Message != null)
+{
+    <span class="text-success">@ViewBag.Message</span>
+}
+<span class="alert-danger">
+    @Html.ValidationSummary()
+</span>

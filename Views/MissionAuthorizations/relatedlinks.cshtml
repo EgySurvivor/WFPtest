@@ -1,0 +1,23 @@
+﻿@model IEnumerable<WFPtest.Models.country >
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayName("Country Name")
+        </th>
+        <th>
+            @Html.DisplayName("country_description")
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.country_name )
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.country_description)
+            </td>
+        </tr>
+    }
+</table>

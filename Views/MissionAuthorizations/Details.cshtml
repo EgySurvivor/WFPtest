@@ -1,0 +1,141 @@
+﻿@model WFPtest.Models.MissionAuthorization
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+
+    <h4>MissionAuthorization</h4>
+    <hr />
+    <table class=" table">
+        <tr>
+            <th>
+                @Html.DisplayName("From Date")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.FromDate)
+            </td>
+       
+            <th>
+                @Html.DisplayNameFor(model => model.ToDate)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.ToDate)
+            </td>
+
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.MissionItinerary)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.MissionItinerary)
+            </td>
+
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.funding)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.funding)
+            </td>
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.ClearedBySupervisor)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.ClearedBySupervisor)
+            </td>
+
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.MissionObjective)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.MissionObjective)
+            </td>
+
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.ExpectedOutputs)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.ExpectedOutputs)
+            </td>
+
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Achievements)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.Achievements)
+            </td>
+
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.FollowUp)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.FollowUp)
+            </td>
+        </tr>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.StaffSignature)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.StaffSignature)
+            </td>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SignatureDate)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.SignatureDate)
+            </td>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.staff.staff_id)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.staff.staff_id)
+            </td>
+            </tr>
+    </table>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MissionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

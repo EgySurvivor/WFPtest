@@ -1,0 +1,58 @@
+﻿@model WFPtest.Models.TRAINING_TYPE
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TRAINING_TYPE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.type_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.typ01)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.typ01)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type02)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type02)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type22)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type22)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.type_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

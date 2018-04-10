@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="HRDB.dbo.EMPLOYEES">
+    <xs:complexType>
+      <xs:attribute name="EMP_ID" type="xs:unsignedByte" use="optional" />
+      <xs:attribute name="EMP_FIRST_NAME" type="xs:string" use="optional" />
+      <xs:attribute name="EMP_MIDDLE_NAME" type="xs:string" use="optional" />
+      <xs:attribute name="EMP_LAST_NAME" type="xs:string" use="optional" />
+      <xs:attribute name="PREFIX" type="xs:string" use="optional" />
+      <xs:attribute name="NATIONALITY_ID" type="xs:unsignedByte" use="optional" />
+      <xs:attribute name="BIRTH_DATE" type="xs:dateTime" use="optional" />
+      <xs:attribute name="GENDER" type="xs:unsignedByte" use="optional" />
+      <xs:attribute name="PERMISSION_GROUP_ID" type="xs:unsignedByte" use="optional" />
+      <xs:attribute name="HOLIDAY_GROUP_ID" type="xs:unsignedByte" use="optional" />
+      <xs:attribute name="DEPID" type="xs:unsignedByte" use="optional" />
+      <xs:attribute name="JOB_ID" type="xs:unsignedByte" use="optional" />
+      <xs:attribute name="HIRE_DATE" type="xs:dateTime" use="optional" />
+      <xs:attribute name="BRANCH_ID" type="xs:unsignedByte" use="optional" />
+      <xs:attribute name="NATIONAL_NO_ID" type="xs:dateTime" use="optional" />
+      <xs:attribute name="OTHER1" type="xs:string" use="optional" />
+      <xs:attribute name="OTHER2" type="xs:string" use="optional" />
+      <xs:attribute name="RESIGN_DATE" type="xs:dateTime" use="optional" />
+      <xs:attribute name="RESIGNED" type="xs:unsignedByte" use="optional" />
+      <xs:attribute name="RESIGN_REASON" type="xs:string" use="optional" />
+      <xs:attribute name="ACCESS_CARD" type="xs:unsignedInt" use="optional" />
+      <xs:attribute name="CUR_ID" type="xs:unsignedByte" use="optional" />
+      <xs:attribute name="EMPLOYEE" type="xs:unsignedByte" use="optional" />
+      <xs:attribute name="MANAGER" type="xs:unsignedByte" use="optional" />
+      <xs:attribute name="RESIGN_REASON_ID" type="xs:unsignedByte" use="optional" />
+      <xs:attribute name="Contract_End" type="xs:dateTime" use="optional" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

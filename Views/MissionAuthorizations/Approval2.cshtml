@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Approval2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+
+    string param2 = ViewBag.RDORDRDSignature;
+
+    if (param2 == "Yes")
+    {
+        <h2>Mission Accepted</h2>
+    }
+    else
+    {
+        <h2>Mission rejected</h2>
+    }
+}

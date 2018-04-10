@@ -1,0 +1,282 @@
+@model WFPStaff.Models.staff
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>staff</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.country_office_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.country_office_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contract_type_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contract_type_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_first_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_first_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_last_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_last_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_created_datetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_created_datetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_index_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_index_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_vendor_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_vendor_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_nationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_nationality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_dob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_dob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_eod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_eod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_nte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_nte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_extension_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_extension_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_main)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_main)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_dts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_dts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_tb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_tb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_ct)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_ct)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_li)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_li)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_lc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_lc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_sr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_sr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_access_admin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_access_admin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_last_updated_datetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_last_updated_datetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff_deleted_datetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff_deleted_datetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.functional_title3.functional_title_description_english)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.functional_title3.functional_title_description_english)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff2.country_office_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff2.country_office_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff3.country_office_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff3.country_office_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff4.country_office_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff4.country_office_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unit.unit_description_english)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unit.unit_description_english)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staff5.country_office_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staff5.country_office_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sub_office.office_description_english)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sub_office.office_description_english)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.staff_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

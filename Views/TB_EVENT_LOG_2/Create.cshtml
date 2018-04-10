@@ -1,0 +1,96 @@
+﻿@model WFPtest.Models.TB_EVENT_LOG_2
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>TB_EVENT_LOG_2</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.nDateTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nDateTime)
+                @Html.ValidationMessageFor(model => model.nDateTime)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nReaderIdn, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nReaderIdn)
+                @Html.ValidationMessageFor(model => model.nReaderIdn)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nEventIdn, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nEventIdn)
+                @Html.ValidationMessageFor(model => model.nEventIdn)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nUserID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nUserID)
+                @Html.ValidationMessageFor(model => model.nUserID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nIsLog, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nIsLog)
+                @Html.ValidationMessageFor(model => model.nIsLog)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nTNAEvent, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nTNAEvent)
+                @Html.ValidationMessageFor(model => model.nTNAEvent)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nIsUseTA, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nIsUseTA)
+                @Html.ValidationMessageFor(model => model.nIsUseTA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nType, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nType)
+                @Html.ValidationMessageFor(model => model.nType)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,64 @@
+﻿@model WFPtest.Models.contract_details
+
+@using WFPtest.Models
+
+@{
+    ViewBag.Title = "ConDetails";
+}
+<br>
+
+<p><h2>
+    Staff Contract Details
+    </h2>
+</p>
+<div>
+   
+    <hr />
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayName("contract Details Code")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.contract_details_id)
+            </td>
+
+            <th>
+                @Html.DisplayName("Contract Description")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.contract_details_description_english)
+            </td>
+
+            <th>
+                @Html.DisplayName("Contract Status")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.contract_details_status)
+            </td>
+            <th>
+                @Html.DisplayName("Funds")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.Fund.resource  )
+            </td>
+            <th>
+                @Html.DisplayName("Funds Description")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.Fund.Description )
+            </td>
+
+        </tr>
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "index")
+    @Html.ActionLink("Edit", "EditCon", new { id = Model.contractdetailsid }) |
+    @*@Html.ActionLink("Back to List", "Index")*@
+</p>

@@ -1,0 +1,133 @@
+﻿@using Microsoft.AspNet.Identity
+@if (!Request.IsAuthenticated)
+{
+    Response.Redirect("/RBC-SMS/account/login");
+}
+
+
+@model PagedList.IPagedList<WFPtest.Models.dependent>
+
+@using WFPtest.Models
+@using PagedList.Mvc;
+@using JQueryUIHelpers;
+@{
+    ViewBag.Title = "Index";
+}
+<br>
+
+<p>
+   <h2> Dependents List</h2>
+</p>
+
+@using (Html.BeginForm("Index", "dependent", FormMethod.Get))
+
+{
+
+
+    <br>
+    <p>
+        Find by name or staff E-mail: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />&nbsp;&nbsp;@Html.ActionLink("Reset Filter", "Index")
+    </p>
+}
+
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayName("Dependents Code")
+        </th>*@
+        <th>
+            @Html.ActionLink("First Name (Sort)", "Index", new { sortOrder = ViewBag.DateSortParm })
+            @*@Html.DisplayName("First Name")*@
+        </th>
+        <th>
+            @Html.ActionLink("Last Name (Sort)", "Index", new { sortOrder = ViewBag.DateSortParm })
+            @*@Html.DisplayName("Last Name")*@
+        </th>
+        <th>
+            @Html.DisplayName("Dependents Gender")
+        </th>
+        <th>
+            @Html.DisplayName("Phone Number")
+        </th>
+        <th>
+            @Html.DisplayName("Blood Group")
+        </th>
+        <th>
+            @Html.DisplayName("Passport Num")
+        </th>
+        @*<th>
+            @Html.DisplayName("Passport Expiry Date")
+        </th>*@
+        @*<th>
+            @Html.DisplayName("Dependents Notes")
+        </th>
+        <th>
+            @Html.DisplayName("Medical Condition")
+        </th>*@
+        <th>
+            @Html.DisplayName("Staff E-Mail")
+        <th></th>
+       
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.dependents_code)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.dependents_first_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dependents_last_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dependents_gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dependents_phone_num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dependents_blood_group)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dependents_passport_num)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.dependents_passport_expiry_date)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.dependents_notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dependents_medical_condition)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.staff.staff_email)
+        </td>
+     
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.dependentsid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.dependentsid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.dependentsid })
+        </td>
+        
+    </tr>
+}
+
+</table>
+<table>
+    <tr>
+        <td>
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        </td>
+    </tr>
+</table>
+<br>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

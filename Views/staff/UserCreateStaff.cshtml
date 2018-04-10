@@ -1,0 +1,103 @@
+﻿@model WFPtest.Models.staff
+
+@{
+    ViewBag.Title = "UserCreateStaff";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add Staff</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <table class=" table">
+            <tr>
+                
+
+                <th>
+                    @Html.Label("Title")
+                </th>
+                <td>
+                    @Html.DropDownList("functional_title_id", String.Empty)<b style="color:Red;">*</b>
+                    @Html.ValidationMessageFor(model => model.functional_title_id)
+                </td>
+          
+                <th>
+                    @Html.Label("First Name")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.staff_first_name)<b style="color:Red;">*</b>
+                    @Html.ValidationMessageFor(model => model.staff_first_name)
+                </td>
+
+                <th>
+                    @Html.Label("Last Name")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.staff_last_name)<b style="color:Red;">*</b>
+                    @Html.ValidationMessageFor(model => model.staff_last_name)
+                </td>
+
+               </tr>
+               <tr>
+
+                <th>
+                    @Html.Label("Extension")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.staff_extension_number)<b style="color:Red;">*</b>
+                    @Html.ValidationMessageFor(model => model.staff_extension_number)
+                </td>
+
+          
+
+
+
+                <th>
+                    @Html.Label("E-mail")
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.staff_email)<b style="color:Red;">*</b>
+                    @Html.ValidationMessageFor(model => model.staff_email)
+                </td>
+
+               
+
+           
+    <th>
+        @Html.Label("Supervisor")
+    </th>
+    <td>
+        @Html.DropDownList("staff_supervisorid", String.Empty)<b style="color:Red;">*</b>
+        @Html.ValidationMessageFor(model => model.staff_supervisorid)
+    </td>
+
+
+
+</tr>           
+        </table>
+        <br>
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </td>
+                <td>
+                    @Html.ActionLink("Back to List", "Index", "CourseRegs")
+                </td>
+            </tr>
+        </table>
+
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

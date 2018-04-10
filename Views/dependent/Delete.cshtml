@@ -1,0 +1,119 @@
+﻿@model WFPtest.Models.dependent
+
+@{
+    ViewBag.Title = "Delete";
+}
+<br>
+
+<p>
+    <h2>Delete Dependents</h2>
+</p>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>dependent</h4>
+    <hr />
+   <table class=" table" >
+       <tr>
+           <th>
+               @Html.DisplayName("Code")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_code)
+           </td>
+
+           <th>
+               @Html.DisplayName("First Name")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_first_name)
+           </td>
+
+           <th>
+               @Html.DisplayName("Last Name")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_last_name)
+           </td>
+
+           <th>
+               @Html.DisplayName("Dependents Gender")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_gender)
+           </td>
+
+           <th>
+               @Html.DisplayName("Phone Num")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_phone_num)
+           </td>
+       </tr>
+       <tr>
+           <th>
+               @Html.DisplayName("Blood Group")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_blood_group)
+           </td>
+
+           <th>
+               @Html.DisplayName("Passport Number")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_passport_num)
+           </td>
+
+           <th>
+               @Html.DisplayName("Expiry Date")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_passport_expiry_date)
+           </td>
+
+           <th>
+               @Html.DisplayName("Dependents Notes")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_notes)
+           </td>
+
+           <th>
+               @Html.DisplayName("Medical Condition")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.dependents_medical_condition)
+           </td>
+       </tr>
+       <tr>
+           <th>
+               @Html.DisplayName("Staff E-mail")
+           </th>
+
+           <td>
+               @Html.DisplayFor(model => model.staff.staff_email)
+           </td>
+           </tr>
+       </table>
+
+           @using (Html.BeginForm())
+           {
+               @Html.AntiForgeryToken()
+
+               <div class="form-actions no-color">
+                   <input type="submit" value="Delete" class="btn btn-default" /> |
+                   @Html.ActionLink("Back to List", "Index")
+               </div>
+           }
+</div>

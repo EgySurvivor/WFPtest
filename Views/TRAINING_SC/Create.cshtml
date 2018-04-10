@@ -1,0 +1,123 @@
+﻿@model WFPtest.Models.TRAINING_SC
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>TRAINING_SC</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.sc_id, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.sc_id)
+                @Html.ValidationMessageFor(model => model.sc_id)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.from_time, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.from_time)
+                @Html.ValidationMessageFor(model => model.from_time)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.to_time, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.to_time)
+                @Html.ValidationMessageFor(model => model.to_time)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EMP_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EMP_ID)
+                @Html.ValidationMessageFor(model => model.EMP_ID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.attend, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.attend)
+                @Html.ValidationMessageFor(model => model.attend)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PLAN_ID, "PLAN_ID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("PLAN_ID", String.Empty)
+                @Html.ValidationMessageFor(model => model.PLAN_ID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.time_open, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.time_open)
+                @Html.ValidationMessageFor(model => model.time_open)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.extra1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.extra1)
+                @Html.ValidationMessageFor(model => model.extra1)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.extra2, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.extra2)
+                @Html.ValidationMessageFor(model => model.extra2)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.extra3, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.extra3)
+                @Html.ValidationMessageFor(model => model.extra3)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.time_closed, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.time_closed)
+                @Html.ValidationMessageFor(model => model.time_closed)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.comment, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.comment)
+                @Html.ValidationMessageFor(model => model.comment)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,152 @@
+﻿@model WFPtest.Models.contract_details
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br>
+<br>
+<br>
+@using WFPtest.Models
+
+<p>
+    Contract Details Details
+</p>
+<div>
+ 
+	<hr />
+   <table class=" table" >
+       <tr>
+        <th>
+            @Html.DisplayName("Code")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.contract_details_id)
+        </td>
+
+        <th>
+            @Html.DisplayName("Description English")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.contract_details_description_english)
+        </td>
+
+        <th>
+            @Html.DisplayName("Abreviation English")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.contract_details_abreviation_english)
+        </td>
+
+        <th>
+            @Html.DisplayName("Description French")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.contract_details_description_french)
+        </td>
+</tr>
+<tr>
+        <th>
+            @Html.DisplayName("Abreviation French")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.contract_details_abreviation_french)
+        </td>
+
+        <th>
+            @Html.DisplayName("Details Status")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.contract_details_status)
+        </td>
+
+       
+
+        @*<th>
+            @Html.DisplayName("Contract Type")
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.contract_type_code)
+        </td>*@
+
+        @*<th>
+            @Html.DisplayName("Staff")
+        </th>*@
+
+        @*<td>
+         
+            @Html.EditorFor(model => model.staffs .)
+            @Html.ValidationMessageFor(model => model.staffid)
+        </td>*@
+    <th>
+        @Html.DisplayName("Fund")
+    </th>
+
+    <td>
+        @Html.DisplayFor(model => model.Fund.fund_code)
+    </td>
+      
+      </tr>
+       </table>
+
+    @*hidden*@
+
+    @*<th>
+        @Html.DisplayNameFor(model => model.contract_details_created_by)
+    </th>
+
+    <td>
+        @Html.DisplayFor(model => model.contract_details_created_by)
+    </td>
+
+    <th>
+        @Html.DisplayNameFor(model => model.contract_details_created_datetime)
+    </th>
+
+    <td>
+        @Html.DisplayFor(model => model.contract_details_created_datetime)
+    </td>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.contract_details_last_modified_by)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.contract_details_last_modified_by)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.contract_details_last_modified_datetime)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.contract_details_last_modified_datetime)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.contract_details_deleted_by)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.contract_details_deleted_by)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.contract_details_deleted_datetime)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.contract_details_deleted_datetime)
+    </dd>*@
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.contractdetailsid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

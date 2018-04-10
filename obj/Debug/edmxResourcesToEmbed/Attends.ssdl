@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BioStarModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TB_EVENT">
+    <Key>
+      <PropertyRef Name="nEventIdn" />
+    </Key>
+    <Property Name="nEventIdn" Type="int" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="nPriority" Type="smallint" Nullable="false" />
+    <Property Name="nAck" Type="smallint" Nullable="false" />
+    <Property Name="nSWAlarmIdn" Type="int" Nullable="false" />
+    <Property Name="nAlarmEmailIdn" Type="int" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_DATA">
+    <Key>
+      <PropertyRef Name="nEventIdn" />
+    </Key>
+    <Property Name="nEventIdn" Type="int" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="sDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_FACE">
+    <Key>
+      <PropertyRef Name="nEventFaceIdn" />
+      <PropertyRef Name="nEventLogIdn" />
+    </Key>
+    <Property Name="nEventFaceIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nEventLogIdn" Type="int" Nullable="false" />
+    <Property Name="nType" Type="smallint" Nullable="false" />
+    <Property Name="bFaceImage" Type="varbinary(max)" />
+    <Property Name="nFaceImageLen" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_LOG">
+    <Key>
+      <PropertyRef Name="nDateTime" />
+      <PropertyRef Name="nReaderIdn" />
+      <PropertyRef Name="nEventIdn" />
+      <PropertyRef Name="nUserID" />
+    </Key>
+    <Property Name="nEventLogIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nDateTime" Type="int" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nEventIdn" Type="int" Nullable="false" />
+    <Property Name="nUserID" Type="int" Nullable="false" />
+    <Property Name="nIsLog" Type="smallint" Nullable="false" />
+    <Property Name="nTNAEvent" Type="smallint" Nullable="false" />
+    <Property Name="nIsUseTA" Type="smallint" Nullable="false" />
+    <Property Name="nType" Type="smallint" Nullable="false" />
+    <Property Name="date" Type="datetime" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BioStar.dbo.TB_EVENT_LOG_2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TB_EVENT_LOG_2">
+    <Key>
+      <PropertyRef Name="nEventLogIdn" />
+      <PropertyRef Name="nDateTime" />
+      <PropertyRef Name="nReaderIdn" />
+      <PropertyRef Name="nEventIdn" />
+      <PropertyRef Name="nUserID" />
+      <PropertyRef Name="nIsLog" />
+      <PropertyRef Name="nTNAEvent" />
+      <PropertyRef Name="nIsUseTA" />
+      <PropertyRef Name="nType" />
+    </Key>
+    <Property Name="nEventLogIdn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nDateTime" Type="int" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nEventIdn" Type="int" Nullable="false" />
+    <Property Name="nUserID" Type="int" Nullable="false" />
+    <Property Name="nIsLog" Type="smallint" Nullable="false" />
+    <Property Name="nTNAEvent" Type="smallint" Nullable="false" />
+    <Property Name="nIsUseTA" Type="smallint" Nullable="false" />
+    <Property Name="nType" Type="smallint" Nullable="false" />
+    <Property Name="date" Type="datetime" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_LOG_MANAGER">
+    <Key>
+      <PropertyRef Name="nReaderIdn" />
+    </Key>
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nLastDate" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EVENT_LOG_MODIFY">
+    <Key>
+      <PropertyRef Name="nEventLogIdn" />
+    </Key>
+    <Property Name="nEventLogIdn" Type="int" Nullable="false" />
+    <Property Name="nDateTime" Type="int" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nEventIdn" Type="int" Nullable="false" />
+    <Property Name="nUserID" Type="int" Nullable="false" />
+    <Property Name="nTNAEvent" Type="smallint" Nullable="false" />
+    <Property Name="nFlag" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BioStarModel1StoreContainer">
+    <EntitySet Name="TB_EVENT" EntityType="Self.TB_EVENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EVENT_DATA" EntityType="Self.TB_EVENT_DATA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EVENT_FACE" EntityType="Self.TB_EVENT_FACE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EVENT_LOG" EntityType="Self.TB_EVENT_LOG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EVENT_LOG_MANAGER" EntityType="Self.TB_EVENT_LOG_MANAGER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EVENT_LOG_MODIFY" EntityType="Self.TB_EVENT_LOG_MODIFY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EVENT_LOG_2" EntityType="Self.TB_EVENT_LOG_2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TB_EVENT_LOG_2].[nEventLogIdn] AS [nEventLogIdn], 
+    [TB_EVENT_LOG_2].[nDateTime] AS [nDateTime], 
+    [TB_EVENT_LOG_2].[nReaderIdn] AS [nReaderIdn], 
+    [TB_EVENT_LOG_2].[nEventIdn] AS [nEventIdn], 
+    [TB_EVENT_LOG_2].[nUserID] AS [nUserID], 
+    [TB_EVENT_LOG_2].[nIsLog] AS [nIsLog], 
+    [TB_EVENT_LOG_2].[nTNAEvent] AS [nTNAEvent], 
+    [TB_EVENT_LOG_2].[nIsUseTA] AS [nIsUseTA], 
+    [TB_EVENT_LOG_2].[nType] AS [nType], 
+    [TB_EVENT_LOG_2].[date] AS [date]
+    FROM [dbo].[TB_EVENT_LOG_2] AS [TB_EVENT_LOG_2]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

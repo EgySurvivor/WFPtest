@@ -1,0 +1,509 @@
+﻿@using Microsoft.AspNet.Identity
+
+
+
+@model WFPtest.Models.MissionAuthorization
+
+@{
+    ViewBag.Title = "Edit On Behalf";
+}
+
+<h2>Edit On Behalf</h2>
+
+
+@using (Html.BeginForm("EditBehalfof", "MissionAuthorizations", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+
+
+
+    <style type="text/css">
+        .form-create {
+            background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+            background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+            margin: auto;
+            position: relative;
+            width: 1150px;
+            height: 1100px;
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 14px;
+            font-style: italic;
+            line-height: 24px;
+            font-weight: bold;
+            color: #09C;
+            text-decoration: none;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            border: 1px solid #999;
+            border: inset 1px solid #333;
+            -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-create1 {
+            position: absolute;
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 18px;
+            font-style: italic;
+            line-height: 24px;
+            font-weight: bold;
+            left: 930px;
+            top: 300px;
+            padding: 5px;
+            font: bold 0.8em sans-serif;
+            border: 0px solid #333;
+            border-radius: 0px;
+            background: none;
+            /*-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+                            -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+                            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);*/
+        }
+
+        .ui-datepicker {
+            background: #fff; /* Old browsers */
+            background: #fff -moz-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* FF3.6+ */
+            background: #fff -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc)), color-stop(100%,#fff)); /* Chrome,Safari4+ */
+            background: #fff -webkit-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* Chrome10+,Safari5.1+ */
+            background: #fff -o-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* Opera11.10+ */
+            background: #fff -ms-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* IE10+ */
+            background: #fff linear-gradient(top, #fcfcfc 0%, #fff 100%); /* W3C */
+            font-size: 11px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+            .ui-datepicker table {
+                width: 278px;
+            }
+
+                .ui-datepicker table td {
+                    text-align: center;
+                }
+
+            .ui-datepicker a {
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+        .ui-datepicker-prev {
+            float: left;
+        }
+
+        .ui-datepicker-next {
+            float: right;
+        }
+
+        .ui-datepicker-title {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        }
+        }
+    </style>
+
+    <div class="form-create">
+
+
+        <h4>Mission Authorization</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.MissionID)
+        @Html.HiddenFor(model => model.staffid)
+
+        <table class=" table">
+
+            <tr>
+                <th>
+                    @Html.Label("First Name")
+                </th>
+
+                <td>
+
+                    @*@Html.Display("staffid")*@
+                    @*@Html.EditorFor(model => model.staffid, new { @readonly = "readonly", @Name = "", @Value = ViewBag.staffid })*@
+                    @Html.Display("staffid2")
+                    @Html.TextBoxFor(model => model.staffid, new { @readonly = "readonly", @Value = ViewBag.staffid, @class = "hidden" })
+
+                    @*@Html.Display("staffid2", String.Empty)*@
+                    @*@Html.Hidden("staffid2", "", new { data_val = "true", data_val_required = "staffid2", @class = "IncludeHidden" })*@
+                    @*@Html.DropDownList("staffid", String.Empty)*@
+                    @Html.ValidationMessageFor(model => model.staffid)
+                    @*@Html.ActionLink(User.Identity.GetUserName()+ "@wfp.org" + "", "", "")*@
+
+                    @Html.TextBoxFor(model => model.SignatureDate, new { @readonly = "readonly", @Value = ViewBag.SignatureDate, @class = "hidden" })
+                    @Html.TextBoxFor(model => model.MissionID, new { @readonly = "readonly", @Value = ViewBag.MissionID22, @class = "hidden" })
+                </td>
+
+
+                <th>
+                    @Html.Label("Last Name")
+                </th>
+                <td>
+                    @Html.Display("LastName")
+                    @Html.ValidationMessageFor(model => model.staffid)
+                </td>
+
+                <th>
+                    @Html.Label("Unit")
+                </th>
+                <td>
+                    @Html.Display("Unit")
+                    @Html.ValidationMessageFor(model => model.staffid)
+                    @Html.ValidationMessage("Error")
+                </td>
+
+            </tr>
+            <tr>
+                <td style=" border-right:none "></td>
+
+            </tr>
+
+            <tr>
+                <td style="text-transform:initial" colspan=" 2">
+
+                    <b style="color:Red;">PLEASE ADD TWO RECORDS FOR ITINERARIES ONE FOR THE OUTGOING JOURNEY AND THE SECOND FOR THE RETURN JOURNEY.</b>
+<br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td style=" border-right:none "></td>
+
+            </tr>
+
+            <tr>
+
+
+                <th style="text-transform:initial">
+                    @Html.Label("Mission Type")
+                </th>
+                <td>
+                    @Html.DropDownList("Mission_Type", null, "Please Select ...", new
+                   {
+                       @class = "form-control",  @*onchange = "ddListChange()"*@ })<b style="color:Red;">*</b>
+                    @Html.ValidationMessageFor(model => model.Mission_Type)
+                </td>
+
+            </tr>
+
+
+            <tr>
+                <td style=" border-right:none "></td>
+
+            </tr>
+
+            <tr>
+
+                <th style="text-transform:initial">
+                    @Html.Label("Administrative Note")
+                </th>
+                <td>
+
+                    <div id="single" style=" align-content :center ">
+                        <input type="file" class="single" name="files" /><br />
+
+
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td style=" border-right:none "></td>
+
+            </tr>
+            <tr>
+                <th>
+                    @Html.Label("on behalf of")
+                </th>
+                <td>
+                    @Html.DropDownList("staffonbehalf", null, "Please Select ...", new { @class = "form-control" })
+
+                    @*@Html.ValidationMessageFor(model => model.staff.staff_email )*@
+                </td>
+                <th>
+                    @Html.Label("Head Of Unit")
+                </th>
+                <td>
+                    @Html.DropDownList("nnon1", null, "Please Select ...", new { @class = "form-control" })
+
+                    @*@Html.ValidationMessageFor(model => model.staff.staff_email )*@
+                </td>
+                <th>
+                    @Html.Label("Supervisor")
+                </th>
+                <td>
+                    @Html.DropDownList("non3", null, "Please Select ...", new { @class = "form-control" })
+
+                    @*@Html.ValidationMessageFor(model => model.staff.staff_email )*@
+                </td>
+
+            </tr>
+            <tr>
+                <td style=" border-right :none  ">
+                    <h4>
+                        Mission Information
+                    </h4>
+                </td>
+
+            </tr>
+            <tr>
+
+                <th style="text-transform:initial">
+                    @Html.Label("Funding Code")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.EditorFor(model => model.funding)
+                    @Html.ValidationMessageFor(model => model.funding)
+                </td>
+
+
+
+                @*<th>
+                @Html.LabelFor(model => model.ClearedBySupervisor, htmlAttributes: new { @class = "control-label col-md-2" })
+            </th>
+            <td>
+                @Html.EditorFor(model => model.ClearedBySupervisor)
+                @Html.ValidationMessageFor(model => model.ClearedBySupervisor)
+            </td>*@
+
+
+                <th style="text-transform:initial">
+                    @Html.Label("Mission Objective")<b style="color:Red;">*</b>
+
+                </th>
+                <td>
+                    @Html.TextAreaFor(model => model.MissionObjective)
+                    @Html.ValidationMessageFor(model => model.MissionObjective)
+                </td>
+
+                <th style="text-transform:initial">
+                    @Html.Label("Expected Outputs")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @Html.TextAreaFor(model => model.ExpectedOutputs)
+                    @Html.ValidationMessageFor(model => model.ExpectedOutputs)
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td style=" border-right:none "></td>
+
+            </tr>
+
+
+
+
+
+
+            <tr>
+                <th style="text-transform:initial">
+                    @Html.Label("Can This meeting Be Done Over Voice/Video ?")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @*@Html.CheckBoxFor(model => model.canbedone)*@
+                    @*@Html.CheckBoxFor(m => m.canbedone )*@
+                    @Html.RadioButtonFor(model => model.canbedone, "True") Yes
+                    @Html.RadioButtonFor(model => model.canbedone, "False") No
+
+                    @Html.ValidationMessageFor(model => model.canbedone)
+                </td>
+
+                <th style="text-transform:initial">
+                    @Html.Label("I had a discussion with my supervisor?")<b style="color:Red;">*</b>
+                </th>
+                <td>
+
+                    @Html.RadioButtonFor(model => model.ClearedBySupervisor, "True") Yes
+                    @Html.RadioButtonFor(model => model.ClearedBySupervisor, "False") No
+
+                    @Html.ValidationMessageFor(model => model.ClearedBySupervisor)
+                </td>
+
+
+                <th style="text-transform:initial">
+                    @Html.Label("You had agrement for the mission from receiving CO?")<b style="color:Red;">*</b>
+                </th>
+                <td>
+
+                    @Html.RadioButtonFor(model => model.UberCareem, "True") Yes
+                    @Html.RadioButtonFor(model => model.UberCareem, "False") No
+
+                    @Html.ValidationMessageFor(model => model.UberCareem)
+
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td style=" border-right:none "></td>
+
+            </tr>
+
+
+            <tr>
+                <th style="text-transform:initial">
+                    @Html.Label("Is international roaming required?")<b style="color:Red;">*</b>
+                </th>
+                <td>
+                    @*@Html.CheckBoxFor(model => model.canbedone)*@
+                    @*@Html.CheckBoxFor(m => m.canbedone )*@
+                    @Html.RadioButtonFor(model => model.StaffSignature, "True") Yes
+                    @Html.RadioButtonFor(model => model.StaffSignature, "False") No
+
+                    @Html.ValidationMessageFor(model => model.StaffSignature)
+                </td>
+
+                <th style="text-transform:initial">
+                    @Html.Label("Was the ticket requested 14 days in advance?")<b style="color:Red;">*</b>
+                </th>
+                <td>
+
+                    @Html.RadioButtonFor(model => model.non18, "True") Yes
+                    @Html.RadioButtonFor(model => model.non18, "False") No
+
+                    @Html.ValidationMessageFor(model => model.non18)
+                </td>
+                <th style="text-transform:initial">
+                    @Html.Label("If not, please explain?")<b style="color:Red;">*</b>
+                </th>
+                <td>
+
+                    @Html.TextAreaFor(model => model.non17)
+
+                    @Html.ValidationMessageFor(model => model.non17)
+                </td>
+
+            </tr>
+
+            <tr>
+                <td style=" border-right :none  ">
+                    <h4>
+                        Comments
+                    </h4>
+                </td>
+
+            </tr>
+            <tr>
+                <th style="text-transform:initial" colspan="2">
+                    @Html.Label("Comments related to travel and other requirements")
+                </th>
+                <td colspan="2" style="text-transform:initial">
+                    @Html.TextAreaFor(model => model.FollowUp)
+                    @Html.ValidationMessageFor(model => model.FollowUp)
+                </td>
+
+
+            </tr>
+            <tr>
+                <td style=" border-right:none "></td>
+
+            </tr>
+
+            <tr>
+                <td style=" border-right :none  " colspan="5">
+                    Data roming packages may not be available in some countries. <br>
+                    Please note <b style="color:Red;">*</b> mean mandatory fields.
+                </td>
+
+            </tr>
+        </table>
+        <br>
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </td>
+                <td>
+                    @Html.ActionLink("Back to List", "Index")
+
+                </td>
+
+            </tr>
+        </table>
+    </div>
+
+
+}
+
+<div class="form-create1">
+    <br>
+    <br>
+
+    @{ Html.RenderAction("IndexItineraryeditbehalfof"); }
+</div>
+
+
+
+
+@*//////////////Links////////////////////*@
+
+@*<h2>Customers</h2>
+
+    @Ajax.ActionLink("Customer from Germany", // <-- Text to display
+             "Germany", // <-- Action Method Name
+             new AjaxOptions
+             {
+                 UpdateTargetId = "CustomerList", // <-- DOM element ID to update
+                 InsertionMode = InsertionMode.Replace, // <-- Replace the content of DOM element
+                 HttpMethod = "GET" // <-- HTTP method
+             })
+
+    |
+
+    @Ajax.ActionLink("Customer from Mexico", // <-- Text to display
+             "Mexico", // <-- Action Method Name
+             new AjaxOptions
+             {
+                 UpdateTargetId = "CustomerList", // <-- DOM element ID to update
+                 InsertionMode = InsertionMode.Replace, // <-- Replace the content of DOM element
+                 HttpMethod = "GET" // <-- HTTP method
+             })
+
+
+
+    <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#CustomerList" href="/MissionAuthorizations/Germany">Customer from Germany</a>*@
+
+@*//////////////Links////////////////////*@
+
+
+
+
+<br>
+@*<table border="0" align="center">
+        <tr>
+            <td>
+                <input type="submit" value="Create" class="btn btn-default" />
+            </td>
+            <td>
+                @Html.ActionLink("Back to List", "Index")
+            </td>
+
+        </tr>
+    </table>*@
+
+<br>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/scripts/customcompare.js")
+    @Scripts.Render("~/jquery.unobtrusive-ajax.js")
+    @Scripts.Render("~/Scripts/jquery.unobtrusive*")
+    @Scripts.Render("~/Scripts/jquery.validate*")
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.min.js")
+
+
+}

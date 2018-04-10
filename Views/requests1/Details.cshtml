@@ -1,0 +1,306 @@
+﻿@model WFPtest.Models.requests1
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>requests1</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestingDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestingDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestingUnit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestingUnit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FocalPoint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FocalPoint)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Purpose)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Purpose)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FromDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOFP_CO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOFP_CO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOFP_RB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOFP_RB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOFP_HQ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOFP_HQ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOFP_Other)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOFP_Other)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GOV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GOV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.District)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.District)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherPlace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtherPlace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Budget_TR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Budget_TR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_Roms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_Roms)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Check_inDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Check_inDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Check_OutDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Check_OutDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rom_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rom_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Microphone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Microphone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HiSpeedInternet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HiSpeedInternet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Conf_Call_Device)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Conf_Call_Device)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MMR_Days)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MMR_Days)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BOR_Days)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOR_Days)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COffeBreak)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COffeBreak)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COffeBreak_UNM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COffeBreak_UNM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lunch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lunch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dinner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dinner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Coctail_Reception)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Coctail_Reception)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dedicated_IT_SUPP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dedicated_IT_SUPP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Transportstion_ForLocal_Staff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Transportstion_ForLocal_Staff)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Airport_Picup_Services)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Airport_Picup_Services)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Other_Services)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Other_Services)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.non1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.non1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.non2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.non2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.non3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.non3)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

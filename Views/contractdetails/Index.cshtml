@@ -1,0 +1,159 @@
+﻿@*@using Microsoft.AspNet.Identity
+    @if (!Request.IsAuthenticated)
+    {
+        Response.Redirect("/RBC-SMS/account/login");
+    }*@
+
+@*@model IEnumerable<WFPtest.Models.contract_details>*@
+
+@model PagedList.IPagedList<WFPtest.Models.contract_details >
+
+@{
+    ViewBag.Title = "Index";
+}
+<br>
+<br>
+<br>
+
+
+<p>
+    Contract Details List
+</p>
+@using WFPtest.Models
+
+
+@using PagedList.Mvc;
+@using JQueryUIHelpers;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+
+@using (Html.BeginForm("Index", "contractdetails", FormMethod.Get))
+{
+
+
+    <br>
+    <p>
+        Find by ABREVIATION: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />&nbsp;&nbsp; @Html.ActionLink("Reset Filter", "Index")
+    </p>
+}
+
+
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayName("Code")
+        </th>*@
+        @*<th>
+            @Html.DisplayName("DescriptioncEnglish")
+        </th>*@
+        <th>
+            @Html.ActionLink("Abreviation English (Sort)", "Index", new { sortOrder = ViewBag.DateSortParm })
+            @*@Html.DisplayName("Abreviation English")*@
+        </th>
+        @*<th>
+            @Html.DisplayName("Description French")
+        </th>*@
+        <th>
+            @Html.ActionLink("Abreviation French (Sort)", "Index", new { sortOrder = ViewBag.DateSortParm })
+            @*@Html.DisplayName("Abreviation French")*@
+        </th>
+        <th>
+            @Html.DisplayName("Status")
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.contract_details_created_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contract_details_created_datetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contract_details_last_modified_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contract_details_last_modified_datetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contract_details_deleted_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contract_details_deleted_datetime)
+        </th>*@
+        @*<th>
+            @Html.DisplayName("Contract Type")
+        </th>*@
+        <th>
+            @Html.DisplayName("Staff")
+        </th>
+        <th>
+            @Html.DisplayName("Fund")
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.contract_details_id)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.contract_details_description_english)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.contract_details_abreviation_english)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.contract_details_description_french)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.contract_details_abreviation_french)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contract_details_status)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.contract_details_created_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contract_details_created_datetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contract_details_last_modified_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contract_details_last_modified_datetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contract_details_deleted_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contract_details_deleted_datetime)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.contract_type_code)
+        </td>*@
+
+        <td>
+            @Html.DropDownList("staffid", String.Empty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fund.fund_code)
+        </td>
+        <td>
+        @Html.ActionLink("Create New", "Create")
+        </td> 
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.contractdetailsid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.contractdetailsid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.contractdetailsid })
+        </td>
+    </tr>
+}
+
+</table>
+<br>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

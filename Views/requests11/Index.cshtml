@@ -1,0 +1,255 @@
+﻿@model IEnumerable<WFPtest.Models.requests1>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RequstingBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestingDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestingUnit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FocalPoint)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Purpose)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FromDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumOFP_CO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumOFP_RB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumOFP_HQ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumOFP_Other)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GOV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.District)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OtherPlace)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Budget_TR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Number_Roms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Check_inDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Check_OutDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rom_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Microphone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HiSpeedInternet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Conf_Call_Device)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MMR_Days)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BOR_Days)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COffeBreak)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COffeBreak_UNM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lunch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dinner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Coctail_Reception)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dedicated_IT_SUPP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescripDaysORHours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Transportstion_ForLocal_Staff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Airport_Picup_Services)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Other_Services)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.non1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.non2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.non3)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequstingBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestingDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestingUnit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FocalPoint)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Purpose)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FromDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumOFP_CO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumOFP_RB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumOFP_HQ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumOFP_Other)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GOV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.District)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OtherPlace)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Budget_TR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Number_Roms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Check_inDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Check_OutDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rom_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Microphone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HiSpeedInternet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Conf_Call_Device)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MMR_Days)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BOR_Days)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COffeBreak)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COffeBreak_UNM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lunch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dinner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Coctail_Reception)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dedicated_IT_SUPP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescripDaysORHours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Transportstion_ForLocal_Staff)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Airport_Picup_Services)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Other_Services)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.non1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.non2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.non3)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,418 @@
+﻿@model WFPtest.Models.staff
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>staffonbehalfperson2</title>
+</head>
+<body>
+    <div>
+        <h4>staff</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_login)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_login)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_first_name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_first_name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_last_name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_last_name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_created_by)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_created_by)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_created_datetime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_created_datetime)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_status)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_status)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_index_number)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_index_number)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_vendor_number)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_vendor_number)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_nationality)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_nationality)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_address)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_address)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_dob)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_dob)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_eod)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_eod)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_nte)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_nte)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_extension_number)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_extension_number)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_access_main)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_access_main)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_access_dts)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_access_dts)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_access_tb)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_access_tb)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_access_ct)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_access_ct)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_access_li)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_access_li)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_access_lc)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_access_lc)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_access_sr)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_access_sr)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_access_admin)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_access_admin)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_last_updated_by)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_last_updated_by)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_last_updated_datetime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_last_updated_datetime)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_deleted_by)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_deleted_by)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff_deleted_datetime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff_deleted_datetime)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Call_Sign)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Call_Sign)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Landline)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Landline)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Mobile)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Mobile)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.international)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.international)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.cate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.cate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.contract_details.contract_details_id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.contract_details.contract_details_id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.contract_type.contract_Type_code)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.contract_type.contract_Type_code)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Country_office.office_id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Country_office.office_id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.functional_title.functional_title_id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.functional_title.functional_title_id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff2.staff_id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff2.staff_id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.sub_office.sub_office_id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.sub_office.sub_office_id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.unit.unit_id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.unit.unit_id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.country.country_name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.country.country_name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff3.staff_id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff3.staff_id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff4.staff_id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff4.staff_id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.staff5.staff_id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.staff5.staff_id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.governorate.governorates_name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.governorate.governorates_name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.district.area_name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.district.area_name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.category.CatName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.category.CatName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.district1.area_name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.district1.area_name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.WardenGroup.GroupName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.WardenGroup.GroupName)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.staffid }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

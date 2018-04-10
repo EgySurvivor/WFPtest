@@ -1,0 +1,42 @@
+﻿@model WFPtest.Models.TRAINING_PLAN
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TRAINING_PLAN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TRAINING_PLACE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRAINING_PLACE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PERIOD_FROM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PERIOD_FROM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PERIOD_TO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PERIOD_TO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PLAN_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

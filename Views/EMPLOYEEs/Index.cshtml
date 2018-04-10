@@ -1,0 +1,375 @@
+﻿@model IEnumerable<WFPtest.Models.EMPLOYEE>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EMP_FIRST_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMP_MIDDLE_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMP_LAST_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PREFIX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NATIONALITY_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BIRTH_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BIRTH_PLACE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GENDER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PHONE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ADDRESSID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CELL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MARTIAL_STATUS_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VACATION_GROUP_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PERMISSION_GROUP_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOLIDAY_GROUP_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEPID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JOB_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QUAKIFICATION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GRADU_DEPT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GRADU_GRADE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SSN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HIRE_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BRANCH_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NATIONAL_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NATIONAL_NO_IP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NATIONAL_NO_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MILIT_SERV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OTHER1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OTHER2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OTHERDATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PIC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RESIGN_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RESIGNED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RESIGN_REASON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACCESS_CARD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SAL_GRP_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CUR_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMPLOYEE1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USER_CARD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAIL_ADDRESS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MANAGER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZONE_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STEP_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Agent_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Insur)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contract_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FLEXY_GRPS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CST_CD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SSN_DT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RESIGN_REASON_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MILIT_SERV_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MILIT_SERV_ISUDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MILIT_SERV_EXPDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NATIONAL_NO_ED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Portal_UsrNam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Send_Mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cont_Type_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contract_End)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMP_FIRST_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMP_MIDDLE_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMP_LAST_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PREFIX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NATIONALITY_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BIRTH_DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BIRTH_PLACE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GENDER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PHONE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADDRESSID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CELL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MARTIAL_STATUS_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VACATION_GROUP_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PERMISSION_GROUP_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOLIDAY_GROUP_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEPID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JOB_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QUAKIFICATION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GRADU_DEPT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GRADU_GRADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SSN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HIRE_DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BRANCH_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NATIONAL_NO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NATIONAL_NO_IP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NATIONAL_NO_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MILIT_SERV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OTHER1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OTHER2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OTHERDATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PIC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RESIGN_DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RESIGNED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RESIGN_REASON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACCESS_CARD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SAL_GRP_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUR_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMPLOYEE1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USER_CARD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAIL_ADDRESS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MANAGER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZONE_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STEP_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_Agent_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_Insur)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contract_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FLEXY_GRPS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CST_CD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SSN_DT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RESIGN_REASON_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MILIT_SERV_NO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MILIT_SERV_ISUDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MILIT_SERV_EXPDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NATIONAL_NO_ED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Portal_UsrNam)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Send_Mail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cont_Type_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contract_End)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EMP_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EMP_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EMP_ID })
+        </td>
+    </tr>
+}
+
+</table>

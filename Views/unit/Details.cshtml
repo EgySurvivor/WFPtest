@@ -1,0 +1,140 @@
+﻿@model WFPtest.Models.unit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>unit</h4>
+    <hr />
+    <table class=" table">
+        <tr>
+            <th>
+                @Html.DisplayName("code")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.unit_id)
+            </td>
+
+            <th>
+                @Html.DisplayName("english description")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.unit_description_english)
+            </td>
+
+            <th>
+                @Html.DisplayName("english abreviation")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.unit_abreviation_english)
+            </td>
+
+            <th>
+                @Html.DisplayName("french description")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.unit_description_french)
+            </td>
+
+            </tr>
+            <tr>
+
+            <th>
+                @Html.DisplayName("french abreviation")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.unit_abreviation_french)
+            </td>
+
+            <th>
+                @Html.DisplayName("status")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.unit_status)
+            </td>
+
+
+
+            <th>
+                @Html.DisplayName("short abreviation")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.unit_short_abreviation)
+            </td>
+
+            <th>
+                @Html.DisplayName("Office")
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.Country_office .office_abreviation_english )
+            </td>
+
+        </tr>
+    </table>
+
+    @*<dt>
+            @Html.DisplayNameFor(model => model.unit_created_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unit_created_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unit_created_datetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unit_created_datetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unit_last_modified_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unit_last_modified_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unit_last_modified_datetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unit_last_modified_datetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unit_deleted_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unit_deleted_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unit_deleted_datetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unit_deleted_datetime)
+        </dd>*@
+
+
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.unitid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

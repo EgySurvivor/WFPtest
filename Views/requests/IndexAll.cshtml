@@ -1,0 +1,252 @@
+﻿@using Microsoft.AspNet.Identity
+@if (!Request.IsAuthenticated)
+{
+    Response.Redirect("/RBC-SMS/account/login");
+}
+
+@model PagedList.IPagedList<WFPtest.Models.request>
+
+@*@model IEnumerable<WFPtest.Models.staff>*@
+@*@using IEnumerable<wfptest.models.staff>;*@
+@using WFPtest.Models
+
+
+@using PagedList.Mvc;
+@using JQueryUIHelpers;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Index All";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    <h2>All Requests List</h2>
+</p>
+
+@using (Html.BeginForm("Index", "requests", FormMethod.Get))
+{
+
+
+    <br>
+    <p>
+        Find by name : @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />&nbsp;&nbsp;@Html.ActionLink("Reset Filter", "Index")
+    </p>
+}
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("First Name")
+        </th>
+        <th>
+            @Html.DisplayName("Last Name")
+        </th>
+        <th>
+            @Html.DisplayName("Budget Code")
+        </th>
+        <th>
+            @Html.DisplayName("Index Number")
+        </th>
+        <th>
+            @Html.DisplayName("Duty Station")
+        </th>
+        @*<th>
+                @Html.DisplayName("Supervisor")
+            </th>*@
+        <th>
+            @Html.DisplayName("Appointment Type")
+        </th>
+        <th>
+            @Html.DisplayName("Start Date")
+        </th>
+        <th>
+            @Html.DisplayName("End Date")
+        </th>
+        <th>
+            @Html.DisplayName("Computer")
+        </th>
+
+        <th>
+            @Html.DisplayName("e-mail")
+        </th>
+        <th>
+            @Html.DisplayName("Access Drive P")
+        </th>
+        <th>
+            @Html.DisplayName("Telephone")
+        </th>
+        <th>
+            @Html.DisplayName("Pincode Ext")
+        </th>
+        @*<th>
+                @Html.DisplayName("local Sim")
+            </th>
+            <th>
+                @Html.DisplayName("International")
+            </th>
+            <th>
+                @Html.DisplayName("Roaming")
+            </th>
+            <th>
+                @Html.DisplayName("Smart Phone")
+            </th>
+            <th>
+                @Html.DisplayName("Basic Phone")
+            </th>
+            <th>
+                @Html.DisplayName("USB Modem")
+            </th>
+            <th>
+                @Html.DisplayName("Color Printer")
+            </th>*@
+        @*<th>
+                @Html.DisplayName("Blackberry Service")
+            </th>
+            <th>
+                @Html.DisplayName("Iphone Service")
+            </th>
+            <th>
+                @Html.DisplayName("Mobile Phone")
+            </th>*@
+        @*<th>
+                @Html.DisplayName("Other")
+            </th>
+            <th>
+                @Html.DisplayName("location")
+            </th>
+            <th>
+                @Html.DisplayName("Title")
+            </th>*@
+        @*<th>
+                @Html.DisplayNameFor(model => model.staff.staff_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.staff1.staff_id)
+            </th>*@
+        <th>
+            @Html.DisplayName("Unit")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.first_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.last_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.budget_code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.index_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.duty_station)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.staff1 .staff_email   )
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.appointment_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.start_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.end_date)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.IphoneService)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.access_P)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pincode_ext)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.local_sim)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.international)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.roaming)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SmartPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BasicPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.usb_modem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.color_printer)
+                </td>*@
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.BlackberryService)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IphoneService)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.mobile_phone)
+                </td>*@
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.other)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.functional_title.functional_title_id)
+                </td>*@
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.staff.staff_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.staff1.staff_id)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.unit1.unit_description_english)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.request_no }) @*|*@
+                @*@Html.ActionLink("Details", "Details", new { id=item.request_no }) |*@
+                @Html.ActionLink("Delete", "Delete", new { id = item.request_no })
+            </td>
+        </tr>
+    }
+
+</table>
+<table border="0">
+    <tr>
+        <td>
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        </td>
+    </tr>
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
