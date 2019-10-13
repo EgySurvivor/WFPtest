@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hangfire.Azure.ServiceBusQueue</name>
+    </assembly>
+    <members>
+        <member name="P:Hangfire.Azure.ServiceBusQueue.ServiceBusQueueOptions.QueuePrefix">
+            <summary>
+            Gets or sets the prefix that will be prepended to all queue names in
+            the service bus (e.g. if the prefix is "a-prefix-" then the default queue
+            will be named "a-prefix-default" in Azure)
+            </summary>
+        </member>
+        <member name="P:Hangfire.Azure.ServiceBusQueue.ServiceBusQueueOptions.Configure">
+            <summary>
+            Configures a queue on construction, for example setting maximum message
+            size of default TTL.
+            </summary>
+        </member>
+    </members>
+</doc>

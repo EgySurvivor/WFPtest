@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hangfire.SqlServer.Msmq</name>
+    </assembly>
+    <members>
+        <member name="F:Hangfire.SqlServer.Msmq.MsmqTransactionType.Internal">
+            <summary>
+            Internal (MSMQ) transaction will be used to fetch pending background
+            jobs, does not support remote queues.
+            </summary>
+        </member>
+        <member name="F:Hangfire.SqlServer.Msmq.MsmqTransactionType.Dtc">
+            <summary>
+            External (DTC) transaction will be used to fetch pending background
+            jobs. Supports remote queues, but requires running MSDTC Service.
+            </summary>
+        </member>
+    </members>
+</doc>
